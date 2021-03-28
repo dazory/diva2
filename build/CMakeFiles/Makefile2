@@ -121,7 +121,7 @@ test/zmq/preinstall:
 test/zmq/CMakeFiles/zmq_test.dir/all:
 	$(MAKE) -f test/zmq/CMakeFiles/zmq_test.dir/build.make test/zmq/CMakeFiles/zmq_test.dir/depend
 	$(MAKE) -f test/zmq/CMakeFiles/zmq_test.dir/build.make test/zmq/CMakeFiles/zmq_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=3,4 "Built target zmq_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=7,8 "Built target zmq_test"
 .PHONY : test/zmq/CMakeFiles/zmq_test.dir/all
 
 # Include target in all.
@@ -148,6 +148,116 @@ test/zmq/CMakeFiles/zmq_test.dir/clean:
 
 # clean rule for target.
 clean: test/zmq/CMakeFiles/zmq_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test/sensor_connect
+
+# Convenience name for "all" pass in the directory.
+test/sensor_connect/all: test/sensor_connect/CMakeFiles/sensing.dir/all
+
+.PHONY : test/sensor_connect/all
+
+# Convenience name for "clean" pass in the directory.
+test/sensor_connect/clean: test/sensor_connect/CMakeFiles/sensing.dir/clean
+
+.PHONY : test/sensor_connect/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/sensor_connect/preinstall:
+
+.PHONY : test/sensor_connect/preinstall
+
+#=============================================================================
+# Target rules for target test/sensor_connect/CMakeFiles/sensing.dir
+
+# All Build rule for target.
+test/sensor_connect/CMakeFiles/sensing.dir/all:
+	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/depend
+	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=3,4 "Built target sensing"
+.PHONY : test/sensor_connect/CMakeFiles/sensing.dir/all
+
+# Include target in all.
+all: test/sensor_connect/CMakeFiles/sensing.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/sensor_connect/CMakeFiles/sensing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 test/sensor_connect/CMakeFiles/sensing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/sensor_connect/CMakeFiles/sensing.dir/rule
+
+# Convenience name for target.
+sensing: test/sensor_connect/CMakeFiles/sensing.dir/rule
+
+.PHONY : sensing
+
+# clean rule for target.
+test/sensor_connect/CMakeFiles/sensing.dir/clean:
+	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/clean
+.PHONY : test/sensor_connect/CMakeFiles/sensing.dir/clean
+
+# clean rule for target.
+clean: test/sensor_connect/CMakeFiles/sensing.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test/sensor_parsing
+
+# Convenience name for "all" pass in the directory.
+test/sensor_parsing/all: test/sensor_parsing/CMakeFiles/sensor_parsing.dir/all
+
+.PHONY : test/sensor_parsing/all
+
+# Convenience name for "clean" pass in the directory.
+test/sensor_parsing/clean: test/sensor_parsing/CMakeFiles/sensor_parsing.dir/clean
+
+.PHONY : test/sensor_parsing/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/sensor_parsing/preinstall:
+
+.PHONY : test/sensor_parsing/preinstall
+
+#=============================================================================
+# Target rules for target test/sensor_parsing/CMakeFiles/sensor_parsing.dir
+
+# All Build rule for target.
+test/sensor_parsing/CMakeFiles/sensor_parsing.dir/all:
+	$(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/depend
+	$(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=5,6 "Built target sensor_parsing"
+.PHONY : test/sensor_parsing/CMakeFiles/sensor_parsing.dir/all
+
+# Include target in all.
+all: test/sensor_parsing/CMakeFiles/sensor_parsing.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/sensor_parsing/CMakeFiles/sensor_parsing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/CMakeFiles/sensor_parsing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/sensor_parsing/CMakeFiles/sensor_parsing.dir/rule
+
+# Convenience name for target.
+sensor_parsing: test/sensor_parsing/CMakeFiles/sensor_parsing.dir/rule
+
+.PHONY : sensor_parsing
+
+# clean rule for target.
+test/sensor_parsing/CMakeFiles/sensor_parsing.dir/clean:
+	$(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/clean
+.PHONY : test/sensor_parsing/CMakeFiles/sensor_parsing.dir/clean
+
+# clean rule for target.
+clean: test/sensor_parsing/CMakeFiles/sensor_parsing.dir/clean
 
 .PHONY : clean
 

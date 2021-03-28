@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/sensor_connect.dir/main.cpp.o  -o sensor_connect -Wl,-rpath,/usr/local/lib /usr/local/lib/libzmq.so -lpthread 

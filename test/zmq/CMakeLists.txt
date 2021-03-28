@@ -15,8 +15,8 @@ find_library(ZeroMQ_LIBRARY             # use the hint from about to find the lo
 )
 
 # 실행파일 만들기
-set(SOURCE_FILES main.cpp)
-add_executable(zmq_test ${SOURCE_FILES})                           # 생성할 실행파일 이름 지정
+set(SOURCE_ZMQ_TEST main.cpp)
+add_executable(zmq_test ${SOURCE_ZMQ_TEST})                           # 생성할 실행파일 이름 지정
 target_include_directories(zmq_test PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives
 target_link_libraries(zmq_test PUBLIC ${ZeroMQ_LIBRARY})           # at the 0mq library to our link directive
 
