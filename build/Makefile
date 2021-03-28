@@ -136,6 +136,32 @@ zmq_test/fast:
 	$(MAKE) -f test/zmq/CMakeFiles/zmq_test.dir/build.make test/zmq/CMakeFiles/zmq_test.dir/build
 .PHONY : zmq_test/fast
 
+#=============================================================================
+# Target rules for targets named sensing
+
+# Build rule for target.
+sensing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensing
+.PHONY : sensing
+
+# fast build rule for target.
+sensing/fast:
+	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/build
+.PHONY : sensing/fast
+
+#=============================================================================
+# Target rules for targets named sensor_parsing
+
+# Build rule for target.
+sensor_parsing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_parsing
+.PHONY : sensor_parsing
+
+# fast build rule for target.
+sensor_parsing/fast:
+	$(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build
+.PHONY : sensor_parsing/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -173,6 +199,8 @@ help:
 	@echo "... diva2"
 	@echo "... edit_cache"
 	@echo "... zmq_test"
+	@echo "... sensing"
+	@echo "... sensor_parsing"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

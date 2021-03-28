@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/diva2/diva2/test/sensor_parsing/gps_parsing.cpp
+zmq.hpp
+-
+iostream
+-
+iomanip
+-
+string
+-
+sstream
+-
+string.h
+-
+time.h
+-
+assert.h
+-
+stdlib.h
+-
+stdio.h
+-
+stdarg.h
+-
+signal.h
+-
+sys/time.h
+-
+unistd.h
+-
+fstream
+-
+thread
+-
+

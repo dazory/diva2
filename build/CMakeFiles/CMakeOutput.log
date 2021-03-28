@@ -629,3 +629,35 @@ make[1]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 나감
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/diva2/diva2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1dee8/fast"
+make[1]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 들어감
+/usr/bin/make -f CMakeFiles/cmTC_1dee8.dir/build.make CMakeFiles/cmTC_1dee8.dir/build
+make[2]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_1dee8.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1dee8.dir/CheckIncludeFile.c.o   -c /home/diva2/diva2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_1dee8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1dee8.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_1dee8.dir/CheckIncludeFile.c.o  -o cmTC_1dee8 
+make[2]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 나감
+make[1]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/diva2/diva2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d6931/fast"
+make[1]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 들어감
+/usr/bin/make -f CMakeFiles/cmTC_d6931.dir/build.make CMakeFiles/cmTC_d6931.dir/build
+make[2]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_d6931.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d6931.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d6931
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6931.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d6931.dir/CheckFunctionExists.c.o  -o cmTC_d6931 -lpthread 
+make[2]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 나감
+make[1]: 디렉터리 '/home/diva2/diva2/build/CMakeFiles/CMakeTmp' 나감
+
+

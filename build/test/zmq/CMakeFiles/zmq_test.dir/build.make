@@ -91,6 +91,7 @@ zmq_test_EXTERNAL_OBJECTS =
 test/zmq/zmq_test: test/zmq/CMakeFiles/zmq_test.dir/main.cpp.o
 test/zmq/zmq_test: test/zmq/CMakeFiles/zmq_test.dir/build.make
 test/zmq/zmq_test: /usr/local/lib/libzmq.so
+test/zmq/zmq_test: /usr/local/lib/libzmq.so
 test/zmq/zmq_test: test/zmq/CMakeFiles/zmq_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable zmq_test"
 	cd /home/diva2/diva2/build/test/zmq && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zmq_test.dir/link.txt --verbose=$(VERBOSE)
