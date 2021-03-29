@@ -2,30 +2,9 @@
 
 #pragma once
 #include "GpsSensing.cpp"
+#include "service/zmq_helper.h"
+
 using namespace std;
-
-inline static bool s_sendmore (void *context, const std::string & string) {
-
-	zmq::socket_t socket(*(zmq::context_t*)context,ZMQ_REQ);
-	socket.bind("tcp://*:5563");
-
-	zmq::message_t message(string.size());
-    memcpy (message.data(), string.data(), string.size());
-
-    bool rc = socket.send (message, ZMQ_SNDMORE);
-    return (rc);
-}
-inline static bool s_send (void *context, const std::string & string, int flags = 0) {
-
-	zmq::socket_t socket(*(zmq::context_t*)context,ZMQ_REQ);
-	socket.bind("tcp://*:5563");
-
-    zmq::message_t message(string.size());
-    memcpy (message.data(), string.data(), string.size());
-
-    bool rc = socket.send (message, flags);
-    return (rc);
-}
 
 class GpsSensingThread{
 	public:
@@ -54,15 +33,17 @@ void GpsSensingThread::run(const char *devicename, const char *baudrate, void *c
 	lk.init_keyboard();
 	printf("keyboard initialize (in GpsSensingThread::run)\n");
 
-	int iRet = 0; char cBuff[255];
 	while (1) {
+		int iRet = 0; char cBuff[255];
+		
         s_sendmore (context, "GPS");
 		iRet = read(iDev, cBuff, 255);
 		cBuff[iRet] = 0;
 		printf("read 511byte from iDev (in GpsSensingThread::run/while(1))\n");
 		printf("   : %s\n",cBuff);
 
-        s_send (context, cBuff);
+        zmq::message_t msg(&cBuff, sizeof(char)*255, NULL);
+        s_send (context, msg);
 		printf("send data to PUB (tcp:5563) (in GpsSensingThread::run/while(1))\n");
 		
         sleep (1);
