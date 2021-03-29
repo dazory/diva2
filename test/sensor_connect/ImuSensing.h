@@ -14,11 +14,11 @@
 #include <sys/time.h>
 #include <unistd.h>
 
-#include "utils/Linux_keyboard.h"
-#include "utils/Timestamp.h"
-#include "utils/Strtok_m.h"
-#include "utils/Can_serial.h"
-#include "utils/Speed_spec.h"
+#include "service/Linux_keyboard.h"
+#include "service/Timestamp.h"
+#include "service/Strtok_m.h"
+#include "service/Can_serial.h"
+#include "service/Speed_spec.h"
 #include "mscl/mscl.h"
 
 using namespace std;
@@ -26,8 +26,7 @@ using namespace std;
 class ImuSensing{
    public:
         ImuSensing();
-        mscl::InertialNode initialize(const char *devicename);
-        int getBaudrate(const char *baudrate);
+        mscl::InertialNode getMsclNode(const char *devicename, mscl::uint32 baudrate);
         float gyrox, gyroy, gyroz, magx, magy, magz, accelx, accely, accelz;
    private:
 

@@ -46,3 +46,4 @@ add_subdirectory(test/zmq)
 # 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
 add_subdirectory(test/sensor_connect)
 add_subdirectory(test/sensor_parsing)
+add_subdirectory(test/zmq_filetransfer)
