@@ -16,15 +16,18 @@
 #include <fstream>
 #include <thread>
 
+using namespace std;
+
 class GpsParsingThread{
     public:
         GpsParsingThread();
+        void run(void*);
+        void stop();
     private:
         string latitude;
         string longtitude;
         bool stop_flag=false;
-        void run(void*);
-        void stop();
+        
 };
 
 inline static bool s_sendmore (zmq::socket_t & socket, const std::string & string) {

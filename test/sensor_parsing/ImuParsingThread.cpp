@@ -7,6 +7,8 @@ public:
     float gyrox, gyroy, gyroz, magx, magy, magz, accelx, accely, accelz;
 };
 
+ImuParsingThread::ImuParsingThread(){}
+
 void ImuParsingThread::run(void *context) {
     zmq::socket_t imu_sub(*(zmq::context_t*)context, ZMQ_SUB);
     imu_sub.connect("tcp://localhost:5563");
@@ -44,6 +46,7 @@ void ImuParsingThread::run(void *context) {
                 }
                 count--;
                 if (count == 0) {
+                    cout<<"IMU Data Received\n";
                     cout << "accelx: " << temp.accelx << "//accely: " << temp.accely << "//accelz: " << temp.accelz << endl;
                     //여기서 받은 값을 qt로 넘겨줘야함
                     break;
