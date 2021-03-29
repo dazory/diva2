@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../test/sensor_connect/CMakeLists.txt"
   "../test/sensor_parsing/CMakeLists.txt"
   "../test/zmq/CMakeLists.txt"
+  "../test/zmq_filetransfer/CMakeLists.txt"
   "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
@@ -51,6 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "test/zmq/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/sensor_connect/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/sensor_parsing/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/zmq_filetransfer/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -59,4 +61,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/zmq/CMakeFiles/zmq_test.dir/DependInfo.cmake"
   "test/sensor_connect/CMakeFiles/sensing.dir/DependInfo.cmake"
   "test/sensor_parsing/CMakeFiles/sensor_parsing.dir/DependInfo.cmake"
+  "test/zmq_filetransfer/CMakeFiles/pub.dir/DependInfo.cmake"
+  "test/zmq_filetransfer/CMakeFiles/sub.dir/DependInfo.cmake"
   )

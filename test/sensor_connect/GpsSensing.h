@@ -14,11 +14,11 @@
 #include <sys/time.h>
 #include <unistd.h>
 
-#include "utils/Linux_keyboard.h"
-#include "utils/Timestamp.h"
-#include "utils/Strtok_m.h"
-#include "utils/Can_serial.h"
-#include "utils/Speed_spec.h"
+#include "service/Linux_keyboard.h"
+#include "service/Timestamp.h"
+#include "service/Strtok_m.h"
+#include "service/Can_serial.h"
+#include "service/Speed_spec.h"
 
 using namespace std;
 
