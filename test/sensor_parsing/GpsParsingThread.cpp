@@ -20,6 +20,7 @@ void GpsParsingThread::run(void* context){
     //gps_pub.bind("tcp://localhost::5564");
 
     while (!stop_flag) {
+        cout<<"this is while"<<endl;
         std::string topic = s_recv(gps_sub);         //topic받아옴
         std::string gps_data = s_recv(gps_sub);      //topic 이후의 데이터를 저장
 
