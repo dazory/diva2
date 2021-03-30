@@ -15,6 +15,8 @@
 #include <sys/time.h>
 #include <unistd.h>
 
+#include "zmq_helper.h"
+
 using namespace std;
 
 class data {
@@ -25,6 +27,7 @@ int a, b, c, d;
 int main () {
     printf("start main\n");
 
+    // void *context = zmq_ctx_new();
     zmq::context_t context(1);
     zmq::socket_t subscriber(context, ZMQ_SUB);
     subscriber.connect("tcp://localhost:5563");

@@ -6,6 +6,56 @@
 
 #IncludeRegexTransform: 
 
+/home/diva2/diva2/test/sensor_connect/CanSensing.h
+zmq.hpp
+-
+iostream
+-
+iomanip
+-
+string
+-
+sstream
+-
+time.h
+-
+assert.h
+-
+stdlib.h
+-
+stdio.h
+-
+stdarg.h
+-
+signal.h
+-
+sys/time.h
+-
+unistd.h
+-
+service/Linux_keyboard.h
+/home/diva2/diva2/test/sensor_connect/service/Linux_keyboard.h
+service/Timestamp.h
+/home/diva2/diva2/test/sensor_connect/service/Timestamp.h
+service/Strtok_m.h
+/home/diva2/diva2/test/sensor_connect/service/Strtok_m.h
+service/Can_serial.h
+/home/diva2/diva2/test/sensor_connect/service/Can_serial.h
+service/Speed_spec.h
+/home/diva2/diva2/test/sensor_connect/service/Speed_spec.h
+net/if.h
+-
+sys/ioctl.h
+-
+sys/socket.h
+-
+linux/can.h
+-
+linux/can/raw.h
+-
+
+/home/diva2/diva2/test/sensor_connect/CanSensingThread.h
+
 /home/diva2/diva2/test/sensor_connect/GpsSensing.cpp
 GpsSensing.h
 /home/diva2/diva2/test/sensor_connect/GpsSensing.h
@@ -51,10 +101,8 @@ service/Speed_spec.h
 /home/diva2/diva2/test/sensor_connect/GpsSensingThread.h
 GpsSensing.cpp
 /home/diva2/diva2/test/sensor_connect/GpsSensing.cpp
-
-/home/diva2/diva2/test/sensor_connect/ImuSensing.cpp
-ImuSensing.h
-/home/diva2/diva2/test/sensor_connect/ImuSensing.h
+service/zmq_helper.h
+/home/diva2/diva2/test/sensor_connect/service/zmq_helper.h
 
 /home/diva2/diva2/test/sensor_connect/ImuSensing.h
 zmq.hpp
@@ -97,16 +145,6 @@ mscl/mscl.h
 /home/diva2/diva2/test/sensor_connect/mscl/mscl.h
 
 /home/diva2/diva2/test/sensor_connect/ImuSensingThread.h
-string
--
-iostream
--
-ImuSensing.cpp
-/home/diva2/diva2/test/sensor_connect/ImuSensing.cpp
-mscl/mscl.h
-/home/diva2/diva2/test/sensor_connect/mscl/mscl.h
-fstream
--
 
 /home/diva2/diva2/test/sensor_connect/main.cpp
 iostream
@@ -121,6 +159,10 @@ ImuSensing.h
 /home/diva2/diva2/test/sensor_connect/ImuSensing.h
 ImuSensingThread.h
 /home/diva2/diva2/test/sensor_connect/ImuSensingThread.h
+CanSensing.h
+/home/diva2/diva2/test/sensor_connect/CanSensing.h
+CanSensingThread.h
+/home/diva2/diva2/test/sensor_connect/CanSensingThread.h
 
 /home/diva2/diva2/test/sensor_connect/service/Can_serial.h
 stdlib.h
@@ -180,6 +222,10 @@ string.h
 string
 -
 cstring
+-
+
+/home/diva2/diva2/test/sensor_connect/service/zmq_helper.h
+zmq.hpp
 -
 
 /usr/share/c++-mscl/Boost/include/boost/assert.hpp

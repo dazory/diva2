@@ -3,3 +3,4 @@
 
 test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.o
  /home/diva2/diva2/test/zmq_filetransfer/sub.cpp
+ /home/diva2/diva2/test/zmq_filetransfer/zmq_helper.h
