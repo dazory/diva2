@@ -17,6 +17,10 @@ find_library(ZeroMQ_LIBRARY             # use the hint from about to find the lo
 ## use thread
 find_package( Threads )
 
+##use opencv
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS}) 
+
 ## use mscl
 find_library(MSCL_LIB_PATH NAMES libmscl.so PATHS "/usr/share/c++-mscl" DOC "MSCL Library" NO_DEFAULT_PATH)
 find_library(BOOST_LIB_PATH NAMES libboost_chrono.so PATHS "/usr/share/c++-mscl/Boost/lib" NO_DEFAULT_PATH)
@@ -31,9 +35,9 @@ add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 # 실행파일 만들기
 set(SOURCE_SENSOR_CONNECT main.cpp)
-add_executable(sensing ${SOURCE_SENSOR_CONNECT} ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC})                           # 생성할 실행파일 이름 지정
+add_executable(sensing ${SOURCE_SENSOR_CONNECT} ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})                           # 생성할 실행파일 이름 지정
 target_include_directories(sensing PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives
-target_link_libraries(sensing PUBLIC ${ZeroMQ_LIBRARY} 
+target_link_libraries(sensing PUBLIC ${ZeroMQ_LIBRARY} ${OpenCV_LIBS} 
         /usr/share/c++-mscl/libmscl.so
         )           # at the 0mq library to our link directive
 

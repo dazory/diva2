@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diva2/diva2
+CMAKE_SOURCE_DIR = /home/dahye/diva2/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diva2/diva2/build
+CMAKE_BINARY_DIR = /home/dahye/diva2/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/progress.marks
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+	cd /home/dahye/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/diva2/build/CMakeFiles /home/dahye/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/progress.marks
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/clean
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/preinstall
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/preinstall
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dahye/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/zmq_filetransfer/CMakeFiles/pub.dir/rule:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/CMakeFiles/pub.dir/rule
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/CMakeFiles/pub.dir/rule
 .PHONY : test/zmq_filetransfer/CMakeFiles/pub.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ pub: test/zmq_filetransfer/CMakeFiles/pub.dir/rule
 
 # fast build rule for target.
 pub/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/build
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/build
 .PHONY : pub/fast
 
 # Convenience name for target.
 test/zmq_filetransfer/CMakeFiles/sub.dir/rule:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/CMakeFiles/sub.dir/rule
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/zmq_filetransfer/CMakeFiles/sub.dir/rule
 .PHONY : test/zmq_filetransfer/CMakeFiles/sub.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ sub: test/zmq_filetransfer/CMakeFiles/sub.dir/rule
 
 # fast build rule for target.
 sub/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/build
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/build
 .PHONY : sub/fast
 
 pub.o: pub.cpp.o
@@ -146,7 +146,7 @@ pub.o: pub.cpp.o
 
 # target to build an object file
 pub.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.o
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.o
 .PHONY : pub.cpp.o
 
 pub.i: pub.cpp.i
@@ -155,7 +155,7 @@ pub.i: pub.cpp.i
 
 # target to preprocess a source file
 pub.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.i
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.i
 .PHONY : pub.cpp.i
 
 pub.s: pub.cpp.s
@@ -164,7 +164,7 @@ pub.s: pub.cpp.s
 
 # target to generate assembly for a file
 pub.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.s
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.s
 .PHONY : pub.cpp.s
 
 sub.o: sub.cpp.o
@@ -173,7 +173,7 @@ sub.o: sub.cpp.o
 
 # target to build an object file
 sub.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.o
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.o
 .PHONY : sub.cpp.o
 
 sub.i: sub.cpp.i
@@ -182,7 +182,7 @@ sub.i: sub.cpp.i
 
 # target to preprocess a source file
 sub.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.i
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.i
 .PHONY : sub.cpp.i
 
 sub.s: sub.cpp.s
@@ -191,7 +191,7 @@ sub.s: sub.cpp.s
 
 # target to generate assembly for a file
 sub.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.s
+	cd /home/dahye/diva2/diva2/build && $(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.s
 .PHONY : sub.cpp.s
 
 # Help Target
@@ -221,6 +221,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dahye/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
