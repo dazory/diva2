@@ -15,10 +15,15 @@ int main(int argc, char *argv[]){
 
     zmq::context_t context(1);
     zmq::socket_t socket(context, ZMQ_PUB);
-    socket.bind("tcp://*:5563");
+    const char * protocol = "tcp://*:5563";
+    socket.bind(protocol);
     
     GpsSensingThread gpsSensingThread;
     std::thread sensingthread_gps(gpsSensingThread.run, "/dev/ttyACM0", "9600", &socket);
+
+    // CamSensingThread camSensingThread;
+    // thread sensingthread_cam(camSensingThread.run, 0, &context, &publisher);
+    // sensingthread_cam.join();
 
     //ImuSensingThread imuSensingThread;
     //std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM1", 115200, context);
