@@ -4,7 +4,6 @@
 using namespace std;
 
 int main(int argc, char * argv[]){
-    //void *context=zmq_ctx_new();
     zmq::context_t context(1);
 
     GpsParsingThread gps_parsing_thread;
