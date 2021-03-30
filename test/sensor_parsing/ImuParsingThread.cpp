@@ -4,7 +4,7 @@ using namespace std;
 
 class IMUdata {
 public:
-    float gyrox, gyroy, gyroz, magx, magy, magz, accelx, accely, accelz;
+    float accelx, accely, accelz;
 };
 
 ImuParsingThread::ImuParsingThread(){}
