@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/diva2/diva2/test/sensor_connect/CanSensing.cpp
-CanSensing.h
-/home/diva2/diva2/test/sensor_connect/CanSensing.h
-
 /home/diva2/diva2/test/sensor_connect/CanSensing.h
 zmq.hpp
 -
@@ -59,14 +55,6 @@ linux/can/raw.h
 -
 
 /home/diva2/diva2/test/sensor_connect/CanSensingThread.h
-string
--
-iostream
--
-CanSensing.cpp
-/home/diva2/diva2/test/sensor_connect/CanSensing.cpp
-service/zmq_helper.h
-/home/diva2/diva2/test/sensor_connect/service/zmq_helper.h
 
 /home/diva2/diva2/test/sensor_connect/GpsSensing.cpp
 GpsSensing.h
@@ -116,10 +104,6 @@ GpsSensing.cpp
 service/zmq_helper.h
 /home/diva2/diva2/test/sensor_connect/service/zmq_helper.h
 
-/home/diva2/diva2/test/sensor_connect/ImuSensing.cpp
-ImuSensing.h
-/home/diva2/diva2/test/sensor_connect/ImuSensing.h
-
 /home/diva2/diva2/test/sensor_connect/ImuSensing.h
 zmq.hpp
 -
@@ -161,18 +145,6 @@ mscl/mscl.h
 /home/diva2/diva2/test/sensor_connect/mscl/mscl.h
 
 /home/diva2/diva2/test/sensor_connect/ImuSensingThread.h
-string
--
-iostream
--
-ImuSensing.cpp
-/home/diva2/diva2/test/sensor_connect/ImuSensing.cpp
-service/zmq_helper.h
-/home/diva2/diva2/test/sensor_connect/service/zmq_helper.h
-mscl/mscl.h
-/home/diva2/diva2/test/sensor_connect/mscl/mscl.h
-fstream
--
 
 /home/diva2/diva2/test/sensor_connect/main.cpp
 iostream

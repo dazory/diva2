@@ -11,18 +11,22 @@ using namespace std;
 
 int main(int argc, char *argv[]){
 
-    void *context = zmq_ctx_new();
+    //void *context = zmq_ctx_new();
+
+    zmq::context_t context(1);
+    zmq::socket_t socket(context, ZMQ_PUB);
+    socket.bind("tcp://*:5563");
     
-    // GpsSensingThread gpsSensingThread;
-    // std::thread sensingthread_gps(gpsSensingThread.run, "/dev/ttyACM0", "9600", context);
+    GpsSensingThread gpsSensingThread;
+    std::thread sensingthread_gps(gpsSensingThread.run, "/dev/ttyACM0", "9600", &socket);
 
     //ImuSensingThread imuSensingThread;
     //std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM1", 115200, context);
 
-    CanSensingThread canSensingThread;
-    thread sensingthread_can(canSensingThread.run, "can0", context);
+    // CanSensingThread canSensingThread;
+    // thread sensingthread_can(canSensingThread.run, "can0", context);
 
-    //sensingthread_gps.join();
+    sensingthread_gps.join();
     //sensingthread_imu.join();
-    sensingthread_can.join();
+    // sensingthread_can.join();
 }

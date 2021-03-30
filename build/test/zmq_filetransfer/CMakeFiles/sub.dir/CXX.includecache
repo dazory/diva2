@@ -33,4 +33,10 @@ sys/time.h
 -
 unistd.h
 -
+zmq_helper.h
+/home/diva2/diva2/test/zmq_filetransfer/zmq_helper.h
+
+/home/diva2/diva2/test/zmq_filetransfer/zmq_helper.h
+zmq.hpp
+-
 
