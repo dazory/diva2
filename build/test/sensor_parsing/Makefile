@@ -111,46 +111,100 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/sensor_parsing/CMakeFiles/sensor_parsing.dir/rule:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/CMakeFiles/sensor_parsing.dir/rule
-.PHONY : test/sensor_parsing/CMakeFiles/sensor_parsing.dir/rule
+test/sensor_parsing/CMakeFiles/parsing.dir/rule:
+	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/CMakeFiles/parsing.dir/rule
+.PHONY : test/sensor_parsing/CMakeFiles/parsing.dir/rule
 
 # Convenience name for target.
-sensor_parsing: test/sensor_parsing/CMakeFiles/sensor_parsing.dir/rule
+parsing: test/sensor_parsing/CMakeFiles/parsing.dir/rule
 
-.PHONY : sensor_parsing
+.PHONY : parsing
 
 # fast build rule for target.
-sensor_parsing/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build
-.PHONY : sensor_parsing/fast
+parsing/fast:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/build
+.PHONY : parsing/fast
 
-gps_parsing.o: gps_parsing.cpp.o
+GpsParsingThread.o: GpsParsingThread.cpp.o
 
-.PHONY : gps_parsing.o
+.PHONY : GpsParsingThread.o
 
 # target to build an object file
-gps_parsing.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/gps_parsing.cpp.o
-.PHONY : gps_parsing.cpp.o
+GpsParsingThread.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o
+.PHONY : GpsParsingThread.cpp.o
 
-gps_parsing.i: gps_parsing.cpp.i
+GpsParsingThread.i: GpsParsingThread.cpp.i
 
-.PHONY : gps_parsing.i
+.PHONY : GpsParsingThread.i
 
 # target to preprocess a source file
-gps_parsing.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/gps_parsing.cpp.i
-.PHONY : gps_parsing.cpp.i
+GpsParsingThread.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.i
+.PHONY : GpsParsingThread.cpp.i
 
-gps_parsing.s: gps_parsing.cpp.s
+GpsParsingThread.s: GpsParsingThread.cpp.s
 
-.PHONY : gps_parsing.s
+.PHONY : GpsParsingThread.s
 
 # target to generate assembly for a file
-gps_parsing.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/gps_parsing.cpp.s
-.PHONY : gps_parsing.cpp.s
+GpsParsingThread.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.s
+.PHONY : GpsParsingThread.cpp.s
+
+ImuParsingThread.o: ImuParsingThread.cpp.o
+
+.PHONY : ImuParsingThread.o
+
+# target to build an object file
+ImuParsingThread.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o
+.PHONY : ImuParsingThread.cpp.o
+
+ImuParsingThread.i: ImuParsingThread.cpp.i
+
+.PHONY : ImuParsingThread.i
+
+# target to preprocess a source file
+ImuParsingThread.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.i
+.PHONY : ImuParsingThread.cpp.i
+
+ImuParsingThread.s: ImuParsingThread.cpp.s
+
+.PHONY : ImuParsingThread.s
+
+# target to generate assembly for a file
+ImuParsingThread.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.s
+.PHONY : ImuParsingThread.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -159,11 +213,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... sensor_parsing"
+	@echo "... parsing"
 	@echo "... edit_cache"
-	@echo "... gps_parsing.o"
-	@echo "... gps_parsing.i"
-	@echo "... gps_parsing.s"
+	@echo "... GpsParsingThread.o"
+	@echo "... GpsParsingThread.i"
+	@echo "... GpsParsingThread.s"
+	@echo "... ImuParsingThread.o"
+	@echo "... ImuParsingThread.i"
+	@echo "... ImuParsingThread.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

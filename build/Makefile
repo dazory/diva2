@@ -150,17 +150,17 @@ sensing/fast:
 .PHONY : sensing/fast
 
 #=============================================================================
-# Target rules for targets named sensor_parsing
+# Target rules for targets named parsing
 
 # Build rule for target.
-sensor_parsing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_parsing
-.PHONY : sensor_parsing
+parsing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 parsing
+.PHONY : parsing
 
 # fast build rule for target.
-sensor_parsing/fast:
-	$(MAKE) -f test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build.make test/sensor_parsing/CMakeFiles/sensor_parsing.dir/build
-.PHONY : sensor_parsing/fast
+parsing/fast:
+	$(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/build
+.PHONY : parsing/fast
 
 #=============================================================================
 # Target rules for targets named pub
@@ -226,7 +226,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... zmq_test"
 	@echo "... sensing"
-	@echo "... sensor_parsing"
+	@echo "... parsing"
 	@echo "... pub"
 	@echo "... sub"
 	@echo "... main.o"

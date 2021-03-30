@@ -46,6 +46,7 @@
         "typeinfo": "cpp",
         "thread": "cpp",
         "iterator": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "bitset": "cpp"
     }
 }

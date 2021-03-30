@@ -60,7 +60,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/diva2.dir/DependInfo.cmake"
   "test/zmq/CMakeFiles/zmq_test.dir/DependInfo.cmake"
   "test/sensor_connect/CMakeFiles/sensing.dir/DependInfo.cmake"
-  "test/sensor_parsing/CMakeFiles/sensor_parsing.dir/DependInfo.cmake"
+  "test/sensor_parsing/CMakeFiles/parsing.dir/DependInfo.cmake"
   "test/zmq_filetransfer/CMakeFiles/pub.dir/DependInfo.cmake"
   "test/zmq_filetransfer/CMakeFiles/sub.dir/DependInfo.cmake"
   )

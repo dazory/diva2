@@ -8,7 +8,7 @@
 /home/diva2/diva2/build/test/sensor_connect/CMakeFiles/sensing.dir
 /home/diva2/diva2/build/test/sensor_connect/CMakeFiles/edit_cache.dir
 /home/diva2/diva2/build/test/sensor_parsing/CMakeFiles/rebuild_cache.dir
-/home/diva2/diva2/build/test/sensor_parsing/CMakeFiles/sensor_parsing.dir
+/home/diva2/diva2/build/test/sensor_parsing/CMakeFiles/parsing.dir
 /home/diva2/diva2/build/test/sensor_parsing/CMakeFiles/edit_cache.dir
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/rebuild_cache.dir
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/edit_cache.dir
