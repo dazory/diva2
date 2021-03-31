@@ -129,11 +129,36 @@ test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o.provides: test
 test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o.provides.build: test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o
 
 
+test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o: test/sensor_parsing/CMakeFiles/parsing.dir/flags.make
+test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o: ../test/sensor_parsing/CamParsingThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o"
+	cd /home/diva2/diva2/build/test/sensor_parsing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parsing.dir/CamParsingThread.cpp.o -c /home/diva2/diva2/test/sensor_parsing/CamParsingThread.cpp
+
+test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parsing.dir/CamParsingThread.cpp.i"
+	cd /home/diva2/diva2/build/test/sensor_parsing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sensor_parsing/CamParsingThread.cpp > CMakeFiles/parsing.dir/CamParsingThread.cpp.i
+
+test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parsing.dir/CamParsingThread.cpp.s"
+	cd /home/diva2/diva2/build/test/sensor_parsing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sensor_parsing/CamParsingThread.cpp -o CMakeFiles/parsing.dir/CamParsingThread.cpp.s
+
+test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o.requires:
+
+.PHONY : test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o.requires
+
+test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o.provides: test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o.requires
+	$(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o.provides.build
+.PHONY : test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o.provides
+
+test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o.provides.build: test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o
+
+
 # Object files for target parsing
 parsing_OBJECTS = \
 "CMakeFiles/parsing.dir/main.cpp.o" \
 "CMakeFiles/parsing.dir/ImuParsingThread.cpp.o" \
-"CMakeFiles/parsing.dir/GpsParsingThread.cpp.o"
+"CMakeFiles/parsing.dir/GpsParsingThread.cpp.o" \
+"CMakeFiles/parsing.dir/CamParsingThread.cpp.o"
 
 # External object files for target parsing
 parsing_EXTERNAL_OBJECTS =
@@ -141,13 +166,55 @@ parsing_EXTERNAL_OBJECTS =
 test/sensor_parsing/parsing: test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.o
 test/sensor_parsing/parsing: test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o
 test/sensor_parsing/parsing: test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o
+test/sensor_parsing/parsing: test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o
 test/sensor_parsing/parsing: test/sensor_parsing/CMakeFiles/parsing.dir/build.make
 test/sensor_parsing/parsing: /usr/local/lib/libzmq.so
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_shape.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_dpm.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_face.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_freetype.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_hdf.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_optflow.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_plot.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_reg.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_saliency.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_stereo.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_text.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.3.2.0
 test/sensor_parsing/parsing: /usr/share/c++-mscl/libmscl.so
 test/sensor_parsing/parsing: /usr/local/lib/libzmq.so
 test/sensor_parsing/parsing: /usr/share/c++-mscl/libmscl.so
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_video.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_videoio.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
+test/sensor_parsing/parsing: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 test/sensor_parsing/parsing: test/sensor_parsing/CMakeFiles/parsing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable parsing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable parsing"
 	cd /home/diva2/diva2/build/test/sensor_parsing && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parsing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -158,6 +225,7 @@ test/sensor_parsing/CMakeFiles/parsing.dir/build: test/sensor_parsing/parsing
 test/sensor_parsing/CMakeFiles/parsing.dir/requires: test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.o.requires
 test/sensor_parsing/CMakeFiles/parsing.dir/requires: test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o.requires
 test/sensor_parsing/CMakeFiles/parsing.dir/requires: test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o.requires
+test/sensor_parsing/CMakeFiles/parsing.dir/requires: test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o.requires
 
 .PHONY : test/sensor_parsing/CMakeFiles/parsing.dir/requires
 

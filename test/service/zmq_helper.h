@@ -1,7 +1,21 @@
 #pragma once
 #include <zmq.hpp> // https://github.com/zeromq/cppzmq
+#include <opencv2/opencv.hpp>
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include <opencv2/imgcodecs.hpp>
 
 enum SENSOR{SENSOR_GPS, SENSOR_IMU, SENSOR_CAN, SENSOR_CAM, SENSOR_LIDAR};
+
+inline static zmq::message_t s_recv(zmq::socket_t & socket, int flags = 0) {
+    printf("s_recv\n");
+    zmq::message_t message;
+    socket.recv(& message, flags);
+	std::cout << "receive: \"" << (const char*)message.data() << "\"... done." << std::endl;
+    
+    return message;
+}
+
 
 inline static bool s_sendmore (zmq::socket_t & publisher, zmq::message_t &data) {
     int rc = publisher.send(data, ZMQ_SNDMORE);

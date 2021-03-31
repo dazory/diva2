@@ -33,7 +33,7 @@ add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 set(SOURCE_SENSOR_CONNECT main.cpp)
 add_executable(sensing ${SOURCE_SENSOR_CONNECT} ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC})                           # 생성할 실행파일 이름 지정
 target_include_directories(sensing PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives
-target_link_libraries(sensing PUBLIC ${ZeroMQ_LIBRARY} 
+target_link_libraries(sensing PUBLIC ${ZeroMQ_LIBRARY} ${OpenCV_LIBS} 
         /usr/share/c++-mscl/libmscl.so
         )           # at the 0mq library to our link directive
 

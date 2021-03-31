@@ -125,6 +125,33 @@ parsing/fast:
 	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/build
 .PHONY : parsing/fast
 
+CamParsingThread.o: CamParsingThread.cpp.o
+
+.PHONY : CamParsingThread.o
+
+# target to build an object file
+CamParsingThread.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o
+.PHONY : CamParsingThread.cpp.o
+
+CamParsingThread.i: CamParsingThread.cpp.i
+
+.PHONY : CamParsingThread.i
+
+# target to preprocess a source file
+CamParsingThread.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.i
+.PHONY : CamParsingThread.cpp.i
+
+CamParsingThread.s: CamParsingThread.cpp.s
+
+.PHONY : CamParsingThread.s
+
+# target to generate assembly for a file
+CamParsingThread.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.s
+.PHONY : CamParsingThread.cpp.s
+
 GpsParsingThread.o: GpsParsingThread.cpp.o
 
 .PHONY : GpsParsingThread.o
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... parsing"
 	@echo "... edit_cache"
+	@echo "... CamParsingThread.o"
+	@echo "... CamParsingThread.i"
+	@echo "... CamParsingThread.s"
 	@echo "... GpsParsingThread.o"
 	@echo "... GpsParsingThread.i"
 	@echo "... GpsParsingThread.s"
