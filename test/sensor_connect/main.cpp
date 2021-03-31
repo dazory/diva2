@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
     // sensingthread_cam.join();
 
     //ImuSensingThread imuSensingThread;
-    //std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM1", 115200, context);
+    //std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM1", 115200, &socket);
 
     // CanSensingThread canSensingThread;
     // thread sensingthread_can(canSensingThread.run, "can0", context);

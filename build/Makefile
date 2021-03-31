@@ -188,6 +188,32 @@ sub/fast:
 	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/build
 .PHONY : sub/fast
 
+#=============================================================================
+# Target rules for targets named OpenCV
+
+# Build rule for target.
+OpenCV: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 OpenCV
+.PHONY : OpenCV
+
+# fast build rule for target.
+OpenCV/fast:
+	$(MAKE) -f test/openCv/CMakeFiles/OpenCV.dir/build.make test/openCv/CMakeFiles/OpenCV.dir/build
+.PHONY : OpenCV/fast
+
+#=============================================================================
+# Target rules for targets named HelloCV
+
+# Build rule for target.
+HelloCV: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HelloCV
+.PHONY : HelloCV
+
+# fast build rule for target.
+HelloCV/fast:
+	$(MAKE) -f test/openCv2/CMakeFiles/HelloCV.dir/build.make test/openCv2/CMakeFiles/HelloCV.dir/build
+.PHONY : HelloCV/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -229,6 +255,8 @@ help:
 	@echo "... parsing"
 	@echo "... pub"
 	@echo "... sub"
+	@echo "... OpenCV"
+	@echo "... HelloCV"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

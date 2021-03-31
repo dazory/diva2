@@ -44,6 +44,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/diva2/diva2/build/test/sensor_parsing/cmake_install.cmake")
   include("/home/diva2/diva2/build/test/zmq_filetransfer/cmake_install.cmake")
   include("/home/diva2/diva2/build/test/openCv/cmake_install.cmake")
+  include("/home/diva2/diva2/build/test/openCv2/cmake_install.cmake")
 
 endif()
 

@@ -15,4 +15,8 @@
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/pub.dir
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/sub.dir
 /home/diva2/diva2/build/test/openCv/CMakeFiles/rebuild_cache.dir
+/home/diva2/diva2/build/test/openCv/CMakeFiles/OpenCV.dir
 /home/diva2/diva2/build/test/openCv/CMakeFiles/edit_cache.dir
+/home/diva2/diva2/build/test/openCv2/CMakeFiles/rebuild_cache.dir
+/home/diva2/diva2/build/test/openCv2/CMakeFiles/HelloCV.dir
+/home/diva2/diva2/build/test/openCv2/CMakeFiles/edit_cache.dir

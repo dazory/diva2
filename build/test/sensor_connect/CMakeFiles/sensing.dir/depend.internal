@@ -7,15 +7,16 @@ test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.o
  /home/diva2/diva2/test/sensor_connect/GpsSensing.cpp
  /home/diva2/diva2/test/sensor_connect/GpsSensing.h
  /home/diva2/diva2/test/sensor_connect/GpsSensingThread.h
+ /home/diva2/diva2/test/sensor_connect/ImuSensing.cpp
  /home/diva2/diva2/test/sensor_connect/ImuSensing.h
  /home/diva2/diva2/test/sensor_connect/ImuSensingThread.h
  /home/diva2/diva2/test/sensor_connect/main.cpp
- /home/diva2/diva2/test/sensor_connect/service/Can_serial.h
- /home/diva2/diva2/test/sensor_connect/service/Linux_keyboard.h
- /home/diva2/diva2/test/sensor_connect/service/Speed_spec.h
- /home/diva2/diva2/test/sensor_connect/service/Strtok_m.h
- /home/diva2/diva2/test/sensor_connect/service/Timestamp.h
- /home/diva2/diva2/test/sensor_connect/service/zmq_helper.h
+ /home/diva2/diva2/test/service/Can_serial.h
+ /home/diva2/diva2/test/service/Linux_keyboard.h
+ /home/diva2/diva2/test/service/Speed_spec.h
+ /home/diva2/diva2/test/service/Strtok_m.h
+ /home/diva2/diva2/test/service/Timestamp.h
+ /home/diva2/diva2/test/service/zmq_helper.h
  /usr/share/c++-mscl/Boost/include/boost/assert.hpp
  /usr/share/c++-mscl/Boost/include/boost/call_traits.hpp
  /usr/share/c++-mscl/Boost/include/boost/circular_buffer.hpp

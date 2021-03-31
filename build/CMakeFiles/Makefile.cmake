@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
   "../test/openCv/CMakeLists.txt"
+  "../test/openCv2/CMakeLists.txt"
   "../test/sensor_connect/CMakeLists.txt"
   "../test/sensor_parsing/CMakeLists.txt"
   "../test/zmq/CMakeLists.txt"
@@ -59,6 +60,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "test/sensor_parsing/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq_filetransfer/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/openCv/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/openCv2/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -69,4 +71,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/sensor_parsing/CMakeFiles/parsing.dir/DependInfo.cmake"
   "test/zmq_filetransfer/CMakeFiles/pub.dir/DependInfo.cmake"
   "test/zmq_filetransfer/CMakeFiles/sub.dir/DependInfo.cmake"
+  "test/openCv/CMakeFiles/OpenCV.dir/DependInfo.cmake"
+  "test/openCv2/CMakeFiles/HelloCV.dir/DependInfo.cmake"
   )

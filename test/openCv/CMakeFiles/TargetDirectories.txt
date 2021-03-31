@@ -1,0 +1,3 @@
+/home/diva2/diva2/test/openCv/CMakeFiles/rebuild_cache.dir
+/home/diva2/diva2/test/openCv/CMakeFiles/OpenCV.dir
+/home/diva2/diva2/test/openCv/CMakeFiles/edit_cache.dir
