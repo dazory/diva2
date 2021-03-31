@@ -15,7 +15,7 @@ GpsParsingThread::GpsParsingThread(){}
 inline static zmq::message_t s_recv(zmq::socket_t & socket, int flags = 0) {
     zmq::message_t message;
     socket.recv(& message, flags);
-	std::cout << "receive: \"" << (const char*)message.data() << "\"... done." << std::endl;
+	//std::cout << "receive: \"" << (const char*)message.data() << "\"... done." << std::endl;
 
     return message;
 }
@@ -23,7 +23,7 @@ inline static zmq::message_t s_recv(zmq::socket_t & socket, int flags = 0) {
 void GpsParsingThread::run(void* context){
     zmq::socket_t gps_sub(*(zmq::context_t*)context, ZMQ_SUB);
     gps_sub.connect("tcp://localhost:5563");
-    gps_sub.setsockopt(ZMQ_SUBSCRIBE, "", 0);
+    gps_sub.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
 
    // zmq::socket_t gps_pub(context, ZMQ_PUB);
     //gps_pub.bind("tcp://localhost::5564");
@@ -36,8 +36,8 @@ void GpsParsingThread::run(void* context){
         //std::string topic = s_recv(gps_sub);         //topic받아옴
         //std::string gps_data = s_recv(gps_sub);      //topic 이후의 데이터를 저장
 
-        printf("s_recv: topic = %s  (in GpsParsingThread::run/while(1))\n",topic.c_str());
-        printf("s_recv: gps_data = %s  (in GpsParsingThread::run/while(1)\n",gps_data.c_str());
+        //printf("s_recv: topic = %s  (in GpsParsingThread::run/while(1))\n",topic.c_str());
+        //printf("s_recv: gps_data = %s  (in GpsParsingThread::run/while(1)\n",gps_data.c_str());
 
 
         //gps_data에서 $GPGGA로 시작하는 데이터를 , 를 기준으로 파싱
@@ -47,7 +47,7 @@ void GpsParsingThread::run(void* context){
         strcpy(str_buff, gps_data.c_str());
         char * tok = strtok(str_buff, ",");
 
-        if (tok != NULL && strcmp(tok, "$GPGGA") == 0) {
+        if (tok != NULL && strcmp(tok, "$GNGGA") == 0) {
             while (tok != nullptr) {
                 str_arr[str_cnt++] = string(tok);
                 tok = strtok(nullptr, ",");

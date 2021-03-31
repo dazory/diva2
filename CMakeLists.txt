@@ -32,8 +32,10 @@ link_libraries(mscl pthread GL GLU glut GLEW glfw X11 Xxf86vm Xrandr pthread Xi 
 add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 ## Use OpenCV
-#find_package(OpenCV REQUIRED)
-#include_directories(${OpenCV_INCLUDE_DIRS}) 
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS}) 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
+
 
 # 실행파일 만들기
 set(SOURCE_MAIN main.cpp)
@@ -47,3 +49,4 @@ add_subdirectory(test/zmq)
 add_subdirectory(test/sensor_connect)
 add_subdirectory(test/sensor_parsing)
 add_subdirectory(test/zmq_filetransfer)
+add_subdirectory(test/openCv)

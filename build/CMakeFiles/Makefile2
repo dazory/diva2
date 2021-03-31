@@ -356,6 +356,24 @@ clean: test/zmq_filetransfer/CMakeFiles/sub.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory test/openCv
+
+# Convenience name for "all" pass in the directory.
+test/openCv/all:
+
+.PHONY : test/openCv/all
+
+# Convenience name for "clean" pass in the directory.
+test/openCv/clean:
+
+.PHONY : test/openCv/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/openCv/preinstall:
+
+.PHONY : test/openCv/preinstall
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.
