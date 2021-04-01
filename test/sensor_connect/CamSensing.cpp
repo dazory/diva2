@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CamSensing.h"
 
 CamSensing::CamSensing()

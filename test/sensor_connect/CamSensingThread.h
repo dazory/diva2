@@ -16,6 +16,7 @@ inline static bool S_send(zmq::socket_t &publisher, zmq::message_t &data, int fl
 }
 
 class CamSensingThread{
+
 public:
     CamSensingThread();
     static void run(const int devicename, zmq::context_t *context, zmq::socket_t *publisher);
@@ -69,5 +70,6 @@ void CamSensingThread::run(const int devicename, zmq::context_t *context, zmq::s
         sleep(1);
     }
 }
+
 
 #endif //CAMSENSINGTHREAD_H_

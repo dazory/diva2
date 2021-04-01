@@ -1,7 +1,7 @@
 //#pragma once
 #ifndef CAMSENSING_H_
 #define CAMSENSING_H_
-//#include "zhelpers.hpp"
+
 #include <opencv2/opencv.hpp>
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/highgui/highgui.hpp"
@@ -14,6 +14,7 @@ using namespace std;
 class CamSensing
 {
     public:
+
     CamSensing();
     VideoCapture cap;
     Mat frame;
@@ -25,4 +26,5 @@ class CamSensing
     Timestamp ts;
     private:
 };
+
 #endif //CAMSENSING_H_
