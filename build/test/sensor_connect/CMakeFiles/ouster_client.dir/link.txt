@@ -1,0 +1,2 @@
+/usr/bin/ar qc libouster_client.a  CMakeFiles/ouster_client.dir/LidarSensing.cpp.o CMakeFiles/ouster_client.dir/main.cpp.o
+/usr/bin/ranlib libouster_client.a

@@ -110,6 +110,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake-mod
 
 
 
+
 # 실행파일 만들기
 set(SOURCE_MAIN main.cpp)
 add_executable(diva2 ${SOURCE_MAIN})                           # 생성할 실행파일 이름 지정

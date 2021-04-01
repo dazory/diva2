@@ -31,11 +31,13 @@ void ImuSensingThread::run(const char *devicename, mscl::uint32 baudrate, zmq::s
     mscl::InertialNode msclNode = imuThread.getMsclNode(devicename,baudrate);
 	printf("imu.getMsclNode (in ImuSensingThread::run)\n");
 
+    
+
     while(1){
         mscl::MipDataPackets msclPackets = msclNode.getDataPackets(500);
         printf("getDataPackets (in ImuSensingThread::run/while(1))\n");
               
-
+        
         // for(mscl::MipDataPacket msclPacket : msclPackets){
         //     int count = 0;
         //     msclPacket.descriptorSet();

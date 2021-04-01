@@ -29,6 +29,10 @@ link_directories(/usr/share/c++-mscl)
 link_libraries(mscl pthread GL GLU glut GLEW glfw X11 Xxf86vm Xrandr pthread Xi dl Xinerama Xcursor m)
 add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
+
+## Use Ouster
+
+
 # 실행파일 만들기
 set(SOURCE_SENSOR_CONNECT main.cpp)
 add_executable(sensing ${SOURCE_SENSOR_CONNECT} ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC})                           # 생성할 실행파일 이름 지정
