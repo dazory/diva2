@@ -6,7 +6,7 @@ using namespace std;
 CamParsingThread::CamParsingThread() {}
 
 
-void CamParsingThread::run(void* context) {
+void CamParsingThread::run(void* context, zmq::socket_t *pub) {
     printf("start (in CamParsingThread::run)\n");
     
     zmq::socket_t subscriber(*(zmq::context_t*)context, ZMQ_SUB);
