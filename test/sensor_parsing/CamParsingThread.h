@@ -27,7 +27,7 @@ using namespace std;
 class CamParsingThread {
 public:
 CamParsingThread();
-void run(void*);
+void run(void*, zmq::socket_t*);
 void stop();
 private:
 cv::Mat mat;
