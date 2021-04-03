@@ -8,6 +8,7 @@
 #include "CanSensingThread.h"
 #include "CamSensing.h"
 #include "CamSensingThread.h"
+#include "../service/global_name.hpp"
 
 using namespace std;
 
@@ -17,8 +18,7 @@ int main(int argc, char *argv[]){
 
     zmq::context_t context(1);
     zmq::socket_t socket(context, ZMQ_PUB);
-    const char * protocol = "tcp://*:5563";
-    socket.bind(protocol);
+    socket.bind(protocol::SENSING_PUB);
     
     //GpsSensingThread gpsSensingThread;
     //std::thread sensingthread_gps(gpsSensingThread.run, "/dev/ttyACM0", "9600", &socket);
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]){
     //thread sensingthread_cam(camSensingThread.run, 0, &context, &socket);
 
     ImuSensingThread imuSensingThread;
-    std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM1", 115200, &socket);
+    std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM0", 115200, &socket);
 
     // CanSensingThread canSensingThread;
     // thread sensingthread_can(canSensingThread.run, "can0", context);
