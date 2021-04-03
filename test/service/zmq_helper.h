@@ -5,10 +5,11 @@
 #include "opencv2/highgui/highgui.hpp"
 #include <opencv2/imgcodecs.hpp>
 
+using namespace std;
+
 enum SENSOR{SENSOR_GPS, SENSOR_IMU, SENSOR_CAN, SENSOR_CAM, SENSOR_LIDAR};
 
 inline static zmq::message_t s_recv(zmq::socket_t & socket, int flags = 0) {
-    printf("s_recv\n");
     zmq::message_t message;
     socket.recv(& message, flags);
 	std::cout << "receive: \"" << (const char*)message.data() << "\"... done." << std::endl;
@@ -19,13 +20,11 @@ inline static zmq::message_t s_recv(zmq::socket_t & socket, int flags = 0) {
 
 inline static bool s_sendmore (zmq::socket_t & publisher, zmq::message_t &data) {
     int rc = publisher.send(data, ZMQ_SNDMORE);
-    printf("rc=%d\n",rc);
     return (rc);
 }
 
 inline static bool s_send (zmq::socket_t & publisher, zmq::message_t &data, int flags = 0) {
     int rc = publisher.send(data, flags);
-    printf("rc=%d\n",rc);
     return (rc);
 }
 
@@ -39,7 +38,7 @@ inline size_t send_one(zmq::socket_t & sock, T const & t, int flags)  //!< gener
 
 
 inline static bool s_send_idx (zmq::socket_t & socket, int nSensor) {
-    string strIdx = "";
+    string strIdx;
     switch (nSensor)
     {
     case SENSOR_GPS:
@@ -87,7 +86,7 @@ inline static bool s_send_test (zmq::socket_t & socket, int nSensor) {
     memcpy(zmqData.data(), strData.c_str(), size);
     s_send(socket, zmqData);
 
-	 cout<<"zmqData = "<<(const char *)zmqData.data()<<"  (in s_send_test())"<<endl;
+	 cout<<"zmqData = "<<(const char *)zmqData.data()<<"  (in s_send_test())"<<std::endl;
 }
 
 /* image_zmq/zmq_service.hpp */

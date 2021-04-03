@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/diva2/diva2/test/zmq/main.cpp
+zmq.h
+-
+string.h
+-
+stdio.h
+-
+unistd.h
+-
+iostream
+-
+assert.h
+-
+

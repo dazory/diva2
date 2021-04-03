@@ -7,7 +7,6 @@
                 "/usr/share/c++-mscl/source",
                 "/usr/share/c++-mscl/Boost/include",
                 "/usr/include",
-                "/home/diva2/opencv/opencv-3.2.0/include",
                 "/home/diva2/develop/ouster_example-master/ouster_client"
             ],
             "defines": [],
