@@ -20,8 +20,8 @@ int main(int argc, char *argv[]){
     zmq::socket_t socket(context, ZMQ_PUB);
     socket.bind(protocol::SENSING_PUB);
     
-    //GpsSensingThread gpsSensingThread;
-    //std::thread sensingthread_gps(gpsSensingThread.run, "/dev/ttyACM0", "9600", &socket);
+    GpsSensingThread gpsSensingThread;
+    std::thread sensingthread_gps(gpsSensingThread.run, "/dev/ttyACM0", "9600", &socket);
 
     //CamSensingThread camSensingThread;
     //thread sensingthread_cam(camSensingThread.run, 0, &context, &socket);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]){
     // thread sensingthread_can(canSensingThread.run, "can0", context);
 
     //sensingthread_cam.join();
-    //sensingthread_gps.join();
-    sensingthread_imu.join();
+    sensingthread_gps.join();
+    //sensingthread_imu.join();
     // sensingthread_can.join();
 }

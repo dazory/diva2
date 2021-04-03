@@ -1,4 +1,5 @@
 #include "GpsParsingThread.h"
+#include "../service/zmq_helper.h"
 
 using namespace std;
 
@@ -12,21 +13,18 @@ GpsParsingThread::GpsParsingThread(){}
 //     return std::string(static_cast < char *> (message.data()), message.size());
 // }
 
-inline static zmq::message_t s_recv(zmq::socket_t & socket, int flags = 0) {
-    zmq::message_t message;
-    socket.recv(& message, flags);
-	//std::cout << "receive: \"" << (const char*)message.data() << "\"... done." << std::endl;
+// inline static zmq::message_t s_recv(zmq::socket_t & socket, int flags = 0) {
+//     zmq::message_t message;
+//     socket.recv(& message, flags);
+// 	//std::cout << "receive: \"" << (const char*)message.data() << "\"... done." << std::endl;
 
-    return message;
-}
+//     return message;
+// }
 
-void GpsParsingThread::run(void* context){
+void GpsParsingThread::run(void* context, zmq::socket_t* pub){
     zmq::socket_t gps_sub(*(zmq::context_t*)context, ZMQ_SUB);
     gps_sub.connect("tcp://localhost:5563");
     gps_sub.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
-
-   // zmq::socket_t gps_pub(context, ZMQ_PUB);
-    //gps_pub.bind("tcp://localhost::5564");
 
     while (!stop_flag) {
         zmq::message_t msgtopic = s_recv(gps_sub);
@@ -40,7 +38,7 @@ void GpsParsingThread::run(void* context){
         //printf("s_recv: gps_data = %s  (in GpsParsingThread::run/while(1)\n",gps_data.c_str());
 
 
-        //gps_data에서 $GPGGA로 시작하는 데이터를 , 를 기준으로 파싱
+        //gps_data에서 $GNGGA로 시작하는 데이터를 , 를 기준으로 파싱
         string str_arr[1000];
         int str_cnt = 0;
         char str_buff[100];
@@ -66,9 +64,9 @@ void GpsParsingThread::run(void* context){
             }
 
             //Qt로 전송
-           // s_sendmore(gps_pub, "GPS");
-            //s_sendmore(gps_pub, latitude);
-            //s_send(gps_pub, longtitude);
+            s_send_idx(*pub, SENSOR_GPS);
+            ss_sendmore(*pub, latitude);
+            ss_send(*pub, longtitude);
         }
         
     }
