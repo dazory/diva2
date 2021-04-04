@@ -19,27 +19,25 @@
 #include "../service/Strtok_m.h"
 #include "../service/Can_serial.h"
 #include "../service/Speed_spec.h"
+#include "../service/ImuPacket.h"
 #include "mscl/mscl.h"
+
 
 using namespace std;
 
 class ImuSensing{
    public:
-        ImuSensing();
-        mscl::InertialNode getMsclNode(const char *devicename, mscl::uint32 baudrate);
-        //float gyrox, gyroy, gyroz, magx, magy, magz, accelx, accely, accelz;
-        Timestamp ts;
-         bool stop_flag = false;
-         string dir;
-         float accel_x = 0.1;
-         float accel_y = 0.1;
-         float accel_z = 0.1;
-
-         const char * mtime;
-         char fp[526];
-         string path;
-         ofstream writeFile;
+      ImuSensing();
+      mscl::InertialNode getMsclNode(const char *devicename, mscl::uint32 baudrate);
+      void read_imuPacket(int enumIMU, mscl::MipDataPoint dataPoint);
+      void displayImuPacket();
+      size_t getImuPacketSize();
+      size_t getImuPacketsSize();
+      ImuPacket getImuPacket();
    private:
+      ImuPacket mImuPacket;
+      vector<ImuPacket> mImuPackets;
+      
 
 
 };
