@@ -44,7 +44,6 @@ void ImuSensingThread::run(const char *devicename, mscl::uint32 baudrate, zmq::s
     while(1){
         mscl::MipDataPackets msclPackets = msclNode.getDataPackets(500);
         printf("getDataPackets (in ImuSensingThread::run/while(1))\n");
-        
         ImuPacket mImuPacket;
         //IMUdata temp;
 
@@ -177,7 +176,7 @@ void ImuSensingThread::run(const char *devicename, mscl::uint32 baudrate, zmq::s
         // printf("size: %d\n",sizeof(c_msg));
         // memcpy(zmq_msg_data (&msg), &c_msg, sizeof(c_msg));
         // printf("message make!\n");
-
-        sleep (1);
+        //sleep (1);
+        usleep(50);
     }
 }

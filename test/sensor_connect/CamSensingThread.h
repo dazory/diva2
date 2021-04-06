@@ -51,6 +51,9 @@ void CamSensingThread::run(const int devicename, zmq::context_t *context, zmq::s
         s_send_idx(*publisher,SENSOR_CAM);
         printf("sendmore: CAM (in CamSensingThread::run())\n");
 
+        //bgr -> rgb 하고 좌우반전
+        cv::cvtColor(frame, frame, cv::COLOR_BGR2RGB);
+        flip(frame, frame, 1);
         // send the capture image through socket
         int32_t info[3];
         info[0]=(int32_t)frame.rows;
@@ -66,8 +69,7 @@ void CamSensingThread::run(const int devicename, zmq::context_t *context, zmq::s
         
         if (publisher->send(msg2))
             printf("complete to send! (in CamSensingThread::run())\n");
-
-        sleep(1);
+\
     }
 }
 

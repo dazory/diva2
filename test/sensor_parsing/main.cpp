@@ -9,7 +9,7 @@ int main(int argc, char * argv[]){
 
     //Qt로 보내기 위한 소켓
     zmq::socket_t pub(context, ZMQ_PUB);
-    pub.bind("tcp://127.0.0.1:5564");
+    pub.bind("tcp://127.0.0.1:5563");
 
 
     GpsParsingThread gps_parsing_thread;
@@ -19,11 +19,11 @@ int main(int argc, char * argv[]){
     //CamParsingThread cam_parsing_thread;
     //thread cam_parsing(&CamParsingThread::run, &cam_parsing_thread, &context);
 
-    ImuParsingThread imu_parsing_thread;
-    thread imu_parsing(&ImuParsingThread::run, &imu_parsing_thread, &context);
+    //ImuParsingThread imu_parsing_thread;
+    //thread imu_parsing(&ImuParsingThread::run, &imu_parsing_thread, &context);
 
-    //gps_parsing.join();
-    imu_parsing.join();
+    gps_parsing.join();
+    //imu_parsing.join();
 
     return 0;
 }
