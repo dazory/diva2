@@ -27,6 +27,7 @@ void GpsParsingThread::run(void* context, zmq::socket_t* pub){
     
     zmq::socket_t gps_sub(*(zmq::context_t*)context, ZMQ_SUB);
     gps_sub.connect(protocol::SENSING_SUB);
+
     gps_sub.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
 
     while (!stop_flag) {

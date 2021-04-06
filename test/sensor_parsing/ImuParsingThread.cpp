@@ -3,10 +3,10 @@
 
 using namespace std;
 
-class IMUdata {
-public:
-    float accelx, accely, accelz;
-};
+// class IMUdata {
+// public:
+//     float accelx, accely, accelz;
+// };
 
 ImuParsingThread::ImuParsingThread(){}
 

@@ -7,6 +7,7 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include <opencv2/imgcodecs.hpp>
+#include "zmq_helper.h"
 
 using namespace cv;
 using namespace std;
@@ -27,7 +28,6 @@ public:
     void read(VideoCapture cap);
     int getSizeofImage();
     CamPacket getCamPacket(zmq::message_t zmqData);
-private:
 
 };
 

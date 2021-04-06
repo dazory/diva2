@@ -19,12 +19,13 @@ int main(int argc, char * argv[]){
     //CamParsingThread cam_parsing_thread;
     //thread cam_parsing(&CamParsingThread::run, &cam_parsing_thread, &context, &pub);
 
-    ImuParsingThread imu_parsing_thread;
-    thread imu_parsing(&ImuParsingThread::run, &imu_parsing_thread, &context);
+    //ImuParsingThread imu_parsing_thread;
+    //thread imu_parsing(&ImuParsingThread::run, &imu_parsing_thread, &context);
 
     // gps_parsing.join();
     //cam_parsing.join();
-    imu_parsing.join();
+    // imu_parsing.join();
+
 
     return 0;
 }

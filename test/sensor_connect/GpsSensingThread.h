@@ -41,6 +41,7 @@ void GpsSensingThread::run(zmq::socket_t *socket){
 		cs.init_serial(iDev,speed);
 		printf("GPS device connect setting complete! (in GpsSensingThread::run)\n");
 
+
 		lk.init_keyboard();
 		printf("keyboard initialize (in GpsSensingThread::run)\n");
 	}	

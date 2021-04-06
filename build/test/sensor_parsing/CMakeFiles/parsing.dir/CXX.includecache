@@ -163,6 +163,8 @@ opencv2/highgui/highgui.hpp
 /home/diva2/diva2/test/service/opencv2/highgui/highgui.hpp
 opencv2/imgcodecs.hpp
 -
+zmq_helper.h
+/home/diva2/diva2/test/service/zmq_helper.h
 
 /home/diva2/diva2/test/service/global_name.hpp
 string
