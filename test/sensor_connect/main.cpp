@@ -11,29 +11,35 @@
 #include "../service/global_name.hpp"
 
 using namespace std;
+// 1 = REAL, 2 = Test, 0 = Not used
+int USE_GPS =0; int USE_IMU =0; int USE_CAM =0; int USE_LIDAR =0; int USE_CAN =0;
+map<string, tuple<string, int>> SensorInfoMap;
 
 int main(int argc, char *argv[]){
 
-    //void *context = zmq_ctx_new();
-
+    // sudo chmod 777 /dev/ttyACM1
+    /* Sensing Process */
     zmq::context_t context(1);
     zmq::socket_t socket(context, ZMQ_PUB);
     socket.bind(protocol::SENSING_PUB);
     
+    USE_GPS = 2;
     GpsSensingThread gpsSensingThread;
-    std::thread sensingthread_gps(gpsSensingThread.run, "/dev/ttyACM0", "9600", &socket);
+    std::thread sensingthread_gps(gpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    
+    USE_CAM=0;
+    CamSensingThread camSensingThread;
+    thread sensingthread_cam(camSensingThread.run, 0, &context, &socket);
 
-    //CamSensingThread camSensingThread;
-    //thread sensingthread_cam(camSensingThread.run, 0, &context, &socket);
-
-    ImuSensingThread imuSensingThread;
-    std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM0", 115200, &socket);
+    // USE_IMU=1;
+    // ImuSensingThread imuSensingThread;
+    // std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM0", 115200, &socket);
 
     // CanSensingThread canSensingThread;
     // thread sensingthread_can(canSensingThread.run, "can0", context);
 
-    //sensingthread_cam.join();
+    sensingthread_cam.join();
     sensingthread_gps.join();
-    //sensingthread_imu.join();
+    // sensingthread_imu.join();
     // sensingthread_can.join();
 }

@@ -1,5 +1,6 @@
 #include "CamParsingThread.h"
 #include "../service/zmq_helper.h"
+#include "../service/cam_packet.h"
 
 using namespace std;
 
@@ -19,10 +20,17 @@ void CamParsingThread::run(void* context, zmq::socket_t *pub) {
         printf("start in while(1) (in CamParsingThread::run)\n");
         
         // read topic
-        zmq::message_t msgtopic = s_recv(subscriber);         //topic받아옴 -> CAM 만 받음
-        string topic = (const char *)msgtopic.data();
-        printf("topic= %s\n",topic);
+        // zmq::message_t msgtopic = s_recv(subscriber);         //topic받아옴 -> CAM 만 받음
+        // string topic = (const char *)msgtopic.data();
+        // printf("topic= %s\n",topic);
 	
+        zmq::message_t msgData = s_recv(subscriber);
+        CamPacket mCamPacket;
+        memcpy(&mCamPacket, msgData.data(), msgData.size());
+        printf("===== CAM ====\n");
+        mCamPacket.display();
+
+        /*
         if(topic=="CAM"){
             int cnt = 0;
             int rows, cols, type;
@@ -51,7 +59,8 @@ void CamParsingThread::run(void* context, zmq::socket_t *pub) {
 
             cv::imshow("receive_image", img);
             cv::waitKey(0);
-        }        
+        }
+        */        
     }
 }
 

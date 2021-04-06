@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/diva2/diva2/test/zmq_filetransfer/sub.cpp
+zmq.hpp
+-
+iostream
+-
+iomanip
+-
+string
+-
+sstream
+-
+time.h
+-
+assert.h
+-
+stdlib.h
+-
+stdio.h
+-
+stdarg.h
+-
+signal.h
+-
+sys/time.h
+-
+unistd.h
+-
+zmq_helper.h
+/home/diva2/diva2/test/zmq_filetransfer/zmq_helper.h
+
+/home/diva2/diva2/test/zmq_filetransfer/zmq_helper.h
+zmq.hpp
+-
+

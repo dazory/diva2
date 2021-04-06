@@ -1,5 +1,7 @@
 #include "GpsParsingThread.h"
 #include "../service/zmq_helper.h"
+#include "../service/global_name.hpp"
+#include "../service/gps_packet.h"
 
 using namespace std;
 
@@ -22,13 +24,22 @@ GpsParsingThread::GpsParsingThread(){}
 // }
 
 void GpsParsingThread::run(void* context, zmq::socket_t* pub){
+    
     zmq::socket_t gps_sub(*(zmq::context_t*)context, ZMQ_SUB);
-    gps_sub.connect("tcp://localhost:5563");
+    gps_sub.connect(protocol::SENSING_SUB);
     gps_sub.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
 
     while (!stop_flag) {
         zmq::message_t msgtopic = s_recv(gps_sub);
         string topic = (const char *)msgtopic.data();
+        
+        zmq::message_t msggps_data = s_recv(gps_sub);
+        GpsPacket mGpsPacket;
+        memcpy(&mGpsPacket, msggps_data.data(), msggps_data.size());
+        printf("=========== GPS ===========\n");
+        mGpsPacket.displayGpsPacket();
+        printf("===========================\n");
+        /*
         zmq::message_t msggps_data = s_recv(gps_sub);
         string gps_data = (const char *)msggps_data.data();
         //std::string topic = s_recv(gps_sub);         //topic받아옴
@@ -37,7 +48,7 @@ void GpsParsingThread::run(void* context, zmq::socket_t* pub){
         //printf("s_recv: topic = %s  (in GpsParsingThread::run/while(1))\n",topic.c_str());
         //printf("s_recv: gps_data = %s  (in GpsParsingThread::run/while(1)\n",gps_data.c_str());
 
-
+        
         //gps_data에서 $GNGGA로 시작하는 데이터를 , 를 기준으로 파싱
         string str_arr[1000];
         int str_cnt = 0;
@@ -68,6 +79,8 @@ void GpsParsingThread::run(void* context, zmq::socket_t* pub){
             ss_sendmore(*pub, latitude);
             ss_send(*pub, longtitude);
         }
+        */
+
         
     }
 }

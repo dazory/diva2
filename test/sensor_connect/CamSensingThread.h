@@ -2,18 +2,9 @@
 #ifndef CAMSENSINGTHREAD_H_
 #define CAMSENSINGTHREAD_H_
 #include "CamSensing.cpp"
+#include "../service/cam_packet.h"
 
-inline static bool S_sendmore(zmq::socket_t &publisher, const void *data)
-{
-    bool rc = publisher.send(data, ZMQ_SNDMORE);
-    return (rc);
-}
-
-inline static bool S_send(zmq::socket_t &publisher, zmq::message_t &data, int flags = 0)
-{
-    bool rc = publisher.send(data, flags);
-    return (rc);
-}
+extern int USE_CAM;
 
 class CamSensingThread{
 
@@ -32,12 +23,40 @@ void my_free(void *data, void *hint){
 void CamSensingThread::run(const int devicename, zmq::context_t *context, zmq::socket_t *publisher){
 
     CamSensing camThread;
-    int open = camThread.initialize(devicename);
-    printf("cam open[%d] (in CamSensingThread::run())\n");
+    int open;
+    if(USE_CAM==1){
+        open = camThread.initialize(devicename);
+        printf("cam open[%d] (in CamSensingThread::run())\n");  
+    } 
 
     vector<uchar> buffer;
     while (open)
     {
+        if(USE_CAM==1){
+            s_send_idx(*publisher, SENSOR_CAM);
+            printf("sendmore: CAM (in CamSensingThread::run())\n");
+            
+            CamPacket mCamPacket;
+            mCamPacket.read(camThread.cap);
+            // mCamPacket.display();
+
+            size_t size = sizeof(mCamPacket);
+            zmq::message_t zmqData(size);
+            memcpy(zmqData.data(), &mCamPacket, size);
+            
+            //publisher->send(zmq);
+            s_send(*publisher,zmqData);
+            
+            /* TEST */
+            printf("TEST!\n");
+            CamPacket tmpCamPacket;
+            printf("size=%d == %d\n",zmqData.size(), size);
+            memcpy(&tmpCamPacket, zmqData.data(), zmqData.size());
+            // tmpCamPacket.image = imdecode(Mat(tmpCamPacket.img_buff),CV_LOAD_IMAGE_COLOR);
+            tmpCamPacket.display();
+            
+        }
+        /*
         camThread.cap.read(camThread.frame);
         printf("read cap (in CamSensingThread::run())\n");
 
@@ -66,6 +85,8 @@ void CamSensingThread::run(const int devicename, zmq::context_t *context, zmq::s
         
         if (publisher->send(msg2))
             printf("complete to send! (in CamSensingThread::run())\n");
+
+        */
 
         sleep(1);
     }

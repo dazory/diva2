@@ -176,6 +176,19 @@ senderTocloud/fast:
 .PHONY : senderTocloud/fast
 
 #=============================================================================
+# Target rules for targets named receiverFrommobile
+
+# Build rule for target.
+receiverFrommobile: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 receiverFrommobile
+.PHONY : receiverFrommobile
+
+# fast build rule for target.
+receiverFrommobile/fast:
+	$(MAKE) -f test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build.make test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build
+.PHONY : receiverFrommobile/fast
+
+#=============================================================================
 # Target rules for targets named pub
 
 # Build rule for target.
@@ -241,6 +254,7 @@ help:
 	@echo "... sensing"
 	@echo "... parsing"
 	@echo "... senderTocloud"
+	@echo "... receiverFrommobile"
 	@echo "... pub"
 	@echo "... sub"
 	@echo "... main.o"

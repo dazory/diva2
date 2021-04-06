@@ -8,23 +8,16 @@
     "echoCommand": true,
     "presentation" : { "reveal": "always" },
     "tasks": [
-          //C++ 컴파일
-          {
+        {
             "label": "compile for C++",
             "command": "cd ${fileDirname} && cmake . && make",
             "group": "build",
-
-            //컴파일시 에러를 편집기에 반영
-            //참고:   https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
-
             "problemMatcher": {
                 "fileLocation": [
                     "relative",
                     "${workspaceRoot}"
                 ],
                 "pattern": {
-                    // The regular expression. 
-                   //Example to match: helloWorld.c:5:3: warning: implicit declaration of function 'prinft'
                     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
                     "file": 1,
                     "line": 2,
@@ -34,18 +27,30 @@
                 }
             }
         },
-        // 바이너리 실행(Ubuntu)
-
         {
-
             "label": "execute",
-
             "command": "cd ${fileDirname} && ./${workspaceFolderBasename} ",
-
             "group": "test"
-
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cpp 활성 파일 빌드",
+            "command": "/usr/bin/cpp",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "컴파일러: /usr/bin/cpp"
         }
-
     ]
 }
 

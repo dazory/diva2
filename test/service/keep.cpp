@@ -76,3 +76,17 @@ switch(ImuMap[cName]){
                         break;
                 }
 */
+/* GpsSenderThread.cpp  : generate a file with timeStamp
+
+    Timestamp mTimestamp;
+    string fname = "/home/diva2/GPS_log/";
+    // string now = mTimestamp.getMilliTime();
+    string now = "1234";
+    fname.append(now); fname.append(".txt");
+    // ofstream file;
+    // file.open(fname.c_str(), ios::out | ios::app | ios::binary);
+    FILE *file = fopen(fname.c_str(), "a+"); // 읽기/쓰기 모드로 열기
+    fseek(file, 0, SEEK_END); // 끝으로 가기
+    printf("file open = %s (in GpsSenderThread::run)\n", fname.c_str());
+
+*/

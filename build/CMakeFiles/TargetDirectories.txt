@@ -13,6 +13,9 @@
 /home/diva2/diva2/build/test/sender_toCloud/CMakeFiles/rebuild_cache.dir
 /home/diva2/diva2/build/test/sender_toCloud/CMakeFiles/senderTocloud.dir
 /home/diva2/diva2/build/test/sender_toCloud/CMakeFiles/edit_cache.dir
+/home/diva2/diva2/build/test/receiver_fromMobile/CMakeFiles/rebuild_cache.dir
+/home/diva2/diva2/build/test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir
+/home/diva2/diva2/build/test/receiver_fromMobile/CMakeFiles/edit_cache.dir
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/rebuild_cache.dir
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/edit_cache.dir
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/pub.dir

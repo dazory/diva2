@@ -25,18 +25,13 @@ void ImuParsingThread::run(void *context) {
         zmq::message_t imu_data;
         imu_sub.recv(& imu_data);
         
-        printf("imu.recv (in ImuParsingThread::run)\n" );
         memcpy(&mImuPacket, imu_data.data(), imu_data.size());
         //packets = *(mscl::MipDataPackets *)imu_data.data(); //MipDataPackets를 받아 저장
-        printf("imu.packets (in ImuParsingThread::run)\n");
-        IMUdata temp;
         
-        printf("Accel (X,Y,Z) = (%.2f, %.2f, %.2f)\n",mImuPacket.scaledAccelX,mImuPacket.scaledAccelY,mImuPacket.scaledAccelZ );
-        printf("Gyro (X,Y,Z) = (%.2f, %.2f, %.2f)\n",mImuPacket.scaledGyroX,mImuPacket.scaledGyroY,mImuPacket.scaledGyroZ );
-        printf("Mag (X,Y,Z) = (%.2f, %.2f, %.2f)\n",mImuPacket.scaledMagX,mImuPacket.scaledMagY,mImuPacket.scaledMagZ );
-        printf("est (Roll,Pitch,Yaw) = (%.2f, %.2f, %.2f)\n",mImuPacket.estRoll,mImuPacket.estPitch,mImuPacket.estYaw );
-        printf("estUncert (Roll,Pitch,Yaw) = (%.2f, %.2f, %.2f)\n",mImuPacket.estRollUncert,mImuPacket.estPitchUncert,mImuPacket.estYawUncert );
-            
+        printf("=========== 데이터 수신 ===========\n");
+        mImuPacket.display();
+        printf("==================================\n");
+         
 
 
 
