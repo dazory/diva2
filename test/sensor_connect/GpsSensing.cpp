@@ -15,13 +15,13 @@ Speed_spec speeds[] = {
 };
 
 GpsSensing::GpsSensing(){
-	
+	mGpsPacket = GpsPacket();
 }
 
-int GpsSensing::initialize(const char *devname){
+int GpsSensing::initialize(string devname){ //const char *devname
 	printf("start! (in GpsSensing::initialize)\n");
 
-	const char *devicename = devname;
+	const char *devicename = devname.c_str();
 	int iDev = open(devicename, O_RDWR | O_NOCTTY);
 	if(0>iDev){
 		printf("(ERROR) can't open the gps device with devicename(%s) (in GpsSensing::initialize)\n", devicename);
@@ -47,4 +47,8 @@ int GpsSensing::getBaudrate(const char * baudrate){
 
 	printf("finish! (in GpsSensing::getBaudrate)\n");
     return speed;
+}
+
+GpsPacket GpsSensing::getGpsPacket(){
+	return mGpsPacket;
 }

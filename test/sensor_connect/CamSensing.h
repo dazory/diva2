@@ -8,22 +8,30 @@
 #include <opencv2/imgcodecs.hpp>
 #include <stdint.h>
 #include <iostream>
+
 #include "../service/Timestamp.h"
+#include "../service/cam_packet.h"
+
 using namespace cv;
 using namespace std;
 class CamSensing
 {
-    public:
+public:
 
     CamSensing();
+
+    /* DATA */
     VideoCapture cap;
     Mat frame;
     vector<int> Compression_params;
-    bool initialize(const int devicename); //0
-    //bool initialize(const char *devicename); // /dev/tty/ACM0
     string dir;
     string path;
     Timestamp ts;
+
+    /* FUNCTIONS */
+    bool initialize(const int devicename); //0
+    //bool initialize(const char *devicename); // /dev/tty/ACM0
+    
     private:
 };
 

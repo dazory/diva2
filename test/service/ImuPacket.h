@@ -1,15 +1,21 @@
 class ImuPacket {
 public:
     ImuPacket();
+
+    /* DATA */
+    time_t time;
     float scaledAccelX, scaledAccelY, scaledAccelZ;
     float scaledGyroX, scaledGyroY, scaledGyroZ;
     float scaledMagX, scaledMagY, scaledMagZ;
     float estRoll, estPitch, estYaw;
     float estRollUncert, estPitchUncert, estYawUncert;
 
+    /* FUNCTION */
+    void display();
 };
 
 ImuPacket::ImuPacket(){
+    time = NULL;
     scaledAccelX=0;  scaledAccelY=0; scaledAccelZ=0;
     scaledGyroX=0; scaledGyroY=0; scaledGyroZ=0;
     scaledMagX=0; scaledMagY=0; scaledMagZ=0;
@@ -41,4 +47,17 @@ void Init(){
     ImuMap["estYawUncert"] = IMU_ESTYAW_UNCERT;
 
     ImuMap[""] = IMU_EXCEPTION;
+}
+
+void ImuPacket::display(){
+    printf("Accel (X,Y,Z) = (%.2f, %.2f, %.2f)\n",scaledAccelX,scaledAccelY,scaledAccelZ );
+    printf("Gyro (X,Y,Z) = (%.2f, %.2f, %.2f)\n",scaledGyroX,scaledGyroY,scaledGyroZ );
+    printf("Mag (X,Y,Z) = (%.2f, %.2f, %.2f)\n",scaledMagX,scaledMagY,scaledMagZ );
+    printf("est (Roll,Pitch,Yaw) = (%.2f, %.2f, %.2f)\n",estRoll,estPitch,estYaw );
+    printf("estUncert (Roll,Pitch,Yaw) = (%.2f, %.2f, %.2f)\n",estRollUncert,estPitchUncert,estYawUncert );
+    // printf("Accel (X,Y,Z) = (%.2f, %.2f, %.2f)\n",mImuPacket.scaledAccelX,mImuPacket.scaledAccelY,mImuPacket.scaledAccelZ );
+    // printf("Gyro (X,Y,Z) = (%.2f, %.2f, %.2f)\n",mImuPacket.scaledGyroX,mImuPacket.scaledGyroY,mImuPacket.scaledGyroZ );
+    // printf("Mag (X,Y,Z) = (%.2f, %.2f, %.2f)\n",mImuPacket.scaledMagX,mImuPacket.scaledMagY,mImuPacket.scaledMagZ );
+    // printf("est (Roll,Pitch,Yaw) = (%.2f, %.2f, %.2f)\n",mImuPacket.estRoll,mImuPacket.estPitch,mImuPacket.estYaw );
+    // printf("estUncert (Roll,Pitch,Yaw) = (%.2f, %.2f, %.2f)\n",mImuPacket.estRollUncert,mImuPacket.estPitchUncert,mImuPacket.estYawUncert );       
 }

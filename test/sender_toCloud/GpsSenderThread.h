@@ -9,7 +9,7 @@ using namespace std;
 class GpsSenderThread{
     public:
         GpsSenderThread();
-        void run(void *contextSub, zmq::socket_t *socketPub);
+        void run(void *contextSub, zmq::socket_t *socketReq);
         void stop();
     private:
         bool stop_flag=false;

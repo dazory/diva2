@@ -4,7 +4,7 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include <opencv2/imgcodecs.hpp>
-
+#include "global_name.hpp"
 using namespace std;
 
 enum SENSOR{SENSOR_GPS, SENSOR_IMU, SENSOR_CAN, SENSOR_CAM, SENSOR_LIDAR};
@@ -12,22 +12,29 @@ enum SENSOR{SENSOR_GPS, SENSOR_IMU, SENSOR_CAN, SENSOR_CAM, SENSOR_LIDAR};
 inline static zmq::message_t s_recv(zmq::socket_t & socket, int flags = 0) {
     zmq::message_t message;
     socket.recv(& message, flags);
-	std::cout << "receive: \"" << (const char*)message.data() << "\"... done." << std::endl;
-    
+	//std::cout << "receive: \"" << (const char*)message.data() << "\"... done." << std::endl;
     return message;
 }
 
 
-inline static bool s_sendmore (zmq::socket_t & publisher, zmq::message_t &data) {
-    int rc = publisher.send(data, ZMQ_SNDMORE);
+inline static bool s_sendmore (zmq::socket_t & socket, zmq::message_t &data) {
+    int rc = socket.send(data, ZMQ_SNDMORE);
     return (rc);
 }
 
-inline static bool s_send (zmq::socket_t & publisher, zmq::message_t &data, int flags = 0) {
-    int rc = publisher.send(data, flags);
+inline static bool s_send (zmq::socket_t & socket, zmq::message_t &data, int flags = 0) {
+    int rc = socket.send(data, flags);
     return (rc);
 }
 
+
+inline static bool ss_send (zmq::message_t &data, int flags = 0) {
+    zmq::context_t context(1);
+    zmq::socket_t socket(context, ZMQ_REP);
+    socket.connect(protocol::SENDER_TOCLOUD_REQ_TEST);
+    int rc = socket.send(data, flags);
+    return (rc);
+}
 
 /* 참고: https://github.com/sansajn/remoteplayer/blob/f4c2abe030758951c2018f44c74039940cfbc2bd/rplay/libs/zmqu/send.hpp */
 template <typename T>
@@ -60,7 +67,7 @@ inline static bool s_send_idx (zmq::socket_t & socket, int nSensor) {
     memcpy(zmqIdx.data(), strIdx.c_str(), size);
     s_sendmore(socket, zmqIdx);
 
-	 cout<<"zmqIdx = "<<(const char *)zmqIdx.data()<<"  (in s_send_idx())"<<endl;
+	// cout<<"zmqIdx = "<<(const char *)zmqIdx.data()<<"  (in s_send_idx())"<<endl;
 }
 
 inline static bool s_send_test (zmq::socket_t & socket, int nSensor) {

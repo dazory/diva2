@@ -19,15 +19,18 @@
 #include "../service/Strtok_m.h"
 #include "../service/Can_serial.h"
 #include "../service/Speed_spec.h"
+#include "../service/gps_packet.h"
 
 using namespace std;
 
 class GpsSensing{
    public:
       GpsSensing();
-      int initialize(const char *devicename);
+      int initialize(string devicename); //const char *
       int getBaudrate(const char *baudrate);
+      GpsPacket getGpsPacket();
    private:
+      GpsPacket mGpsPacket;
 
 
 };
