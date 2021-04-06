@@ -152,6 +152,33 @@ GpsSenderThread.cpp.s:
 	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.s
 .PHONY : GpsSenderThread.cpp.s
 
+ImuSenderThread.o: ImuSenderThread.cpp.o
+
+.PHONY : ImuSenderThread.o
+
+# target to build an object file
+ImuSenderThread.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o
+.PHONY : ImuSenderThread.cpp.o
+
+ImuSenderThread.i: ImuSenderThread.cpp.i
+
+.PHONY : ImuSenderThread.i
+
+# target to preprocess a source file
+ImuSenderThread.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.i
+.PHONY : ImuSenderThread.cpp.i
+
+ImuSenderThread.s: ImuSenderThread.cpp.s
+
+.PHONY : ImuSenderThread.s
+
+# target to generate assembly for a file
+ImuSenderThread.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.s
+.PHONY : ImuSenderThread.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -191,6 +218,9 @@ help:
 	@echo "... GpsSenderThread.o"
 	@echo "... GpsSenderThread.i"
 	@echo "... GpsSenderThread.s"
+	@echo "... ImuSenderThread.o"
+	@echo "... ImuSenderThread.i"
+	@echo "... ImuSenderThread.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

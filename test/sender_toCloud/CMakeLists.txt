@@ -34,7 +34,7 @@ add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 
 # 실행파일 만들기
-set(SOURCE_SENDER_TOCLOUD main.cpp GpsSenderThread.cpp)
+set(SOURCE_SENDER_TOCLOUD main.cpp GpsSenderThread.cpp ImuSenderThread.cpp)
 add_executable(senderTocloud ${SOURCE_SENDER_TOCLOUD} ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})                           # 생성할 실행파일 이름 지정
 target_include_directories(senderTocloud PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives
 target_link_libraries(senderTocloud PUBLIC ${ZeroMQ_LIBRARY} ${OpenCV_LIBS} 

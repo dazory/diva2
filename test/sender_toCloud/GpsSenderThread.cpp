@@ -34,7 +34,7 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq){
         cout<<"msgtopic.data:     "<<msgtopic.data()<<endl;
 
         zmq::message_t msggps_data = s_recv(socketSub);
-        cout<<"&msggps_data"<<&msggps_data<<endl;
+        cout<<"&msggps_data:      "<<&msggps_data<<endl;
         cout<<"msggps_data.data:  "<<msggps_data.data()<<endl;
 
         GpsPacket *mGpsPacket = new GpsPacket();

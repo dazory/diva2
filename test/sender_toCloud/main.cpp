@@ -1,5 +1,6 @@
 #pragma once
 #include "GpsSenderThread.h"
+#include "ImuSenderThread.h"
 #include "../service/global_name.hpp"
 #include <thread> 
 
@@ -18,9 +19,13 @@ int main(int argc, char *argv[]){
     printf("sub context generated (in main)\n");
 
     // GPS
-    GpsSenderThread mGpsSenderThread;
-    thread gpsSenderThread(&GpsSenderThread::run, &mGpsSenderThread, &contextSub, &socketReq);
-    gpsSenderThread.join();
+    // GpsSenderThread mGpsSenderThread;
+    // thread gpsSenderThread(&GpsSenderThread::run, &mGpsSenderThread, &contextSub, &socketReq);
+    // gpsSenderThread.join();
 
+    /*IMU*/
+    ImuSenderThread mImuSenderThread;
+    thread imuSenderThread(&ImuSenderThread::run, &mImuSenderThread, &contextSub, &socketReq);
+    imuSenderThread.join();
 
 }

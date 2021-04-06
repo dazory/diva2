@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp" "/home/diva2/diva2/build/test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o"
+  "/home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp" "/home/diva2/diva2/build/test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o"
   "/home/diva2/diva2/test/sender_toCloud/main.cpp" "/home/diva2/diva2/build/test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/senderTocloud.dir/main.cpp.o"
   "CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o"
+  "CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o"
   "senderTocloud.pdb"
   "senderTocloud"
 )
