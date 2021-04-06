@@ -23,7 +23,7 @@ GpsParsingThread::GpsParsingThread(){}
 
 void GpsParsingThread::run(void* context, zmq::socket_t* pub){
     zmq::socket_t gps_sub(*(zmq::context_t*)context, ZMQ_SUB);
-    gps_sub.connect("tcp://localhost:5563");
+    gps_sub.connect("tcp://localhost:5562");
     gps_sub.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
 
     while (!stop_flag) {

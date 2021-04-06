@@ -18,7 +18,7 @@ int main(int argc, char *argv[]){
 
     zmq::context_t context(1);
     zmq::socket_t socket(context, ZMQ_PUB);
-    socket.bind(protocol::SENSING_PUB);
+    socket.bind("tcp://127.0.0.1:5564");
     
     GpsSensingThread gpsSensingThread;
     std::thread sensingthread_gps(gpsSensingThread.run, "/dev/ttyACM0", "9600", &socket);
@@ -26,8 +26,8 @@ int main(int argc, char *argv[]){
     //CamSensingThread camSensingThread;
     //thread sensingthread_cam(camSensingThread.run, 0, &context, &socket);
 
-    ImuSensingThread imuSensingThread;
-    std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM0", 115200, &socket);
+    //ImuSensingThread imuSensingThread;
+    //std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM0", 115200, &socket);
 
     // CanSensingThread canSensingThread;
     // thread sensingthread_can(canSensingThread.run, "can0", context);
