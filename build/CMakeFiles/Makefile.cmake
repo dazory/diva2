@@ -15,6 +15,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../test/sender_toCloud/CMakeLists.txt"
   "../test/sensor_connect/CMakeLists.txt"
   "../test/sensor_parsing/CMakeLists.txt"
+  "../test/socketCan/CMakeLists.txt"
   "../test/zmq/CMakeLists.txt"
   "../test/zmq_filetransfer/CMakeLists.txt"
   "/usr/share/OpenCV/OpenCVConfig-version.cmake"
@@ -39,6 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.10/Modules/FindPkgConfig.cmake"
   "/usr/share/cmake-3.10/Modules/FindThreads.cmake"
+  "/usr/share/cmake-3.10/Modules/GNUInstallDirs.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake"
@@ -61,6 +63,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "test/sender_toCloud/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/receiver_fromMobile/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq_filetransfer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/socketCan/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

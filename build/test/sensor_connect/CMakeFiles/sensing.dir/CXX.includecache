@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/diva2/diva2/test/sensor_connect/CamSensing.cpp
+CamSensing.h
+/home/diva2/diva2/test/sensor_connect/CamSensing.h
+
 /home/diva2/diva2/test/sensor_connect/CamSensing.h
 opencv2/opencv.hpp
 -
@@ -25,6 +29,10 @@ iostream
 /home/diva2/diva2/test/service/cam_packet.h
 
 /home/diva2/diva2/test/sensor_connect/CamSensingThread.h
+CamSensing.cpp
+/home/diva2/diva2/test/sensor_connect/CamSensing.cpp
+../service/cam_packet.h
+/home/diva2/diva2/test/service/cam_packet.h
 
 /home/diva2/diva2/test/sensor_connect/CanSensing.h
 zmq.hpp
