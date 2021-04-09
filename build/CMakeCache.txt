@@ -17,6 +17,9 @@
 //Path to a library.
 BOOST_LIB_PATH:FILEPATH=/usr/share/c++-mscl/Boost/lib/libboost_chrono.so
 
+//CAN-utils Library
+CANUTILS_LIB_PATH:FILEPATH=CANUTILS_LIB_PATH-NOTFOUND
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -258,6 +261,9 @@ _INCLUDE_DIRS:PATH=_INCLUDE_DIRS-NOTFOUND
 
 //Path to a library.
 _LIBRARIES:FILEPATH=_LIBRARIES-NOTFOUND
+
+//Dependencies for the target
+can_LIB_DEPENDS:STATIC=general;mscl;general;pthread;general;GL;general;GLU;general;glut;general;GLEW;general;glfw;general;X11;general;Xxf86vm;general;Xrandr;general;pthread;general;Xi;general;dl;general;Xinerama;general;Xcursor;general;m;
 
 //Value Computed by CMake
 diva2_BINARY_DIR:STATIC=/home/diva2/diva2/build
