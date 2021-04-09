@@ -1,63 +1,91 @@
-// //CanSensingThread.h
-// #pragma once
-// #include <string>
-// #include <iostream>
-// #include "CanSensing.cpp"
+//#pragma once
+#ifndef CAMSENSINGTHREAD_H_
+#define CAMSENSINGTHREAD_H_
+#include "CamSensing.cpp"
+#include "../service/cam_packet.h"
 
-// #include "../service/zmq_helper.h"
+extern int USE_CAM;
 
-// using namespace std;
+class CamSensingThread{
 
+public:
+    CamSensingThread();
+    static void run(const int devicename, zmq::context_t *context, zmq::socket_t *publisher);
+};
 
-// class CanSensingThread{
-// 	public:
-// 	CanSensingThread();
-// 	static void run(const char *devicename="can0", void *context=zmq_ctx_new());
-// };
+CamSensingThread::CamSensingThread(){
 
-// CanSensingThread::CanSensingThread(){
+}
 
-// }
+void my_free(void *data, void *hint){
+    free(data);
+}
+void CamSensingThread::run(const int devicename, zmq::context_t *context, zmq::socket_t *publisher){
 
-// void CanSensingThread::run(const char *devicename, void *context){
-//     printf("start (in CanSensingThread::run)\n");
+    CamSensing camThread;
+    int open;
+    if(USE_CAM==1){
+        open = camThread.initialize(devicename);
+        printf("cam open[%d] (in CamSensingThread::run())\n");  
+    } 
 
-//     CanSensing canThread;
-//     int socket = canThread.getSocket(devicename); // defualt device name = "can0"
-//     printf("canThread.getSocket Complete (in CanSensingThread::run)\n");
-	
-//     while(1){
-//         struct can_frame frame;
-//         int nbytes = read(socket, &frame, sizeof(struct can_frame));
+    vector<uchar> buffer;
+    while (open)
+    {
+        if(USE_CAM==1){
+            s_send_idx(*publisher, SENSOR_CAM);
+            printf("sendmore: CAM (in CamSensingThread::run())\n");
+            
+            CamPacket mCamPacket;
+            mCamPacket.read(camThread.cap);
+            // mCamPacket.display();
 
-//         if(nbytes <0){
-// 		    printf("(ERROR) Fail to read the socket(%d) (in CanSensingThread::run/while(1))\n",socket);
-//             exit(-100);
-//         }
-//         printf("Read a can_frame: 0x%03X [%d] (in CanSensingThread::run/while(1))", frame.can_id, frame.can_dlc);
-
-//         for(int i=0; i<frame.can_dlc; i++){ 
-//             printf("%02X ", frame.data[i]);
-//         }
-//         printf("\r\n");
-//         printf("Complete to read ID, DLC(데이터 길이 코드), payload from CAN (in CanSensingThread::run/while(1))");
-
-//         struct can_filter rfilter [1];
-//         rfilter[0].can_id=0x550;
-//         rfilter[0].can_mask=0xFF0;
-//         // rfilter[1].can_id = 0x200;
-//         // rfilter[1].can_mask = 0x700;
-
-//         setsockopt(socket, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter));
-//         printf("filtering out CAN frames that are not relevant (in CanSensingThread::run/while(1))");
-
-//         s_sendmore (context, "CAN");
-//         printf("sendmore: \"CAN\" (in CanSensingThread::run/while(1))\n");
+            size_t size = sizeof(mCamPacket);
+            zmq::message_t zmqData(size);
+            memcpy(zmqData.data(), &mCamPacket, size);
+            
+            //publisher->send(zmq);
+            s_send(*publisher,zmqData);
+            
+            /* TEST */
+            printf("TEST!\n");
+            CamPacket tmpCamPacket;
+            printf("size=%d == %d\n",zmqData.size(), size);
+            memcpy(&tmpCamPacket, zmqData.data(), zmqData.size());
+            // tmpCamPacket.image = imdecode(Mat(tmpCamPacket.img_buff),CV_LOAD_IMAGE_COLOR);
+            tmpCamPacket.display();
+            
+        }
+        /*
+        camThread.cap.read(camThread.frame);
+        printf("read cap (in CamSensingThread::run())\n");
+        Mat frame;
+        camThread.cap  >> frame;
+        printf("copy cap to frame (in CamSensingThread::run())\n");
+        //imencode(".jpg", camThread.frame, buffer); //image encode -> jpg
+        //S_sendmore(*publisher, "CAM");
+        s_send_idx(*publisher,SENSOR_CAM);
+        printf("sendmore: CAM (in CamSensingThread::run())\n");
+        // send the capture image through socket
+        int32_t info[3];
+        info[0]=(int32_t)frame.rows;
+        info[1]=(int32_t)frame.cols;
+        info[2]=(int32_t)frame.type();
+        for(int i=0; i<3; i++){
+            zmq::message_t msg((void*)&info[i], sizeof(int32_t), NULL);
+            publisher->send(msg,ZMQ_SNDMORE);
+        }
+        void *data = malloc(frame.total()*frame.elemSize());
+        memcpy(data,frame.data, frame.total()*frame.elemSize());
+        zmq::message_t msg2(data,frame.total()*frame.elemSize(), my_free,NULL);
         
-//         zmq::message_t msg(&frame, sizeof(can_frame), NULL);
-//         s_send(context,msg);
-// 		printf("send complete! (in CanSensingThread::run/while(1))\n");
+        if (publisher->send(msg2))
+            printf("complete to send! (in CamSensingThread::run())\n");
+        */
 
-//         sleep (1);
-//     }
-// }
+        sleep(1);
+    }
+}
+
+
+#endif //CAMSENSINGTHREAD_H_

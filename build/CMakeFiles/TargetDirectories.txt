@@ -20,3 +20,5 @@
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/edit_cache.dir
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/pub.dir
 /home/diva2/diva2/build/test/zmq_filetransfer/CMakeFiles/sub.dir
+/home/diva2/diva2/build/test/socketCan/CMakeFiles/rebuild_cache.dir
+/home/diva2/diva2/build/test/socketCan/CMakeFiles/edit_cache.dir

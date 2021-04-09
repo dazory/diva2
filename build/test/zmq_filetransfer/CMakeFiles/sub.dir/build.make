@@ -60,15 +60,15 @@ include test/zmq_filetransfer/CMakeFiles/sub.dir/flags.make
 test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.o: test/zmq_filetransfer/CMakeFiles/sub.dir/flags.make
 test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.o: ../test/zmq_filetransfer/sub.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.o"
-	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sub.dir/sub.cpp.o -c /home/diva2/diva2/test/zmq_filetransfer/sub.cpp
+	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sub.dir/sub.cpp.o -c /home/diva2/diva2/test/zmq_filetransfer/sub.cpp
 
 test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sub.dir/sub.cpp.i"
-	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/zmq_filetransfer/sub.cpp > CMakeFiles/sub.dir/sub.cpp.i
+	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/zmq_filetransfer/sub.cpp > CMakeFiles/sub.dir/sub.cpp.i
 
 test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sub.dir/sub.cpp.s"
-	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/zmq_filetransfer/sub.cpp -o CMakeFiles/sub.dir/sub.cpp.s
+	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/zmq_filetransfer/sub.cpp -o CMakeFiles/sub.dir/sub.cpp.s
 
 test/zmq_filetransfer/CMakeFiles/sub.dir/sub.cpp.o.requires:
 
