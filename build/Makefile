@@ -214,6 +214,45 @@ sub/fast:
 	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/build
 .PHONY : sub/fast
 
+#=============================================================================
+# Target rules for targets named cppTest
+
+# Build rule for target.
+cppTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cppTest
+.PHONY : cppTest
+
+# fast build rule for target.
+cppTest/fast:
+	$(MAKE) -f test/protobuf/CMakeFiles/cppTest.dir/build.make test/protobuf/CMakeFiles/cppTest.dir/build
+.PHONY : cppTest/fast
+
+#=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) -f test/zmq_protobuf/client/CMakeFiles/client.dir/build.make test/zmq_protobuf/client/CMakeFiles/client.dir/build
+.PHONY : client/fast
+
+#=============================================================================
+# Target rules for targets named server
+
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) -f test/zmq_protobuf/server/CMakeFiles/server.dir/build.make test/zmq_protobuf/server/CMakeFiles/server.dir/build
+.PHONY : server/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -257,6 +296,9 @@ help:
 	@echo "... receiverFrommobile"
 	@echo "... pub"
 	@echo "... sub"
+	@echo "... cppTest"
+	@echo "... client"
+	@echo "... server"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
+  "../test/protobuf/CMakeLists.txt"
   "../test/receiver_fromMobile/CMakeLists.txt"
   "../test/sender_toCloud/CMakeLists.txt"
   "../test/sensor_connect/CMakeLists.txt"
@@ -18,6 +19,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../test/socketCan/CMakeLists.txt"
   "../test/zmq/CMakeLists.txt"
   "../test/zmq_filetransfer/CMakeLists.txt"
+  "../test/zmq_protobuf/client/CMakeLists.txt"
+  "../test/zmq_protobuf/server/CMakeLists.txt"
   "/usr/share/OpenCV/OpenCVConfig-version.cmake"
   "/usr/share/OpenCV/OpenCVConfig.cmake"
   "/usr/share/OpenCV/OpenCVModules-release.cmake"
@@ -39,12 +42,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.10/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.10/Modules/FindPkgConfig.cmake"
+  "/usr/share/cmake-3.10/Modules/FindProtobuf.cmake"
   "/usr/share/cmake-3.10/Modules/FindThreads.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.10/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
@@ -63,6 +68,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "test/receiver_fromMobile/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq_filetransfer/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/socketCan/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/protobuf/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/zmq_protobuf/client/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/zmq_protobuf/server/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -75,4 +83,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/DependInfo.cmake"
   "test/zmq_filetransfer/CMakeFiles/pub.dir/DependInfo.cmake"
   "test/zmq_filetransfer/CMakeFiles/sub.dir/DependInfo.cmake"
+  "test/protobuf/CMakeFiles/cppTest.dir/DependInfo.cmake"
+  "test/zmq_protobuf/client/CMakeFiles/client.dir/DependInfo.cmake"
+  "test/zmq_protobuf/server/CMakeFiles/server.dir/DependInfo.cmake"
   )

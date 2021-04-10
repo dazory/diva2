@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -46,6 +46,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/diva2/diva2/build/test/receiver_fromMobile/cmake_install.cmake")
   include("/home/diva2/diva2/build/test/zmq_filetransfer/cmake_install.cmake")
   include("/home/diva2/diva2/build/test/socketCan/cmake_install.cmake")
+  include("/home/diva2/diva2/build/test/protobuf/cmake_install.cmake")
+  include("/home/diva2/diva2/build/test/zmq_protobuf/client/cmake_install.cmake")
+  include("/home/diva2/diva2/build/test/zmq_protobuf/server/cmake_install.cmake")
 
 endif()
 
