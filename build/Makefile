@@ -253,6 +253,32 @@ server/fast:
 	$(MAKE) -f test/zmq_protobuf/server/CMakeFiles/server.dir/build.make test/zmq_protobuf/server/CMakeFiles/server.dir/build
 .PHONY : server/fast
 
+#=============================================================================
+# Target rules for targets named senderToCloud
+
+# Build rule for target.
+senderToCloud: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 senderToCloud
+.PHONY : senderToCloud
+
+# fast build rule for target.
+senderToCloud/fast:
+	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build
+.PHONY : senderToCloud/fast
+
+#=============================================================================
+# Target rules for targets named receiverFromMobile
+
+# Build rule for target.
+receiverFromMobile: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 receiverFromMobile
+.PHONY : receiverFromMobile
+
+# fast build rule for target.
+receiverFromMobile/fast:
+	$(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build
+.PHONY : receiverFromMobile/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -299,6 +325,8 @@ help:
 	@echo "... cppTest"
 	@echo "... client"
 	@echo "... server"
+	@echo "... senderToCloud"
+	@echo "... receiverFromMobile"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

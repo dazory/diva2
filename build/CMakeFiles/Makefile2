@@ -121,7 +121,7 @@ test/zmq/preinstall:
 test/zmq/CMakeFiles/zmq_test.dir/all:
 	$(MAKE) -f test/zmq/CMakeFiles/zmq_test.dir/build.make test/zmq/CMakeFiles/zmq_test.dir/depend
 	$(MAKE) -f test/zmq/CMakeFiles/zmq_test.dir/build.make test/zmq/CMakeFiles/zmq_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=33,34 "Built target zmq_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=43,44 "Built target zmq_test"
 .PHONY : test/zmq/CMakeFiles/zmq_test.dir/all
 
 # Include target in all.
@@ -176,7 +176,7 @@ test/sensor_connect/preinstall:
 test/sensor_connect/CMakeFiles/sensing.dir/all:
 	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/depend
 	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=25,26 "Built target sensing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=35,36 "Built target sensing"
 .PHONY : test/sensor_connect/CMakeFiles/sensing.dir/all
 
 # Include target in all.
@@ -286,7 +286,7 @@ test/sender_toCloud/preinstall:
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/all:
 	$(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/depend
 	$(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=21,22,23,24 "Built target senderTocloud"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=31,32,33,34 "Built target senderTocloud"
 .PHONY : test/sender_toCloud/CMakeFiles/senderTocloud.dir/all
 
 # Include target in all.
@@ -341,7 +341,7 @@ test/receiver_fromMobile/preinstall:
 test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/all:
 	$(MAKE) -f test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build.make test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/depend
 	$(MAKE) -f test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build.make test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=18,19,20 "Built target receiverFrommobile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=23,24,25 "Built target receiverFrommobile"
 .PHONY : test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/all
 
 # Include target in all.
@@ -435,7 +435,7 @@ clean: test/zmq_filetransfer/CMakeFiles/pub.dir/clean
 test/zmq_filetransfer/CMakeFiles/sub.dir/all:
 	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/depend
 	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=31,32 "Built target sub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=41,42 "Built target sub"
 .PHONY : test/zmq_filetransfer/CMakeFiles/sub.dir/all
 
 # Include target in all.
@@ -618,7 +618,7 @@ test/zmq_protobuf/server/preinstall:
 test/zmq_protobuf/server/CMakeFiles/server.dir/all:
 	$(MAKE) -f test/zmq_protobuf/server/CMakeFiles/server.dir/build.make test/zmq_protobuf/server/CMakeFiles/server.dir/depend
 	$(MAKE) -f test/zmq_protobuf/server/CMakeFiles/server.dir/build.make test/zmq_protobuf/server/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=27,28,29,30 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=37,38,39,40 "Built target server"
 .PHONY : test/zmq_protobuf/server/CMakeFiles/server.dir/all
 
 # Include target in all.
@@ -645,6 +645,116 @@ test/zmq_protobuf/server/CMakeFiles/server.dir/clean:
 
 # clean rule for target.
 clean: test/zmq_protobuf/server/CMakeFiles/server.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test/sender_toCloud_protobuf
+
+# Convenience name for "all" pass in the directory.
+test/sender_toCloud_protobuf/all: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/all
+
+.PHONY : test/sender_toCloud_protobuf/all
+
+# Convenience name for "clean" pass in the directory.
+test/sender_toCloud_protobuf/clean: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/clean
+
+.PHONY : test/sender_toCloud_protobuf/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/sender_toCloud_protobuf/preinstall:
+
+.PHONY : test/sender_toCloud_protobuf/preinstall
+
+#=============================================================================
+# Target rules for target test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir
+
+# All Build rule for target.
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/all:
+	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/depend
+	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=26,27,28,29,30 "Built target senderToCloud"
+.PHONY : test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/all
+
+# Include target in all.
+all: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/rule
+
+# Convenience name for target.
+senderToCloud: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/rule
+
+.PHONY : senderToCloud
+
+# clean rule for target.
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/clean:
+	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/clean
+.PHONY : test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/clean
+
+# clean rule for target.
+clean: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test/receiver_fromMobile_proto
+
+# Convenience name for "all" pass in the directory.
+test/receiver_fromMobile_proto/all: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/all
+
+.PHONY : test/receiver_fromMobile_proto/all
+
+# Convenience name for "clean" pass in the directory.
+test/receiver_fromMobile_proto/clean: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/clean
+
+.PHONY : test/receiver_fromMobile_proto/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/receiver_fromMobile_proto/preinstall:
+
+.PHONY : test/receiver_fromMobile_proto/preinstall
+
+#=============================================================================
+# Target rules for target test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir
+
+# All Build rule for target.
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/all:
+	$(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/depend
+	$(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=18,19,20,21,22 "Built target receiverFromMobile"
+.PHONY : test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/all
+
+# Include target in all.
+all: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/rule
+
+# Convenience name for target.
+receiverFromMobile: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/rule
+
+.PHONY : receiverFromMobile
+
+# clean rule for target.
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/clean:
+	$(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/clean
+.PHONY : test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/clean
+
+# clean rule for target.
+clean: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/clean
 
 .PHONY : clean
 

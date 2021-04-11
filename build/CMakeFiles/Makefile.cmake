@@ -13,7 +13,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
   "../test/protobuf/CMakeLists.txt"
   "../test/receiver_fromMobile/CMakeLists.txt"
+  "../test/receiver_fromMobile_proto/CMakeLists.txt"
   "../test/sender_toCloud/CMakeLists.txt"
+  "../test/sender_toCloud_protobuf/CMakeLists.txt"
   "../test/sensor_connect/CMakeLists.txt"
   "../test/sensor_parsing/CMakeLists.txt"
   "../test/socketCan/CMakeLists.txt"
@@ -71,6 +73,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "test/protobuf/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq_protobuf/client/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq_protobuf/server/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/sender_toCloud_protobuf/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/receiver_fromMobile_proto/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -86,4 +90,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/protobuf/CMakeFiles/cppTest.dir/DependInfo.cmake"
   "test/zmq_protobuf/client/CMakeFiles/client.dir/DependInfo.cmake"
   "test/zmq_protobuf/server/CMakeFiles/server.dir/DependInfo.cmake"
+  "test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/DependInfo.cmake"
+  "test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/DependInfo.cmake"
   )

@@ -68,15 +68,15 @@ test/zmq_protobuf/server/message.pb.h: test/zmq_protobuf/server/message.pb.cc
 test/zmq_protobuf/server/CMakeFiles/server.dir/main.cpp.o: test/zmq_protobuf/server/CMakeFiles/server.dir/flags.make
 test/zmq_protobuf/server/CMakeFiles/server.dir/main.cpp.o: ../test/zmq_protobuf/server/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/zmq_protobuf/server/CMakeFiles/server.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/main.cpp.o -c /home/diva2/diva2/test/zmq_protobuf/server/main.cpp
+	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/main.cpp.o -c /home/diva2/diva2/test/zmq_protobuf/server/main.cpp
 
 test/zmq_protobuf/server/CMakeFiles/server.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/zmq_protobuf/server/main.cpp > CMakeFiles/server.dir/main.cpp.i
+	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/zmq_protobuf/server/main.cpp > CMakeFiles/server.dir/main.cpp.i
 
 test/zmq_protobuf/server/CMakeFiles/server.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/zmq_protobuf/server/main.cpp -o CMakeFiles/server.dir/main.cpp.s
+	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/zmq_protobuf/server/main.cpp -o CMakeFiles/server.dir/main.cpp.s
 
 test/zmq_protobuf/server/CMakeFiles/server.dir/main.cpp.o.requires:
 
@@ -92,15 +92,15 @@ test/zmq_protobuf/server/CMakeFiles/server.dir/main.cpp.o.provides.build: test/z
 test/zmq_protobuf/server/CMakeFiles/server.dir/message.pb.cc.o: test/zmq_protobuf/server/CMakeFiles/server.dir/flags.make
 test/zmq_protobuf/server/CMakeFiles/server.dir/message.pb.cc.o: test/zmq_protobuf/server/message.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/zmq_protobuf/server/CMakeFiles/server.dir/message.pb.cc.o"
-	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/message.pb.cc.o -c /home/diva2/diva2/build/test/zmq_protobuf/server/message.pb.cc
+	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/message.pb.cc.o -c /home/diva2/diva2/build/test/zmq_protobuf/server/message.pb.cc
 
 test/zmq_protobuf/server/CMakeFiles/server.dir/message.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/message.pb.cc.i"
-	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/zmq_protobuf/server/message.pb.cc > CMakeFiles/server.dir/message.pb.cc.i
+	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/zmq_protobuf/server/message.pb.cc > CMakeFiles/server.dir/message.pb.cc.i
 
 test/zmq_protobuf/server/CMakeFiles/server.dir/message.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/message.pb.cc.s"
-	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/zmq_protobuf/server/message.pb.cc -o CMakeFiles/server.dir/message.pb.cc.s
+	cd /home/diva2/diva2/build/test/zmq_protobuf/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/zmq_protobuf/server/message.pb.cc -o CMakeFiles/server.dir/message.pb.cc.s
 
 test/zmq_protobuf/server/CMakeFiles/server.dir/message.pb.cc.o.requires:
 

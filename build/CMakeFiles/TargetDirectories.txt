@@ -31,3 +31,9 @@
 /home/diva2/diva2/build/test/zmq_protobuf/server/CMakeFiles/rebuild_cache.dir
 /home/diva2/diva2/build/test/zmq_protobuf/server/CMakeFiles/server.dir
 /home/diva2/diva2/build/test/zmq_protobuf/server/CMakeFiles/edit_cache.dir
+/home/diva2/diva2/build/test/sender_toCloud_protobuf/CMakeFiles/rebuild_cache.dir
+/home/diva2/diva2/build/test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir
+/home/diva2/diva2/build/test/sender_toCloud_protobuf/CMakeFiles/edit_cache.dir
+/home/diva2/diva2/build/test/receiver_fromMobile_proto/CMakeFiles/rebuild_cache.dir
+/home/diva2/diva2/build/test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir
+/home/diva2/diva2/build/test/receiver_fromMobile_proto/CMakeFiles/edit_cache.dir
