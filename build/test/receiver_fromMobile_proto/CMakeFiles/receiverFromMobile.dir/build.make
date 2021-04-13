@@ -179,6 +179,9 @@ test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/lib
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.3.2.0
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.3.2.0
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/share/c++-mscl/libmscl.so
+test/receiver_fromMobile_proto/receiverFromMobile: /usr/local/lib/libprotobuf.so
+test/receiver_fromMobile_proto/receiverFromMobile: /usr/local/lib/libzmq.so
+test/receiver_fromMobile_proto/receiverFromMobile: /usr/share/c++-mscl/libmscl.so
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/libopencv_video.so.3.2.0
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.3.2.0
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0

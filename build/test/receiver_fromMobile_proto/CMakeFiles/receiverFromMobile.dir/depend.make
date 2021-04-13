@@ -9,6 +9,7 @@ test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThre
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: ../test/service/gps_packet.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: ../test/service/zmq_helper.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/any.h
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/any.pb.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/arena.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/arena_impl.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/arenastring.h
@@ -36,6 +37,8 @@ test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThre
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/port_def.inc
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/port_undef.inc
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/repeated_field.h
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/source_context.pb.h
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/stubs/bytestream.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/stubs/callback.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/stubs/casts.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/stubs/common.h
@@ -51,7 +54,10 @@ test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThre
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/stubs/stringpiece.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/stubs/strutil.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/text_format.h
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/type.pb.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/unknown_field_set.h
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/util/json_util.h
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/util/type_resolver.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o: /usr/local/include/google/protobuf/wire_format_lite.h
 
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/main.cpp.o: ../test/receiver_fromMobile_proto/GpsReceiverThread.h

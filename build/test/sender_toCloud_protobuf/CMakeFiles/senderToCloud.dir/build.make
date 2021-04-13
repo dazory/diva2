@@ -179,6 +179,9 @@ test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_
 test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.3.2.0
 test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.3.2.0
 test/sender_toCloud_protobuf/senderToCloud: /usr/share/c++-mscl/libmscl.so
+test/sender_toCloud_protobuf/senderToCloud: /usr/local/lib/libprotobuf.so
+test/sender_toCloud_protobuf/senderToCloud: /usr/local/lib/libzmq.so
+test/sender_toCloud_protobuf/senderToCloud: /usr/share/c++-mscl/libmscl.so
 test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_video.so.3.2.0
 test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.3.2.0
 test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.3.2.0

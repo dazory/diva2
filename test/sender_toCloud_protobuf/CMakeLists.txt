@@ -2,7 +2,7 @@
 
 ## use pkg-config support 
 find_package(PkgConfig)                 # load in pkg-config support
-pkg_check_modules(PC_ZeroMQ QUIET zmq)  # use pkg-config to get hints for 0mq locations
+pkg_check_modules(_ZeroMQ QUIET zmq)  # use pkg-config to get hints for 0mq locations
 
 ## use zmq library
 find_path(ZeroMQ_INCLUDE_DIR            # use the hint from above to find where 'zmq.hpp' is located
@@ -17,6 +17,10 @@ find_library(ZeroMQ_LIBRARY             # use the hint from about to find the lo
 
 ## use thread
 find_package( Threads )
+
+## Use json
+pkg_check_modules(JSONCPP jsoncpp)
+link_libraries(${JSONCPP_LIBRARIES})
 
 ##use opencv
 find_package(OpenCV REQUIRED)

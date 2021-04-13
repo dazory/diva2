@@ -1,0 +1,67 @@
+/* references
+    - guide: https://developers.google.com/protocol-buffers/docs/proto
+    - using timestamp: https://stackoverflow.com/questions/3574716/date-and-time-type-for-use-with-protobuf
+
+*/
+
+syntax = "proto3";
+package sensors;
+import "google/protobuf/timestamp.proto";
+
+message Gps{
+    
+    google.protobuf.Timestamp timestamp=1;
+    string gpgga = 2;
+    
+    optional double latitude = 3;
+    optional bool isNorth = 4; // true=north; false=south;
+    optional double longitude = 5;
+    optional bool isEast = 6; // true=east; false=west;
+    optional int32 gpsQuality = 7;
+    optional int32 numberOfSatellitesInUse = 8;
+    optional double horizontalDilutionOfPrecision = 9;
+    optional double antennaAltitudeMeters = 10;
+    optional double geoidalSeparationMeters = 11;
+    optional double ageOfDifferentialGPSDataSeconds = 12;
+    optional int32 differentialReferenceStationID = 13;
+}
+
+message Imu{
+    google.protobuf.Timestamp timestamp=1;
+
+    optional float scaledAccelX = 2;
+    optional float scaledAccelY = 3;
+    optional float scaledAccelZ = 4;
+    optional float scaledGyroX = 5;
+    optional float scaledGyroY = 6;
+    optional float scaledGyroZ = 7;
+    optional float scaledMagX = 8;
+    optional float scaledMagY = 9;
+    optional float scaledMagZ = 10;
+    optional float estRoll = 11;
+    optional float estPitch = 12;
+    optional float estYaw = 13;
+    optional float estRollUncert =14;
+    optional float estPitchUncert = 15;
+    optional float estYawUncert = 16;
+}
+
+message Cam{
+    google.protobuf.Timestamp timestamp=1;
+
+    int32 type = 2;
+    int32 width = 3;
+    int32 height = 4;
+    bytes red_data = 5;
+    bytes green_data = 6;
+    bytes blue_data = 7;
+    bytes image_data =8;
+}
+
+message Lidar{
+    google.protobuf.Timestamp timestamp=1;
+}
+
+message Can{
+    google.protobuf.Timestamp timestamp=1;
+}

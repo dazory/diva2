@@ -1,4 +1,4 @@
-# cmake_minimum_required(VERSION 3.10)
+### diva2/test/zmq
 
 ## use pkg-config support 
 find_package(PkgConfig)                 # load in pkg-config support
@@ -14,13 +14,8 @@ find_library(ZeroMQ_LIBRARY             # use the hint from about to find the lo
         PATHS ${PC_ZeroMQ_LIBRARY_DIRS}
 )
 
-
 ## use thread
 find_package( Threads )
-
-## Use json
-pkg_check_modules(JSONCPP jsoncpp)
-link_libraries(${JSONCPP_LIBRARIES})
 
 ##use opencv
 find_package(OpenCV REQUIRED)
@@ -39,15 +34,7 @@ link_libraries(mscl pthread GL GLU glut GLEW glfw X11 Xxf86vm Xrandr pthread Xi 
 add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 
-
-
-
-# PROJECT (cppTest)
-SET(CLIENT_SRC_LIST main.cpp sensors.pb.cc GpsReceiverThread.cpp)
-
-
-
-# Find required protobuf package
+## Use Protobuf
 find_package(Protobuf REQUIRED)
 if(PROTOBUF_FOUND)
     message(STATUS "protobuf library found")
@@ -55,14 +42,22 @@ else()
     message(FATAL_ERROR "protobuf library is needed but cant be found")
 endif()
 
-
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
-PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS sensors.proto)
+PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../protobuf/sensors.proto" )
 
-# ADD_EXECUTABLE(receiverFromMobile ${CLIENT_SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS}  ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})
-add_executable(receiverFromMobile ${CLIENT_SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS}  ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})
 
-target_include_directories(receiverFromMobile PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives
-target_link_libraries(receiverFromMobile ${PROTOBUF_LIBRARIES} ${ZeroMQ_LIBRARY} ${OpenCV_LIBS}
-        /usr/share/c++-mscl/libmscl.so) 
+# 실행파일 만들기
+set(SOURCE_SENSING main.cpp GpsSensing.cpp)
+add_executable(sensing_proto ${SOURCE_SENSING} ${PROTO_SRCS} ${PROTO_HDRS} ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})                           # 생성할 실행파일 이름 지정
+target_include_directories(sensing_proto PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives
+target_link_libraries(sensing_proto PUBLIC ${ZeroMQ_LIBRARY} ${OpenCV_LIBS} 
+        ${PROTOBUF_LIBRARIES}
+        /usr/share/c++-mscl/libmscl.so
+        )           # at the 0mq library to our link directive
+
+# target_link_libraries(${PROJECT_NAME} ${PCL_LIBRARIES} ${VTK_LIBRARIES} ${JSONCPP_LIBRARIES} ${OpenCV_LIBS} ${GTK2_LIBRARIES}
+# ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${CMAKE_THREAD_LIBS_INIT}
+# 	/usr/share/c++-mscl/libmscl.so
+# )
+

@@ -4,8 +4,12 @@
 #include "../service/gps_packet.h"
 #include "sensors.pb.h"
 #include <fstream>
-#include <google/protobuf/text_format.h>
+#include "jsoncpp/json/json.h"
+#pragma comment(lib, "jsoncpp\\lib\\lib_json.lib")
+#pragma warning(disable : 4996) //error C4996 뜨는 경우
 
+#include <google/protobuf/text_format.h>
+#include <google/protobuf/util/json_util.h>
 
 #define PACKET_SIZE 1024
 using namespace std;
@@ -28,68 +32,52 @@ void GpsReceiverThread::run(void *contextRep){
         /* RECIEVE FROM MOBILE */
         zmq::message_t msgData;
         socketRep.recv(&msgData);
-        printf("Recevied\n");
+        printf("Recevied (in GpsReceiverThread::run/while(1))\n");
 
         sensors::Gps gps;
-        // string strMsg(static_cast<char*>(msgData.data()), msgData.size());
-        // gps.ParseFromString(strMsg);
         unsigned char data[1024] = "\0";
         gps.ParseFromArray(msgData.data(), msgData.size());
 
         string strTxt;
         google::protobuf::TextFormat::PrintToString(gps, &strTxt);
-        cout<<strTxt<<endl;
+        cout<<strTxt<<" (in GpsReceiverThread::run/while(1))"<<endl;
         
-        // zmq::message_t msgRecv = s_recv(*socketReq);
-        // printf("Data:%s\n", msgRecv.data());
+/* ==========가연 ==================*/
+        // string str;
+        // Json::Value gps_json;
+        // //gps["token"] = "KKK";
+        // gps_json["latitude"] = gps.latitude();
+        // gps_json["longtitude"] = gps.longitude();
+        // Json::Value data_json;
+        // data_json.append(data_json);
+
+        // Json::StyledWriter writer;
+        // str = writer.write(data_json);
+        // cout << str << endl;
+
+        // std::ofstream ost("gps.json");
+        // ost << str;
+        // getchar();
+
+        
+        /* SEND REPLY TO MOBILE */
         string strOK = "THANK YOU";
         zmq::message_t zmqData(sizeof(strOK));
         memcpy(zmqData.data(), strOK.c_str(), sizeof(strOK));
         s_send(socketRep, zmqData);
+        
+        /* CONVERT PROTO TO JSON */
+        string json_string;
+        google::protobuf::util::JsonPrintOptions options;
+        options.add_whitespace = true;
+        options.always_print_primitive_fields = true;
+        options.preserve_proto_field_names = true;
+        google::protobuf::util::MessageToJsonString(gps, &json_string, options);
+        cout<<json_string<<endl;
+
         /* OPTIONS */
-        // cnt++;
+
     }
-
-    
-    /*
-    // Send to Cloud
-    //file.close();
-    //fclose(file);
-    printf("file.close (in GpsSenderThread::run)\n");
-
-    s_send_idx(*socketReq, SENSOR_GPS);
-    printf("send_idx complete (in GpsSenderThread::run)\n");
-
-    FILE *infile;
-    //infile = fopen(fname.c_str(), "r"); // binary파일 읽기 형식으로 열기
-    //printf("open file to read (in GpsSenderThread::run)\n");
-
-    fseek(infile, 0, SEEK_END); // 끝으로 가서
-    long file_size = ftell(infile); //사이즈 재고
-    //fseek(file, 0, SEEK_END); // 끝으로 가서
-    //long file_size = ftell(file); //사이즈 재고
-    printf("size of file to read = %d (in GpsSenderThread::run)\n", file_size);
-
-    fseek(infile, 0, SEEK_SET); //처음으로 다시 와서
-    //fseek(file, 0, SEEK_SET); //처음으로 다시 와서
-    char buf[PACKET_SIZE]; // 데이터 저장 버퍼
-    snprintf(buf, PACKET_SIZE-1, "%d", file_size); // 사이즈 값을 buf에다가 넣기, sizeof(buf)
-    printf("buf = %s (in GpsSenderThread::run)\n", buf);
-    
-    zmq::message_t zmqData(file_size);
-    memcpy(zmqData.data(), buf, file_size);
-    s_send(*socketReq, zmqData);
-    string strData = (const char*)zmqData.data();
-    printf("send: %s (in GpsSenderThread::run)\n", strData.c_str());
-
-    int sendBytes;
-    while((sendBytes==fread(buf, sizeof(char), sizeof(buf), infile))>0){
-        s_send(*socketReq, zmqData);
-        //while((sendBytes==fread(buf, sizeof(char), sizeof(buf), file))>0) s_send(*socketReq, zmqData);
-        printf("send: %s (in GpsSenderThread::run)\n", strData.c_str());
-    }
-    */
-    
 
 }
 

@@ -4,45 +4,55 @@
 #include "../service/gps_packet.h"
 #include "sensors.pb.h"
 #include <fstream>
+#include "jsoncpp/json/json.h"
+#pragma comment(lib, "jsoncpp\\lib\\lib_json.lib")
+#pragma warning(disable : 4996) //error C4996 뜨는 경우
 
 #define PACKET_SIZE 1024
+
 // 참고(txt file): https://github.com/BehaviorTree/BehaviorTree.CPP/blob/725eba7e0abbc704284dec393706e5404f1472e3/tools/bt_recorder.cpp
 using namespace std;
 
 // http://zguide.zeromq.org/cpp:interrupt
 
-GpsSenderThread::GpsSenderThread(){}
+GpsSenderThread::GpsSenderThread() {}
 
-void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq){
+void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq)
+{
     printf("start (in GpsSenderThread::run)\n");
-    
+
     // Connect with socket SUB with Sensing Process
-    zmq::socket_t socketSub(*(zmq::context_t*)contextSub, ZMQ_SUB);
+    zmq::socket_t socketSub(*(zmq::context_t *)contextSub, ZMQ_SUB);
     socketSub.connect(protocol::SENSING_SUB);
     socketSub.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
     printf("socket connected (in GpsSenderThread::run)\n");
 
-    
     vector<GpsPacket> mGpsPackets;
-    
 
-    int cnt=0;
-    while(1){//!stop_flag){
+    int cnt = 0;
+    while (1)
+    { //!stop_flag){
 
         /* RECIEVE FROM SENSING PROCESS */
         zmq::message_t msg = s_recv(socketSub);
         GpsPacket *mGpsPacket = new GpsPacket();
         memcpy(mGpsPacket, msg.data(), msg.size());
-        
+
         /* DATA SERIALIZATION */
         sensors::Gps gps;
         //mGpsPacket->copyToProtobuf(gps);
         gps.set_gpgga("temp");
 
         gps.set_latitude(mGpsPacket->Latitude);
-        if(mGpsPacket->NorthSouth==1) gps.set_isnorth(1); else if(mGpsPacket->NorthSouth =0) gps.set_isnorth(0);
+        if (mGpsPacket->NorthSouth == 1)
+            gps.set_isnorth(1);
+        else if (mGpsPacket->NorthSouth = 0)
+            gps.set_isnorth(0);
         gps.set_longitude(mGpsPacket->Longitude);
-        if(mGpsPacket->NorthSouth==1) gps.set_iseast(1); else if(mGpsPacket->NorthSouth =0) gps.set_iseast(0);	
+        if (mGpsPacket->NorthSouth == 1)
+            gps.set_iseast(1);
+        else if (mGpsPacket->NorthSouth = 0)
+            gps.set_iseast(0);
         gps.set_gpsquality(mGpsPacket->GPSQuality);
         gps.set_numberofsatellitesinuse(mGpsPacket->NumberOfSatellitesInUse);
         gps.set_horizontaldilutionofprecision(mGpsPacket->HorizontalDilutionOfPrecision);
@@ -56,7 +66,7 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq){
         int data_len = gps.ByteSize();
         unsigned char data[1024] = "\0";
         gps.SerializeToArray(data, data_len);
-        for(auto i =0; i<data_len; i++)
+        for (auto i = 0; i < data_len; i++)
             printf("%02X ", data[i]);
         printf("\n");
 
@@ -65,41 +75,27 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq){
         size_t size = data_len;
         zmq::message_t zmqDatas(size);
         // memcpy((void*)zmqDatas.data(), strMsg.c_str(), size);
-        memcpy((void*)zmqDatas.data(), data, size);
+        memcpy((void *)zmqDatas.data(), data, size);
         printf("Sending GPS data ...\n");
         s_send(*socketReq, zmqDatas);
         printf("send complete!\n");
-    
-        
-        
+
         /* OPTIONAL: DELETE ALL GLOBAL OBJECTS ALLOCATED BY LIBPROTOBUF */
         google::protobuf::ShutdownProtobufLibrary();
 
         /* RECEIVE FROM CLOUD SERVER PROCESS */
         zmq::message_t msgRecv = s_recv(*socketReq);
         printf("Reply:%s\n", msgRecv.data());
-        printf("size=%d (Gps:%d)\n", zmqDatas.size(),size);
+        printf("size=%d (Gps:%d)\n", zmqDatas.size(), size);
 
-        // size_t size = sizeof(mGpsPackets);
-        // zmq::message_t zmqDatas(size);
-        // memcpy(zmqDatas.data(), &mGpsPackets, size);
-        // s_send(*socketReq, zmqDatas);
-        // printf("send complete!\n");
-
-        // GpsPacket tmpGpsPacket;
-        // memcpy(&tmpGpsPacket, zmqDatas.data(), zmqDatas.size());
-        // printf("============ SEND ============\n");
-        // tmpGpsPacket.displayGpsPacket();
-        // printf("==============================\n");
-
-        // zmq::message_t msgRecv = s_recv(*socketReq);
-        // printf("Reply:%s\n", msgRecv.data());
 
         /* OPTIONS */
         cnt++;
+
+
+
     }
 
-    
     /*
     // Send to Cloud
     //file.close();
@@ -138,6 +134,4 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq){
         printf("send: %s (in GpsSenderThread::run)\n", strData.c_str());
     }
     */
-    
-
 }

@@ -79,6 +79,8 @@ sensors.pb.h
 /home/diva2/diva2/test/sender_toCloud_protobuf/sensors.pb.h
 fstream
 -
+jsoncpp/json/json.h
+/home/diva2/diva2/test/sender_toCloud_protobuf/jsoncpp/json/json.h
 
 /home/diva2/diva2/test/sender_toCloud_protobuf/GpsSenderThread.h
 zmq.hpp
