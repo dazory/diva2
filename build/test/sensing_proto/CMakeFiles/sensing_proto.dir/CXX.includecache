@@ -106,6 +106,36 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
+/home/diva2/diva2/test/sensing_proto/CamSensing.cpp
+
+/home/diva2/diva2/test/sensing_proto/CamSensingThread.h
+CamSensing.cpp
+/home/diva2/diva2/test/sensing_proto/CamSensing.cpp
+../protobuf/sensors.pb.h
+/home/diva2/diva2/test/protobuf/sensors.pb.h
+../service/zmq_helper.h
+/home/diva2/diva2/test/service/zmq_helper.h
+opencv2/opencv.hpp
+-
+opencv2/imgproc/imgproc.hpp
+/home/diva2/diva2/test/sensing_proto/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/diva2/diva2/test/sensing_proto/opencv2/highgui/highgui.hpp
+opencv2/imgcodecs.hpp
+-
+iostream
+-
+sstream
+-
+time.h
+-
+unistd.h
+/home/diva2/diva2/test/sensing_proto/unistd.h
+sys/timeb.h
+-
+cstddef
+-
+
 /home/diva2/diva2/test/sensing_proto/GpsSensing.cpp
 GpsSensing.h
 /home/diva2/diva2/test/sensing_proto/GpsSensing.h
@@ -185,6 +215,8 @@ zmq.hpp
 /home/diva2/diva2/test/service/global_name.hpp
 GpsSensingThread.h
 /home/diva2/diva2/test/sensing_proto/GpsSensingThread.h
+CamSensingThread.h
+/home/diva2/diva2/test/sensing_proto/CamSensingThread.h
 
 /home/diva2/diva2/test/service/Can_serial.h
 stdlib.h

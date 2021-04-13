@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "sensors.pb.h"
   "CMakeFiles/sensing_proto.dir/main.cpp.o"
   "CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o"
+  "CMakeFiles/sensing_proto.dir/CamSensing.cpp.o"
   "CMakeFiles/sensing_proto.dir/sensors.pb.cc.o"
   "sensing_proto.pdb"
   "sensing_proto"

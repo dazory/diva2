@@ -113,9 +113,33 @@ test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o.provides: test/
 test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o.provides.build: test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o
 
 
+test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o: test/sensing_proto/CMakeFiles/sensing_proto.dir/flags.make
+test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o: ../test/sensing_proto/CamSensing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o"
+	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/CamSensing.cpp.o -c /home/diva2/diva2/test/sensing_proto/CamSensing.cpp
+
+test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensing_proto.dir/CamSensing.cpp.i"
+	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sensing_proto/CamSensing.cpp > CMakeFiles/sensing_proto.dir/CamSensing.cpp.i
+
+test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensing_proto.dir/CamSensing.cpp.s"
+	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sensing_proto/CamSensing.cpp -o CMakeFiles/sensing_proto.dir/CamSensing.cpp.s
+
+test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.requires:
+
+.PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.requires
+
+test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.provides: test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.requires
+	$(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.provides.build
+.PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.provides
+
+test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.provides.build: test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o
+
+
 test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o: test/sensing_proto/CMakeFiles/sensing_proto.dir/flags.make
 test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o: test/sensing_proto/sensors.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o"
 	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.i: cmake_force
@@ -141,6 +165,7 @@ test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o.provides.build: 
 sensing_proto_OBJECTS = \
 "CMakeFiles/sensing_proto.dir/main.cpp.o" \
 "CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o" \
+"CMakeFiles/sensing_proto.dir/CamSensing.cpp.o" \
 "CMakeFiles/sensing_proto.dir/sensors.pb.cc.o"
 
 # External object files for target sensing_proto
@@ -148,6 +173,7 @@ sensing_proto_EXTERNAL_OBJECTS =
 
 test/sensing_proto/sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o
 test/sensing_proto/sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o
+test/sensing_proto/sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o
 test/sensing_proto/sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o
 test/sensing_proto/sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make
 test/sensing_proto/sensing_proto: /usr/local/lib/libzmq.so
@@ -195,7 +221,7 @@ test/sensing_proto/sensing_proto: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.
 test/sensing_proto/sensing_proto: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
 test/sensing_proto/sensing_proto: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 test/sensing_proto/sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable sensing_proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sensing_proto"
 	cd /home/diva2/diva2/build/test/sensing_proto && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sensing_proto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -205,6 +231,7 @@ test/sensing_proto/CMakeFiles/sensing_proto.dir/build: test/sensing_proto/sensin
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/requires: test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o.requires
 test/sensing_proto/CMakeFiles/sensing_proto.dir/requires: test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o.requires
+test/sensing_proto/CMakeFiles/sensing_proto.dir/requires: test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.requires
 test/sensing_proto/CMakeFiles/sensing_proto.dir/requires: test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o.requires
 
 .PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/requires

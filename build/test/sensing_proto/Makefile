@@ -125,6 +125,33 @@ sensing_proto/fast:
 	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/build
 .PHONY : sensing_proto/fast
 
+CamSensing.o: CamSensing.cpp.o
+
+.PHONY : CamSensing.o
+
+# target to build an object file
+CamSensing.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o
+.PHONY : CamSensing.cpp.o
+
+CamSensing.i: CamSensing.cpp.i
+
+.PHONY : CamSensing.i
+
+# target to preprocess a source file
+CamSensing.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.i
+.PHONY : CamSensing.cpp.i
+
+CamSensing.s: CamSensing.cpp.s
+
+.PHONY : CamSensing.s
+
+# target to generate assembly for a file
+CamSensing.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.s
+.PHONY : CamSensing.cpp.s
+
 GpsSensing.o: GpsSensing.cpp.o
 
 .PHONY : GpsSensing.o
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... sensing_proto"
 	@echo "... edit_cache"
+	@echo "... CamSensing.o"
+	@echo "... CamSensing.i"
+	@echo "... CamSensing.s"
 	@echo "... GpsSensing.o"
 	@echo "... GpsSensing.i"
 	@echo "... GpsSensing.s"
