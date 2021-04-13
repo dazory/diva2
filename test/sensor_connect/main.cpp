@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     //socket.bind("tcp://127.0.0.1:5564");
     socket.bind(protocol::SENSING_PUB);
     
-    USE_GPS = 0;
+    USE_GPS = 2;
     GpsSensingThread gpsSensingThread;
     std::thread sensingthread_gps(gpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
@@ -35,8 +35,8 @@ int main(int argc, char *argv[])
     // thread sensingthread_cam(camSensingThread.run, 0, &context, &socket);
 
     USE_IMU=1;
-    ImuSensingThread imuSensingThread;
-    std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM0", 115200, &socket);
+    // ImuSensingThread imuSensingThread;
+    // std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM0", 115200, &socket);
 
 
     // CanSensingThread canSensingThread;
@@ -44,6 +44,6 @@ int main(int argc, char *argv[])
 
     // sensingthread_cam.join();
     sensingthread_gps.join();
-    sensingthread_imu.join();
+    // sensingthread_imu.join();
     // sensingthread_can.join();
 }
