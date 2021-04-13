@@ -2,7 +2,7 @@
 #include "../service/Timestamp.h"
 #include "../service/global_name.hpp"
 #include "../service/gps_packet.h"
-#include "sensors.pb.h"
+#include "../protobuf/sensors.pb.h"
 #include <fstream>
 #include "jsoncpp/json/json.h"
 #pragma comment(lib, "jsoncpp\\lib\\lib_json.lib")

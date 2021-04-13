@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/rule:
+	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/rule
+.PHONY : test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/rule
+
+# Convenience name for target.
+ProtoLib: test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/rule
+
+.PHONY : ProtoLib
+
+# fast build rule for target.
+ProtoLib/fast:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/build
+.PHONY : ProtoLib/fast
+
+# Convenience name for target.
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/rule:
 	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/rule
 .PHONY : test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/rule
@@ -151,6 +166,33 @@ GpsSenderThread.s: GpsSenderThread.cpp.s
 GpsSenderThread.cpp.s:
 	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/GpsSenderThread.cpp.s
 .PHONY : GpsSenderThread.cpp.s
+
+__/protobuf/sensors.pb.o: __/protobuf/sensors.pb.cc.o
+
+.PHONY : __/protobuf/sensors.pb.o
+
+# target to build an object file
+__/protobuf/sensors.pb.cc.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/__/protobuf/sensors.pb.cc.o
+.PHONY : __/protobuf/sensors.pb.cc.o
+
+__/protobuf/sensors.pb.i: __/protobuf/sensors.pb.cc.i
+
+.PHONY : __/protobuf/sensors.pb.i
+
+# target to preprocess a source file
+__/protobuf/sensors.pb.cc.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/__/protobuf/sensors.pb.cc.i
+.PHONY : __/protobuf/sensors.pb.cc.i
+
+__/protobuf/sensors.pb.s: __/protobuf/sensors.pb.cc.s
+
+.PHONY : __/protobuf/sensors.pb.s
+
+# target to generate assembly for a file
+__/protobuf/sensors.pb.cc.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/__/protobuf/sensors.pb.cc.s
+.PHONY : __/protobuf/sensors.pb.cc.s
 
 main.o: main.cpp.o
 
@@ -213,11 +255,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... senderToCloud"
 	@echo "... edit_cache"
+	@echo "... ProtoLib"
+	@echo "... senderToCloud"
 	@echo "... GpsSenderThread.o"
 	@echo "... GpsSenderThread.i"
 	@echo "... GpsSenderThread.s"
+	@echo "... __/protobuf/sensors.pb.o"
+	@echo "... __/protobuf/sensors.pb.i"
+	@echo "... __/protobuf/sensors.pb.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

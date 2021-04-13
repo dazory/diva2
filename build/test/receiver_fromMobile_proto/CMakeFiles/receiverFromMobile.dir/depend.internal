@@ -4,7 +4,6 @@
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o
  /home/diva2/diva2/test/receiver_fromMobile_proto/GpsReceiverThread.cpp
  /home/diva2/diva2/test/receiver_fromMobile_proto/GpsReceiverThread.h
- /home/diva2/diva2/test/receiver_fromMobile_proto/sensors.pb.h
  /home/diva2/diva2/test/service/Timestamp.h
  /home/diva2/diva2/test/service/global_name.hpp
  /home/diva2/diva2/test/service/gps_packet.h
@@ -55,11 +54,13 @@ test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThre
  /usr/local/include/google/protobuf/stubs/stringpiece.h
  /usr/local/include/google/protobuf/stubs/strutil.h
  /usr/local/include/google/protobuf/text_format.h
+ /usr/local/include/google/protobuf/timestamp.pb.h
  /usr/local/include/google/protobuf/type.pb.h
  /usr/local/include/google/protobuf/unknown_field_set.h
  /usr/local/include/google/protobuf/util/json_util.h
  /usr/local/include/google/protobuf/util/type_resolver.h
  /usr/local/include/google/protobuf/wire_format_lite.h
+ test/receiver_fromMobile_proto/sensors.pb.h
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/main.cpp.o
  /home/diva2/diva2/test/receiver_fromMobile_proto/GpsReceiverThread.h
  /home/diva2/diva2/test/receiver_fromMobile_proto/main.cpp
@@ -111,6 +112,7 @@ test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o
  /usr/local/include/google/protobuf/stubs/stl_util.h
  /usr/local/include/google/protobuf/stubs/stringpiece.h
  /usr/local/include/google/protobuf/stubs/strutil.h
+ /usr/local/include/google/protobuf/timestamp.pb.h
  /usr/local/include/google/protobuf/unknown_field_set.h
  /usr/local/include/google/protobuf/wire_format.h
  /usr/local/include/google/protobuf/wire_format_lite.h

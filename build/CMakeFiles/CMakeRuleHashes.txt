@@ -1,6 +1,7 @@
 # Hashes of file build rules.
 d8489e29fe24d6eed5017699fd2a4613 test/protobuf/AddressBook.pb.cc
-9f6c6f7f277a48228e33a5d66b34a5d5 test/receiver_fromMobile_proto/sensors.pb.cc
-c9e954f931a59c976ce06e7b23467adf test/sender_toCloud_protobuf/sensors.pb.cc
+10f2df16f69adb57cbc5dbe7e3ac9871 test/receiver_fromMobile_proto/sensors.pb.cc
+5fa8f117656313e92d4d03d8e597d01f test/sender_toCloud_protobuf/sensors.pb.cc
+254241bdf33d027c2617e953f5bd1db7 test/sensing_proto/sensors.pb.cc
 2377aca8ce525c0df22322738c69b05e test/zmq_protobuf/client/message.pb.cc
 da36d815e5cc0ebe10de26ed7c747b26 test/zmq_protobuf/server/message.pb.cc

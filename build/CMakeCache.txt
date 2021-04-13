@@ -193,6 +193,9 @@ OpenCV_DIR:PATH=/usr/share/OpenCV
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
+//Dependencies for the target
+ProtoLib_LIB_DEPENDS:STATIC=general;mscl;general;pthread;general;GL;general;GLU;general;glut;general;GLEW;general;glfw;general;X11;general;Xxf86vm;general;Xrandr;general;pthread;general;Xi;general;dl;general;Xinerama;general;Xcursor;general;m;general;jsoncpp;general;mscl;general;pthread;general;GL;general;GLU;general;glut;general;GLEW;general;glfw;general;X11;general;Xxf86vm;general;Xrandr;general;pthread;general;Xi;general;dl;general;Xinerama;general;Xcursor;general;m;general;protobuf::libprotoc;general;protobuf::libprotobuf;general;protobuf::libprotobuf-lite;
+
 //Path to a file.
 Protobuf_INCLUDE_DIR:PATH=/usr/local/include
 
@@ -348,7 +351,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -40,14 +40,7 @@ add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 
 
-
-
 # PROJECT (cppTest)
-SET(CLIENT_SRC_LIST main.cpp sensors.pb.cc GpsReceiverThread.cpp)
-
-
-
-# Find required protobuf package
 find_package(Protobuf REQUIRED)
 if(PROTOBUF_FOUND)
     message(STATUS "protobuf library found")
@@ -55,12 +48,14 @@ else()
     message(FATAL_ERROR "protobuf library is needed but cant be found")
 endif()
 
-
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
-PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS sensors.proto)
+PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../protobuf/sensors.proto" )
+
+
 
 # ADD_EXECUTABLE(receiverFromMobile ${CLIENT_SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS}  ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})
+SET(CLIENT_SRC_LIST main.cpp GpsReceiverThread.cpp)
 add_executable(receiverFromMobile ${CLIENT_SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS}  ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})
 
 target_include_directories(receiverFromMobile PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives

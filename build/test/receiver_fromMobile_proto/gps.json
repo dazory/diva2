@@ -1,0 +1,268 @@
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+   "latitude" : 0,
+   "longtitude" : 0
+}
+{
+   "latitude" : 3458.1799700000001,
+   "longtitude" : 12728.74791
+}
+{
+ "gpgga": "temp",
+ "latitude": 0,
+ "longitude": 0,
+ "gpsQuality": 0,
+ "numberOfSatellitesInUse": 0,
+ "horizontalDilutionOfPrecision": 0,
+ "antennaAltitudeMeters": 0,
+ "geoidalSeparationMeters": 0,
+ "ageOfDifferentialGPSDataSeconds": 0,
+ "differentialReferenceStationID": 0
+}
+{
+ "gpgga": "temp",
+ "latitude": 3458.17997,
+ "isNorth": true,
+ "longitude": 12728.74791,
+ "isEast": true,
+ "gpsQuality": 1,
+ "numberOfSatellitesInUse": 4,
+ "horizontalDilutionOfPrecision": 6.67,
+ "antennaAltitudeMeters": 39.9,
+ "geoidalSeparationMeters": 21.1,
+ "ageOfDifferentialGPSDataSeconds": 0,
+ "differentialReferenceStationID": 0
+}
+{
+ "gpgga": "temp",
+ "latitude": 0,
+ "longitude": 0,
+ "gpsQuality": 0,
+ "numberOfSatellitesInUse": 0,
+ "horizontalDilutionOfPrecision": 0,
+ "antennaAltitudeMeters": 0,
+ "geoidalSeparationMeters": 0,
+ "ageOfDifferentialGPSDataSeconds": 0,
+ "differentialReferenceStationID": 0
+}
+{
+ "gpgga": "temp",
+ "latitude": 3458.17997,
+ "isNorth": true,
+ "longitude": 12728.74791,
+ "isEast": true,
+ "gpsQuality": 1,
+ "numberOfSatellitesInUse": 4,
+ "horizontalDilutionOfPrecision": 6.67,
+ "antennaAltitudeMeters": 39.9,
+ "geoidalSeparationMeters": 21.1,
+ "ageOfDifferentialGPSDataSeconds": 0,
+ "differentialReferenceStationID": 0
+}
+{
+ "gpgga": "temp",
+ "latitude": 0,
+ "longitude": 0,
+ "gpsQuality": 0,
+ "numberOfSatellitesInUse": 0,
+ "horizontalDilutionOfPrecision": 0,
+ "antennaAltitudeMeters": 0,
+ "geoidalSeparationMeters": 0,
+ "ageOfDifferentialGPSDataSeconds": 0,
+ "differentialReferenceStationID": 0
+}
+{
+ "gpgga": "temp",
+ "latitude": 3458.17997,
+ "isNorth": true,
+ "longitude": 12728.74791,
+ "isEast": true,
+ "gpsQuality": 1,
+ "numberOfSatellitesInUse": 4,
+ "horizontalDilutionOfPrecision": 6.67,
+ "antennaAltitudeMeters": 39.9,
+ "geoidalSeparationMeters": 21.1,
+ "ageOfDifferentialGPSDataSeconds": 0,
+ "differentialReferenceStationID": 0
+}
+{
+ "gpgga": "temp",
+ "latitude": 0,
+ "longitude": 0,
+ "gpsQuality": 0,
+ "numberOfSatellitesInUse": 0,
+ "horizontalDilutionOfPrecision": 0,
+ "antennaAltitudeMeters": 0,
+ "geoidalSeparationMeters": 0,
+ "ageOfDifferentialGPSDataSeconds": 0,
+ "differentialReferenceStationID": 0
+}
+{
+ "gpgga": "temp",
+ "latitude": 3458.17997,
+ "isNorth": true,
+ "longitude": 12728.74791,
+ "isEast": true,
+ "gpsQuality": 1,
+ "numberOfSatellitesInUse": 4,
+ "horizontalDilutionOfPrecision": 6.67,
+ "antennaAltitudeMeters": 39.9,
+ "geoidalSeparationMeters": 21.1,
+ "ageOfDifferentialGPSDataSeconds": 0,
+ "differentialReferenceStationID": 0
+}

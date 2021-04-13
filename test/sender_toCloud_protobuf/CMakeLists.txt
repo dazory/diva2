@@ -42,12 +42,24 @@ add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 
 
-# PROJECT (cppTest)
-SET(CLIENT_SRC_LIST main.cpp sensors.pb.cc GpsSenderThread.cpp)
-
-
-
 # Find required protobuf package
+## Use protobuf
+add_library(ProtoLib
+  STATIC
+    ${PROJECT_SOURCE_DIR}/test/protobuf/sensors.pb.h
+    ${PROJECT_SOURCE_DIR}/test/protobuf/sensors.pb.cc
+    ${PROJECT_SOURCE_DIR}/test/protobuf/sensors.proto
+)
+target_link_libraries(ProtoLib
+  PRIVATE
+    protobuf::libprotoc
+    protobuf::libprotobuf 
+    protobuf::libprotobuf-lite
+#     gRPC::gpr 
+#     gRPC::grpc 
+#     gRPC::grpc++
+)
+
 find_package(Protobuf REQUIRED)
 if(PROTOBUF_FOUND)
     message(STATUS "protobuf library found")
@@ -55,11 +67,14 @@ else()
     message(FATAL_ERROR "protobuf library is needed but cant be found")
 endif()
 
-
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
-PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS sensors.proto)
+PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../protobuf/sensors.proto" )
 
+
+
+## EXCUTABLE
+SET(CLIENT_SRC_LIST main.cpp GpsSenderThread.cpp)
 ADD_EXECUTABLE(senderToCloud ${CLIENT_SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS}  ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})
 
 target_include_directories(senderToCloud PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives

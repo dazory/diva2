@@ -42,24 +42,6 @@ void GpsReceiverThread::run(void *contextRep){
         google::protobuf::TextFormat::PrintToString(gps, &strTxt);
         cout<<strTxt<<" (in GpsReceiverThread::run/while(1))"<<endl;
         
-/* ==========가연 ==================*/
-        // string str;
-        // Json::Value gps_json;
-        // //gps["token"] = "KKK";
-        // gps_json["latitude"] = gps.latitude();
-        // gps_json["longtitude"] = gps.longitude();
-        // Json::Value data_json;
-        // data_json.append(data_json);
-
-        // Json::StyledWriter writer;
-        // str = writer.write(data_json);
-        // cout << str << endl;
-
-        // std::ofstream ost("gps.json");
-        // ost << str;
-        // getchar();
-
-        
         /* SEND REPLY TO MOBILE */
         string strOK = "THANK YOU";
         zmq::message_t zmqData(sizeof(strOK));
@@ -67,6 +49,18 @@ void GpsReceiverThread::run(void *contextRep){
         s_send(socketRep, zmqData);
         
         /* CONVERT PROTO TO JSON */
+        /* ========== 가연이 것 ==================*/
+        // string json_string;
+        // Json::Value gps_json;
+        // gps_json["latitude"] = gps.latitude();
+        // gps_json["longtitude"] = gps.longitude();
+        // Json::Value data_json;
+        // data_json.append(gps_json);
+
+        // Json::StyledWriter writer;
+        // json_string = writer.write(gps_json);
+        // cout << json_string << endl;
+        
         string json_string;
         google::protobuf::util::JsonPrintOptions options;
         options.add_whitespace = true;
@@ -74,7 +68,12 @@ void GpsReceiverThread::run(void *contextRep){
         options.preserve_proto_field_names = true;
         google::protobuf::util::MessageToJsonString(gps, &json_string, options);
         cout<<json_string<<endl;
+        
+        std::ofstream ost;
+        ost.open("gps.json",std::ios_base::out | std::ios_base::app);
+        ost << json_string;
 
+        
         /* OPTIONS */
 
     }
