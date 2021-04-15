@@ -43,7 +43,7 @@ void CamSensingThread::run(const int devicename, zmq::context_t *context, zmq::s
             // publisher->send(msg);
         }
         
-        /*
+        
         camThread.cap.read(camThread.frame);
         printf("read cap (in CamSensingThread::run())\n");
 
@@ -56,7 +56,7 @@ void CamSensingThread::run(const int devicename, zmq::context_t *context, zmq::s
         zmq::message_t msg(buffer.size());
         memcpy(msg.data(), buffer.data(), buffer.size());
         publisher->send(msg);
-        */
+        
 
         /* OPTIONS */
         sleep(1);
