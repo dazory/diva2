@@ -46,17 +46,36 @@ message Imu{
     optional float estYawUncert = 16;
 }
 
+enum ChannelOrder {
+	GRAYSCALE = 0;
+	BGR = 1;
+	RGB = 2;
+	BGRA = 3;
+	RGBA = 4;
+	OPTICAL_FLOW = 5;
+}
+
 message Cam{
     google.protobuf.Timestamp timestamp=1;
 
-    int32 type = 2;
-    int32 width = 3;
-    int32 height = 4;
-    bytes red_data = 5;
-    bytes green_data = 6;
-    bytes blue_data = 7;
-    bytes image_data =8;
+    ChannelOrder channel_order = 2;
+    int32 cols = 3;
+    int32 rows = 4;
+    
+    bytes image_data = 5;
+    /*
+    optional bytes green_data = 6;
+    optional bytes blue_data = 7;
+    optional uint32 image_data =8;
+
+    message Data{
+        bytes r = 9;
+    }
+
+    repeated Data Datas = 10;
+    */
 }
+
 
 message Lidar{
     google.protobuf.Timestamp timestamp=1;

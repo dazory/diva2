@@ -59,6 +59,8 @@ google/protobuf/repeated_field.h
 -
 google/protobuf/extension_set.h
 -
+google/protobuf/generated_enum_reflection.h
+-
 google/protobuf/unknown_field_set.h
 -
 google/protobuf/timestamp.pb.h
@@ -97,6 +99,8 @@ google/protobuf/repeated_field.h
 -
 google/protobuf/extension_set.h
 -
+google/protobuf/generated_enum_reflection.h
+-
 google/protobuf/unknown_field_set.h
 -
 google/protobuf/timestamp.pb.h
@@ -109,12 +113,6 @@ google/protobuf/port_undef.inc
 /home/diva2/diva2/test/sensing_proto/CamSensing.cpp
 
 /home/diva2/diva2/test/sensing_proto/CamSensingThread.h
-CamSensing.cpp
-/home/diva2/diva2/test/sensing_proto/CamSensing.cpp
-../protobuf/sensors.pb.h
-/home/diva2/diva2/test/protobuf/sensors.pb.h
-../service/zmq_helper.h
-/home/diva2/diva2/test/service/zmq_helper.h
 opencv2/opencv.hpp
 -
 opencv2/imgproc/imgproc.hpp
@@ -135,6 +133,12 @@ sys/timeb.h
 -
 cstddef
 -
+CamSensing.cpp
+/home/diva2/diva2/test/sensing_proto/CamSensing.cpp
+../protobuf/sensors.pb.h
+/home/diva2/diva2/test/protobuf/sensors.pb.h
+../service/zmq_helper.h
+/home/diva2/diva2/test/service/zmq_helper.h
 
 /home/diva2/diva2/test/sensing_proto/GpsSensing.cpp
 GpsSensing.h

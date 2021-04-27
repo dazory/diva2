@@ -140,6 +140,33 @@ senderToCloud/fast:
 	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build
 .PHONY : senderToCloud/fast
 
+CamSenderThread.o: CamSenderThread.cpp.o
+
+.PHONY : CamSenderThread.o
+
+# target to build an object file
+CamSenderThread.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o
+.PHONY : CamSenderThread.cpp.o
+
+CamSenderThread.i: CamSenderThread.cpp.i
+
+.PHONY : CamSenderThread.i
+
+# target to preprocess a source file
+CamSenderThread.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.i
+.PHONY : CamSenderThread.cpp.i
+
+CamSenderThread.s: CamSenderThread.cpp.s
+
+.PHONY : CamSenderThread.s
+
+# target to generate assembly for a file
+CamSenderThread.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.s
+.PHONY : CamSenderThread.cpp.s
+
 GpsSenderThread.o: GpsSenderThread.cpp.o
 
 .PHONY : GpsSenderThread.o
@@ -258,6 +285,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... ProtoLib"
 	@echo "... senderToCloud"
+	@echo "... CamSenderThread.o"
+	@echo "... CamSenderThread.i"
+	@echo "... CamSenderThread.s"
 	@echo "... GpsSenderThread.o"
 	@echo "... GpsSenderThread.i"
 	@echo "... GpsSenderThread.s"

@@ -58,7 +58,7 @@ void GpsSensingThread::run(zmq::socket_t *socket)
     {
         printf("while(1) start! (in GpsSensingThread::run/while(1))\n");
 
-        s_send_idx(*socket, SENSOR_GPS);
+        // s_send_idx(*socket, SENSOR_GPS);
         printf("send index (in GpsSensingThread::run/while(1))\n");
 
         /* Read 255bytes from GPS */
@@ -84,7 +84,7 @@ void GpsSensingThread::run(zmq::socket_t *socket)
         
         // time and raw data
         time_t curTime = time(NULL);
-        gps.set_gpgga("hello");
+        gps.set_gpgga("$GNGGA,015442.01,3458.17997,N,12728.74791,E,1,04,6.67,39.9,M,21.1,M,,,*61");
         // gps.set_allocated_timestamp(TimeUtil::TimeTToTimestamp(curTime));
 
         pText = cBuff;

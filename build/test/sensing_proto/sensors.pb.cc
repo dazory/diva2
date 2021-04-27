@@ -70,14 +70,12 @@ struct ImuDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ImuDefaultTypeInternal _Imu_default_instance_;
 constexpr Cam::Cam(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : red_data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , green_data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , blue_data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , image_data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  : image_data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , timestamp_(nullptr)
-  , type_(0)
-  , width_(0)
-  , height_(0){}
+  , channel_order_(0)
+
+  , cols_(0)
+  , rows_(0){}
 struct CamDefaultTypeInternal {
   constexpr CamDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -113,7 +111,7 @@ struct CanDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CanDefaultTypeInternal _Can_default_instance_;
 }  // namespace sensors
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_sensors_2eproto[5];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_sensors_2eproto = nullptr;
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_sensors_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_sensors_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -191,12 +189,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::sensors::Cam, timestamp_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Cam, type_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Cam, width_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Cam, height_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Cam, red_data_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Cam, green_data_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Cam, blue_data_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Cam, channel_order_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Cam, cols_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Cam, rows_),
   PROTOBUF_FIELD_OFFSET(::sensors::Cam, image_data_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Lidar, _internal_metadata_),
@@ -215,8 +210,8 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 0, 18, sizeof(::sensors::Gps)},
   { 31, 52, sizeof(::sensors::Imu)},
   { 68, -1, sizeof(::sensors::Cam)},
-  { 81, -1, sizeof(::sensors::Lidar)},
-  { 87, -1, sizeof(::sensors::Can)},
+  { 78, -1, sizeof(::sensors::Lidar)},
+  { 84, -1, sizeof(::sensors::Can)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -263,21 +258,23 @@ const char descriptor_table_protodef_sensors_2eproto[] PROTOBUF_SECTION_VARIABLE
   "\r\n\013_scaledMagXB\r\n\013_scaledMagYB\r\n\013_scaled"
   "MagZB\n\n\010_estRollB\013\n\t_estPitchB\t\n\007_estYaw"
   "B\020\n\016_estRollUncertB\021\n\017_estPitchUncertB\017\n"
-  "\r_estYawUncert\"\256\001\n\003Cam\022-\n\ttimestamp\030\001 \001("
-  "\0132\032.google.protobuf.Timestamp\022\014\n\004type\030\002 "
-  "\001(\005\022\r\n\005width\030\003 \001(\005\022\016\n\006height\030\004 \001(\005\022\020\n\010re"
-  "d_data\030\005 \001(\014\022\022\n\ngreen_data\030\006 \001(\014\022\021\n\tblue"
-  "_data\030\007 \001(\014\022\022\n\nimage_data\030\010 \001(\014\"6\n\005Lidar"
-  "\022-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf.Ti"
-  "mestamp\"4\n\003Can\022-\n\ttimestamp\030\001 \001(\0132\032.goog"
-  "le.protobuf.Timestampb\006proto3"
+  "\r_estYawUncert\"\222\001\n\003Cam\022-\n\ttimestamp\030\001 \001("
+  "\0132\032.google.protobuf.Timestamp\022,\n\rchannel"
+  "_order\030\002 \001(\0162\025.sensors.ChannelOrder\022\014\n\004c"
+  "ols\030\003 \001(\005\022\014\n\004rows\030\004 \001(\005\022\022\n\nimage_data\030\005 "
+  "\001(\014\"6\n\005Lidar\022-\n\ttimestamp\030\001 \001(\0132\032.google"
+  ".protobuf.Timestamp\"4\n\003Can\022-\n\ttimestamp\030"
+  "\001 \001(\0132\032.google.protobuf.Timestamp*U\n\014Cha"
+  "nnelOrder\022\r\n\tGRAYSCALE\020\000\022\007\n\003BGR\020\001\022\007\n\003RGB"
+  "\020\002\022\010\n\004BGRA\020\003\022\010\n\004RGBA\020\004\022\020\n\014OPTICAL_FLOW\020\005"
+  "b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_sensors_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_sensors_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_sensors_2eproto = {
-  false, false, 1709, descriptor_table_protodef_sensors_2eproto, "sensors.proto", 
+  false, false, 1768, descriptor_table_protodef_sensors_2eproto, "sensors.proto", 
   &descriptor_table_sensors_2eproto_once, descriptor_table_sensors_2eproto_deps, 1, 5,
   schemas, file_default_instances, TableStruct_sensors_2eproto::offsets,
   file_level_metadata_sensors_2eproto, file_level_enum_descriptors_sensors_2eproto, file_level_service_descriptors_sensors_2eproto,
@@ -289,6 +286,24 @@ PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_sensors_2eproto(&descriptor_table_sensors_2eproto);
 namespace sensors {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ChannelOrder_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_sensors_2eproto);
+  return file_level_enum_descriptors_sensors_2eproto[0];
+}
+bool ChannelOrder_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+      return true;
+    default:
+      return false;
+  }
+}
+
 
 // ===================================================================
 
@@ -1512,21 +1527,6 @@ Cam::Cam(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 Cam::Cam(const Cam& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  red_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_red_data().empty()) {
-    red_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_red_data(), 
-      GetArena());
-  }
-  green_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_green_data().empty()) {
-    green_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_green_data(), 
-      GetArena());
-  }
-  blue_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_blue_data().empty()) {
-    blue_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_blue_data(), 
-      GetArena());
-  }
   image_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_image_data().empty()) {
     image_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_image_data(), 
@@ -1537,21 +1537,18 @@ Cam::Cam(const Cam& from)
   } else {
     timestamp_ = nullptr;
   }
-  ::memcpy(&type_, &from.type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&height_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(height_));
+  ::memcpy(&channel_order_, &from.channel_order_,
+    static_cast<size_t>(reinterpret_cast<char*>(&rows_) -
+    reinterpret_cast<char*>(&channel_order_)) + sizeof(rows_));
   // @@protoc_insertion_point(copy_constructor:sensors.Cam)
 }
 
 void Cam::SharedCtor() {
-red_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-green_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-blue_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 image_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&timestamp_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&height_) -
-    reinterpret_cast<char*>(&timestamp_)) + sizeof(height_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&rows_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(rows_));
 }
 
 Cam::~Cam() {
@@ -1562,9 +1559,6 @@ Cam::~Cam() {
 
 void Cam::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  red_data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  green_data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  blue_data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   image_data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete timestamp_;
 }
@@ -1585,17 +1579,14 @@ void Cam::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  red_data_.ClearToEmpty();
-  green_data_.ClearToEmpty();
-  blue_data_.ClearToEmpty();
   image_data_.ClearToEmpty();
   if (GetArena() == nullptr && timestamp_ != nullptr) {
     delete timestamp_;
   }
   timestamp_ = nullptr;
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&height_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(height_));
+  ::memset(&channel_order_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&rows_) -
+      reinterpret_cast<char*>(&channel_order_)) + sizeof(rows_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1612,54 +1603,31 @@ const char* Cam::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::intern
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 type = 2;
+      // .sensors.ChannelOrder channel_order = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
+          _internal_set_channel_order(static_cast<::sensors::ChannelOrder>(val));
         } else goto handle_unusual;
         continue;
-      // int32 width = 3;
+      // int32 cols = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          width_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          cols_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 height = 4;
+      // int32 rows = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          height_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          rows_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bytes red_data = 5;
+      // bytes image_data = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          auto str = _internal_mutable_red_data();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bytes green_data = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          auto str = _internal_mutable_green_data();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bytes blue_data = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          auto str = _internal_mutable_blue_data();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bytes image_data = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           auto str = _internal_mutable_image_data();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
@@ -1702,46 +1670,29 @@ failure:
         1, _Internal::timestamp(this), target, stream);
   }
 
-  // int32 type = 2;
-  if (this->type() != 0) {
+  // .sensors.ChannelOrder channel_order = 2;
+  if (this->channel_order() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_type(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_channel_order(), target);
   }
 
-  // int32 width = 3;
-  if (this->width() != 0) {
+  // int32 cols = 3;
+  if (this->cols() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_width(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_cols(), target);
   }
 
-  // int32 height = 4;
-  if (this->height() != 0) {
+  // int32 rows = 4;
+  if (this->rows() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_height(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_rows(), target);
   }
 
-  // bytes red_data = 5;
-  if (this->red_data().size() > 0) {
-    target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_red_data(), target);
-  }
-
-  // bytes green_data = 6;
-  if (this->green_data().size() > 0) {
-    target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_green_data(), target);
-  }
-
-  // bytes blue_data = 7;
-  if (this->blue_data().size() > 0) {
-    target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_blue_data(), target);
-  }
-
-  // bytes image_data = 8;
+  // bytes image_data = 5;
   if (this->image_data().size() > 0) {
     target = stream->WriteBytesMaybeAliased(
-        8, this->_internal_image_data(), target);
+        5, this->_internal_image_data(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1760,28 +1711,7 @@ size_t Cam::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // bytes red_data = 5;
-  if (this->red_data().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_red_data());
-  }
-
-  // bytes green_data = 6;
-  if (this->green_data().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_green_data());
-  }
-
-  // bytes blue_data = 7;
-  if (this->blue_data().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_blue_data());
-  }
-
-  // bytes image_data = 8;
+  // bytes image_data = 5;
   if (this->image_data().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -1795,25 +1725,24 @@ size_t Cam::ByteSizeLong() const {
         *timestamp_);
   }
 
-  // int32 type = 2;
-  if (this->type() != 0) {
+  // .sensors.ChannelOrder channel_order = 2;
+  if (this->channel_order() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_channel_order());
   }
 
-  // int32 width = 3;
-  if (this->width() != 0) {
+  // int32 cols = 3;
+  if (this->cols() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_width());
+        this->_internal_cols());
   }
 
-  // int32 height = 4;
-  if (this->height() != 0) {
+  // int32 rows = 4;
+  if (this->rows() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_height());
+        this->_internal_rows());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1847,29 +1776,20 @@ void Cam::MergeFrom(const Cam& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.red_data().size() > 0) {
-    _internal_set_red_data(from._internal_red_data());
-  }
-  if (from.green_data().size() > 0) {
-    _internal_set_green_data(from._internal_green_data());
-  }
-  if (from.blue_data().size() > 0) {
-    _internal_set_blue_data(from._internal_blue_data());
-  }
   if (from.image_data().size() > 0) {
     _internal_set_image_data(from._internal_image_data());
   }
   if (from.has_timestamp()) {
     _internal_mutable_timestamp()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_timestamp());
   }
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from.channel_order() != 0) {
+    _internal_set_channel_order(from._internal_channel_order());
   }
-  if (from.width() != 0) {
-    _internal_set_width(from._internal_width());
+  if (from.cols() != 0) {
+    _internal_set_cols(from._internal_cols());
   }
-  if (from.height() != 0) {
-    _internal_set_height(from._internal_height());
+  if (from.rows() != 0) {
+    _internal_set_rows(from._internal_rows());
   }
 }
 
@@ -1894,13 +1814,10 @@ bool Cam::IsInitialized() const {
 void Cam::InternalSwap(Cam* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  red_data_.Swap(&other->red_data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  green_data_.Swap(&other->green_data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  blue_data_.Swap(&other->blue_data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   image_data_.Swap(&other->image_data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Cam, height_)
-      + sizeof(Cam::height_)
+      PROTOBUF_FIELD_OFFSET(Cam, rows_)
+      + sizeof(Cam::rows_)
       - PROTOBUF_FIELD_OFFSET(Cam, timestamp_)>(
           reinterpret_cast<char*>(&timestamp_),
           reinterpret_cast<char*>(&other->timestamp_));

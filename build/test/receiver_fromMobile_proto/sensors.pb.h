@@ -30,6 +30,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include <google/protobuf/timestamp.pb.h>
 // @@protoc_insertion_point(includes)
@@ -80,6 +81,35 @@ template<> ::sensors::Lidar* Arena::CreateMaybeMessage<::sensors::Lidar>(Arena*)
 PROTOBUF_NAMESPACE_CLOSE
 namespace sensors {
 
+enum ChannelOrder : int {
+  GRAYSCALE = 0,
+  BGR = 1,
+  RGB = 2,
+  BGRA = 3,
+  RGBA = 4,
+  OPTICAL_FLOW = 5,
+  ChannelOrder_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ChannelOrder_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ChannelOrder_IsValid(int value);
+constexpr ChannelOrder ChannelOrder_MIN = GRAYSCALE;
+constexpr ChannelOrder ChannelOrder_MAX = OPTICAL_FLOW;
+constexpr int ChannelOrder_ARRAYSIZE = ChannelOrder_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ChannelOrder_descriptor();
+template<typename T>
+inline const std::string& ChannelOrder_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ChannelOrder>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ChannelOrder_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ChannelOrder_descriptor(), enum_t_value);
+}
+inline bool ChannelOrder_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, ChannelOrder* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ChannelOrder>(
+    ChannelOrder_descriptor(), name, value);
+}
 // ===================================================================
 
 class Gps PROTOBUF_FINAL :
@@ -877,58 +907,13 @@ class Cam PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRedDataFieldNumber = 5,
-    kGreenDataFieldNumber = 6,
-    kBlueDataFieldNumber = 7,
-    kImageDataFieldNumber = 8,
+    kImageDataFieldNumber = 5,
     kTimestampFieldNumber = 1,
-    kTypeFieldNumber = 2,
-    kWidthFieldNumber = 3,
-    kHeightFieldNumber = 4,
+    kChannelOrderFieldNumber = 2,
+    kColsFieldNumber = 3,
+    kRowsFieldNumber = 4,
   };
-  // bytes red_data = 5;
-  void clear_red_data();
-  const std::string& red_data() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_red_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_red_data();
-  std::string* release_red_data();
-  void set_allocated_red_data(std::string* red_data);
-  private:
-  const std::string& _internal_red_data() const;
-  void _internal_set_red_data(const std::string& value);
-  std::string* _internal_mutable_red_data();
-  public:
-
-  // bytes green_data = 6;
-  void clear_green_data();
-  const std::string& green_data() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_green_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_green_data();
-  std::string* release_green_data();
-  void set_allocated_green_data(std::string* green_data);
-  private:
-  const std::string& _internal_green_data() const;
-  void _internal_set_green_data(const std::string& value);
-  std::string* _internal_mutable_green_data();
-  public:
-
-  // bytes blue_data = 7;
-  void clear_blue_data();
-  const std::string& blue_data() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_blue_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_blue_data();
-  std::string* release_blue_data();
-  void set_allocated_blue_data(std::string* blue_data);
-  private:
-  const std::string& _internal_blue_data() const;
-  void _internal_set_blue_data(const std::string& value);
-  std::string* _internal_mutable_blue_data();
-  public:
-
-  // bytes image_data = 8;
+  // bytes image_data = 5;
   void clear_image_data();
   const std::string& image_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -960,31 +945,31 @@ class Cam PROTOBUF_FINAL :
       PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
   PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_timestamp();
 
-  // int32 type = 2;
-  void clear_type();
-  ::PROTOBUF_NAMESPACE_ID::int32 type() const;
-  void set_type(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // .sensors.ChannelOrder channel_order = 2;
+  void clear_channel_order();
+  ::sensors::ChannelOrder channel_order() const;
+  void set_channel_order(::sensors::ChannelOrder value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_type() const;
-  void _internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::sensors::ChannelOrder _internal_channel_order() const;
+  void _internal_set_channel_order(::sensors::ChannelOrder value);
   public:
 
-  // int32 width = 3;
-  void clear_width();
-  ::PROTOBUF_NAMESPACE_ID::int32 width() const;
-  void set_width(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // int32 cols = 3;
+  void clear_cols();
+  ::PROTOBUF_NAMESPACE_ID::int32 cols() const;
+  void set_cols(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_width() const;
-  void _internal_set_width(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_cols() const;
+  void _internal_set_cols(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 height = 4;
-  void clear_height();
-  ::PROTOBUF_NAMESPACE_ID::int32 height() const;
-  void set_height(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // int32 rows = 4;
+  void clear_rows();
+  ::PROTOBUF_NAMESPACE_ID::int32 rows() const;
+  void set_rows(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_height() const;
-  void _internal_set_height(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_rows() const;
+  void _internal_set_rows(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
   // @@protoc_insertion_point(class_scope:sensors.Cam)
@@ -994,14 +979,11 @@ class Cam PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr red_data_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr green_data_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr blue_data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr image_data_;
   PROTOBUF_NAMESPACE_ID::Timestamp* timestamp_;
-  ::PROTOBUF_NAMESPACE_ID::int32 type_;
-  ::PROTOBUF_NAMESPACE_ID::int32 width_;
-  ::PROTOBUF_NAMESPACE_ID::int32 height_;
+  int channel_order_;
+  ::PROTOBUF_NAMESPACE_ID::int32 cols_;
+  ::PROTOBUF_NAMESPACE_ID::int32 rows_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
 };
@@ -2308,202 +2290,67 @@ inline void Cam::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* times
   // @@protoc_insertion_point(field_set_allocated:sensors.Cam.timestamp)
 }
 
-// int32 type = 2;
-inline void Cam::clear_type() {
-  type_ = 0;
+// .sensors.ChannelOrder channel_order = 2;
+inline void Cam::clear_channel_order() {
+  channel_order_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::_internal_type() const {
-  return type_;
+inline ::sensors::ChannelOrder Cam::_internal_channel_order() const {
+  return static_cast< ::sensors::ChannelOrder >(channel_order_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::type() const {
-  // @@protoc_insertion_point(field_get:sensors.Cam.type)
-  return _internal_type();
+inline ::sensors::ChannelOrder Cam::channel_order() const {
+  // @@protoc_insertion_point(field_get:sensors.Cam.channel_order)
+  return _internal_channel_order();
 }
-inline void Cam::_internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Cam::_internal_set_channel_order(::sensors::ChannelOrder value) {
   
-  type_ = value;
+  channel_order_ = value;
 }
-inline void Cam::set_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:sensors.Cam.type)
+inline void Cam::set_channel_order(::sensors::ChannelOrder value) {
+  _internal_set_channel_order(value);
+  // @@protoc_insertion_point(field_set:sensors.Cam.channel_order)
 }
 
-// int32 width = 3;
-inline void Cam::clear_width() {
-  width_ = 0;
+// int32 cols = 3;
+inline void Cam::clear_cols() {
+  cols_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::_internal_width() const {
-  return width_;
+inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::_internal_cols() const {
+  return cols_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::width() const {
-  // @@protoc_insertion_point(field_get:sensors.Cam.width)
-  return _internal_width();
+inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::cols() const {
+  // @@protoc_insertion_point(field_get:sensors.Cam.cols)
+  return _internal_cols();
 }
-inline void Cam::_internal_set_width(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Cam::_internal_set_cols(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  width_ = value;
+  cols_ = value;
 }
-inline void Cam::set_width(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_width(value);
-  // @@protoc_insertion_point(field_set:sensors.Cam.width)
+inline void Cam::set_cols(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_cols(value);
+  // @@protoc_insertion_point(field_set:sensors.Cam.cols)
 }
 
-// int32 height = 4;
-inline void Cam::clear_height() {
-  height_ = 0;
+// int32 rows = 4;
+inline void Cam::clear_rows() {
+  rows_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::_internal_height() const {
-  return height_;
+inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::_internal_rows() const {
+  return rows_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::height() const {
-  // @@protoc_insertion_point(field_get:sensors.Cam.height)
-  return _internal_height();
+inline ::PROTOBUF_NAMESPACE_ID::int32 Cam::rows() const {
+  // @@protoc_insertion_point(field_get:sensors.Cam.rows)
+  return _internal_rows();
 }
-inline void Cam::_internal_set_height(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Cam::_internal_set_rows(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  height_ = value;
+  rows_ = value;
 }
-inline void Cam::set_height(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_height(value);
-  // @@protoc_insertion_point(field_set:sensors.Cam.height)
+inline void Cam::set_rows(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_rows(value);
+  // @@protoc_insertion_point(field_set:sensors.Cam.rows)
 }
 
-// bytes red_data = 5;
-inline void Cam::clear_red_data() {
-  red_data_.ClearToEmpty();
-}
-inline const std::string& Cam::red_data() const {
-  // @@protoc_insertion_point(field_get:sensors.Cam.red_data)
-  return _internal_red_data();
-}
-template <typename ArgT0, typename... ArgT>
-PROTOBUF_ALWAYS_INLINE
-inline void Cam::set_red_data(ArgT0&& arg0, ArgT... args) {
- 
- red_data_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
-  // @@protoc_insertion_point(field_set:sensors.Cam.red_data)
-}
-inline std::string* Cam::mutable_red_data() {
-  // @@protoc_insertion_point(field_mutable:sensors.Cam.red_data)
-  return _internal_mutable_red_data();
-}
-inline const std::string& Cam::_internal_red_data() const {
-  return red_data_.Get();
-}
-inline void Cam::_internal_set_red_data(const std::string& value) {
-  
-  red_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline std::string* Cam::_internal_mutable_red_data() {
-  
-  return red_data_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Cam::release_red_data() {
-  // @@protoc_insertion_point(field_release:sensors.Cam.red_data)
-  return red_data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Cam::set_allocated_red_data(std::string* red_data) {
-  if (red_data != nullptr) {
-    
-  } else {
-    
-  }
-  red_data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), red_data,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:sensors.Cam.red_data)
-}
-
-// bytes green_data = 6;
-inline void Cam::clear_green_data() {
-  green_data_.ClearToEmpty();
-}
-inline const std::string& Cam::green_data() const {
-  // @@protoc_insertion_point(field_get:sensors.Cam.green_data)
-  return _internal_green_data();
-}
-template <typename ArgT0, typename... ArgT>
-PROTOBUF_ALWAYS_INLINE
-inline void Cam::set_green_data(ArgT0&& arg0, ArgT... args) {
- 
- green_data_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
-  // @@protoc_insertion_point(field_set:sensors.Cam.green_data)
-}
-inline std::string* Cam::mutable_green_data() {
-  // @@protoc_insertion_point(field_mutable:sensors.Cam.green_data)
-  return _internal_mutable_green_data();
-}
-inline const std::string& Cam::_internal_green_data() const {
-  return green_data_.Get();
-}
-inline void Cam::_internal_set_green_data(const std::string& value) {
-  
-  green_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline std::string* Cam::_internal_mutable_green_data() {
-  
-  return green_data_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Cam::release_green_data() {
-  // @@protoc_insertion_point(field_release:sensors.Cam.green_data)
-  return green_data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Cam::set_allocated_green_data(std::string* green_data) {
-  if (green_data != nullptr) {
-    
-  } else {
-    
-  }
-  green_data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), green_data,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:sensors.Cam.green_data)
-}
-
-// bytes blue_data = 7;
-inline void Cam::clear_blue_data() {
-  blue_data_.ClearToEmpty();
-}
-inline const std::string& Cam::blue_data() const {
-  // @@protoc_insertion_point(field_get:sensors.Cam.blue_data)
-  return _internal_blue_data();
-}
-template <typename ArgT0, typename... ArgT>
-PROTOBUF_ALWAYS_INLINE
-inline void Cam::set_blue_data(ArgT0&& arg0, ArgT... args) {
- 
- blue_data_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
-  // @@protoc_insertion_point(field_set:sensors.Cam.blue_data)
-}
-inline std::string* Cam::mutable_blue_data() {
-  // @@protoc_insertion_point(field_mutable:sensors.Cam.blue_data)
-  return _internal_mutable_blue_data();
-}
-inline const std::string& Cam::_internal_blue_data() const {
-  return blue_data_.Get();
-}
-inline void Cam::_internal_set_blue_data(const std::string& value) {
-  
-  blue_data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline std::string* Cam::_internal_mutable_blue_data() {
-  
-  return blue_data_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Cam::release_blue_data() {
-  // @@protoc_insertion_point(field_release:sensors.Cam.blue_data)
-  return blue_data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Cam::set_allocated_blue_data(std::string* blue_data) {
-  if (blue_data != nullptr) {
-    
-  } else {
-    
-  }
-  blue_data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), blue_data,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:sensors.Cam.blue_data)
-}
-
-// bytes image_data = 8;
+// bytes image_data = 5;
 inline void Cam::clear_image_data() {
   image_data_.ClearToEmpty();
 }
@@ -2725,6 +2572,16 @@ inline void Can::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* times
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace sensors
+
+PROTOBUF_NAMESPACE_OPEN
+
+template <> struct is_proto_enum< ::sensors::ChannelOrder> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::sensors::ChannelOrder>() {
+  return ::sensors::ChannelOrder_descriptor();
+}
+
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 

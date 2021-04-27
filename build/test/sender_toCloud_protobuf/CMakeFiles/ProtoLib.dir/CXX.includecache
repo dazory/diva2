@@ -59,6 +59,8 @@ google/protobuf/repeated_field.h
 -
 google/protobuf/extension_set.h
 -
+google/protobuf/generated_enum_reflection.h
+-
 google/protobuf/unknown_field_set.h
 -
 google/protobuf/timestamp.pb.h

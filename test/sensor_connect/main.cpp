@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     // CamSensingThread camSensingThread;
     // thread sensingthread_cam(camSensingThread.run, 0, &context, &socket);
 
-    USE_IMU=1;
+    // USE_IMU=0;
     // ImuSensingThread imuSensingThread;
     // std::thread sensingthread_imu(imuSensingThread.run, "/dev/ttyACM0", 115200, &socket);
 

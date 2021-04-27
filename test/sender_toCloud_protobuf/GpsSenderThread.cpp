@@ -24,7 +24,7 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq)
     // Connect with socket SUB with Sensing Process
     zmq::socket_t socketSub(*(zmq::context_t *)contextSub, ZMQ_SUB);
     socketSub.connect(protocol::SENSING_SUB);
-    socketSub.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
+    socketSub.setsockopt(ZMQ_SUBSCRIBE, "", 0);
     printf("socket connected (in GpsSenderThread::run)\n");
 
     vector<GpsPacket> mGpsPackets;
@@ -41,7 +41,8 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq)
         {
             zmq::message_t msgData;
             socketSub.recv(&msgData);
-            printf("Recevied (in GpsSenderThread::run)\n");
+            printf("Recevied(in GpsSenderThread::run)\n");
+            printf("~~~~~~~~~~~~~~~~ SIZE = %d ~~~~~~~~~~~~~~~~ \n", msgData.size());
 
             unsigned char data[1024] = "\0";
             gps.ParseFromArray(msgData.data(), msgData.size());

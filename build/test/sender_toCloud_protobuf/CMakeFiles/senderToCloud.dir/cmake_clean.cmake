@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "sensors.pb.h"
   "CMakeFiles/senderToCloud.dir/main.cpp.o"
   "CMakeFiles/senderToCloud.dir/GpsSenderThread.cpp.o"
+  "CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o"
   "CMakeFiles/senderToCloud.dir/sensors.pb.cc.o"
   "senderToCloud.pdb"
   "senderToCloud"
