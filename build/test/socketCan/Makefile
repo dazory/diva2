@@ -110,6 +110,75 @@ depend:
 	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+test/socketCan/CMakeFiles/socketCan.dir/rule:
+	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/CMakeFiles/socketCan.dir/rule
+.PHONY : test/socketCan/CMakeFiles/socketCan.dir/rule
+
+# Convenience name for target.
+socketCan: test/socketCan/CMakeFiles/socketCan.dir/rule
+
+.PHONY : socketCan
+
+# fast build rule for target.
+socketCan/fast:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/build
+.PHONY : socketCan/fast
+
+sensors.pb.o: sensors.pb.cc.o
+
+.PHONY : sensors.pb.o
+
+# target to build an object file
+sensors.pb.cc.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.o
+.PHONY : sensors.pb.cc.o
+
+sensors.pb.i: sensors.pb.cc.i
+
+.PHONY : sensors.pb.i
+
+# target to preprocess a source file
+sensors.pb.cc.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.i
+.PHONY : sensors.pb.cc.i
+
+sensors.pb.s: sensors.pb.cc.s
+
+.PHONY : sensors.pb.s
+
+# target to generate assembly for a file
+sensors.pb.cc.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.s
+.PHONY : sensors.pb.cc.s
+
+test.o: test.cpp.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -117,7 +186,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... socketCan"
 	@echo "... edit_cache"
+	@echo "... sensors.pb.o"
+	@echo "... sensors.pb.i"
+	@echo "... sensors.pb.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

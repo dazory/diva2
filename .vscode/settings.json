@@ -60,7 +60,7 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        
+        "core": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
     

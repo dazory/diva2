@@ -140,6 +140,36 @@ CamSensing.cpp
 ../service/zmq_helper.h
 /home/diva2/diva2/test/service/zmq_helper.h
 
+/home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp
+CanSensingThread.h
+/home/diva2/diva2/test/sensing_proto/CanSensingThread.h
+
+/home/diva2/diva2/test/sensing_proto/CanSensingThread.h
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+thread
+-
+net/if.h
+-
+sys/ioctl.h
+-
+sys/socket.h
+-
+linux/can.h
+-
+linux/can/raw.h
+-
+../protobuf/sensors.pb.h
+/home/diva2/diva2/test/protobuf/sensors.pb.h
+../service/zmq_helper.h
+/home/diva2/diva2/test/service/zmq_helper.h
+
 /home/diva2/diva2/test/sensing_proto/GpsSensing.cpp
 GpsSensing.h
 /home/diva2/diva2/test/sensing_proto/GpsSensing.h
@@ -221,6 +251,8 @@ GpsSensingThread.h
 /home/diva2/diva2/test/sensing_proto/GpsSensingThread.h
 CamSensingThread.h
 /home/diva2/diva2/test/sensing_proto/CamSensingThread.h
+CanSensingThread.h
+/home/diva2/diva2/test/sensing_proto/CanSensingThread.h
 
 /home/diva2/diva2/test/service/Can_serial.h
 stdlib.h

@@ -137,6 +137,19 @@ zmq_test/fast:
 .PHONY : zmq_test/fast
 
 #=============================================================================
+# Target rules for targets named ouster
+
+# Build rule for target.
+ouster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ouster
+.PHONY : ouster
+
+# fast build rule for target.
+ouster/fast:
+	$(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/build
+.PHONY : ouster/fast
+
+#=============================================================================
 # Target rules for targets named cppTest
 
 # Build rule for target.
@@ -280,6 +293,19 @@ sub/fast:
 .PHONY : sub/fast
 
 #=============================================================================
+# Target rules for targets named socketCan
+
+# Build rule for target.
+socketCan: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 socketCan
+.PHONY : socketCan
+
+# fast build rule for target.
+socketCan/fast:
+	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/build
+.PHONY : socketCan/fast
+
+#=============================================================================
 # Target rules for targets named client
 
 # Build rule for target.
@@ -304,6 +330,32 @@ server: cmake_check_build_system
 server/fast:
 	$(MAKE) -f test/zmq_protobuf/server/CMakeFiles/server.dir/build.make test/zmq_protobuf/server/CMakeFiles/server.dir/build
 .PHONY : server/fast
+
+#=============================================================================
+# Target rules for targets named algorithmTesting
+
+# Build rule for target.
+algorithmTesting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 algorithmTesting
+.PHONY : algorithmTesting
+
+# fast build rule for target.
+algorithmTesting/fast:
+	$(MAKE) -f test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/build.make test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/build
+.PHONY : algorithmTesting/fast
+
+#=============================================================================
+# Target rules for targets named gs_receiverFromMobile
+
+# Build rule for target.
+gs_receiverFromMobile: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gs_receiverFromMobile
+.PHONY : gs_receiverFromMobile
+
+# fast build rule for target.
+gs_receiverFromMobile/fast:
+	$(MAKE) -f test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/build.make test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/build
+.PHONY : gs_receiverFromMobile/fast
 
 main.o: main.cpp.o
 
@@ -342,6 +394,7 @@ help:
 	@echo "... diva2"
 	@echo "... edit_cache"
 	@echo "... zmq_test"
+	@echo "... ouster"
 	@echo "... cppTest"
 	@echo "... receiverFrommobile"
 	@echo "... receiverFromMobile"
@@ -353,8 +406,11 @@ help:
 	@echo "... parsing"
 	@echo "... pub"
 	@echo "... sub"
+	@echo "... socketCan"
 	@echo "... client"
 	@echo "... server"
+	@echo "... algorithmTesting"
+	@echo "... gs_receiverFromMobile"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

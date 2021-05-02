@@ -1,0 +1,212 @@
+[
+{
+  "directory": "/home/diva2/diva2/build",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/diva2.dir/main.cpp.o -c /home/diva2/diva2/main.cpp",
+  "file": "/home/diva2/diva2/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/zmq",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/zmq_test.dir/main.cpp.o -c /home/diva2/diva2/test/zmq/main.cpp",
+  "file": "/home/diva2/diva2/test/zmq/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/ouster",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/ouster  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/ouster.dir/main.cpp.o -c /home/diva2/diva2/test/ouster/main.cpp",
+  "file": "/home/diva2/diva2/test/ouster/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/ouster",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/ouster  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/ouster.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/ouster/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test/ouster/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/protobuf",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/protobuf  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/cppTest.dir/main.cpp.o -c /home/diva2/diva2/test/protobuf/main.cpp",
+  "file": "/home/diva2/diva2/test/protobuf/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/protobuf",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/protobuf  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/cppTest.dir/AddressBook.pb.cc.o -c /home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc",
+  "file": "/home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/receiver_fromMobile",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/receiverFrommobile.dir/main.cpp.o -c /home/diva2/diva2/test/receiver_fromMobile/main.cpp",
+  "file": "/home/diva2/diva2/test/receiver_fromMobile/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/receiver_fromMobile",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/receiverFrommobile.dir/GpsReceiverThread.cpp.o -c /home/diva2/diva2/test/receiver_fromMobile/GpsReceiverThread.cpp",
+  "file": "/home/diva2/diva2/test/receiver_fromMobile/GpsReceiverThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/receiver_fromMobile_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/receiver_fromMobile_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/receiverFromMobile.dir/main.cpp.o -c /home/diva2/diva2/test/receiver_fromMobile_proto/main.cpp",
+  "file": "/home/diva2/diva2/test/receiver_fromMobile_proto/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/receiver_fromMobile_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/receiver_fromMobile_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o -c /home/diva2/diva2/test/receiver_fromMobile_proto/GpsReceiverThread.cpp",
+  "file": "/home/diva2/diva2/test/receiver_fromMobile_proto/GpsReceiverThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/receiver_fromMobile_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/receiver_fromMobile_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/receiver_fromMobile_proto/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test/receiver_fromMobile_proto/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderTocloud.dir/main.cpp.o -c /home/diva2/diva2/test/sender_toCloud/main.cpp",
+  "file": "/home/diva2/diva2/test/sender_toCloud/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp",
+  "file": "/home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp",
+  "file": "/home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud_protobuf",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -isystem /usr/local/include -I/home/diva2/diva2/build/test/sender_toCloud_protobuf  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/ProtoLib.dir/__/protobuf/sensors.pb.cc.o -c /home/diva2/diva2/test/protobuf/sensors.pb.cc",
+  "file": "/home/diva2/diva2/test/protobuf/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud_protobuf",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sender_toCloud_protobuf  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderToCloud.dir/main.cpp.o -c /home/diva2/diva2/test/sender_toCloud_protobuf/main.cpp",
+  "file": "/home/diva2/diva2/test/sender_toCloud_protobuf/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud_protobuf",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sender_toCloud_protobuf  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderToCloud.dir/GpsSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud_protobuf/GpsSenderThread.cpp",
+  "file": "/home/diva2/diva2/test/sender_toCloud_protobuf/GpsSenderThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud_protobuf",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sender_toCloud_protobuf  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud_protobuf/CamSenderThread.cpp",
+  "file": "/home/diva2/diva2/test/sender_toCloud_protobuf/CamSenderThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud_protobuf",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sender_toCloud_protobuf  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderToCloud.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/sender_toCloud_protobuf/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test/sender_toCloud_protobuf/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/main.cpp.o -c /home/diva2/diva2/test/sensing_proto/main.cpp",
+  "file": "/home/diva2/diva2/test/sensing_proto/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o -c /home/diva2/diva2/test/sensing_proto/GpsSensing.cpp",
+  "file": "/home/diva2/diva2/test/sensing_proto/GpsSensing.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/CamSensing.cpp.o -c /home/diva2/diva2/test/sensing_proto/CamSensing.cpp",
+  "file": "/home/diva2/diva2/test/sensing_proto/CamSensing.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o -c /home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp",
+  "file": "/home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensor_connect",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing.dir/main.cpp.o -c /home/diva2/diva2/test/sensor_connect/main.cpp",
+  "file": "/home/diva2/diva2/test/sensor_connect/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensor_parsing",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/parsing.dir/main.cpp.o -c /home/diva2/diva2/test/sensor_parsing/main.cpp",
+  "file": "/home/diva2/diva2/test/sensor_parsing/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensor_parsing",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/parsing.dir/ImuParsingThread.cpp.o -c /home/diva2/diva2/test/sensor_parsing/ImuParsingThread.cpp",
+  "file": "/home/diva2/diva2/test/sensor_parsing/ImuParsingThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensor_parsing",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/parsing.dir/GpsParsingThread.cpp.o -c /home/diva2/diva2/test/sensor_parsing/GpsParsingThread.cpp",
+  "file": "/home/diva2/diva2/test/sensor_parsing/GpsParsingThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensor_parsing",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/parsing.dir/CamParsingThread.cpp.o -c /home/diva2/diva2/test/sensor_parsing/CamParsingThread.cpp",
+  "file": "/home/diva2/diva2/test/sensor_parsing/CamParsingThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/zmq_filetransfer",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/pub.dir/pub.cpp.o -c /home/diva2/diva2/test/zmq_filetransfer/pub.cpp",
+  "file": "/home/diva2/diva2/test/zmq_filetransfer/pub.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/zmq_filetransfer",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/sub.dir/sub.cpp.o -c /home/diva2/diva2/test/zmq_filetransfer/sub.cpp",
+  "file": "/home/diva2/diva2/test/zmq_filetransfer/sub.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/socketCan",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/socketCan  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/socketCan.dir/test.cpp.o -c /home/diva2/diva2/test/socketCan/test.cpp",
+  "file": "/home/diva2/diva2/test/socketCan/test.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/socketCan",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/socketCan  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/socketCan.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/socketCan/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test/socketCan/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/zmq_protobuf/client",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/zmq_protobuf/client  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/client.dir/main.cpp.o -c /home/diva2/diva2/test/zmq_protobuf/client/main.cpp",
+  "file": "/home/diva2/diva2/test/zmq_protobuf/client/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/zmq_protobuf/client",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/zmq_protobuf/client  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/client.dir/message.pb.cc.o -c /home/diva2/diva2/build/test/zmq_protobuf/client/message.pb.cc",
+  "file": "/home/diva2/diva2/build/test/zmq_protobuf/client/message.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/zmq_protobuf/server",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/zmq_protobuf/server  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/server.dir/main.cpp.o -c /home/diva2/diva2/test/zmq_protobuf/server/main.cpp",
+  "file": "/home/diva2/diva2/test/zmq_protobuf/server/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/zmq_protobuf/server",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/zmq_protobuf/server  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/server.dir/message.pb.cc.o -c /home/diva2/diva2/build/test/zmq_protobuf/server/message.pb.cc",
+  "file": "/home/diva2/diva2/build/test/zmq_protobuf/server/message.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test_GroundStation/AlgorithmTesting",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test_GroundStation/AlgorithmTesting  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/algorithmTesting.dir/main.cpp.o -c /home/diva2/diva2/test_GroundStation/AlgorithmTesting/main.cpp",
+  "file": "/home/diva2/diva2/test_GroundStation/AlgorithmTesting/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test_GroundStation/AlgorithmTesting",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test_GroundStation/AlgorithmTesting  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/algorithmTesting.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test_GroundStation/AlgorithmTesting/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test_GroundStation/AlgorithmTesting/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/gs_receiverFromMobile.dir/main.cpp.o -c /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/main.cpp",
+  "file": "/home/diva2/diva2/test_GroundStation/ReceiverFromMobile/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.o -c /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp",
+  "file": "/home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/sensors.pb.cc"
+}
+]
