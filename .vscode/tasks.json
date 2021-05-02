@@ -51,6 +51,12 @@
             "group": "build",
             "detail": "컴파일러: /usr/bin/cpp"
         }
+        // {
+        //     "type": "shell",
+        //     "label": "protobuf build",
+        //     "command": "cmake . && make",
+        //     "group": "build"
+        // }
     ]
 }
 

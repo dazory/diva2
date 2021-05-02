@@ -30,24 +30,15 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq){
         /* RECIEVE FROM SENSING PROCESS */
         zmq::message_t msgtopic = s_recv(socketSub);
         string topic = (const char *)msgtopic.data();
-        cout<<"&msgtopic   :      "<<&msgtopic<<endl;
-        cout<<"msgtopic.data:     "<<msgtopic.data()<<endl;
-
+        
         zmq::message_t msggps_data = s_recv(socketSub);
-        cout<<"&msggps_data:      "<<&msggps_data<<endl;
-        cout<<"msggps_data.data:  "<<msggps_data.data()<<endl;
-
+        printf("~~~~~~~~~~~~~~~~ SIZE = %d ~~~~~~~~~~~~~~~~ \n", msggps_data.size());
+        
         GpsPacket *mGpsPacket = new GpsPacket();
-        cout<<"mGpsPacket :       "<<mGpsPacket<<endl;
-        cout<<"&mGpsPacket:       "<<&mGpsPacket<<endl;
-
+        
         memcpy(mGpsPacket, msggps_data.data(), msggps_data.size());
-        cout<<"mGpsPacket:        "<<mGpsPacket<<endl;
-        cout<<"&mGpsPacket:       "<<&mGpsPacket<<endl;
-
-        printf("===== GPS ====\n");
-        mGpsPacket->displayGpsPacket();
-        printf("==============\n");
+        
+        // mGpsPacket->displayGpsPacket();
         
         // mGpsPackets.push_back(mGpsPacket);
 
@@ -56,17 +47,11 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq){
 
         size_t size = sizeof(GpsPacket);
         zmq::message_t zmqDatas(size);
-        cout<<"&zmqDatas:         "<<&zmqDatas<<endl;
-        cout<<"zmqDatas.data:     "<<zmqDatas.data()<<endl;
-
+        
         msggps_data.copy(&zmqDatas);
-        cout<<"&zmqDatas:         "<<&zmqDatas<<endl;
-        cout<<"zmqDatas.data:     "<<zmqDatas.data()<<endl;
-
+        
         memset(zmqDatas.data(), 0, size);
-        cout<<"&zmqDatas:         "<<&zmqDatas<<endl;
-        cout<<"zmqDatas.data:     "<<zmqDatas.data()<<endl;
-
+        
         // memcpy(zmqDatas.data(), mGpsPacket, size);
         s_send(*socketReq, msggps_data);
         printf("send complete!\n");

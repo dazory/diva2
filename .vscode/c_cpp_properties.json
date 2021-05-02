@@ -4,6 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}",
                 "/usr/share/c++-mscl/source",
                 "/usr/share/c++-mscl/Boost/include",
                 "/usr/include",
