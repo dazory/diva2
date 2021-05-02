@@ -6,6 +6,7 @@
 #include "../service/global_name.hpp"
 #include "GpsSensingThread.h"
 #include "CamSensingThread.h"
+#include "CanSensingThread.h"
 
 using namespace std;
 
@@ -22,14 +23,19 @@ int main(int argc, char *argv[]){
     socket.bind("tcp://*:5563"); //protocol::SENSING_PUB);
     printf("bind complete!\n");
 
-    // USE_GPS = 0;
+    // USE_GPS = 2;
     // GpsSensingThread gpsSensingThread;
     // std::thread sensingthread_gps(gpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
-    USE_CAM = 1;
-    CamSensingThread camSensingThread;
-    std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // USE_CAM = 1;
+    // CamSensingThread camSensingThread;
+    // std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
+    USE_CAN = 2;
+    CanSensingThread canSensingThread;
+    std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+  
+    sensingthread_can.join();
     // sensingthread_gps.join();
-    sensingthread_cam.join();
+    // sensingthread_cam.join();
 }

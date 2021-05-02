@@ -120,6 +120,7 @@ target_link_libraries(diva2 PUBLIC ${ZeroMQ_LIBRARY} /usr/share/c++-mscl/libmscl
 # 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
 add_subdirectory(test/zmq)
 # 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
+add_subdirectory(test/ouster)
 add_subdirectory(test/protobuf)
 add_subdirectory(test/receiver_fromMobile)
 add_subdirectory(test/receiver_fromMobile_proto)
@@ -136,3 +137,5 @@ add_subdirectory(test/zmq_protobuf/server)
 # add_subdirectory(test/openCv2)
 #add_subdirectory(test/zmq_imgtransfer)
 
+add_subdirectory(test_GroundStation/AlgorithmTesting)
+add_subdirectory(test_GroundStation/ReceiverFromMobile)

@@ -15,8 +15,9 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
-int
-main(void)
+#include "../protobuf/sensors.pb.h"
+
+int main(void)
 {
 	int s;
 	int nbytes;
@@ -51,7 +52,25 @@ main(void)
 
 	nbytes = write(s, &frame, sizeof(struct can_frame));
 
+	sensors::Can can;
+	can.set_can_id(frame.can_id);
+	can.set_can_dlc(frame.can_dlc);
+	size_t data_size = sizeof(frame.data);
+	printf("data size= %d\n", data_size);
+    can.mutable_data()->resize(data_size);
+    memcpy((void*)can.mutable_data()->data(), (void*)frame.data, data_size);
+
 	printf("Wrote %d bytes\n", nbytes);
+
+	printf("start SerializeToArray\n");
+	int data_len = can.ByteSize();
+    unsigned char data[data_len] = "\0";
+    can.SerializeToArray(data, data_len);
+    printf("end SerializeToArray\n");
+    for (auto i = 0; i < data_len; i++)
+        printf("%02X ", data[i]);
+    printf("\n");
+
 	
 	return 0;
 }

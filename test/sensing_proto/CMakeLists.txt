@@ -48,7 +48,7 @@ PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../protobuf/sensors.proto" )
 
 
 # 실행파일 만들기
-set(SOURCE_SENSING main.cpp GpsSensing.cpp CamSensing.cpp)
+set(SOURCE_SENSING main.cpp GpsSensing.cpp CamSensing.cpp CanSensingThread.cpp)
 add_executable(sensing_proto ${SOURCE_SENSING} ${PROTO_SRCS} ${PROTO_HDRS} ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})                           # 생성할 실행파일 이름 지정
 target_include_directories(sensing_proto PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives
 target_link_libraries(sensing_proto PUBLIC ${ZeroMQ_LIBRARY} ${OpenCV_LIBS} 

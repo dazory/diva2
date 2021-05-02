@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/diva2/diva2/test/sensing_proto/CamSensing.cpp" "/home/diva2/diva2/build/test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o"
+  "/home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp" "/home/diva2/diva2/build/test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o"
   "/home/diva2/diva2/test/sensing_proto/GpsSensing.cpp" "/home/diva2/diva2/build/test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o"
   "/home/diva2/diva2/test/sensing_proto/main.cpp" "/home/diva2/diva2/build/test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o"
   "/home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc" "/home/diva2/diva2/build/test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o"

@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
+  "../test/ouster/CMakeLists.txt"
   "../test/protobuf/CMakeLists.txt"
   "../test/receiver_fromMobile/CMakeLists.txt"
   "../test/receiver_fromMobile_proto/CMakeLists.txt"
@@ -24,6 +25,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../test/zmq_filetransfer/CMakeLists.txt"
   "../test/zmq_protobuf/client/CMakeLists.txt"
   "../test/zmq_protobuf/server/CMakeLists.txt"
+  "../test_GroundStation/AlgorithmTesting/CMakeLists.txt"
+  "../test_GroundStation/ReceiverFromMobile/CMakeLists.txt"
   "/usr/share/OpenCV/OpenCVConfig-version.cmake"
   "/usr/share/OpenCV/OpenCVConfig.cmake"
   "/usr/share/OpenCV/OpenCVModules-release.cmake"
@@ -65,6 +68,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/ouster/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/protobuf/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/receiver_fromMobile/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/receiver_fromMobile_proto/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -77,12 +81,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "test/socketCan/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq_protobuf/client/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq_protobuf/server/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test_GroundStation/AlgorithmTesting/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test_GroundStation/ReceiverFromMobile/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/diva2.dir/DependInfo.cmake"
   "test/zmq/CMakeFiles/zmq_test.dir/DependInfo.cmake"
+  "test/ouster/CMakeFiles/ouster.dir/DependInfo.cmake"
   "test/protobuf/CMakeFiles/cppTest.dir/DependInfo.cmake"
   "test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/DependInfo.cmake"
   "test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/DependInfo.cmake"
@@ -94,6 +101,9 @@ set(CMAKE_DEPEND_INFO_FILES
   "test/sensor_parsing/CMakeFiles/parsing.dir/DependInfo.cmake"
   "test/zmq_filetransfer/CMakeFiles/pub.dir/DependInfo.cmake"
   "test/zmq_filetransfer/CMakeFiles/sub.dir/DependInfo.cmake"
+  "test/socketCan/CMakeFiles/socketCan.dir/DependInfo.cmake"
   "test/zmq_protobuf/client/CMakeFiles/client.dir/DependInfo.cmake"
   "test/zmq_protobuf/server/CMakeFiles/server.dir/DependInfo.cmake"
+  "test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/DependInfo.cmake"
+  "test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/DependInfo.cmake"
   )

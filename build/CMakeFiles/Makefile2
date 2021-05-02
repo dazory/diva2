@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/diva2/diva2/build
 CMakeFiles/diva2.dir/all:
 	$(MAKE) -f CMakeFiles/diva2.dir/build.make CMakeFiles/diva2.dir/depend
 	$(MAKE) -f CMakeFiles/diva2.dir/build.make CMakeFiles/diva2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=11,12 "Built target diva2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=15,16 "Built target diva2"
 .PHONY : CMakeFiles/diva2.dir/all
 
 # Include target in all.
@@ -121,7 +121,7 @@ test/zmq/preinstall:
 test/zmq/CMakeFiles/zmq_test.dir/all:
 	$(MAKE) -f test/zmq/CMakeFiles/zmq_test.dir/build.make test/zmq/CMakeFiles/zmq_test.dir/depend
 	$(MAKE) -f test/zmq/CMakeFiles/zmq_test.dir/build.make test/zmq/CMakeFiles/zmq_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=52,53 "Built target zmq_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=70,71 "Built target zmq_test"
 .PHONY : test/zmq/CMakeFiles/zmq_test.dir/all
 
 # Include target in all.
@@ -152,6 +152,61 @@ clean: test/zmq/CMakeFiles/zmq_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory test/ouster
+
+# Convenience name for "all" pass in the directory.
+test/ouster/all: test/ouster/CMakeFiles/ouster.dir/all
+
+.PHONY : test/ouster/all
+
+# Convenience name for "clean" pass in the directory.
+test/ouster/clean: test/ouster/CMakeFiles/ouster.dir/clean
+
+.PHONY : test/ouster/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/ouster/preinstall:
+
+.PHONY : test/ouster/preinstall
+
+#=============================================================================
+# Target rules for target test/ouster/CMakeFiles/ouster.dir
+
+# All Build rule for target.
+test/ouster/CMakeFiles/ouster.dir/all:
+	$(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/depend
+	$(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=22,23,24,25 "Built target ouster"
+.PHONY : test/ouster/CMakeFiles/ouster.dir/all
+
+# Include target in all.
+all: test/ouster/CMakeFiles/ouster.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/ouster/CMakeFiles/ouster.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 test/ouster/CMakeFiles/ouster.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/ouster/CMakeFiles/ouster.dir/rule
+
+# Convenience name for target.
+ouster: test/ouster/CMakeFiles/ouster.dir/rule
+
+.PHONY : ouster
+
+# clean rule for target.
+test/ouster/CMakeFiles/ouster.dir/clean:
+	$(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/clean
+.PHONY : test/ouster/CMakeFiles/ouster.dir/clean
+
+# clean rule for target.
+clean: test/ouster/CMakeFiles/ouster.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory test/protobuf
 
 # Convenience name for "all" pass in the directory.
@@ -176,7 +231,7 @@ test/protobuf/preinstall:
 test/protobuf/CMakeFiles/cppTest.dir/all:
 	$(MAKE) -f test/protobuf/CMakeFiles/cppTest.dir/build.make test/protobuf/CMakeFiles/cppTest.dir/depend
 	$(MAKE) -f test/protobuf/CMakeFiles/cppTest.dir/build.make test/protobuf/CMakeFiles/cppTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=7,8,9,10 "Built target cppTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=11,12,13,14 "Built target cppTest"
 .PHONY : test/protobuf/CMakeFiles/cppTest.dir/all
 
 # Include target in all.
@@ -231,7 +286,7 @@ test/receiver_fromMobile/preinstall:
 test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/all:
 	$(MAKE) -f test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build.make test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/depend
 	$(MAKE) -f test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build.make test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=25,26,27 "Built target receiverFrommobile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=38,39,40 "Built target receiverFrommobile"
 .PHONY : test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/all
 
 # Include target in all.
@@ -286,7 +341,7 @@ test/receiver_fromMobile_proto/preinstall:
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/all:
 	$(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/depend
 	$(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=20,21,22,23,24 "Built target receiverFromMobile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=33,34,35,36,37 "Built target receiverFromMobile"
 .PHONY : test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/all
 
 # Include target in all.
@@ -341,7 +396,7 @@ test/sender_toCloud/preinstall:
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/all:
 	$(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/depend
 	$(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=34,35,36,37 "Built target senderTocloud"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=47,48,49,50 "Built target senderTocloud"
 .PHONY : test/sender_toCloud/CMakeFiles/senderTocloud.dir/all
 
 # Include target in all.
@@ -435,7 +490,7 @@ clean: test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/clean
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/all:
 	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/depend
 	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=28,29,30,31,32,33 "Built target senderToCloud"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=41,42,43,44,45,46 "Built target senderToCloud"
 .PHONY : test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/all
 
 # Include target in all.
@@ -490,7 +545,7 @@ test/sensing_proto/preinstall:
 test/sensing_proto/CMakeFiles/sensing_proto.dir/all:
 	$(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/depend
 	$(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=40,41,42,43,44,45 "Built target sensing_proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=53,54,55,56,57,58,59 "Built target sensing_proto"
 .PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/all
 
 # Include target in all.
@@ -500,7 +555,7 @@ all: test/sensing_proto/CMakeFiles/sensing_proto.dir/all
 
 # Build rule for subdir invocation for target.
 test/sensing_proto/CMakeFiles/sensing_proto.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/CMakeFiles/sensing_proto.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
 .PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/rule
@@ -545,7 +600,7 @@ test/sensor_connect/preinstall:
 test/sensor_connect/CMakeFiles/sensing.dir/all:
 	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/depend
 	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=38,39 "Built target sensing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=51,52 "Built target sensing"
 .PHONY : test/sensor_connect/CMakeFiles/sensing.dir/all
 
 # Include target in all.
@@ -600,7 +655,7 @@ test/sensor_parsing/preinstall:
 test/sensor_parsing/CMakeFiles/parsing.dir/all:
 	$(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/depend
 	$(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=13,14,15,16,17 "Built target parsing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=26,27,28,29,30 "Built target parsing"
 .PHONY : test/sensor_parsing/CMakeFiles/parsing.dir/all
 
 # Include target in all.
@@ -657,7 +712,7 @@ test/zmq_filetransfer/preinstall:
 test/zmq_filetransfer/CMakeFiles/pub.dir/all:
 	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/depend
 	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=18,19 "Built target pub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=31,32 "Built target pub"
 .PHONY : test/zmq_filetransfer/CMakeFiles/pub.dir/all
 
 # Include target in all.
@@ -694,7 +749,7 @@ clean: test/zmq_filetransfer/CMakeFiles/pub.dir/clean
 test/zmq_filetransfer/CMakeFiles/sub.dir/all:
 	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/depend
 	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=50,51 "Built target sub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=68,69 "Built target sub"
 .PHONY : test/zmq_filetransfer/CMakeFiles/sub.dir/all
 
 # Include target in all.
@@ -728,12 +783,12 @@ clean: test/zmq_filetransfer/CMakeFiles/sub.dir/clean
 # Directory level rules for directory test/socketCan
 
 # Convenience name for "all" pass in the directory.
-test/socketCan/all:
+test/socketCan/all: test/socketCan/CMakeFiles/socketCan.dir/all
 
 .PHONY : test/socketCan/all
 
 # Convenience name for "clean" pass in the directory.
-test/socketCan/clean:
+test/socketCan/clean: test/socketCan/CMakeFiles/socketCan.dir/clean
 
 .PHONY : test/socketCan/clean
 
@@ -741,6 +796,43 @@ test/socketCan/clean:
 test/socketCan/preinstall:
 
 .PHONY : test/socketCan/preinstall
+
+#=============================================================================
+# Target rules for target test/socketCan/CMakeFiles/socketCan.dir
+
+# All Build rule for target.
+test/socketCan/CMakeFiles/socketCan.dir/all:
+	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/depend
+	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=64,65,66,67 "Built target socketCan"
+.PHONY : test/socketCan/CMakeFiles/socketCan.dir/all
+
+# Include target in all.
+all: test/socketCan/CMakeFiles/socketCan.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/socketCan/CMakeFiles/socketCan.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 test/socketCan/CMakeFiles/socketCan.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/socketCan/CMakeFiles/socketCan.dir/rule
+
+# Convenience name for target.
+socketCan: test/socketCan/CMakeFiles/socketCan.dir/rule
+
+.PHONY : socketCan
+
+# clean rule for target.
+test/socketCan/CMakeFiles/socketCan.dir/clean:
+	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/clean
+.PHONY : test/socketCan/CMakeFiles/socketCan.dir/clean
+
+# clean rule for target.
+clean: test/socketCan/CMakeFiles/socketCan.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory test/zmq_protobuf/client
@@ -767,7 +859,7 @@ test/zmq_protobuf/client/preinstall:
 test/zmq_protobuf/client/CMakeFiles/client.dir/all:
 	$(MAKE) -f test/zmq_protobuf/client/CMakeFiles/client.dir/build.make test/zmq_protobuf/client/CMakeFiles/client.dir/depend
 	$(MAKE) -f test/zmq_protobuf/client/CMakeFiles/client.dir/build.make test/zmq_protobuf/client/CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=3,4,5,6 "Built target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=7,8,9,10 "Built target client"
 .PHONY : test/zmq_protobuf/client/CMakeFiles/client.dir/all
 
 # Include target in all.
@@ -822,7 +914,7 @@ test/zmq_protobuf/server/preinstall:
 test/zmq_protobuf/server/CMakeFiles/server.dir/all:
 	$(MAKE) -f test/zmq_protobuf/server/CMakeFiles/server.dir/build.make test/zmq_protobuf/server/CMakeFiles/server.dir/depend
 	$(MAKE) -f test/zmq_protobuf/server/CMakeFiles/server.dir/build.make test/zmq_protobuf/server/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=46,47,48,49 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=60,61,62,63 "Built target server"
 .PHONY : test/zmq_protobuf/server/CMakeFiles/server.dir/all
 
 # Include target in all.
@@ -849,6 +941,116 @@ test/zmq_protobuf/server/CMakeFiles/server.dir/clean:
 
 # clean rule for target.
 clean: test/zmq_protobuf/server/CMakeFiles/server.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test_GroundStation/AlgorithmTesting
+
+# Convenience name for "all" pass in the directory.
+test_GroundStation/AlgorithmTesting/all: test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/all
+
+.PHONY : test_GroundStation/AlgorithmTesting/all
+
+# Convenience name for "clean" pass in the directory.
+test_GroundStation/AlgorithmTesting/clean: test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/clean
+
+.PHONY : test_GroundStation/AlgorithmTesting/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test_GroundStation/AlgorithmTesting/preinstall:
+
+.PHONY : test_GroundStation/AlgorithmTesting/preinstall
+
+#=============================================================================
+# Target rules for target test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir
+
+# All Build rule for target.
+test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/all:
+	$(MAKE) -f test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/build.make test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/depend
+	$(MAKE) -f test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/build.make test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=3,4,5,6 "Built target algorithmTesting"
+.PHONY : test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/all
+
+# Include target in all.
+all: test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/rule
+
+# Convenience name for target.
+algorithmTesting: test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/rule
+
+.PHONY : algorithmTesting
+
+# clean rule for target.
+test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/clean:
+	$(MAKE) -f test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/build.make test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/clean
+.PHONY : test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/clean
+
+# clean rule for target.
+clean: test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test_GroundStation/ReceiverFromMobile
+
+# Convenience name for "all" pass in the directory.
+test_GroundStation/ReceiverFromMobile/all: test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/all
+
+.PHONY : test_GroundStation/ReceiverFromMobile/all
+
+# Convenience name for "clean" pass in the directory.
+test_GroundStation/ReceiverFromMobile/clean: test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/clean
+
+.PHONY : test_GroundStation/ReceiverFromMobile/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test_GroundStation/ReceiverFromMobile/preinstall:
+
+.PHONY : test_GroundStation/ReceiverFromMobile/preinstall
+
+#=============================================================================
+# Target rules for target test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir
+
+# All Build rule for target.
+test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/all:
+	$(MAKE) -f test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/build.make test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/depend
+	$(MAKE) -f test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/build.make test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=17,18,19,20,21 "Built target gs_receiverFromMobile"
+.PHONY : test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/all
+
+# Include target in all.
+all: test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/rule
+
+# Convenience name for target.
+gs_receiverFromMobile: test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/rule
+
+.PHONY : gs_receiverFromMobile
+
+# clean rule for target.
+test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/clean:
+	$(MAKE) -f test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/build.make test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/clean
+.PHONY : test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/clean
+
+# clean rule for target.
+clean: test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/clean
 
 .PHONY : clean
 
