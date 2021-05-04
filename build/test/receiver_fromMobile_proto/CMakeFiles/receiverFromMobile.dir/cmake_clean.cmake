@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "sensors.pb.h"
   "CMakeFiles/receiverFromMobile.dir/main.cpp.o"
   "CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o"
+  "CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o"
   "CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o"
   "receiverFromMobile.pdb"
   "receiverFromMobile"

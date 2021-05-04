@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/diva2/diva2/test/receiver_fromMobile_proto/CamReceiverThread.cpp" "/home/diva2/diva2/build/test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o"
   "/home/diva2/diva2/test/receiver_fromMobile_proto/GpsReceiverThread.cpp" "/home/diva2/diva2/build/test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o"
   "/home/diva2/diva2/test/receiver_fromMobile_proto/main.cpp" "/home/diva2/diva2/build/test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/main.cpp.o"
   "/home/diva2/diva2/build/test/receiver_fromMobile_proto/sensors.pb.cc" "/home/diva2/diva2/build/test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o"

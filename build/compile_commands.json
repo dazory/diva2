@@ -51,6 +51,11 @@
 },
 {
   "directory": "/home/diva2/diva2/build/test/receiver_fromMobile_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/receiver_fromMobile_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o -c /home/diva2/diva2/test/receiver_fromMobile_proto/CamReceiverThread.cpp",
+  "file": "/home/diva2/diva2/test/receiver_fromMobile_proto/CamReceiverThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/receiver_fromMobile_proto",
   "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/receiver_fromMobile_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/receiver_fromMobile_proto/sensors.pb.cc",
   "file": "/home/diva2/diva2/build/test/receiver_fromMobile_proto/sensors.pb.cc"
 },

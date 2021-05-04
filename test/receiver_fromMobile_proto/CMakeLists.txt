@@ -55,7 +55,7 @@ PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../protobuf/sensors.proto" )
 
 
 # ADD_EXECUTABLE(receiverFromMobile ${CLIENT_SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS}  ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})
-SET(CLIENT_SRC_LIST main.cpp GpsReceiverThread.cpp)
+SET(CLIENT_SRC_LIST main.cpp GpsReceiverThread.cpp CamReceiverThread.cpp)
 add_executable(receiverFromMobile ${CLIENT_SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS}  ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})
 
 target_include_directories(receiverFromMobile PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives

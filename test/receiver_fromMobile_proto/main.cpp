@@ -1,6 +1,7 @@
 #pragma once
 #include "../service/global_name.hpp"
 #include "GpsReceiverThread.h"
+#include "CamReceiverThread.h"
 #include <zmq.hpp>
 #include <thread> 
 #include <string>
@@ -15,9 +16,13 @@ int main(int argc, char *argv[]){
     // printf("rep socket connected (in main)\n");
 
     // GPS
-    GpsReceiverThread mGpsReceiverThread;
-    thread gpsSenderThread(&GpsReceiverThread::run, &mGpsReceiverThread, &contextRep);
-    gpsSenderThread.join();
+    // GpsReceiverThread mGpsReceiverThread;
+    // thread gpsSenderThread(&GpsReceiverThread::run, &mGpsReceiverThread, &contextRep);
+    // gpsSenderThread.join();
 
+    // CAM
+    CamReceiverThread mCamReceiverThread;
+    thread camSenderThread(&CamReceiverThread::run, &mCamReceiverThread, &contextRep);
+    camSenderThread.join();
 
 }
