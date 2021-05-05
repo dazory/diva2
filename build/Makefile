@@ -124,6 +124,32 @@ diva2/fast:
 .PHONY : diva2/fast
 
 #=============================================================================
+# Target rules for targets named MP_sensing
+
+# Build rule for target.
+MP_sensing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MP_sensing
+.PHONY : MP_sensing
+
+# fast build rule for target.
+MP_sensing/fast:
+	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
+.PHONY : MP_sensing/fast
+
+#=============================================================================
+# Target rules for targets named MP_visualization
+
+# Build rule for target.
+MP_visualization: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MP_visualization
+.PHONY : MP_visualization
+
+# fast build rule for target.
+MP_visualization/fast:
+	$(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build
+.PHONY : MP_visualization/fast
+
+#=============================================================================
 # Target rules for targets named zmq_test
 
 # Build rule for target.
@@ -393,6 +419,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... diva2"
 	@echo "... edit_cache"
+	@echo "... MP_sensing"
+	@echo "... MP_visualization"
 	@echo "... zmq_test"
 	@echo "... ouster"
 	@echo "... cppTest"

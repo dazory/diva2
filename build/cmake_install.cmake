@@ -39,6 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/diva2/diva2/build/MobilePlatform/Sensing/cmake_install.cmake")
+  include("/home/diva2/diva2/build/MobilePlatform/Visualization/cmake_install.cmake")
   include("/home/diva2/diva2/build/test/zmq/cmake_install.cmake")
   include("/home/diva2/diva2/build/test/ouster/cmake_install.cmake")
   include("/home/diva2/diva2/build/test/protobuf/cmake_install.cmake")

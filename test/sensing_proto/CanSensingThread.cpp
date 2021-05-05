@@ -43,6 +43,7 @@ void CanSensingThread::run(zmq::socket_t *publisher) // const int devicename, zm
     /* Reading can data from rSock */
     while (pid==0)
     {
+        
         // printf("This is child process(%d)\n", pid);
         if (USE_CAN == 1) // real
         {
@@ -76,6 +77,9 @@ void CanSensingThread::run(zmq::socket_t *publisher) // const int devicename, zm
             //     printf("%02X ", data[i]);
             // printf("\n");
 
+            /* SEND TO SENDER_TOCLOUD */
+            s_send_idx(*publisher,SENSOR_CAN);
+            
             zmq::message_t zmqData(data_len);
             memcpy((void *)zmqData.data(), data, data_len);
             s_send(*publisher, zmqData);

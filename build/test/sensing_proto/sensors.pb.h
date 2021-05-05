@@ -48,7 +48,7 @@ struct TableStruct_sensors_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[6]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -71,6 +71,9 @@ extern ImuDefaultTypeInternal _Imu_default_instance_;
 class Lidar;
 struct LidarDefaultTypeInternal;
 extern LidarDefaultTypeInternal _Lidar_default_instance_;
+class Log;
+struct LogDefaultTypeInternal;
+extern LogDefaultTypeInternal _Log_default_instance_;
 }  // namespace sensors
 PROTOBUF_NAMESPACE_OPEN
 template<> ::sensors::Cam* Arena::CreateMaybeMessage<::sensors::Cam>(Arena*);
@@ -78,6 +81,7 @@ template<> ::sensors::Can* Arena::CreateMaybeMessage<::sensors::Can>(Arena*);
 template<> ::sensors::Gps* Arena::CreateMaybeMessage<::sensors::Gps>(Arena*);
 template<> ::sensors::Imu* Arena::CreateMaybeMessage<::sensors::Imu>(Arena*);
 template<> ::sensors::Lidar* Arena::CreateMaybeMessage<::sensors::Lidar>(Arena*);
+template<> ::sensors::Log* Arena::CreateMaybeMessage<::sensors::Log>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace sensors {
 
@@ -1348,6 +1352,212 @@ class Can PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr __res1_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
   PROTOBUF_NAMESPACE_ID::Timestamp* timestamp_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 can_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 can_dlc_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_sensors_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Log PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:sensors.Log) */ {
+ public:
+  inline Log() : Log(nullptr) {}
+  ~Log() override;
+  explicit constexpr Log(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Log(const Log& from);
+  Log(Log&& from) noexcept
+    : Log() {
+    *this = ::std::move(from);
+  }
+
+  inline Log& operator=(const Log& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Log& operator=(Log&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Log& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Log* internal_default_instance() {
+    return reinterpret_cast<const Log*>(
+               &_Log_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(Log& a, Log& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Log* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Log* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Log* New() const final {
+    return CreateMaybeMessage<Log>(nullptr);
+  }
+
+  Log* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Log>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Log& from);
+  void MergeFrom(const Log& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Log* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "sensors.Log";
+  }
+  protected:
+  explicit Log(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPadFieldNumber = 4,
+    kRes0FieldNumber = 5,
+    kRes1FieldNumber = 6,
+    kDataFieldNumber = 7,
+    kCanIdFieldNumber = 2,
+    kCanDlcFieldNumber = 3,
+  };
+  // bytes __pad = 4;
+  void clear___pad();
+  const std::string& __pad() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set___pad(ArgT0&& arg0, ArgT... args);
+  std::string* mutable___pad();
+  std::string* release___pad();
+  void set_allocated___pad(std::string* __pad);
+  private:
+  const std::string& _internal___pad() const;
+  void _internal_set___pad(const std::string& value);
+  std::string* _internal_mutable___pad();
+  public:
+
+  // bytes __res0 = 5;
+  void clear___res0();
+  const std::string& __res0() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set___res0(ArgT0&& arg0, ArgT... args);
+  std::string* mutable___res0();
+  std::string* release___res0();
+  void set_allocated___res0(std::string* __res0);
+  private:
+  const std::string& _internal___res0() const;
+  void _internal_set___res0(const std::string& value);
+  std::string* _internal_mutable___res0();
+  public:
+
+  // bytes __res1 = 6;
+  void clear___res1();
+  const std::string& __res1() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set___res1(ArgT0&& arg0, ArgT... args);
+  std::string* mutable___res1();
+  std::string* release___res1();
+  void set_allocated___res1(std::string* __res1);
+  private:
+  const std::string& _internal___res1() const;
+  void _internal_set___res1(const std::string& value);
+  std::string* _internal_mutable___res1();
+  public:
+
+  // bytes data = 7;
+  void clear_data();
+  const std::string& data() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_data();
+  std::string* release_data();
+  void set_allocated_data(std::string* data);
+  private:
+  const std::string& _internal_data() const;
+  void _internal_set_data(const std::string& value);
+  std::string* _internal_mutable_data();
+  public:
+
+  // uint32 can_id = 2;
+  void clear_can_id();
+  ::PROTOBUF_NAMESPACE_ID::uint32 can_id() const;
+  void set_can_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_can_id() const;
+  void _internal_set_can_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // uint32 can_dlc = 3;
+  void clear_can_dlc();
+  ::PROTOBUF_NAMESPACE_ID::uint32 can_dlc() const;
+  void set_can_dlc(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_can_dlc() const;
+  void _internal_set_can_dlc(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:sensors.Log)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr __pad_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr __res0_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr __res1_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
   ::PROTOBUF_NAMESPACE_ID::uint32 can_id_;
   ::PROTOBUF_NAMESPACE_ID::uint32 can_dlc_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -2863,9 +3073,235 @@ inline void Can::set_allocated_data(std::string* data) {
   // @@protoc_insertion_point(field_set_allocated:sensors.Can.data)
 }
 
+// -------------------------------------------------------------------
+
+// Log
+
+// uint32 can_id = 2;
+inline void Log::clear_can_id() {
+  can_id_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Log::_internal_can_id() const {
+  return can_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Log::can_id() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.can_id)
+  return _internal_can_id();
+}
+inline void Log::_internal_set_can_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  can_id_ = value;
+}
+inline void Log::set_can_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_can_id(value);
+  // @@protoc_insertion_point(field_set:sensors.Log.can_id)
+}
+
+// uint32 can_dlc = 3;
+inline void Log::clear_can_dlc() {
+  can_dlc_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Log::_internal_can_dlc() const {
+  return can_dlc_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Log::can_dlc() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.can_dlc)
+  return _internal_can_dlc();
+}
+inline void Log::_internal_set_can_dlc(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  can_dlc_ = value;
+}
+inline void Log::set_can_dlc(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_can_dlc(value);
+  // @@protoc_insertion_point(field_set:sensors.Log.can_dlc)
+}
+
+// bytes __pad = 4;
+inline void Log::clear___pad() {
+  __pad_.ClearToEmpty();
+}
+inline const std::string& Log::__pad() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.__pad)
+  return _internal___pad();
+}
+template <typename ArgT0, typename... ArgT>
+PROTOBUF_ALWAYS_INLINE
+inline void Log::set___pad(ArgT0&& arg0, ArgT... args) {
+ 
+ __pad_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
+  // @@protoc_insertion_point(field_set:sensors.Log.__pad)
+}
+inline std::string* Log::mutable___pad() {
+  // @@protoc_insertion_point(field_mutable:sensors.Log.__pad)
+  return _internal_mutable___pad();
+}
+inline const std::string& Log::_internal___pad() const {
+  return __pad_.Get();
+}
+inline void Log::_internal_set___pad(const std::string& value) {
+  
+  __pad_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline std::string* Log::_internal_mutable___pad() {
+  
+  return __pad_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Log::release___pad() {
+  // @@protoc_insertion_point(field_release:sensors.Log.__pad)
+  return __pad_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Log::set_allocated___pad(std::string* __pad) {
+  if (__pad != nullptr) {
+    
+  } else {
+    
+  }
+  __pad_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), __pad,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:sensors.Log.__pad)
+}
+
+// bytes __res0 = 5;
+inline void Log::clear___res0() {
+  __res0_.ClearToEmpty();
+}
+inline const std::string& Log::__res0() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.__res0)
+  return _internal___res0();
+}
+template <typename ArgT0, typename... ArgT>
+PROTOBUF_ALWAYS_INLINE
+inline void Log::set___res0(ArgT0&& arg0, ArgT... args) {
+ 
+ __res0_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
+  // @@protoc_insertion_point(field_set:sensors.Log.__res0)
+}
+inline std::string* Log::mutable___res0() {
+  // @@protoc_insertion_point(field_mutable:sensors.Log.__res0)
+  return _internal_mutable___res0();
+}
+inline const std::string& Log::_internal___res0() const {
+  return __res0_.Get();
+}
+inline void Log::_internal_set___res0(const std::string& value) {
+  
+  __res0_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline std::string* Log::_internal_mutable___res0() {
+  
+  return __res0_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Log::release___res0() {
+  // @@protoc_insertion_point(field_release:sensors.Log.__res0)
+  return __res0_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Log::set_allocated___res0(std::string* __res0) {
+  if (__res0 != nullptr) {
+    
+  } else {
+    
+  }
+  __res0_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), __res0,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:sensors.Log.__res0)
+}
+
+// bytes __res1 = 6;
+inline void Log::clear___res1() {
+  __res1_.ClearToEmpty();
+}
+inline const std::string& Log::__res1() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.__res1)
+  return _internal___res1();
+}
+template <typename ArgT0, typename... ArgT>
+PROTOBUF_ALWAYS_INLINE
+inline void Log::set___res1(ArgT0&& arg0, ArgT... args) {
+ 
+ __res1_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
+  // @@protoc_insertion_point(field_set:sensors.Log.__res1)
+}
+inline std::string* Log::mutable___res1() {
+  // @@protoc_insertion_point(field_mutable:sensors.Log.__res1)
+  return _internal_mutable___res1();
+}
+inline const std::string& Log::_internal___res1() const {
+  return __res1_.Get();
+}
+inline void Log::_internal_set___res1(const std::string& value) {
+  
+  __res1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline std::string* Log::_internal_mutable___res1() {
+  
+  return __res1_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Log::release___res1() {
+  // @@protoc_insertion_point(field_release:sensors.Log.__res1)
+  return __res1_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Log::set_allocated___res1(std::string* __res1) {
+  if (__res1 != nullptr) {
+    
+  } else {
+    
+  }
+  __res1_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), __res1,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:sensors.Log.__res1)
+}
+
+// bytes data = 7;
+inline void Log::clear_data() {
+  data_.ClearToEmpty();
+}
+inline const std::string& Log::data() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.data)
+  return _internal_data();
+}
+template <typename ArgT0, typename... ArgT>
+PROTOBUF_ALWAYS_INLINE
+inline void Log::set_data(ArgT0&& arg0, ArgT... args) {
+ 
+ data_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
+  // @@protoc_insertion_point(field_set:sensors.Log.data)
+}
+inline std::string* Log::mutable_data() {
+  // @@protoc_insertion_point(field_mutable:sensors.Log.data)
+  return _internal_mutable_data();
+}
+inline const std::string& Log::_internal_data() const {
+  return data_.Get();
+}
+inline void Log::_internal_set_data(const std::string& value) {
+  
+  data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline std::string* Log::_internal_mutable_data() {
+  
+  return data_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Log::release_data() {
+  // @@protoc_insertion_point(field_release:sensors.Log.data)
+  return data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Log::set_allocated_data(std::string* data) {
+  if (data != nullptr) {
+    
+  } else {
+    
+  }
+  data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:sensors.Log.data)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

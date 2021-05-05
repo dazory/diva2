@@ -125,6 +125,33 @@ receiverFromMobile/fast:
 	cd /home/diva2/diva2/build && $(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build
 .PHONY : receiverFromMobile/fast
 
+CamReceiverThread.o: CamReceiverThread.cpp.o
+
+.PHONY : CamReceiverThread.o
+
+# target to build an object file
+CamReceiverThread.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o
+.PHONY : CamReceiverThread.cpp.o
+
+CamReceiverThread.i: CamReceiverThread.cpp.i
+
+.PHONY : CamReceiverThread.i
+
+# target to preprocess a source file
+CamReceiverThread.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.i
+.PHONY : CamReceiverThread.cpp.i
+
+CamReceiverThread.s: CamReceiverThread.cpp.s
+
+.PHONY : CamReceiverThread.s
+
+# target to generate assembly for a file
+CamReceiverThread.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.s
+.PHONY : CamReceiverThread.cpp.s
+
 GpsReceiverThread.o: GpsReceiverThread.cpp.o
 
 .PHONY : GpsReceiverThread.o
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... receiverFromMobile"
 	@echo "... edit_cache"
+	@echo "... CamReceiverThread.o"
+	@echo "... CamReceiverThread.i"
+	@echo "... CamReceiverThread.s"
 	@echo "... GpsReceiverThread.o"
 	@echo "... GpsReceiverThread.i"
 	@echo "... GpsReceiverThread.s"

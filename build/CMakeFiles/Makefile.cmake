@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../MobilePlatform/Sensing/CMakeLists.txt"
+  "../MobilePlatform/Visualization/CMakeLists.txt"
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
@@ -67,6 +69,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "MobilePlatform/Sensing/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "MobilePlatform/Visualization/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/zmq/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/ouster/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/protobuf/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -88,6 +92,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/diva2.dir/DependInfo.cmake"
+  "MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/DependInfo.cmake"
+  "MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/DependInfo.cmake"
   "test/zmq/CMakeFiles/zmq_test.dir/DependInfo.cmake"
   "test/ouster/CMakeFiles/ouster.dir/DependInfo.cmake"
   "test/protobuf/CMakeFiles/cppTest.dir/DependInfo.cmake"

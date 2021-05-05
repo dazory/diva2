@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/diva2/diva2/test/sender_toCloud_protobuf/CamSenderThread.cpp" "/home/diva2/diva2/build/test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o"
+  "/home/diva2/diva2/test/sender_toCloud_protobuf/CanSenderThread.cpp" "/home/diva2/diva2/build/test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o"
   "/home/diva2/diva2/test/sender_toCloud_protobuf/GpsSenderThread.cpp" "/home/diva2/diva2/build/test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/GpsSenderThread.cpp.o"
   "/home/diva2/diva2/test/sender_toCloud_protobuf/main.cpp" "/home/diva2/diva2/build/test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/main.cpp.o"
   "/home/diva2/diva2/build/test/sender_toCloud_protobuf/sensors.pb.cc" "/home/diva2/diva2/build/test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/sensors.pb.cc.o"

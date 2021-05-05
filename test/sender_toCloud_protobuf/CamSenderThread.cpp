@@ -59,32 +59,35 @@ void CamSenderThread::run(void *contextSub, zmq::socket_t *socketReq)
         waitKey(0);
         */
 
-        // /* SEND TO CLOUD SERVER */
-        // size_t data_len = cam.ByteSize();
-        // unsigned char data[data_len] = "\0";
-        // cam.SerializeToArray(data, data_len);
-        // // for (auto i = 0; i < data_len; i++)
-        // //     printf("%02X ", data[i]);
-        // // printf("\n");
+        /* DATA SERIALIZATION */
 
-        // size_t size = data_len;
-        // zmq::message_t zmqDatas(size);
-        // // memcpy((void*)zmqDatas.data(), strMsg.c_str(), size);
-        // memcpy((void *)zmqDatas.data(), data, size);
-        // printf("Sending Cam data ...\n");
-        // s_send(*socketReq, zmqDatas);
-        // printf("send complete!\n");
+        /* SEND TO CLOUD SERVER */
+        int data_len = cam.ByteSize();
+        unsigned char s_data[data_len] = "\0";
+        cam.SerializeToArray(s_data, data_len);
+        // for (auto i = 0; i < data_len; i++)
+        //     printf("%02X ", data[i]);
+        // printf("\n");
 
-        // /* OPTIONAL: DELETE ALL GLOBAL OBJECTS ALLOCATED BY LIBPROTOBUF */
-        // google::protobuf::ShutdownProtobufLibrary();
+        size_t size = data_len;
+        zmq::message_t zmqDatas(size);
+        // memcpy((void*)zmqDatas.data(), strMsg.c_str(), size);
+        memcpy((void *)zmqDatas.data(), s_data, size);
+        printf("Sending CAM data ...\n");
+        s_send(*socketReq, zmqDatas);
+        printf("send complete!\n");
 
-        // /* RECEIVE FROM CLOUD SERVER PROCESS */
-        // zmq::message_t msgRecv = s_recv(*socketReq);
-        // printf("Reply:%s\n", msgRecv.data());
-        // printf("size=%d (Cam:%d)\n", zmqDatas.size(), size);
+        /* OPTIONAL: DELETE ALL GLOBAL OBJECTS ALLOCATED BY LIBPROTOBUF */
+        google::protobuf::ShutdownProtobufLibrary();
 
-        // /* OPTIONS */
-        // cnt++;
+        /* RECEIVE FROM CLOUD SERVER PROCESS */
+        zmq::message_t msgRecv = s_recv(*socketReq);
+        printf("Reply:%s\n", msgRecv.data());
+        printf("size=%d (CAM:%d)\n", zmqDatas.size(), size);
+
+        /* OPTIONS */
+        cnt++;
+
     }
 
 }

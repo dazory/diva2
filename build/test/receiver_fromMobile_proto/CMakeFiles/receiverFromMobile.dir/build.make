@@ -113,9 +113,33 @@ test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThre
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o.provides.build: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o
 
 
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/flags.make
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o: ../test/receiver_fromMobile_proto/CamReceiverThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o"
+	cd /home/diva2/diva2/build/test/receiver_fromMobile_proto && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o -c /home/diva2/diva2/test/receiver_fromMobile_proto/CamReceiverThread.cpp
+
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.i"
+	cd /home/diva2/diva2/build/test/receiver_fromMobile_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/receiver_fromMobile_proto/CamReceiverThread.cpp > CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.i
+
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.s"
+	cd /home/diva2/diva2/build/test/receiver_fromMobile_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/receiver_fromMobile_proto/CamReceiverThread.cpp -o CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.s
+
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o.requires:
+
+.PHONY : test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o.requires
+
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o.provides: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o.requires
+	$(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o.provides.build
+.PHONY : test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o.provides
+
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o.provides.build: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o
+
+
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/flags.make
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o: test/receiver_fromMobile_proto/sensors.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o"
 	cd /home/diva2/diva2/build/test/receiver_fromMobile_proto && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/receiver_fromMobile_proto/sensors.pb.cc
 
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.i: cmake_force
@@ -141,6 +165,7 @@ test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o
 receiverFromMobile_OBJECTS = \
 "CMakeFiles/receiverFromMobile.dir/main.cpp.o" \
 "CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o" \
+"CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o" \
 "CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o"
 
 # External object files for target receiverFromMobile
@@ -148,6 +173,7 @@ receiverFromMobile_EXTERNAL_OBJECTS =
 
 test/receiver_fromMobile_proto/receiverFromMobile: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/main.cpp.o
 test/receiver_fromMobile_proto/receiverFromMobile: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o
+test/receiver_fromMobile_proto/receiverFromMobile: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o
 test/receiver_fromMobile_proto/receiverFromMobile: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o
 test/receiver_fromMobile_proto/receiverFromMobile: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/local/lib/libprotobuf.so
@@ -198,7 +224,7 @@ test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/lib
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
 test/receiver_fromMobile_proto/receiverFromMobile: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 test/receiver_fromMobile_proto/receiverFromMobile: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable receiverFromMobile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable receiverFromMobile"
 	cd /home/diva2/diva2/build/test/receiver_fromMobile_proto && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/receiverFromMobile.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -208,6 +234,7 @@ test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build: test/rec
 
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/requires: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/main.cpp.o.requires
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/requires: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/GpsReceiverThread.cpp.o.requires
+test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/requires: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/CamReceiverThread.cpp.o.requires
 test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/requires: test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/sensors.pb.cc.o.requires
 
 .PHONY : test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/requires
