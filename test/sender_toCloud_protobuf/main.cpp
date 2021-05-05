@@ -1,6 +1,7 @@
 #pragma once
 #include "GpsSenderThread.h"
 #include "CamSenderThread.h"
+#include "CanSenderThread.h"
 #include "../service/global_name.hpp"
 #include <thread> 
 #include <string>
@@ -24,11 +25,17 @@ int main(int argc, char *argv[]){
     // GPS
     // GpsSenderThread mGpsSenderThread;
     // thread gpsSenderThread(&GpsSenderThread::run, &mGpsSenderThread, &contextSub, &socketReq);
-    // gpsSenderThread.join();
-
+    
     // CAM
-    CamSenderThread mCamSenderThread;
-    thread camSenderThread(&CamSenderThread::run, &mCamSenderThread, &contextSub, &socketReq);
-    camSenderThread.join();
-
+    // CamSenderThread mCamSenderThread;
+    // thread camSenderThread(&CamSenderThread::run, &mCamSenderThread, &contextSub, &socketReq);
+    
+    // CAN
+    CanSenderThread mCanSenderThread;
+    thread canSenderThread(&CanSenderThread::run, &mCanSenderThread, &contextSub, &socketReq);
+    
+    // gpsSenderThread.join();
+    // camSenderThread.join();
+    canSenderThread.join();
+    
 }

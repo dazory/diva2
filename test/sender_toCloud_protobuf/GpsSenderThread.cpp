@@ -24,7 +24,7 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq)
     // Connect with socket SUB with Sensing Process
     zmq::socket_t socketSub(*(zmq::context_t *)contextSub, ZMQ_SUB);
     socketSub.connect(protocol::SENSING_SUB);
-    socketSub.setsockopt(ZMQ_SUBSCRIBE, "", 0);
+    socketSub.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
     printf("socket connected (in GpsSenderThread::run)\n");
 
     vector<GpsPacket> mGpsPackets;
@@ -34,6 +34,10 @@ void GpsSenderThread::run(void *contextSub, zmq::socket_t *socketReq)
     { //!stop_flag){
 
         int USE_PROTO = 1;
+
+        zmq::message_t msgtopic = s_recv(socketSub);
+        string topic = (const char *)msgtopic.data();
+        printf("TOPIC: %d \n", topic.c_str());
 
         sensors::Gps gps;
         /* RECIEVE FROM SENSING PROCESS */

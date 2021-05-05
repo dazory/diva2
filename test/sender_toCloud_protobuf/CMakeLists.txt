@@ -74,7 +74,7 @@ PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../protobuf/sensors.proto" )
 
 
 ## EXCUTABLE
-SET(CLIENT_SRC_LIST main.cpp GpsSenderThread.cpp CamSenderThread.cpp)
+SET(CLIENT_SRC_LIST main.cpp GpsSenderThread.cpp CamSenderThread.cpp CanSenderThread.cpp)
 ADD_EXECUTABLE(senderToCloud ${CLIENT_SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS}  ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${OpenCV_INCLUDE_DIRS})
 
 target_include_directories(senderToCloud PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives

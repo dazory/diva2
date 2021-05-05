@@ -5,6 +5,36 @@
   "file": "/home/diva2/diva2/main.cpp"
 },
 {
+  "directory": "/home/diva2/diva2/build/MobilePlatform/Sensing",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Sensing  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_sensing.dir/main.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/main.cpp",
+  "file": "/home/diva2/diva2/MobilePlatform/Sensing/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/MobilePlatform/Sensing",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Sensing  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp",
+  "file": "/home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/MobilePlatform/Sensing",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Sensing  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_sensing.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/MobilePlatform/Visualization",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Visualization  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_visualization.dir/main.cpp.o -c /home/diva2/diva2/MobilePlatform/Visualization/main.cpp",
+  "file": "/home/diva2/diva2/MobilePlatform/Visualization/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/MobilePlatform/Visualization",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Visualization  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o -c /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp",
+  "file": "/home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/MobilePlatform/Visualization",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Visualization  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_visualization.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc"
+},
+{
   "directory": "/home/diva2/diva2/build/test/zmq",
   "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/zmq_test.dir/main.cpp.o -c /home/diva2/diva2/test/zmq/main.cpp",
   "file": "/home/diva2/diva2/test/zmq/main.cpp"
@@ -93,6 +123,11 @@
   "directory": "/home/diva2/diva2/build/test/sender_toCloud_protobuf",
   "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sender_toCloud_protobuf  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud_protobuf/CamSenderThread.cpp",
   "file": "/home/diva2/diva2/test/sender_toCloud_protobuf/CamSenderThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sender_toCloud_protobuf",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sender_toCloud_protobuf  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud_protobuf/CanSenderThread.cpp",
+  "file": "/home/diva2/diva2/test/sender_toCloud_protobuf/CanSenderThread.cpp"
 },
 {
   "directory": "/home/diva2/diva2/build/test/sender_toCloud_protobuf",

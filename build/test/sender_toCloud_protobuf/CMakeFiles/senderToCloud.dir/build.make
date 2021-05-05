@@ -137,9 +137,33 @@ test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o.
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o.provides.build: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o
 
 
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/flags.make
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o: ../test/sender_toCloud_protobuf/CanSenderThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o"
+	cd /home/diva2/diva2/build/test/sender_toCloud_protobuf && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud_protobuf/CanSenderThread.cpp
+
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.i"
+	cd /home/diva2/diva2/build/test/sender_toCloud_protobuf && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sender_toCloud_protobuf/CanSenderThread.cpp > CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.i
+
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.s"
+	cd /home/diva2/diva2/build/test/sender_toCloud_protobuf && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sender_toCloud_protobuf/CanSenderThread.cpp -o CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.s
+
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o.requires:
+
+.PHONY : test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o.requires
+
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o.provides: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o.requires
+	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o.provides.build
+.PHONY : test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o.provides
+
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o.provides.build: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o
+
+
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/sensors.pb.cc.o: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/flags.make
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/sensors.pb.cc.o: test/sender_toCloud_protobuf/sensors.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/sensors.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/sensors.pb.cc.o"
 	cd /home/diva2/diva2/build/test/sender_toCloud_protobuf && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/senderToCloud.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/sender_toCloud_protobuf/sensors.pb.cc
 
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/sensors.pb.cc.i: cmake_force
@@ -166,6 +190,7 @@ senderToCloud_OBJECTS = \
 "CMakeFiles/senderToCloud.dir/main.cpp.o" \
 "CMakeFiles/senderToCloud.dir/GpsSenderThread.cpp.o" \
 "CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o" \
+"CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o" \
 "CMakeFiles/senderToCloud.dir/sensors.pb.cc.o"
 
 # External object files for target senderToCloud
@@ -174,6 +199,7 @@ senderToCloud_EXTERNAL_OBJECTS =
 test/sender_toCloud_protobuf/senderToCloud: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/main.cpp.o
 test/sender_toCloud_protobuf/senderToCloud: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/GpsSenderThread.cpp.o
 test/sender_toCloud_protobuf/senderToCloud: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o
+test/sender_toCloud_protobuf/senderToCloud: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o
 test/sender_toCloud_protobuf/senderToCloud: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/sensors.pb.cc.o
 test/sender_toCloud_protobuf/senderToCloud: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make
 test/sender_toCloud_protobuf/senderToCloud: /usr/local/lib/libprotobuf.so
@@ -224,7 +250,7 @@ test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_
 test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
 test/sender_toCloud_protobuf/senderToCloud: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 test/sender_toCloud_protobuf/senderToCloud: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable senderToCloud"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable senderToCloud"
 	cd /home/diva2/diva2/build/test/sender_toCloud_protobuf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/senderToCloud.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -235,6 +261,7 @@ test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build: test/sender_toC
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/requires: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/main.cpp.o.requires
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/requires: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/GpsSenderThread.cpp.o.requires
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/requires: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CamSenderThread.cpp.o.requires
+test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/requires: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/CanSenderThread.cpp.o.requires
 test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/requires: test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/sensors.pb.cc.o.requires
 
 .PHONY : test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/requires

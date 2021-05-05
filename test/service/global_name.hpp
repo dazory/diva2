@@ -14,6 +14,7 @@ namespace protocol
     const string SENDER_TOCLOUD_REQ_TEST = "tcp://localhost:5564"; //tcp://13.125.216.169:5555
     const string SENDER_TOCLOUD_REQ = "tcp://165.246.39.124:5564";//"54.180.155.160:22"; // ubuntu@
     const string RECEIVER_FROMMOBILE_REP_TEST = "tcp://*:5564";
+    // const string RECEIVER_FROMMOBILE_REP_TEST = "tcp://*:5565";
 } // namespace protocol
 
 // static map<string, int> SpeedMap;

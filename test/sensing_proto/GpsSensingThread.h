@@ -58,7 +58,7 @@ void GpsSensingThread::run(zmq::socket_t *socket)
     {
         printf("while(1) start! (in GpsSensingThread::run/while(1))\n");
 
-        // s_send_idx(*socket, SENSOR_GPS);
+        s_send_idx(*socket, SENSOR_GPS);
         printf("send index (in GpsSensingThread::run/while(1))\n");
 
         /* Read 255bytes from GPS */
@@ -172,6 +172,8 @@ void GpsSensingThread::run(zmq::socket_t *socket)
         for (auto i = 0; i < data_len; i++)
             printf("%02X ", data[i]);
         printf("\n");
+
+        
 
         zmq::message_t zmqData(data_len);
         memcpy((void *)zmqData.data(), data, data_len);

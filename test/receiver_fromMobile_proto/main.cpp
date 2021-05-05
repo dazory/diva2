@@ -17,12 +17,13 @@ int main(int argc, char *argv[]){
 
     // GPS
     // GpsReceiverThread mGpsReceiverThread;
-    // thread gpsSenderThread(&GpsReceiverThread::run, &mGpsReceiverThread, &contextRep);
-    // gpsSenderThread.join();
-
+    // thread gpsReceiverThread(&GpsReceiverThread::run, &mGpsReceiverThread, &contextRep);
+    
     // CAM
     CamReceiverThread mCamReceiverThread;
-    thread camSenderThread(&CamReceiverThread::run, &mCamReceiverThread, &contextRep);
-    camSenderThread.join();
+    thread camReceiverThread(&CamReceiverThread::run, &mCamReceiverThread, &contextRep);
+
+    camReceiverThread.join();
+    // gpsReceiverThread.join();
 
 }
