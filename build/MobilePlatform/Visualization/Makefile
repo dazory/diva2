@@ -125,6 +125,33 @@ MP_visualization/fast:
 	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build
 .PHONY : MP_visualization/fast
 
+CamVisualization.o: CamVisualization.cpp.o
+
+.PHONY : CamVisualization.o
+
+# target to build an object file
+CamVisualization.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o
+.PHONY : CamVisualization.cpp.o
+
+CamVisualization.i: CamVisualization.cpp.i
+
+.PHONY : CamVisualization.i
+
+# target to preprocess a source file
+CamVisualization.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.i
+.PHONY : CamVisualization.cpp.i
+
+CamVisualization.s: CamVisualization.cpp.s
+
+.PHONY : CamVisualization.s
+
+# target to generate assembly for a file
+CamVisualization.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.s
+.PHONY : CamVisualization.cpp.s
+
 GpsVisualization.o: GpsVisualization.cpp.o
 
 .PHONY : GpsVisualization.o
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MP_visualization"
 	@echo "... edit_cache"
+	@echo "... CamVisualization.o"
+	@echo "... CamVisualization.i"
+	@echo "... CamVisualization.s"
 	@echo "... GpsVisualization.o"
 	@echo "... GpsVisualization.i"
 	@echo "... GpsVisualization.s"

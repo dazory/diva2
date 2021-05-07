@@ -68,15 +68,15 @@ test_GroundStation/ReceiverFromMobile/sensors.pb.h: test_GroundStation/ReceiverF
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/main.cpp.o: test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/flags.make
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/main.cpp.o: ../test_GroundStation/ReceiverFromMobile/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gs_receiverFromMobile.dir/main.cpp.o -c /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/main.cpp
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gs_receiverFromMobile.dir/main.cpp.o -c /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/main.cpp
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gs_receiverFromMobile.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/main.cpp > CMakeFiles/gs_receiverFromMobile.dir/main.cpp.i
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/main.cpp > CMakeFiles/gs_receiverFromMobile.dir/main.cpp.i
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gs_receiverFromMobile.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/main.cpp -o CMakeFiles/gs_receiverFromMobile.dir/main.cpp.s
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/main.cpp -o CMakeFiles/gs_receiverFromMobile.dir/main.cpp.s
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/main.cpp.o.requires:
 
@@ -92,15 +92,15 @@ test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/main.
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.o: test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/flags.make
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.o: ../test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.o"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.o -c /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.o -c /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.i"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp > CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.i
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp > CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.i
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.s"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp -o CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.s
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp -o CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.s
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/GpsReceiverThread.cpp.o.requires:
 
@@ -116,15 +116,15 @@ test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/GpsRe
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.o: test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/flags.make
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.o: test_GroundStation/ReceiverFromMobile/sensors.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.o"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/sensors.pb.cc
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/sensors.pb.cc
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.i"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/sensors.pb.cc > CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.i
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/sensors.pb.cc > CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.i
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.s"
-	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/sensors.pb.cc -o CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.s
+	cd /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/sensors.pb.cc -o CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.s
 
 test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/sensors.pb.cc.o.requires:
 

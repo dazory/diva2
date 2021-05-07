@@ -68,15 +68,15 @@ test/ouster/sensors.pb.h: test/ouster/sensors.pb.cc
 test/ouster/CMakeFiles/ouster.dir/main.cpp.o: test/ouster/CMakeFiles/ouster.dir/flags.make
 test/ouster/CMakeFiles/ouster.dir/main.cpp.o: ../test/ouster/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/ouster/CMakeFiles/ouster.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/test/ouster && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ouster.dir/main.cpp.o -c /home/diva2/diva2/test/ouster/main.cpp
+	cd /home/diva2/diva2/build/test/ouster && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ouster.dir/main.cpp.o -c /home/diva2/diva2/test/ouster/main.cpp
 
 test/ouster/CMakeFiles/ouster.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ouster.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/test/ouster && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/ouster/main.cpp > CMakeFiles/ouster.dir/main.cpp.i
+	cd /home/diva2/diva2/build/test/ouster && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/ouster/main.cpp > CMakeFiles/ouster.dir/main.cpp.i
 
 test/ouster/CMakeFiles/ouster.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ouster.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/test/ouster && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/ouster/main.cpp -o CMakeFiles/ouster.dir/main.cpp.s
+	cd /home/diva2/diva2/build/test/ouster && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/ouster/main.cpp -o CMakeFiles/ouster.dir/main.cpp.s
 
 test/ouster/CMakeFiles/ouster.dir/main.cpp.o.requires:
 
@@ -92,15 +92,15 @@ test/ouster/CMakeFiles/ouster.dir/main.cpp.o.provides.build: test/ouster/CMakeFi
 test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.o: test/ouster/CMakeFiles/ouster.dir/flags.make
 test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.o: test/ouster/sensors.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.o"
-	cd /home/diva2/diva2/build/test/ouster && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ouster.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/ouster/sensors.pb.cc
+	cd /home/diva2/diva2/build/test/ouster && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ouster.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/ouster/sensors.pb.cc
 
 test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ouster.dir/sensors.pb.cc.i"
-	cd /home/diva2/diva2/build/test/ouster && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/ouster/sensors.pb.cc > CMakeFiles/ouster.dir/sensors.pb.cc.i
+	cd /home/diva2/diva2/build/test/ouster && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/ouster/sensors.pb.cc > CMakeFiles/ouster.dir/sensors.pb.cc.i
 
 test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ouster.dir/sensors.pb.cc.s"
-	cd /home/diva2/diva2/build/test/ouster && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/ouster/sensors.pb.cc -o CMakeFiles/ouster.dir/sensors.pb.cc.s
+	cd /home/diva2/diva2/build/test/ouster && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/ouster/sensors.pb.cc -o CMakeFiles/ouster.dir/sensors.pb.cc.s
 
 test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.o.requires:
 

@@ -5,6 +5,7 @@
 
 #include "../../service/global_name.hpp"
 #include "GpsSensingThread.h"
+#include "CamSensingThread.h"
 
 using namespace std;
 
@@ -21,13 +22,13 @@ int main(int argc, char *argv[]){
     socket.bind(protocol::SENSING_PUB);
     printf("[MobilePlatform/Sensing] binding\n");
 
-    USE_GPS = 2;
+    USE_GPS = 1;
     GpsSensingThread mGpsSensingThread;
     std::thread sensingthread_gps(mGpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
-    // USE_CAM = 1;
-    // CamSensingThread camSensingThread;
-    // std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    USE_CAM = 1;
+    CamSensingThread camSensingThread;
+    std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
     // USE_CAN = 2;
     // CanSensingThread canSensingThread;
@@ -35,5 +36,5 @@ int main(int argc, char *argv[]){
   
     // sensingthread_can.join();
     sensingthread_gps.join();
-    // sensingthread_cam.join();
+    sensingthread_cam.join();
 }

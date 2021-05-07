@@ -68,15 +68,15 @@ MobilePlatform/Visualization/sensors.pb.h: MobilePlatform/Visualization/sensors.
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.o: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/flags.make
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.o: ../MobilePlatform/Visualization/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_visualization.dir/main.cpp.o -c /home/diva2/diva2/MobilePlatform/Visualization/main.cpp
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_visualization.dir/main.cpp.o -c /home/diva2/diva2/MobilePlatform/Visualization/main.cpp
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_visualization.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Visualization/main.cpp > CMakeFiles/MP_visualization.dir/main.cpp.i
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Visualization/main.cpp > CMakeFiles/MP_visualization.dir/main.cpp.i
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_visualization.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Visualization/main.cpp -o CMakeFiles/MP_visualization.dir/main.cpp.s
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Visualization/main.cpp -o CMakeFiles/MP_visualization.dir/main.cpp.s
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.o.requires:
 
@@ -92,15 +92,15 @@ MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.o.provides
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/flags.make
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o: ../MobilePlatform/Visualization/GpsVisualization.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o -c /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o -c /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp > CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.i
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp > CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.i
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp -o CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.s
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp -o CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.s
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o.requires:
 
@@ -113,18 +113,42 @@ MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cp
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o.provides.build: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o
 
 
+MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/flags.make
+MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o: ../MobilePlatform/Visualization/CamVisualization.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o"
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o -c /home/diva2/diva2/MobilePlatform/Visualization/CamVisualization.cpp
+
+MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_visualization.dir/CamVisualization.cpp.i"
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Visualization/CamVisualization.cpp > CMakeFiles/MP_visualization.dir/CamVisualization.cpp.i
+
+MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_visualization.dir/CamVisualization.cpp.s"
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Visualization/CamVisualization.cpp -o CMakeFiles/MP_visualization.dir/CamVisualization.cpp.s
+
+MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o.requires:
+
+.PHONY : MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o.requires
+
+MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o.provides: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o.requires
+	$(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o.provides.build
+.PHONY : MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o.provides
+
+MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o.provides.build: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o
+
+
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.o: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/flags.make
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.o: MobilePlatform/Visualization/sensors.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_visualization.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.o"
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_visualization.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_visualization.dir/sensors.pb.cc.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc > CMakeFiles/MP_visualization.dir/sensors.pb.cc.i
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc > CMakeFiles/MP_visualization.dir/sensors.pb.cc.i
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_visualization.dir/sensors.pb.cc.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc -o CMakeFiles/MP_visualization.dir/sensors.pb.cc.s
+	cd /home/diva2/diva2/build/MobilePlatform/Visualization && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc -o CMakeFiles/MP_visualization.dir/sensors.pb.cc.s
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.o.requires:
 
@@ -141,6 +165,7 @@ MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.o.pro
 MP_visualization_OBJECTS = \
 "CMakeFiles/MP_visualization.dir/main.cpp.o" \
 "CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o" \
+"CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o" \
 "CMakeFiles/MP_visualization.dir/sensors.pb.cc.o"
 
 # External object files for target MP_visualization
@@ -148,6 +173,7 @@ MP_visualization_EXTERNAL_OBJECTS =
 
 MobilePlatform/Visualization/MP_visualization: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.o
 MobilePlatform/Visualization/MP_visualization: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o
+MobilePlatform/Visualization/MP_visualization: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o
 MobilePlatform/Visualization/MP_visualization: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.o
 MobilePlatform/Visualization/MP_visualization: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make
 MobilePlatform/Visualization/MP_visualization: /usr/local/lib/libzmq.so
@@ -195,7 +221,7 @@ MobilePlatform/Visualization/MP_visualization: /usr/lib/x86_64-linux-gnu/libopen
 MobilePlatform/Visualization/MP_visualization: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
 MobilePlatform/Visualization/MP_visualization: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 MobilePlatform/Visualization/MP_visualization: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable MP_visualization"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MP_visualization"
 	cd /home/diva2/diva2/build/MobilePlatform/Visualization && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MP_visualization.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -205,6 +231,7 @@ MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build: MobilePlatfo
 
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/requires: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/main.cpp.o.requires
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/requires: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o.requires
+MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/requires: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o.requires
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/requires: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/sensors.pb.cc.o.requires
 
 .PHONY : MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/requires

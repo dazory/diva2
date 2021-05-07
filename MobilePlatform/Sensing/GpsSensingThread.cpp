@@ -1,5 +1,6 @@
 #pragma once
 #include "GpsSensingThread.h"
+#include <unistd.h>
 
 int initialize(string devicename);
 void readGPS(int iDev, char *cBuff);
@@ -27,16 +28,27 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
         printf("[MobilePlatform/Sensing/GpsSensingThread] connect GPS device\n");
     }
 
+    int count=0;
     while (1)
     {
-        // [Send Topic]
-        s_send_idx(*pubSock, SENSOR_GPS);
         
         // [Read 255bytes from GPS]
+        int nRet = 0;
         char cBuff[255];
-        readGPS(iDev, cBuff);
-        strcpy(cBuff, "$GNGGA,015442.01,3458.17997,N,12728.74791,E,1,04,6.67,39.9,M,21.1,M,,,*61");
-        printf("[MobilePlatform/Sensing/GpsSensingThread] read %bytes from GPS device\n",sizeof(cBuff)/sizeof(cBuff[0]));
+        if (USE_GPS == 1)
+        {
+            nRet = read(iDev, cBuff, 255);
+            cBuff[nRet] = 0;
+            // printf("(%d) [MobilePlatform/Sensing/GpsSensingThread] read %dbytes from GPS device\n", cnt,nRet); cnt++;
+            // printf("%s\n", cBuff);
+        }
+
+        if (USE_GPS == 2)
+        {
+            strcpy(cBuff, "$GNGGA,015442.01,3458.17997,N,12728.74791,E,1,04,6.67,39.9,M,21.1,M,,,*61");
+            printf("[MobilePlatform/Sensing/GpsSensingThread] read %dbytes from GPS device\n", sizeof(cBuff)/sizeof(cBuff[0]));
+            printf("%s\n", cBuff);
+        }
 
         // [Parsing to Proto]
         sensors::Gps gps;
@@ -88,7 +100,7 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
 
             // NumberOfSatellitesInUse [7]
             if (strlen(strBuff[7].c_str()) != 0)
-                gps.set_numberofsatellitesinuse(stoi(strBuff[7].c_str()));
+                // gps.set_numberofsatellitesinuse(stoi(strBuff[7].c_str()));
 
             // HorizontalDilutionOfPrecision [8]
             if (strlen(strBuff[8].c_str()) != 0)
@@ -113,29 +125,38 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
             // DifferentialReferenceStationID [14]
             if (strlen(strBuff[14].c_str()) != 0)
             {
-                gps.set_differentialreferencestationid(stoi(strBuff[14].c_str()));
+                // gps.set_differentialreferencestationid(stoi(strBuff[14].c_str()));
             }
 
             // checksum [15]
             string checksum = strBuff[15];
+
+            // [Send to PUB socket]
+            // [Send Topic]
+            s_send_idx(*pubSock, SENSOR_GPS);
+            // <Serialization>
+            int data_len = gps.ByteSize();
+            unsigned char data[data_len] = "\0";
+            gps.SerializeToArray(data, data_len);
+            for (auto i = 0; i < data_len; i++)
+                printf("%02X ", data[i]);
+            printf("\n");
+            printf("[MobilePlatform/Sensing/GpsSensingThread] Serialize\n");
+
+            // <Send>
+            zmq::message_t zmqData(data_len);
+            memcpy((void *)zmqData.data(), data, data_len);
+            s_send(*pubSock, zmqData);
+            printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
+
+
+            printf("(%d) [MobilePlatform/Sensing/GpsSensingThread] read %dbytes from GPS device\n", count,nRet); count++;
+            printf("latitude=%f, longitude=%f\n", gps.latitude(), gps.longitude());
+
         } // end "Parsing to Proto"
 
 
-        // [Sender to PUB socket]
-        // <Serialization>
-        int data_len = gps.ByteSize();
-        unsigned char data[data_len] = "\0";
-        gps.SerializeToArray(data, data_len);
-        for (auto i = 0; i < data_len; i++)
-            printf("%02X ", data[i]);
-        printf("\n");
-        printf("[MobilePlatform/Sensing/GpsSensingThread] Serialize\n");
-
-        // <Send>
-        zmq::message_t zmqData(data_len);
-        memcpy((void *)zmqData.data(), data, data_len);
-        s_send(*pubSock, zmqData);
-        printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
+        
 
 
         // [Store the GPS data]
@@ -145,8 +166,8 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
         
 
         // [OPTION]
-        sleep(1);
-
+        usleep(100);
+        // sleep(1);
     } // end: while(1)
 
     if (USE_GPS)

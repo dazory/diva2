@@ -68,15 +68,15 @@ test/protobuf/AddressBook.pb.h: test/protobuf/AddressBook.pb.cc
 test/protobuf/CMakeFiles/cppTest.dir/main.cpp.o: test/protobuf/CMakeFiles/cppTest.dir/flags.make
 test/protobuf/CMakeFiles/cppTest.dir/main.cpp.o: ../test/protobuf/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/protobuf/CMakeFiles/cppTest.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppTest.dir/main.cpp.o -c /home/diva2/diva2/test/protobuf/main.cpp
+	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppTest.dir/main.cpp.o -c /home/diva2/diva2/test/protobuf/main.cpp
 
 test/protobuf/CMakeFiles/cppTest.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppTest.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/protobuf/main.cpp > CMakeFiles/cppTest.dir/main.cpp.i
+	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/protobuf/main.cpp > CMakeFiles/cppTest.dir/main.cpp.i
 
 test/protobuf/CMakeFiles/cppTest.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppTest.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/protobuf/main.cpp -o CMakeFiles/cppTest.dir/main.cpp.s
+	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/protobuf/main.cpp -o CMakeFiles/cppTest.dir/main.cpp.s
 
 test/protobuf/CMakeFiles/cppTest.dir/main.cpp.o.requires:
 
@@ -92,15 +92,15 @@ test/protobuf/CMakeFiles/cppTest.dir/main.cpp.o.provides.build: test/protobuf/CM
 test/protobuf/CMakeFiles/cppTest.dir/AddressBook.pb.cc.o: test/protobuf/CMakeFiles/cppTest.dir/flags.make
 test/protobuf/CMakeFiles/cppTest.dir/AddressBook.pb.cc.o: test/protobuf/AddressBook.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/protobuf/CMakeFiles/cppTest.dir/AddressBook.pb.cc.o"
-	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppTest.dir/AddressBook.pb.cc.o -c /home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc
+	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cppTest.dir/AddressBook.pb.cc.o -c /home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc
 
 test/protobuf/CMakeFiles/cppTest.dir/AddressBook.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppTest.dir/AddressBook.pb.cc.i"
-	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc > CMakeFiles/cppTest.dir/AddressBook.pb.cc.i
+	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc > CMakeFiles/cppTest.dir/AddressBook.pb.cc.i
 
 test/protobuf/CMakeFiles/cppTest.dir/AddressBook.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppTest.dir/AddressBook.pb.cc.s"
-	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc -o CMakeFiles/cppTest.dir/AddressBook.pb.cc.s
+	cd /home/diva2/diva2/build/test/protobuf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc -o CMakeFiles/cppTest.dir/AddressBook.pb.cc.s
 
 test/protobuf/CMakeFiles/cppTest.dir/AddressBook.pb.cc.o.requires:
 

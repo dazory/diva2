@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "sensors.pb.h"
   "CMakeFiles/MP_visualization.dir/main.cpp.o"
   "CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.o"
+  "CMakeFiles/MP_visualization.dir/CamVisualization.cpp.o"
   "CMakeFiles/MP_visualization.dir/sensors.pb.cc.o"
   "MP_visualization.pdb"
   "MP_visualization"

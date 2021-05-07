@@ -121,6 +121,8 @@ target_link_libraries(diva2 PUBLIC ${ZeroMQ_LIBRARY} /usr/share/c++-mscl/libmscl
 add_subdirectory(MobilePlatform/Sensing)
 add_subdirectory(MobilePlatform/Visualization)
 
+add_subdirectory(GroundStation/Playback)
+
 
 
 

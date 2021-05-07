@@ -70,6 +70,26 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
+/home/diva2/diva2/service/global_name.hpp
+string
+/home/diva2/diva2/service/string
+termios.h
+-
+
+/home/diva2/diva2/service/zmq_helper.h
+zmq.hpp
+-
+opencv2/opencv.hpp
+-
+opencv2/imgproc/imgproc.hpp
+/home/diva2/diva2/service/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/diva2/diva2/service/opencv2/highgui/highgui.hpp
+opencv2/imgcodecs.hpp
+-
+global_name.hpp
+/home/diva2/diva2/service/global_name.hpp
+
 /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.cpp
 GpsReceiverThread.h
 /home/diva2/diva2/test_GroundStation/ReceiverFromMobile/GpsReceiverThread.h

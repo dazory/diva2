@@ -150,6 +150,19 @@ MP_visualization/fast:
 .PHONY : MP_visualization/fast
 
 #=============================================================================
+# Target rules for targets named GS_playback
+
+# Build rule for target.
+GS_playback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GS_playback
+.PHONY : GS_playback
+
+# fast build rule for target.
+GS_playback/fast:
+	$(MAKE) -f GroundStation/Playback/CMakeFiles/GS_playback.dir/build.make GroundStation/Playback/CMakeFiles/GS_playback.dir/build
+.PHONY : GS_playback/fast
+
+#=============================================================================
 # Target rules for targets named zmq_test
 
 # Build rule for target.
@@ -421,6 +434,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... MP_sensing"
 	@echo "... MP_visualization"
+	@echo "... GS_playback"
 	@echo "... zmq_test"
 	@echo "... ouster"
 	@echo "... cppTest"

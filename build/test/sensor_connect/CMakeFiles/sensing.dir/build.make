@@ -60,15 +60,15 @@ include test/sensor_connect/CMakeFiles/sensing.dir/flags.make
 test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.o: test/sensor_connect/CMakeFiles/sensing.dir/flags.make
 test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.o: ../test/sensor_connect/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/test/sensor_connect && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing.dir/main.cpp.o -c /home/diva2/diva2/test/sensor_connect/main.cpp
+	cd /home/diva2/diva2/build/test/sensor_connect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing.dir/main.cpp.o -c /home/diva2/diva2/test/sensor_connect/main.cpp
 
 test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensing.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/test/sensor_connect && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sensor_connect/main.cpp > CMakeFiles/sensing.dir/main.cpp.i
+	cd /home/diva2/diva2/build/test/sensor_connect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sensor_connect/main.cpp > CMakeFiles/sensing.dir/main.cpp.i
 
 test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensing.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/test/sensor_connect && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sensor_connect/main.cpp -o CMakeFiles/sensing.dir/main.cpp.s
+	cd /home/diva2/diva2/build/test/sensor_connect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sensor_connect/main.cpp -o CMakeFiles/sensing.dir/main.cpp.s
 
 test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.o.requires:
 

@@ -6,9 +6,41 @@
 
 #IncludeRegexTransform: 
 
+/home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.cpp
+CamSensingThread.h
+/home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.h
+
+/home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.h
+opencv2/opencv.hpp
+-
+opencv2/imgproc/imgproc.hpp
+/home/diva2/diva2/MobilePlatform/Sensing/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/diva2/diva2/MobilePlatform/Sensing/opencv2/highgui/highgui.hpp
+opencv2/imgcodecs.hpp
+-
+iostream
+-
+sstream
+-
+time.h
+-
+unistd.h
+/home/diva2/diva2/MobilePlatform/Sensing/unistd.h
+sys/timeb.h
+-
+cstddef
+-
+../../protobuf/sensors.pb.h
+/home/diva2/diva2/protobuf/sensors.pb.h
+../../service/zmq_helper.h
+/home/diva2/diva2/service/zmq_helper.h
+
 /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp
 GpsSensingThread.h
 /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.h
+unistd.h
+-
 
 /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.h
 iostream
@@ -41,6 +73,8 @@ zmq.hpp
 /home/diva2/diva2/service/global_name.hpp
 GpsSensingThread.h
 /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.h
+CamSensingThread.h
+/home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.h
 
 /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc
 sensors.pb.h

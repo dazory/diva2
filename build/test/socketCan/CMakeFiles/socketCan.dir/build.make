@@ -68,15 +68,15 @@ test/socketCan/sensors.pb.h: test/socketCan/sensors.pb.cc
 test/socketCan/CMakeFiles/socketCan.dir/test.cpp.o: test/socketCan/CMakeFiles/socketCan.dir/flags.make
 test/socketCan/CMakeFiles/socketCan.dir/test.cpp.o: ../test/socketCan/test.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/socketCan/CMakeFiles/socketCan.dir/test.cpp.o"
-	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/socketCan.dir/test.cpp.o -c /home/diva2/diva2/test/socketCan/test.cpp
+	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/socketCan.dir/test.cpp.o -c /home/diva2/diva2/test/socketCan/test.cpp
 
 test/socketCan/CMakeFiles/socketCan.dir/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/socketCan.dir/test.cpp.i"
-	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/socketCan/test.cpp > CMakeFiles/socketCan.dir/test.cpp.i
+	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/socketCan/test.cpp > CMakeFiles/socketCan.dir/test.cpp.i
 
 test/socketCan/CMakeFiles/socketCan.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/socketCan.dir/test.cpp.s"
-	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/socketCan/test.cpp -o CMakeFiles/socketCan.dir/test.cpp.s
+	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/socketCan/test.cpp -o CMakeFiles/socketCan.dir/test.cpp.s
 
 test/socketCan/CMakeFiles/socketCan.dir/test.cpp.o.requires:
 
@@ -92,15 +92,15 @@ test/socketCan/CMakeFiles/socketCan.dir/test.cpp.o.provides.build: test/socketCa
 test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.o: test/socketCan/CMakeFiles/socketCan.dir/flags.make
 test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.o: test/socketCan/sensors.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.o"
-	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/socketCan.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/socketCan/sensors.pb.cc
+	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/socketCan.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/socketCan/sensors.pb.cc
 
 test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/socketCan.dir/sensors.pb.cc.i"
-	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/socketCan/sensors.pb.cc > CMakeFiles/socketCan.dir/sensors.pb.cc.i
+	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/socketCan/sensors.pb.cc > CMakeFiles/socketCan.dir/sensors.pb.cc.i
 
 test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/socketCan.dir/sensors.pb.cc.s"
-	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/socketCan/sensors.pb.cc -o CMakeFiles/socketCan.dir/sensors.pb.cc.s
+	cd /home/diva2/diva2/build/test/socketCan && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/socketCan/sensors.pb.cc -o CMakeFiles/socketCan.dir/sensors.pb.cc.s
 
 test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.o.requires:
 

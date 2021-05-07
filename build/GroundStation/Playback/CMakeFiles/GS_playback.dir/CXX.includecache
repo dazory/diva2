@@ -6,9 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/diva2/diva2/build/test/ouster/sensors.pb.cc
+/home/diva2/diva2/GroundStation/Playback/main.cpp
+zmq.hpp
+-
+thread
+-
+string
+-
+../../service/global_name.hpp
+/home/diva2/diva2/service/global_name.hpp
+
+/home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc
 sensors.pb.h
-/home/diva2/diva2/build/test/ouster/sensors.pb.h
+/home/diva2/diva2/build/GroundStation/Playback/sensors.pb.h
 algorithm
 -
 google/protobuf/io/coded_stream.h
@@ -30,7 +40,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/build/test/ouster/sensors.pb.h
+/home/diva2/diva2/build/GroundStation/Playback/sensors.pb.h
 limits
 -
 string
@@ -70,7 +80,11 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/test/ouster/main.cpp
+/home/diva2/diva2/service/global_name.hpp
+string
+/home/diva2/diva2/service/string
+termios.h
+-
 
 /usr/local/include/google/protobuf/any.h
 string

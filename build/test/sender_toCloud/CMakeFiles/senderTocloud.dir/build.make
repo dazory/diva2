@@ -60,15 +60,15 @@ include test/sender_toCloud/CMakeFiles/senderTocloud.dir/flags.make
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.o: test/sender_toCloud/CMakeFiles/senderTocloud.dir/flags.make
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.o: ../test/sender_toCloud/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/senderTocloud.dir/main.cpp.o -c /home/diva2/diva2/test/sender_toCloud/main.cpp
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/senderTocloud.dir/main.cpp.o -c /home/diva2/diva2/test/sender_toCloud/main.cpp
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senderTocloud.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sender_toCloud/main.cpp > CMakeFiles/senderTocloud.dir/main.cpp.i
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sender_toCloud/main.cpp > CMakeFiles/senderTocloud.dir/main.cpp.i
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senderTocloud.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sender_toCloud/main.cpp -o CMakeFiles/senderTocloud.dir/main.cpp.s
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sender_toCloud/main.cpp -o CMakeFiles/senderTocloud.dir/main.cpp.s
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.o.requires:
 
@@ -84,15 +84,15 @@ test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.o.provides.build: test
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o: test/sender_toCloud/CMakeFiles/senderTocloud.dir/flags.make
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o: ../test/sender_toCloud/GpsSenderThread.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.i"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp > CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.i
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp > CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.i
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.s"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp -o CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.s
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sender_toCloud/GpsSenderThread.cpp -o CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.s
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o.requires:
 
@@ -108,15 +108,15 @@ test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o.provides.
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o: test/sender_toCloud/CMakeFiles/senderTocloud.dir/flags.make
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o: ../test/sender_toCloud/ImuSenderThread.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o -c /home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.i"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp > CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.i
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp > CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.i
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.s"
-	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp -o CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.s
+	cd /home/diva2/diva2/build/test/sender_toCloud && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sender_toCloud/ImuSenderThread.cpp -o CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.s
 
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o.requires:
 

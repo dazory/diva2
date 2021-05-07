@@ -6,6 +6,40 @@
 
 #IncludeRegexTransform: 
 
+/home/diva2/diva2/MobilePlatform/Visualization/CamVisualization.cpp
+CamVisualization.h
+/home/diva2/diva2/MobilePlatform/Visualization/CamVisualization.h
+fstream
+-
+opencv2/opencv.hpp
+-
+opencv2/imgproc/imgproc.hpp
+/home/diva2/diva2/MobilePlatform/Visualization/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/diva2/diva2/MobilePlatform/Visualization/opencv2/highgui/highgui.hpp
+opencv2/imgcodecs.hpp
+-
+jsoncpp/json/json.h
+/home/diva2/diva2/MobilePlatform/Visualization/jsoncpp/json/json.h
+../../service/Timestamp.h
+/home/diva2/diva2/service/Timestamp.h
+../../service/global_name.hpp
+/home/diva2/diva2/service/global_name.hpp
+../../protobuf/sensors.pb.h
+/home/diva2/diva2/protobuf/sensors.pb.h
+
+/home/diva2/diva2/MobilePlatform/Visualization/CamVisualization.h
+iostream
+-
+fstream
+-
+string
+-
+zmq.hpp
+-
+../../service/zmq_helper.h
+/home/diva2/diva2/service/zmq_helper.h
+
 /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.cpp
 GpsVisualization.h
 /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.h
@@ -35,12 +69,14 @@ string
 /home/diva2/diva2/MobilePlatform/Visualization/main.cpp
 GpsVisualization.h
 /home/diva2/diva2/MobilePlatform/Visualization/GpsVisualization.h
-../../service/global_name.hpp
-/home/diva2/diva2/service/global_name.hpp
+CamVisualization.h
+/home/diva2/diva2/MobilePlatform/Visualization/CamVisualization.h
 thread
 -
 string
 -
+../../service/global_name.hpp
+/home/diva2/diva2/service/global_name.hpp
 
 /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc
 sensors.pb.h

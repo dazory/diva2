@@ -47,7 +47,7 @@ PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../../protobuf/sensors.proto" )
 
 
 # 실행파일 만들기
-set(SOURCE_MP_visualization main.cpp GpsVisualization.cpp)
+set(SOURCE_MP_visualization main.cpp GpsVisualization.cpp CamVisualization.cpp)
 add_executable(MP_visualization ${SOURCE_MP_visualization} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer
     ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC}    # MSCL
