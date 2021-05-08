@@ -14,6 +14,7 @@ test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o
  /home/diva2/diva2/test/service/gps_packet.h
  /home/diva2/diva2/test/service/zmq_helper.h
 test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o
+ /home/diva2/diva2/service/ImuPacket.h
  /home/diva2/diva2/test/sensor_parsing/ImuParsingThread.cpp
  /home/diva2/diva2/test/sensor_parsing/ImuParsingThread.h
  /home/diva2/diva2/test/service/ImuPacket.h

@@ -65,109 +65,88 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
             {
                 strBuff[cnt++] = string(pSep);
             }
-            // time [1]
-            struct tm tm;
-            if (strlen(strBuff[1].c_str()) != 0)
-                strptime(strBuff[1].c_str(), "%H%M%S", &tm);
-            time_t t = mktime(&tm);
-            // gps.set_allocated_timestamp(TimeUtil::TimeTToTimestamp(t)));
-
-            // latitude [2]
+            /* GPGGA
+            [1] time
+            [2] latitude
+            [3] Unknown=0 North=1 South=2
+            [4] longitude
+            [5] Unknown=0 East=1 West=2
+            [6] GPS Quality
+            [7] NumberOfSatellitesInUse
+            [8] HorizontalDilutionOfPrecision
+            [9] AntennaAltitudeMeters
+            [11] GeoidalSeparationMeters
+            [13] AgeOfDifferentialGPSDataSeconds
+            [14] DifferentialReferenceStationID
+            [15] checksum
+            */
+            
+            // latitude
             if (strlen(strBuff[2].c_str()) != 0)
                 gps.set_latitude(stod(strBuff[2].c_str()));
 
-            // Unknown=0 North=1 South=2 [3]
-            string strTmp = strBuff[3];
-            if (strcmp(strTmp.c_str(), "N") == 0)
-                gps.set_isnorth(true);
-            else if (strcmp(strTmp.c_str(), "S") == 0)
-                gps.set_isnorth(false);
-
-            // longitude [4]
+            // longitude
             if (strlen(strBuff[4].c_str()) != 0)
                 gps.set_longitude(stod(strBuff[4].c_str()));
-
-            // Unknown=0 East=1 West=2 [5]
-            strTmp = strBuff[5];
-            if (strcmp(strTmp.c_str(), "E") == 0)
-                gps.set_iseast(true);
-            else if (strcmp(strTmp.c_str(), "W") == 0)
-                gps.set_iseast(false);
-
-            // GPS Quality [6]
-            if (strlen(strBuff[6].c_str()) != 0)
-                gps.set_gpsquality(stoi(strBuff[6].c_str()));
-
-            // NumberOfSatellitesInUse [7]
-            if (strlen(strBuff[7].c_str()) != 0)
-                // gps.set_numberofsatellitesinuse(stoi(strBuff[7].c_str()));
-
-            // HorizontalDilutionOfPrecision [8]
+            
+            // HorizontalDilutionOfPrecision
             if (strlen(strBuff[8].c_str()) != 0)
                 gps.set_horizontaldilutionofprecision(stod(strBuff[8].c_str()));
 
-            // AntennaAltitudeMeters [9]
-            string isMeter = strBuff[10];
-            if (strlen(strBuff[9].c_str()) != 0)
-                gps.set_antennaaltitudemeters(stod(strBuff[9].c_str()));
-
-            // GeoidalSeparationMeters [11]
-            string isMeter2 = strBuff[12];
-            if (strlen(strBuff[11].c_str()) != 0)
-                gps.set_geoidalseparationmeters(stod(strBuff[11].c_str()));
-
-            // AgeOfDifferentialGPSDataSeconds [13]
-            if (strlen(strBuff[13].c_str()) != 0)
-            {
-                gps.set_ageofdifferentialgpsdataseconds(stod(strBuff[13].c_str()));
-            }
-
-            // DifferentialReferenceStationID [14]
-            if (strlen(strBuff[14].c_str()) != 0)
-            {
-                // gps.set_differentialreferencestationid(stoi(strBuff[14].c_str()));
-            }
-
-            // checksum [15]
-            string checksum = strBuff[15];
-
             // [Send to PUB socket]
-            // [Send Topic]
+            // <Send Topic>
             s_send_idx(*pubSock, SENSOR_GPS);
+
             // <Serialization>
             int data_len = gps.ByteSize();
             unsigned char data[data_len] = "\0";
             gps.SerializeToArray(data, data_len);
+            printf("[MobilePlatform/Sensing/GpsSensingThread] Serialize\n");
             for (auto i = 0; i < data_len; i++)
                 printf("%02X ", data[i]);
             printf("\n");
-            printf("[MobilePlatform/Sensing/GpsSensingThread] Serialize\n");
 
-            // <Send>
+            // <Send Message>
             zmq::message_t zmqData(data_len);
             memcpy((void *)zmqData.data(), data, data_len);
             s_send(*pubSock, zmqData);
             printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
-
-
-            printf("(%d) [MobilePlatform/Sensing/GpsSensingThread] read %dbytes from GPS device\n", count,nRet); count++;
-            printf("latitude=%f, longitude=%f\n", gps.latitude(), gps.longitude());
-
         } // end "Parsing to Proto"
 
-
-        
-
-
         // [Store the GPS data]
-        // <Make .json File>
+        // <Make json object>
+        Json::Value json_dataset;
+        string path = "gps.json"; // TO-DO: the rule of file name
+        ifstream in(path.c_str());
+        if(in.is_open()) in >> json_dataset;
+        printf("[MobilePlatform/Sensing/GpsSensingThread] Make Json Object (path:%s)\n",path.c_str()); 
 
-        // <Store json file to local storage>
+        Json::Value json_data; 
+        // json_data["gpgga"] = string(cBuff); // TO-DO: gpgga?
+        json_data["latitude"] = strBuff[2]; 
+        json_data["isNorth"] = strBuff[3]; 
+        json_data["longitude"] = strBuff[4]; 
+        json_data["isEast"] = strBuff[5]; 
+        json_data["gpsQuality"] = strBuff[6]; 
+        json_data["NumberOfSatellitesInUse"] = strBuff[7]; 
+        json_data["HorizontalDilutionOfPrecision"] = strBuff[8];
+        json_data["AntennaAltitudeMeters"] = strBuff[9];
+        json_data["GeoidalSeparationMeters"] = strBuff[11];
+        json_data["AgeOfDifferentialGPSDataSeconds"] = strBuff[13];
+        json_data["DifferentialReferenceStationID"] = strBuff[14];
+        json_data["checksum"] = strBuff[15];
+        json_dataset.append(json_data);
+        printf("[MobilePlatform/Sensing/GpsSensingThread] Append a json data\n");
+
+        Json::StyledWriter jsonWriter;
+        ofstream out(path.c_str());
+        out<<jsonWriter.write(json_dataset);
+        out.close();
+        printf("[MobilePlatform/Sensing/GpsSensingThread] complete to make json file at \"%s\"\n",path.c_str());
         
-
         // [OPTION]
-        usleep(100);
-        // sleep(1);
+        // usleep(100);
+        
     } // end: while(1)
 
     if (USE_GPS)

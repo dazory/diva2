@@ -31,10 +31,18 @@ sys/timeb.h
 -
 cstddef
 -
+sys/stat.h
+-
+sys/types.h
+-
+errno.h
+-
 ../../protobuf/sensors.pb.h
 /home/diva2/diva2/protobuf/sensors.pb.h
 ../../service/zmq_helper.h
 /home/diva2/diva2/service/zmq_helper.h
+jsoncpp/json/json.h
+/home/diva2/diva2/MobilePlatform/Sensing/jsoncpp/json/json.h
 
 /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp
 GpsSensingThread.h
@@ -51,8 +59,6 @@ time.h
 -
 sys/timeb.h
 -
-GpsSensingThread.h
-/home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.h
 ../../service/zmq_helper.h
 /home/diva2/diva2/service/zmq_helper.h
 ../../service/Can_serial.h
@@ -61,6 +67,8 @@ GpsSensingThread.h
 /home/diva2/diva2/service/Linux_keyboard.h
 ../../protobuf/sensors.pb.h
 /home/diva2/diva2/protobuf/sensors.pb.h
+jsoncpp/json/json.h
+/home/diva2/diva2/MobilePlatform/Sensing/jsoncpp/json/json.h
 
 /home/diva2/diva2/MobilePlatform/Sensing/main.cpp
 iostream

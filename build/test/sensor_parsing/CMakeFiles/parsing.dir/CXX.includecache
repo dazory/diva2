@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/diva2/diva2/service/ImuPacket.h
+iostream
+/home/diva2/diva2/service/iostream
+time.h
+/home/diva2/diva2/service/time.h
+map
+-
+
 /home/diva2/diva2/test/sensor_parsing/CamParsingThread.cpp
 CamParsingThread.h
 /home/diva2/diva2/test/sensor_parsing/CamParsingThread.h
@@ -149,6 +157,8 @@ CamParsingThread.h
 /home/diva2/diva2/test/sensor_parsing/CamParsingThread.h
 
 /home/diva2/diva2/test/service/ImuPacket.h
+../../service/ImuPacket.h
+/home/diva2/diva2/service/ImuPacket.h
 
 /home/diva2/diva2/test/service/cam_packet.h
 iostream

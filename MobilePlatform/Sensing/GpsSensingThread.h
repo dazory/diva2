@@ -4,11 +4,15 @@
 #include <time.h>
 #include <sys/timeb.h>
 
-#include "GpsSensingThread.h"
 #include "../../service/zmq_helper.h"
 #include "../../service/Can_serial.h"
 #include "../../service/Linux_keyboard.h"
 #include "../../protobuf/sensors.pb.h"
+
+// JSON
+#include "jsoncpp/json/json.h"
+#pragma comment(lib, "jsoncpp\\lib\\lib_json.lib")
+#pragma warning(disable : 4996) //error C4996 뜨는 경우
 
 using namespace std;
 

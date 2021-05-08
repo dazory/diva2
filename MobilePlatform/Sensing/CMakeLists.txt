@@ -45,9 +45,17 @@ include_directories(${PROTOBUF_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../../protobuf/sensors.proto" )
 
+## Use json
+pkg_check_modules(JSONCPP jsoncpp)
+link_libraries(${JSONCPP_LIBRARIES})
 
 # 실행파일 만들기
-set(SOURCE_MP_sensing main.cpp GpsSensingThread.cpp CamSensingThread.cpp)
+set(SOURCE_MP_sensing 
+    main.cpp 
+    GpsSensingThread.cpp 
+    CamSensingThread.cpp 
+    #ImuSensingThread.cpp
+)
 add_executable(MP_sensing ${SOURCE_MP_sensing} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer
     ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC}    # MSCL

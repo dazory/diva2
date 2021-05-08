@@ -48,7 +48,7 @@ struct TableStruct_sensors_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[6]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -71,6 +71,9 @@ extern ImuDefaultTypeInternal _Imu_default_instance_;
 class Lidar;
 struct LidarDefaultTypeInternal;
 extern LidarDefaultTypeInternal _Lidar_default_instance_;
+class Log;
+struct LogDefaultTypeInternal;
+extern LogDefaultTypeInternal _Log_default_instance_;
 }  // namespace sensors
 PROTOBUF_NAMESPACE_OPEN
 template<> ::sensors::Cam* Arena::CreateMaybeMessage<::sensors::Cam>(Arena*);
@@ -78,6 +81,7 @@ template<> ::sensors::Can* Arena::CreateMaybeMessage<::sensors::Can>(Arena*);
 template<> ::sensors::Gps* Arena::CreateMaybeMessage<::sensors::Gps>(Arena*);
 template<> ::sensors::Imu* Arena::CreateMaybeMessage<::sensors::Imu>(Arena*);
 template<> ::sensors::Lidar* Arena::CreateMaybeMessage<::sensors::Lidar>(Arena*);
+template<> ::sensors::Log* Arena::CreateMaybeMessage<::sensors::Log>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace sensors {
 
@@ -219,57 +223,11 @@ class Gps PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGpggaFieldNumber = 2,
-    kTimestampFieldNumber = 1,
-    kLatitudeFieldNumber = 3,
-    kLongitudeFieldNumber = 5,
-    kIsNorthFieldNumber = 4,
-    kIsEastFieldNumber = 6,
-    kGpsQualityFieldNumber = 7,
-    kHorizontalDilutionOfPrecisionFieldNumber = 9,
-    kAntennaAltitudeMetersFieldNumber = 10,
-    kNumberOfSatellitesInUseFieldNumber = 8,
-    kDifferentialReferenceStationIDFieldNumber = 13,
-    kGeoidalSeparationMetersFieldNumber = 11,
-    kAgeOfDifferentialGPSDataSecondsFieldNumber = 12,
+    kLatitudeFieldNumber = 1,
+    kLongitudeFieldNumber = 2,
+    kHorizontalDilutionOfPrecisionFieldNumber = 3,
   };
-  // string gpgga = 2;
-  void clear_gpgga();
-  const std::string& gpgga() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_gpgga(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_gpgga();
-  std::string* release_gpgga();
-  void set_allocated_gpgga(std::string* gpgga);
-  private:
-  const std::string& _internal_gpgga() const;
-  void _internal_set_gpgga(const std::string& value);
-  std::string* _internal_mutable_gpgga();
-  public:
-
-  // .google.protobuf.Timestamp timestamp = 1;
-  bool has_timestamp() const;
-  private:
-  bool _internal_has_timestamp() const;
-  public:
-  void clear_timestamp();
-  const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp() const;
-  PROTOBUF_NAMESPACE_ID::Timestamp* release_timestamp();
-  PROTOBUF_NAMESPACE_ID::Timestamp* mutable_timestamp();
-  void set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
-  private:
-  const PROTOBUF_NAMESPACE_ID::Timestamp& _internal_timestamp() const;
-  PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_timestamp();
-  public:
-  void unsafe_arena_set_allocated_timestamp(
-      PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
-  PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_timestamp();
-
-  // double latitude = 3;
-  bool has_latitude() const;
-  private:
-  bool _internal_has_latitude() const;
-  public:
+  // double latitude = 1;
   void clear_latitude();
   double latitude() const;
   void set_latitude(double value);
@@ -278,11 +236,7 @@ class Gps PROTOBUF_FINAL :
   void _internal_set_latitude(double value);
   public:
 
-  // double longitude = 5;
-  bool has_longitude() const;
-  private:
-  bool _internal_has_longitude() const;
-  public:
+  // double longitude = 2;
   void clear_longitude();
   double longitude() const;
   void set_longitude(double value);
@@ -291,121 +245,13 @@ class Gps PROTOBUF_FINAL :
   void _internal_set_longitude(double value);
   public:
 
-  // bool isNorth = 4;
-  bool has_isnorth() const;
-  private:
-  bool _internal_has_isnorth() const;
-  public:
-  void clear_isnorth();
-  bool isnorth() const;
-  void set_isnorth(bool value);
-  private:
-  bool _internal_isnorth() const;
-  void _internal_set_isnorth(bool value);
-  public:
-
-  // bool isEast = 6;
-  bool has_iseast() const;
-  private:
-  bool _internal_has_iseast() const;
-  public:
-  void clear_iseast();
-  bool iseast() const;
-  void set_iseast(bool value);
-  private:
-  bool _internal_iseast() const;
-  void _internal_set_iseast(bool value);
-  public:
-
-  // int32 gpsQuality = 7;
-  bool has_gpsquality() const;
-  private:
-  bool _internal_has_gpsquality() const;
-  public:
-  void clear_gpsquality();
-  ::PROTOBUF_NAMESPACE_ID::int32 gpsquality() const;
-  void set_gpsquality(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_gpsquality() const;
-  void _internal_set_gpsquality(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // double horizontalDilutionOfPrecision = 9;
-  bool has_horizontaldilutionofprecision() const;
-  private:
-  bool _internal_has_horizontaldilutionofprecision() const;
-  public:
+  // double horizontalDilutionOfPrecision = 3;
   void clear_horizontaldilutionofprecision();
   double horizontaldilutionofprecision() const;
   void set_horizontaldilutionofprecision(double value);
   private:
   double _internal_horizontaldilutionofprecision() const;
   void _internal_set_horizontaldilutionofprecision(double value);
-  public:
-
-  // double antennaAltitudeMeters = 10;
-  bool has_antennaaltitudemeters() const;
-  private:
-  bool _internal_has_antennaaltitudemeters() const;
-  public:
-  void clear_antennaaltitudemeters();
-  double antennaaltitudemeters() const;
-  void set_antennaaltitudemeters(double value);
-  private:
-  double _internal_antennaaltitudemeters() const;
-  void _internal_set_antennaaltitudemeters(double value);
-  public:
-
-  // int32 numberOfSatellitesInUse = 8;
-  bool has_numberofsatellitesinuse() const;
-  private:
-  bool _internal_has_numberofsatellitesinuse() const;
-  public:
-  void clear_numberofsatellitesinuse();
-  ::PROTOBUF_NAMESPACE_ID::int32 numberofsatellitesinuse() const;
-  void set_numberofsatellitesinuse(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_numberofsatellitesinuse() const;
-  void _internal_set_numberofsatellitesinuse(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // int32 differentialReferenceStationID = 13;
-  bool has_differentialreferencestationid() const;
-  private:
-  bool _internal_has_differentialreferencestationid() const;
-  public:
-  void clear_differentialreferencestationid();
-  ::PROTOBUF_NAMESPACE_ID::int32 differentialreferencestationid() const;
-  void set_differentialreferencestationid(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_differentialreferencestationid() const;
-  void _internal_set_differentialreferencestationid(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // double geoidalSeparationMeters = 11;
-  bool has_geoidalseparationmeters() const;
-  private:
-  bool _internal_has_geoidalseparationmeters() const;
-  public:
-  void clear_geoidalseparationmeters();
-  double geoidalseparationmeters() const;
-  void set_geoidalseparationmeters(double value);
-  private:
-  double _internal_geoidalseparationmeters() const;
-  void _internal_set_geoidalseparationmeters(double value);
-  public:
-
-  // double ageOfDifferentialGPSDataSeconds = 12;
-  bool has_ageofdifferentialgpsdataseconds() const;
-  private:
-  bool _internal_has_ageofdifferentialgpsdataseconds() const;
-  public:
-  void clear_ageofdifferentialgpsdataseconds();
-  double ageofdifferentialgpsdataseconds() const;
-  void set_ageofdifferentialgpsdataseconds(double value);
-  private:
-  double _internal_ageofdifferentialgpsdataseconds() const;
-  void _internal_set_ageofdifferentialgpsdataseconds(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:sensors.Gps)
@@ -415,21 +261,10 @@ class Gps PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr gpgga_;
-  PROTOBUF_NAMESPACE_ID::Timestamp* timestamp_;
   double latitude_;
   double longitude_;
-  bool isnorth_;
-  bool iseast_;
-  ::PROTOBUF_NAMESPACE_ID::int32 gpsquality_;
   double horizontaldilutionofprecision_;
-  double antennaaltitudemeters_;
-  ::PROTOBUF_NAMESPACE_ID::int32 numberofsatellitesinuse_;
-  ::PROTOBUF_NAMESPACE_ID::int32 differentialreferencestationid_;
-  double geoidalseparationmeters_;
-  double ageofdifferentialgpsdataseconds_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
 };
 // -------------------------------------------------------------------
@@ -541,46 +376,11 @@ class Imu PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTimestampFieldNumber = 1,
-    kScaledAccelXFieldNumber = 2,
-    kScaledAccelYFieldNumber = 3,
-    kScaledAccelZFieldNumber = 4,
-    kScaledGyroXFieldNumber = 5,
-    kScaledGyroYFieldNumber = 6,
-    kScaledGyroZFieldNumber = 7,
-    kScaledMagXFieldNumber = 8,
-    kScaledMagYFieldNumber = 9,
-    kScaledMagZFieldNumber = 10,
-    kEstRollFieldNumber = 11,
-    kEstPitchFieldNumber = 12,
-    kEstYawFieldNumber = 13,
-    kEstRollUncertFieldNumber = 14,
-    kEstPitchUncertFieldNumber = 15,
-    kEstYawUncertFieldNumber = 16,
+    kScaledAccelXFieldNumber = 1,
+    kScaledAccelYFieldNumber = 2,
+    kScaledAccelZFieldNumber = 3,
   };
-  // .google.protobuf.Timestamp timestamp = 1;
-  bool has_timestamp() const;
-  private:
-  bool _internal_has_timestamp() const;
-  public:
-  void clear_timestamp();
-  const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp() const;
-  PROTOBUF_NAMESPACE_ID::Timestamp* release_timestamp();
-  PROTOBUF_NAMESPACE_ID::Timestamp* mutable_timestamp();
-  void set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
-  private:
-  const PROTOBUF_NAMESPACE_ID::Timestamp& _internal_timestamp() const;
-  PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_timestamp();
-  public:
-  void unsafe_arena_set_allocated_timestamp(
-      PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
-  PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_timestamp();
-
-  // float scaledAccelX = 2;
-  bool has_scaledaccelx() const;
-  private:
-  bool _internal_has_scaledaccelx() const;
-  public:
+  // float scaledAccelX = 1;
   void clear_scaledaccelx();
   float scaledaccelx() const;
   void set_scaledaccelx(float value);
@@ -589,11 +389,7 @@ class Imu PROTOBUF_FINAL :
   void _internal_set_scaledaccelx(float value);
   public:
 
-  // float scaledAccelY = 3;
-  bool has_scaledaccely() const;
-  private:
-  bool _internal_has_scaledaccely() const;
-  public:
+  // float scaledAccelY = 2;
   void clear_scaledaccely();
   float scaledaccely() const;
   void set_scaledaccely(float value);
@@ -602,173 +398,13 @@ class Imu PROTOBUF_FINAL :
   void _internal_set_scaledaccely(float value);
   public:
 
-  // float scaledAccelZ = 4;
-  bool has_scaledaccelz() const;
-  private:
-  bool _internal_has_scaledaccelz() const;
-  public:
+  // float scaledAccelZ = 3;
   void clear_scaledaccelz();
   float scaledaccelz() const;
   void set_scaledaccelz(float value);
   private:
   float _internal_scaledaccelz() const;
   void _internal_set_scaledaccelz(float value);
-  public:
-
-  // float scaledGyroX = 5;
-  bool has_scaledgyrox() const;
-  private:
-  bool _internal_has_scaledgyrox() const;
-  public:
-  void clear_scaledgyrox();
-  float scaledgyrox() const;
-  void set_scaledgyrox(float value);
-  private:
-  float _internal_scaledgyrox() const;
-  void _internal_set_scaledgyrox(float value);
-  public:
-
-  // float scaledGyroY = 6;
-  bool has_scaledgyroy() const;
-  private:
-  bool _internal_has_scaledgyroy() const;
-  public:
-  void clear_scaledgyroy();
-  float scaledgyroy() const;
-  void set_scaledgyroy(float value);
-  private:
-  float _internal_scaledgyroy() const;
-  void _internal_set_scaledgyroy(float value);
-  public:
-
-  // float scaledGyroZ = 7;
-  bool has_scaledgyroz() const;
-  private:
-  bool _internal_has_scaledgyroz() const;
-  public:
-  void clear_scaledgyroz();
-  float scaledgyroz() const;
-  void set_scaledgyroz(float value);
-  private:
-  float _internal_scaledgyroz() const;
-  void _internal_set_scaledgyroz(float value);
-  public:
-
-  // float scaledMagX = 8;
-  bool has_scaledmagx() const;
-  private:
-  bool _internal_has_scaledmagx() const;
-  public:
-  void clear_scaledmagx();
-  float scaledmagx() const;
-  void set_scaledmagx(float value);
-  private:
-  float _internal_scaledmagx() const;
-  void _internal_set_scaledmagx(float value);
-  public:
-
-  // float scaledMagY = 9;
-  bool has_scaledmagy() const;
-  private:
-  bool _internal_has_scaledmagy() const;
-  public:
-  void clear_scaledmagy();
-  float scaledmagy() const;
-  void set_scaledmagy(float value);
-  private:
-  float _internal_scaledmagy() const;
-  void _internal_set_scaledmagy(float value);
-  public:
-
-  // float scaledMagZ = 10;
-  bool has_scaledmagz() const;
-  private:
-  bool _internal_has_scaledmagz() const;
-  public:
-  void clear_scaledmagz();
-  float scaledmagz() const;
-  void set_scaledmagz(float value);
-  private:
-  float _internal_scaledmagz() const;
-  void _internal_set_scaledmagz(float value);
-  public:
-
-  // float estRoll = 11;
-  bool has_estroll() const;
-  private:
-  bool _internal_has_estroll() const;
-  public:
-  void clear_estroll();
-  float estroll() const;
-  void set_estroll(float value);
-  private:
-  float _internal_estroll() const;
-  void _internal_set_estroll(float value);
-  public:
-
-  // float estPitch = 12;
-  bool has_estpitch() const;
-  private:
-  bool _internal_has_estpitch() const;
-  public:
-  void clear_estpitch();
-  float estpitch() const;
-  void set_estpitch(float value);
-  private:
-  float _internal_estpitch() const;
-  void _internal_set_estpitch(float value);
-  public:
-
-  // float estYaw = 13;
-  bool has_estyaw() const;
-  private:
-  bool _internal_has_estyaw() const;
-  public:
-  void clear_estyaw();
-  float estyaw() const;
-  void set_estyaw(float value);
-  private:
-  float _internal_estyaw() const;
-  void _internal_set_estyaw(float value);
-  public:
-
-  // float estRollUncert = 14;
-  bool has_estrolluncert() const;
-  private:
-  bool _internal_has_estrolluncert() const;
-  public:
-  void clear_estrolluncert();
-  float estrolluncert() const;
-  void set_estrolluncert(float value);
-  private:
-  float _internal_estrolluncert() const;
-  void _internal_set_estrolluncert(float value);
-  public:
-
-  // float estPitchUncert = 15;
-  bool has_estpitchuncert() const;
-  private:
-  bool _internal_has_estpitchuncert() const;
-  public:
-  void clear_estpitchuncert();
-  float estpitchuncert() const;
-  void set_estpitchuncert(float value);
-  private:
-  float _internal_estpitchuncert() const;
-  void _internal_set_estpitchuncert(float value);
-  public:
-
-  // float estYawUncert = 16;
-  bool has_estyawuncert() const;
-  private:
-  bool _internal_has_estyawuncert() const;
-  public:
-  void clear_estyawuncert();
-  float estyawuncert() const;
-  void set_estyawuncert(float value);
-  private:
-  float _internal_estyawuncert() const;
-  void _internal_set_estyawuncert(float value);
   public:
 
   // @@protoc_insertion_point(class_scope:sensors.Imu)
@@ -778,24 +414,10 @@ class Imu PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  PROTOBUF_NAMESPACE_ID::Timestamp* timestamp_;
   float scaledaccelx_;
   float scaledaccely_;
   float scaledaccelz_;
-  float scaledgyrox_;
-  float scaledgyroy_;
-  float scaledgyroz_;
-  float scaledmagx_;
-  float scaledmagy_;
-  float scaledmagz_;
-  float estroll_;
-  float estpitch_;
-  float estyaw_;
-  float estrolluncert_;
-  float estpitchuncert_;
-  float estyawuncert_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
 };
 // -------------------------------------------------------------------
@@ -907,13 +529,11 @@ class Cam PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kImageDataFieldNumber = 5,
-    kTimestampFieldNumber = 1,
-    kChannelOrderFieldNumber = 2,
-    kColsFieldNumber = 3,
-    kRowsFieldNumber = 4,
+    kImageDataFieldNumber = 3,
+    kColsFieldNumber = 1,
+    kRowsFieldNumber = 2,
   };
-  // bytes image_data = 5;
+  // bytes image_data = 3;
   void clear_image_data();
   const std::string& image_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -927,34 +547,7 @@ class Cam PROTOBUF_FINAL :
   std::string* _internal_mutable_image_data();
   public:
 
-  // .google.protobuf.Timestamp timestamp = 1;
-  bool has_timestamp() const;
-  private:
-  bool _internal_has_timestamp() const;
-  public:
-  void clear_timestamp();
-  const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp() const;
-  PROTOBUF_NAMESPACE_ID::Timestamp* release_timestamp();
-  PROTOBUF_NAMESPACE_ID::Timestamp* mutable_timestamp();
-  void set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
-  private:
-  const PROTOBUF_NAMESPACE_ID::Timestamp& _internal_timestamp() const;
-  PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_timestamp();
-  public:
-  void unsafe_arena_set_allocated_timestamp(
-      PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
-  PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_timestamp();
-
-  // .sensors.ChannelOrder channel_order = 2;
-  void clear_channel_order();
-  ::sensors::ChannelOrder channel_order() const;
-  void set_channel_order(::sensors::ChannelOrder value);
-  private:
-  ::sensors::ChannelOrder _internal_channel_order() const;
-  void _internal_set_channel_order(::sensors::ChannelOrder value);
-  public:
-
-  // int32 cols = 3;
+  // int32 cols = 1;
   void clear_cols();
   ::PROTOBUF_NAMESPACE_ID::int32 cols() const;
   void set_cols(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -963,7 +556,7 @@ class Cam PROTOBUF_FINAL :
   void _internal_set_cols(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 rows = 4;
+  // int32 rows = 2;
   void clear_rows();
   ::PROTOBUF_NAMESPACE_ID::int32 rows() const;
   void set_rows(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -980,8 +573,6 @@ class Cam PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr image_data_;
-  PROTOBUF_NAMESPACE_ID::Timestamp* timestamp_;
-  int channel_order_;
   ::PROTOBUF_NAMESPACE_ID::int32 cols_;
   ::PROTOBUF_NAMESPACE_ID::int32 rows_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1353,6 +944,212 @@ class Can PROTOBUF_FINAL :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
 };
+// -------------------------------------------------------------------
+
+class Log PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:sensors.Log) */ {
+ public:
+  inline Log() : Log(nullptr) {}
+  ~Log() override;
+  explicit constexpr Log(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  Log(const Log& from);
+  Log(Log&& from) noexcept
+    : Log() {
+    *this = ::std::move(from);
+  }
+
+  inline Log& operator=(const Log& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Log& operator=(Log&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const Log& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const Log* internal_default_instance() {
+    return reinterpret_cast<const Log*>(
+               &_Log_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(Log& a, Log& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Log* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(Log* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Log* New() const final {
+    return CreateMaybeMessage<Log>(nullptr);
+  }
+
+  Log* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Log>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Log& from);
+  void MergeFrom(const Log& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Log* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "sensors.Log";
+  }
+  protected:
+  explicit Log(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPadFieldNumber = 4,
+    kRes0FieldNumber = 5,
+    kRes1FieldNumber = 6,
+    kDataFieldNumber = 7,
+    kCanIdFieldNumber = 2,
+    kCanDlcFieldNumber = 3,
+  };
+  // bytes __pad = 4;
+  void clear___pad();
+  const std::string& __pad() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set___pad(ArgT0&& arg0, ArgT... args);
+  std::string* mutable___pad();
+  std::string* release___pad();
+  void set_allocated___pad(std::string* __pad);
+  private:
+  const std::string& _internal___pad() const;
+  void _internal_set___pad(const std::string& value);
+  std::string* _internal_mutable___pad();
+  public:
+
+  // bytes __res0 = 5;
+  void clear___res0();
+  const std::string& __res0() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set___res0(ArgT0&& arg0, ArgT... args);
+  std::string* mutable___res0();
+  std::string* release___res0();
+  void set_allocated___res0(std::string* __res0);
+  private:
+  const std::string& _internal___res0() const;
+  void _internal_set___res0(const std::string& value);
+  std::string* _internal_mutable___res0();
+  public:
+
+  // bytes __res1 = 6;
+  void clear___res1();
+  const std::string& __res1() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set___res1(ArgT0&& arg0, ArgT... args);
+  std::string* mutable___res1();
+  std::string* release___res1();
+  void set_allocated___res1(std::string* __res1);
+  private:
+  const std::string& _internal___res1() const;
+  void _internal_set___res1(const std::string& value);
+  std::string* _internal_mutable___res1();
+  public:
+
+  // bytes data = 7;
+  void clear_data();
+  const std::string& data() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_data();
+  std::string* release_data();
+  void set_allocated_data(std::string* data);
+  private:
+  const std::string& _internal_data() const;
+  void _internal_set_data(const std::string& value);
+  std::string* _internal_mutable_data();
+  public:
+
+  // uint32 can_id = 2;
+  void clear_can_id();
+  ::PROTOBUF_NAMESPACE_ID::uint32 can_id() const;
+  void set_can_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_can_id() const;
+  void _internal_set_can_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // uint32 can_dlc = 3;
+  void clear_can_dlc();
+  ::PROTOBUF_NAMESPACE_ID::uint32 can_dlc() const;
+  void set_can_dlc(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_can_dlc() const;
+  void _internal_set_can_dlc(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:sensors.Log)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr __pad_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr __res0_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr __res1_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 can_id_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 can_dlc_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_sensors_2eproto;
+};
 // ===================================================================
 
 
@@ -1364,139 +1161,9 @@ class Can PROTOBUF_FINAL :
 #endif  // __GNUC__
 // Gps
 
-// .google.protobuf.Timestamp timestamp = 1;
-inline bool Gps::_internal_has_timestamp() const {
-  return this != internal_default_instance() && timestamp_ != nullptr;
-}
-inline bool Gps::has_timestamp() const {
-  return _internal_has_timestamp();
-}
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& Gps::_internal_timestamp() const {
-  const PROTOBUF_NAMESPACE_ID::Timestamp* p = timestamp_;
-  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Timestamp&>(
-      PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
-}
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& Gps::timestamp() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.timestamp)
-  return _internal_timestamp();
-}
-inline void Gps::unsafe_arena_set_allocated_timestamp(
-    PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
-  if (GetArena() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
-  }
-  timestamp_ = timestamp;
-  if (timestamp) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:sensors.Gps.timestamp)
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Gps::release_timestamp() {
-  
-  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
-  timestamp_ = nullptr;
-  if (GetArena() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-  return temp;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Gps::unsafe_arena_release_timestamp() {
-  // @@protoc_insertion_point(field_release:sensors.Gps.timestamp)
-  
-  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
-  timestamp_ = nullptr;
-  return temp;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Gps::_internal_mutable_timestamp() {
-  
-  if (timestamp_ == nullptr) {
-    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Timestamp>(GetArena());
-    timestamp_ = p;
-  }
-  return timestamp_;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Gps::mutable_timestamp() {
-  // @@protoc_insertion_point(field_mutable:sensors.Gps.timestamp)
-  return _internal_mutable_timestamp();
-}
-inline void Gps::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
-  }
-  if (timestamp) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      timestamp = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, timestamp, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  timestamp_ = timestamp;
-  // @@protoc_insertion_point(field_set_allocated:sensors.Gps.timestamp)
-}
-
-// string gpgga = 2;
-inline void Gps::clear_gpgga() {
-  gpgga_.ClearToEmpty();
-}
-inline const std::string& Gps::gpgga() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.gpgga)
-  return _internal_gpgga();
-}
-template <typename ArgT0, typename... ArgT>
-PROTOBUF_ALWAYS_INLINE
-inline void Gps::set_gpgga(ArgT0&& arg0, ArgT... args) {
- 
- gpgga_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
-  // @@protoc_insertion_point(field_set:sensors.Gps.gpgga)
-}
-inline std::string* Gps::mutable_gpgga() {
-  // @@protoc_insertion_point(field_mutable:sensors.Gps.gpgga)
-  return _internal_mutable_gpgga();
-}
-inline const std::string& Gps::_internal_gpgga() const {
-  return gpgga_.Get();
-}
-inline void Gps::_internal_set_gpgga(const std::string& value) {
-  
-  gpgga_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline std::string* Gps::_internal_mutable_gpgga() {
-  
-  return gpgga_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Gps::release_gpgga() {
-  // @@protoc_insertion_point(field_release:sensors.Gps.gpgga)
-  return gpgga_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Gps::set_allocated_gpgga(std::string* gpgga) {
-  if (gpgga != nullptr) {
-    
-  } else {
-    
-  }
-  gpgga_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), gpgga,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:sensors.Gps.gpgga)
-}
-
-// double latitude = 3;
-inline bool Gps::_internal_has_latitude() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Gps::has_latitude() const {
-  return _internal_has_latitude();
-}
+// double latitude = 1;
 inline void Gps::clear_latitude() {
   latitude_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline double Gps::_internal_latitude() const {
   return latitude_;
@@ -1506,7 +1173,7 @@ inline double Gps::latitude() const {
   return _internal_latitude();
 }
 inline void Gps::_internal_set_latitude(double value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   latitude_ = value;
 }
 inline void Gps::set_latitude(double value) {
@@ -1514,45 +1181,9 @@ inline void Gps::set_latitude(double value) {
   // @@protoc_insertion_point(field_set:sensors.Gps.latitude)
 }
 
-// bool isNorth = 4;
-inline bool Gps::_internal_has_isnorth() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Gps::has_isnorth() const {
-  return _internal_has_isnorth();
-}
-inline void Gps::clear_isnorth() {
-  isnorth_ = false;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline bool Gps::_internal_isnorth() const {
-  return isnorth_;
-}
-inline bool Gps::isnorth() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.isNorth)
-  return _internal_isnorth();
-}
-inline void Gps::_internal_set_isnorth(bool value) {
-  _has_bits_[0] |= 0x00000004u;
-  isnorth_ = value;
-}
-inline void Gps::set_isnorth(bool value) {
-  _internal_set_isnorth(value);
-  // @@protoc_insertion_point(field_set:sensors.Gps.isNorth)
-}
-
-// double longitude = 5;
-inline bool Gps::_internal_has_longitude() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Gps::has_longitude() const {
-  return _internal_has_longitude();
-}
+// double longitude = 2;
 inline void Gps::clear_longitude() {
   longitude_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline double Gps::_internal_longitude() const {
   return longitude_;
@@ -1562,7 +1193,7 @@ inline double Gps::longitude() const {
   return _internal_longitude();
 }
 inline void Gps::_internal_set_longitude(double value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   longitude_ = value;
 }
 inline void Gps::set_longitude(double value) {
@@ -1570,101 +1201,9 @@ inline void Gps::set_longitude(double value) {
   // @@protoc_insertion_point(field_set:sensors.Gps.longitude)
 }
 
-// bool isEast = 6;
-inline bool Gps::_internal_has_iseast() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Gps::has_iseast() const {
-  return _internal_has_iseast();
-}
-inline void Gps::clear_iseast() {
-  iseast_ = false;
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline bool Gps::_internal_iseast() const {
-  return iseast_;
-}
-inline bool Gps::iseast() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.isEast)
-  return _internal_iseast();
-}
-inline void Gps::_internal_set_iseast(bool value) {
-  _has_bits_[0] |= 0x00000008u;
-  iseast_ = value;
-}
-inline void Gps::set_iseast(bool value) {
-  _internal_set_iseast(value);
-  // @@protoc_insertion_point(field_set:sensors.Gps.isEast)
-}
-
-// int32 gpsQuality = 7;
-inline bool Gps::_internal_has_gpsquality() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Gps::has_gpsquality() const {
-  return _internal_has_gpsquality();
-}
-inline void Gps::clear_gpsquality() {
-  gpsquality_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Gps::_internal_gpsquality() const {
-  return gpsquality_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Gps::gpsquality() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.gpsQuality)
-  return _internal_gpsquality();
-}
-inline void Gps::_internal_set_gpsquality(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000010u;
-  gpsquality_ = value;
-}
-inline void Gps::set_gpsquality(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_gpsquality(value);
-  // @@protoc_insertion_point(field_set:sensors.Gps.gpsQuality)
-}
-
-// int32 numberOfSatellitesInUse = 8;
-inline bool Gps::_internal_has_numberofsatellitesinuse() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool Gps::has_numberofsatellitesinuse() const {
-  return _internal_has_numberofsatellitesinuse();
-}
-inline void Gps::clear_numberofsatellitesinuse() {
-  numberofsatellitesinuse_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Gps::_internal_numberofsatellitesinuse() const {
-  return numberofsatellitesinuse_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Gps::numberofsatellitesinuse() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.numberOfSatellitesInUse)
-  return _internal_numberofsatellitesinuse();
-}
-inline void Gps::_internal_set_numberofsatellitesinuse(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000080u;
-  numberofsatellitesinuse_ = value;
-}
-inline void Gps::set_numberofsatellitesinuse(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_numberofsatellitesinuse(value);
-  // @@protoc_insertion_point(field_set:sensors.Gps.numberOfSatellitesInUse)
-}
-
-// double horizontalDilutionOfPrecision = 9;
-inline bool Gps::_internal_has_horizontaldilutionofprecision() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool Gps::has_horizontaldilutionofprecision() const {
-  return _internal_has_horizontaldilutionofprecision();
-}
+// double horizontalDilutionOfPrecision = 3;
 inline void Gps::clear_horizontaldilutionofprecision() {
   horizontaldilutionofprecision_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline double Gps::_internal_horizontaldilutionofprecision() const {
   return horizontaldilutionofprecision_;
@@ -1674,7 +1213,7 @@ inline double Gps::horizontaldilutionofprecision() const {
   return _internal_horizontaldilutionofprecision();
 }
 inline void Gps::_internal_set_horizontaldilutionofprecision(double value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   horizontaldilutionofprecision_ = value;
 }
 inline void Gps::set_horizontaldilutionofprecision(double value) {
@@ -1682,210 +1221,13 @@ inline void Gps::set_horizontaldilutionofprecision(double value) {
   // @@protoc_insertion_point(field_set:sensors.Gps.horizontalDilutionOfPrecision)
 }
 
-// double antennaAltitudeMeters = 10;
-inline bool Gps::_internal_has_antennaaltitudemeters() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool Gps::has_antennaaltitudemeters() const {
-  return _internal_has_antennaaltitudemeters();
-}
-inline void Gps::clear_antennaaltitudemeters() {
-  antennaaltitudemeters_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline double Gps::_internal_antennaaltitudemeters() const {
-  return antennaaltitudemeters_;
-}
-inline double Gps::antennaaltitudemeters() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.antennaAltitudeMeters)
-  return _internal_antennaaltitudemeters();
-}
-inline void Gps::_internal_set_antennaaltitudemeters(double value) {
-  _has_bits_[0] |= 0x00000040u;
-  antennaaltitudemeters_ = value;
-}
-inline void Gps::set_antennaaltitudemeters(double value) {
-  _internal_set_antennaaltitudemeters(value);
-  // @@protoc_insertion_point(field_set:sensors.Gps.antennaAltitudeMeters)
-}
-
-// double geoidalSeparationMeters = 11;
-inline bool Gps::_internal_has_geoidalseparationmeters() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool Gps::has_geoidalseparationmeters() const {
-  return _internal_has_geoidalseparationmeters();
-}
-inline void Gps::clear_geoidalseparationmeters() {
-  geoidalseparationmeters_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
-}
-inline double Gps::_internal_geoidalseparationmeters() const {
-  return geoidalseparationmeters_;
-}
-inline double Gps::geoidalseparationmeters() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.geoidalSeparationMeters)
-  return _internal_geoidalseparationmeters();
-}
-inline void Gps::_internal_set_geoidalseparationmeters(double value) {
-  _has_bits_[0] |= 0x00000200u;
-  geoidalseparationmeters_ = value;
-}
-inline void Gps::set_geoidalseparationmeters(double value) {
-  _internal_set_geoidalseparationmeters(value);
-  // @@protoc_insertion_point(field_set:sensors.Gps.geoidalSeparationMeters)
-}
-
-// double ageOfDifferentialGPSDataSeconds = 12;
-inline bool Gps::_internal_has_ageofdifferentialgpsdataseconds() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool Gps::has_ageofdifferentialgpsdataseconds() const {
-  return _internal_has_ageofdifferentialgpsdataseconds();
-}
-inline void Gps::clear_ageofdifferentialgpsdataseconds() {
-  ageofdifferentialgpsdataseconds_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
-}
-inline double Gps::_internal_ageofdifferentialgpsdataseconds() const {
-  return ageofdifferentialgpsdataseconds_;
-}
-inline double Gps::ageofdifferentialgpsdataseconds() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.ageOfDifferentialGPSDataSeconds)
-  return _internal_ageofdifferentialgpsdataseconds();
-}
-inline void Gps::_internal_set_ageofdifferentialgpsdataseconds(double value) {
-  _has_bits_[0] |= 0x00000400u;
-  ageofdifferentialgpsdataseconds_ = value;
-}
-inline void Gps::set_ageofdifferentialgpsdataseconds(double value) {
-  _internal_set_ageofdifferentialgpsdataseconds(value);
-  // @@protoc_insertion_point(field_set:sensors.Gps.ageOfDifferentialGPSDataSeconds)
-}
-
-// int32 differentialReferenceStationID = 13;
-inline bool Gps::_internal_has_differentialreferencestationid() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool Gps::has_differentialreferencestationid() const {
-  return _internal_has_differentialreferencestationid();
-}
-inline void Gps::clear_differentialreferencestationid() {
-  differentialreferencestationid_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Gps::_internal_differentialreferencestationid() const {
-  return differentialreferencestationid_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Gps::differentialreferencestationid() const {
-  // @@protoc_insertion_point(field_get:sensors.Gps.differentialReferenceStationID)
-  return _internal_differentialreferencestationid();
-}
-inline void Gps::_internal_set_differentialreferencestationid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000100u;
-  differentialreferencestationid_ = value;
-}
-inline void Gps::set_differentialreferencestationid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_differentialreferencestationid(value);
-  // @@protoc_insertion_point(field_set:sensors.Gps.differentialReferenceStationID)
-}
-
 // -------------------------------------------------------------------
 
 // Imu
 
-// .google.protobuf.Timestamp timestamp = 1;
-inline bool Imu::_internal_has_timestamp() const {
-  return this != internal_default_instance() && timestamp_ != nullptr;
-}
-inline bool Imu::has_timestamp() const {
-  return _internal_has_timestamp();
-}
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& Imu::_internal_timestamp() const {
-  const PROTOBUF_NAMESPACE_ID::Timestamp* p = timestamp_;
-  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Timestamp&>(
-      PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
-}
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& Imu::timestamp() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.timestamp)
-  return _internal_timestamp();
-}
-inline void Imu::unsafe_arena_set_allocated_timestamp(
-    PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
-  if (GetArena() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
-  }
-  timestamp_ = timestamp;
-  if (timestamp) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:sensors.Imu.timestamp)
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Imu::release_timestamp() {
-  
-  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
-  timestamp_ = nullptr;
-  if (GetArena() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-  return temp;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Imu::unsafe_arena_release_timestamp() {
-  // @@protoc_insertion_point(field_release:sensors.Imu.timestamp)
-  
-  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
-  timestamp_ = nullptr;
-  return temp;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Imu::_internal_mutable_timestamp() {
-  
-  if (timestamp_ == nullptr) {
-    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Timestamp>(GetArena());
-    timestamp_ = p;
-  }
-  return timestamp_;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Imu::mutable_timestamp() {
-  // @@protoc_insertion_point(field_mutable:sensors.Imu.timestamp)
-  return _internal_mutable_timestamp();
-}
-inline void Imu::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
-  }
-  if (timestamp) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      timestamp = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, timestamp, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  timestamp_ = timestamp;
-  // @@protoc_insertion_point(field_set_allocated:sensors.Imu.timestamp)
-}
-
-// float scaledAccelX = 2;
-inline bool Imu::_internal_has_scaledaccelx() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledaccelx() const {
-  return _internal_has_scaledaccelx();
-}
+// float scaledAccelX = 1;
 inline void Imu::clear_scaledaccelx() {
   scaledaccelx_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline float Imu::_internal_scaledaccelx() const {
   return scaledaccelx_;
@@ -1895,7 +1237,7 @@ inline float Imu::scaledaccelx() const {
   return _internal_scaledaccelx();
 }
 inline void Imu::_internal_set_scaledaccelx(float value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   scaledaccelx_ = value;
 }
 inline void Imu::set_scaledaccelx(float value) {
@@ -1903,17 +1245,9 @@ inline void Imu::set_scaledaccelx(float value) {
   // @@protoc_insertion_point(field_set:sensors.Imu.scaledAccelX)
 }
 
-// float scaledAccelY = 3;
-inline bool Imu::_internal_has_scaledaccely() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledaccely() const {
-  return _internal_has_scaledaccely();
-}
+// float scaledAccelY = 2;
 inline void Imu::clear_scaledaccely() {
   scaledaccely_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline float Imu::_internal_scaledaccely() const {
   return scaledaccely_;
@@ -1923,7 +1257,7 @@ inline float Imu::scaledaccely() const {
   return _internal_scaledaccely();
 }
 inline void Imu::_internal_set_scaledaccely(float value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   scaledaccely_ = value;
 }
 inline void Imu::set_scaledaccely(float value) {
@@ -1931,17 +1265,9 @@ inline void Imu::set_scaledaccely(float value) {
   // @@protoc_insertion_point(field_set:sensors.Imu.scaledAccelY)
 }
 
-// float scaledAccelZ = 4;
-inline bool Imu::_internal_has_scaledaccelz() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledaccelz() const {
-  return _internal_has_scaledaccelz();
-}
+// float scaledAccelZ = 3;
 inline void Imu::clear_scaledaccelz() {
   scaledaccelz_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline float Imu::_internal_scaledaccelz() const {
   return scaledaccelz_;
@@ -1951,7 +1277,7 @@ inline float Imu::scaledaccelz() const {
   return _internal_scaledaccelz();
 }
 inline void Imu::_internal_set_scaledaccelz(float value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   scaledaccelz_ = value;
 }
 inline void Imu::set_scaledaccelz(float value) {
@@ -1959,444 +1285,11 @@ inline void Imu::set_scaledaccelz(float value) {
   // @@protoc_insertion_point(field_set:sensors.Imu.scaledAccelZ)
 }
 
-// float scaledGyroX = 5;
-inline bool Imu::_internal_has_scaledgyrox() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledgyrox() const {
-  return _internal_has_scaledgyrox();
-}
-inline void Imu::clear_scaledgyrox() {
-  scaledgyrox_ = 0;
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline float Imu::_internal_scaledgyrox() const {
-  return scaledgyrox_;
-}
-inline float Imu::scaledgyrox() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.scaledGyroX)
-  return _internal_scaledgyrox();
-}
-inline void Imu::_internal_set_scaledgyrox(float value) {
-  _has_bits_[0] |= 0x00000008u;
-  scaledgyrox_ = value;
-}
-inline void Imu::set_scaledgyrox(float value) {
-  _internal_set_scaledgyrox(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.scaledGyroX)
-}
-
-// float scaledGyroY = 6;
-inline bool Imu::_internal_has_scaledgyroy() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledgyroy() const {
-  return _internal_has_scaledgyroy();
-}
-inline void Imu::clear_scaledgyroy() {
-  scaledgyroy_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline float Imu::_internal_scaledgyroy() const {
-  return scaledgyroy_;
-}
-inline float Imu::scaledgyroy() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.scaledGyroY)
-  return _internal_scaledgyroy();
-}
-inline void Imu::_internal_set_scaledgyroy(float value) {
-  _has_bits_[0] |= 0x00000010u;
-  scaledgyroy_ = value;
-}
-inline void Imu::set_scaledgyroy(float value) {
-  _internal_set_scaledgyroy(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.scaledGyroY)
-}
-
-// float scaledGyroZ = 7;
-inline bool Imu::_internal_has_scaledgyroz() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledgyroz() const {
-  return _internal_has_scaledgyroz();
-}
-inline void Imu::clear_scaledgyroz() {
-  scaledgyroz_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline float Imu::_internal_scaledgyroz() const {
-  return scaledgyroz_;
-}
-inline float Imu::scaledgyroz() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.scaledGyroZ)
-  return _internal_scaledgyroz();
-}
-inline void Imu::_internal_set_scaledgyroz(float value) {
-  _has_bits_[0] |= 0x00000020u;
-  scaledgyroz_ = value;
-}
-inline void Imu::set_scaledgyroz(float value) {
-  _internal_set_scaledgyroz(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.scaledGyroZ)
-}
-
-// float scaledMagX = 8;
-inline bool Imu::_internal_has_scaledmagx() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledmagx() const {
-  return _internal_has_scaledmagx();
-}
-inline void Imu::clear_scaledmagx() {
-  scaledmagx_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline float Imu::_internal_scaledmagx() const {
-  return scaledmagx_;
-}
-inline float Imu::scaledmagx() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.scaledMagX)
-  return _internal_scaledmagx();
-}
-inline void Imu::_internal_set_scaledmagx(float value) {
-  _has_bits_[0] |= 0x00000040u;
-  scaledmagx_ = value;
-}
-inline void Imu::set_scaledmagx(float value) {
-  _internal_set_scaledmagx(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.scaledMagX)
-}
-
-// float scaledMagY = 9;
-inline bool Imu::_internal_has_scaledmagy() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledmagy() const {
-  return _internal_has_scaledmagy();
-}
-inline void Imu::clear_scaledmagy() {
-  scaledmagy_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
-}
-inline float Imu::_internal_scaledmagy() const {
-  return scaledmagy_;
-}
-inline float Imu::scaledmagy() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.scaledMagY)
-  return _internal_scaledmagy();
-}
-inline void Imu::_internal_set_scaledmagy(float value) {
-  _has_bits_[0] |= 0x00000080u;
-  scaledmagy_ = value;
-}
-inline void Imu::set_scaledmagy(float value) {
-  _internal_set_scaledmagy(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.scaledMagY)
-}
-
-// float scaledMagZ = 10;
-inline bool Imu::_internal_has_scaledmagz() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool Imu::has_scaledmagz() const {
-  return _internal_has_scaledmagz();
-}
-inline void Imu::clear_scaledmagz() {
-  scaledmagz_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
-}
-inline float Imu::_internal_scaledmagz() const {
-  return scaledmagz_;
-}
-inline float Imu::scaledmagz() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.scaledMagZ)
-  return _internal_scaledmagz();
-}
-inline void Imu::_internal_set_scaledmagz(float value) {
-  _has_bits_[0] |= 0x00000100u;
-  scaledmagz_ = value;
-}
-inline void Imu::set_scaledmagz(float value) {
-  _internal_set_scaledmagz(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.scaledMagZ)
-}
-
-// float estRoll = 11;
-inline bool Imu::_internal_has_estroll() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool Imu::has_estroll() const {
-  return _internal_has_estroll();
-}
-inline void Imu::clear_estroll() {
-  estroll_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
-}
-inline float Imu::_internal_estroll() const {
-  return estroll_;
-}
-inline float Imu::estroll() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.estRoll)
-  return _internal_estroll();
-}
-inline void Imu::_internal_set_estroll(float value) {
-  _has_bits_[0] |= 0x00000200u;
-  estroll_ = value;
-}
-inline void Imu::set_estroll(float value) {
-  _internal_set_estroll(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.estRoll)
-}
-
-// float estPitch = 12;
-inline bool Imu::_internal_has_estpitch() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool Imu::has_estpitch() const {
-  return _internal_has_estpitch();
-}
-inline void Imu::clear_estpitch() {
-  estpitch_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
-}
-inline float Imu::_internal_estpitch() const {
-  return estpitch_;
-}
-inline float Imu::estpitch() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.estPitch)
-  return _internal_estpitch();
-}
-inline void Imu::_internal_set_estpitch(float value) {
-  _has_bits_[0] |= 0x00000400u;
-  estpitch_ = value;
-}
-inline void Imu::set_estpitch(float value) {
-  _internal_set_estpitch(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.estPitch)
-}
-
-// float estYaw = 13;
-inline bool Imu::_internal_has_estyaw() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  return value;
-}
-inline bool Imu::has_estyaw() const {
-  return _internal_has_estyaw();
-}
-inline void Imu::clear_estyaw() {
-  estyaw_ = 0;
-  _has_bits_[0] &= ~0x00000800u;
-}
-inline float Imu::_internal_estyaw() const {
-  return estyaw_;
-}
-inline float Imu::estyaw() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.estYaw)
-  return _internal_estyaw();
-}
-inline void Imu::_internal_set_estyaw(float value) {
-  _has_bits_[0] |= 0x00000800u;
-  estyaw_ = value;
-}
-inline void Imu::set_estyaw(float value) {
-  _internal_set_estyaw(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.estYaw)
-}
-
-// float estRollUncert = 14;
-inline bool Imu::_internal_has_estrolluncert() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
-  return value;
-}
-inline bool Imu::has_estrolluncert() const {
-  return _internal_has_estrolluncert();
-}
-inline void Imu::clear_estrolluncert() {
-  estrolluncert_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
-}
-inline float Imu::_internal_estrolluncert() const {
-  return estrolluncert_;
-}
-inline float Imu::estrolluncert() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.estRollUncert)
-  return _internal_estrolluncert();
-}
-inline void Imu::_internal_set_estrolluncert(float value) {
-  _has_bits_[0] |= 0x00001000u;
-  estrolluncert_ = value;
-}
-inline void Imu::set_estrolluncert(float value) {
-  _internal_set_estrolluncert(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.estRollUncert)
-}
-
-// float estPitchUncert = 15;
-inline bool Imu::_internal_has_estpitchuncert() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
-  return value;
-}
-inline bool Imu::has_estpitchuncert() const {
-  return _internal_has_estpitchuncert();
-}
-inline void Imu::clear_estpitchuncert() {
-  estpitchuncert_ = 0;
-  _has_bits_[0] &= ~0x00002000u;
-}
-inline float Imu::_internal_estpitchuncert() const {
-  return estpitchuncert_;
-}
-inline float Imu::estpitchuncert() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.estPitchUncert)
-  return _internal_estpitchuncert();
-}
-inline void Imu::_internal_set_estpitchuncert(float value) {
-  _has_bits_[0] |= 0x00002000u;
-  estpitchuncert_ = value;
-}
-inline void Imu::set_estpitchuncert(float value) {
-  _internal_set_estpitchuncert(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.estPitchUncert)
-}
-
-// float estYawUncert = 16;
-inline bool Imu::_internal_has_estyawuncert() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
-  return value;
-}
-inline bool Imu::has_estyawuncert() const {
-  return _internal_has_estyawuncert();
-}
-inline void Imu::clear_estyawuncert() {
-  estyawuncert_ = 0;
-  _has_bits_[0] &= ~0x00004000u;
-}
-inline float Imu::_internal_estyawuncert() const {
-  return estyawuncert_;
-}
-inline float Imu::estyawuncert() const {
-  // @@protoc_insertion_point(field_get:sensors.Imu.estYawUncert)
-  return _internal_estyawuncert();
-}
-inline void Imu::_internal_set_estyawuncert(float value) {
-  _has_bits_[0] |= 0x00004000u;
-  estyawuncert_ = value;
-}
-inline void Imu::set_estyawuncert(float value) {
-  _internal_set_estyawuncert(value);
-  // @@protoc_insertion_point(field_set:sensors.Imu.estYawUncert)
-}
-
 // -------------------------------------------------------------------
 
 // Cam
 
-// .google.protobuf.Timestamp timestamp = 1;
-inline bool Cam::_internal_has_timestamp() const {
-  return this != internal_default_instance() && timestamp_ != nullptr;
-}
-inline bool Cam::has_timestamp() const {
-  return _internal_has_timestamp();
-}
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& Cam::_internal_timestamp() const {
-  const PROTOBUF_NAMESPACE_ID::Timestamp* p = timestamp_;
-  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Timestamp&>(
-      PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
-}
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& Cam::timestamp() const {
-  // @@protoc_insertion_point(field_get:sensors.Cam.timestamp)
-  return _internal_timestamp();
-}
-inline void Cam::unsafe_arena_set_allocated_timestamp(
-    PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
-  if (GetArena() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
-  }
-  timestamp_ = timestamp;
-  if (timestamp) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:sensors.Cam.timestamp)
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Cam::release_timestamp() {
-  
-  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
-  timestamp_ = nullptr;
-  if (GetArena() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-  return temp;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Cam::unsafe_arena_release_timestamp() {
-  // @@protoc_insertion_point(field_release:sensors.Cam.timestamp)
-  
-  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
-  timestamp_ = nullptr;
-  return temp;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Cam::_internal_mutable_timestamp() {
-  
-  if (timestamp_ == nullptr) {
-    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Timestamp>(GetArena());
-    timestamp_ = p;
-  }
-  return timestamp_;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Cam::mutable_timestamp() {
-  // @@protoc_insertion_point(field_mutable:sensors.Cam.timestamp)
-  return _internal_mutable_timestamp();
-}
-inline void Cam::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
-  }
-  if (timestamp) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      timestamp = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, timestamp, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  timestamp_ = timestamp;
-  // @@protoc_insertion_point(field_set_allocated:sensors.Cam.timestamp)
-}
-
-// .sensors.ChannelOrder channel_order = 2;
-inline void Cam::clear_channel_order() {
-  channel_order_ = 0;
-}
-inline ::sensors::ChannelOrder Cam::_internal_channel_order() const {
-  return static_cast< ::sensors::ChannelOrder >(channel_order_);
-}
-inline ::sensors::ChannelOrder Cam::channel_order() const {
-  // @@protoc_insertion_point(field_get:sensors.Cam.channel_order)
-  return _internal_channel_order();
-}
-inline void Cam::_internal_set_channel_order(::sensors::ChannelOrder value) {
-  
-  channel_order_ = value;
-}
-inline void Cam::set_channel_order(::sensors::ChannelOrder value) {
-  _internal_set_channel_order(value);
-  // @@protoc_insertion_point(field_set:sensors.Cam.channel_order)
-}
-
-// int32 cols = 3;
+// int32 cols = 1;
 inline void Cam::clear_cols() {
   cols_ = 0;
 }
@@ -2416,7 +1309,7 @@ inline void Cam::set_cols(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:sensors.Cam.cols)
 }
 
-// int32 rows = 4;
+// int32 rows = 2;
 inline void Cam::clear_rows() {
   rows_ = 0;
 }
@@ -2436,7 +1329,7 @@ inline void Cam::set_rows(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:sensors.Cam.rows)
 }
 
-// bytes image_data = 5;
+// bytes image_data = 3;
 inline void Cam::clear_image_data() {
   image_data_.ClearToEmpty();
 }
@@ -2863,9 +1756,235 @@ inline void Can::set_allocated_data(std::string* data) {
   // @@protoc_insertion_point(field_set_allocated:sensors.Can.data)
 }
 
+// -------------------------------------------------------------------
+
+// Log
+
+// uint32 can_id = 2;
+inline void Log::clear_can_id() {
+  can_id_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Log::_internal_can_id() const {
+  return can_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Log::can_id() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.can_id)
+  return _internal_can_id();
+}
+inline void Log::_internal_set_can_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  can_id_ = value;
+}
+inline void Log::set_can_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_can_id(value);
+  // @@protoc_insertion_point(field_set:sensors.Log.can_id)
+}
+
+// uint32 can_dlc = 3;
+inline void Log::clear_can_dlc() {
+  can_dlc_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Log::_internal_can_dlc() const {
+  return can_dlc_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Log::can_dlc() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.can_dlc)
+  return _internal_can_dlc();
+}
+inline void Log::_internal_set_can_dlc(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  can_dlc_ = value;
+}
+inline void Log::set_can_dlc(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_can_dlc(value);
+  // @@protoc_insertion_point(field_set:sensors.Log.can_dlc)
+}
+
+// bytes __pad = 4;
+inline void Log::clear___pad() {
+  __pad_.ClearToEmpty();
+}
+inline const std::string& Log::__pad() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.__pad)
+  return _internal___pad();
+}
+template <typename ArgT0, typename... ArgT>
+PROTOBUF_ALWAYS_INLINE
+inline void Log::set___pad(ArgT0&& arg0, ArgT... args) {
+ 
+ __pad_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
+  // @@protoc_insertion_point(field_set:sensors.Log.__pad)
+}
+inline std::string* Log::mutable___pad() {
+  // @@protoc_insertion_point(field_mutable:sensors.Log.__pad)
+  return _internal_mutable___pad();
+}
+inline const std::string& Log::_internal___pad() const {
+  return __pad_.Get();
+}
+inline void Log::_internal_set___pad(const std::string& value) {
+  
+  __pad_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline std::string* Log::_internal_mutable___pad() {
+  
+  return __pad_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Log::release___pad() {
+  // @@protoc_insertion_point(field_release:sensors.Log.__pad)
+  return __pad_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Log::set_allocated___pad(std::string* __pad) {
+  if (__pad != nullptr) {
+    
+  } else {
+    
+  }
+  __pad_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), __pad,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:sensors.Log.__pad)
+}
+
+// bytes __res0 = 5;
+inline void Log::clear___res0() {
+  __res0_.ClearToEmpty();
+}
+inline const std::string& Log::__res0() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.__res0)
+  return _internal___res0();
+}
+template <typename ArgT0, typename... ArgT>
+PROTOBUF_ALWAYS_INLINE
+inline void Log::set___res0(ArgT0&& arg0, ArgT... args) {
+ 
+ __res0_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
+  // @@protoc_insertion_point(field_set:sensors.Log.__res0)
+}
+inline std::string* Log::mutable___res0() {
+  // @@protoc_insertion_point(field_mutable:sensors.Log.__res0)
+  return _internal_mutable___res0();
+}
+inline const std::string& Log::_internal___res0() const {
+  return __res0_.Get();
+}
+inline void Log::_internal_set___res0(const std::string& value) {
+  
+  __res0_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline std::string* Log::_internal_mutable___res0() {
+  
+  return __res0_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Log::release___res0() {
+  // @@protoc_insertion_point(field_release:sensors.Log.__res0)
+  return __res0_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Log::set_allocated___res0(std::string* __res0) {
+  if (__res0 != nullptr) {
+    
+  } else {
+    
+  }
+  __res0_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), __res0,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:sensors.Log.__res0)
+}
+
+// bytes __res1 = 6;
+inline void Log::clear___res1() {
+  __res1_.ClearToEmpty();
+}
+inline const std::string& Log::__res1() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.__res1)
+  return _internal___res1();
+}
+template <typename ArgT0, typename... ArgT>
+PROTOBUF_ALWAYS_INLINE
+inline void Log::set___res1(ArgT0&& arg0, ArgT... args) {
+ 
+ __res1_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
+  // @@protoc_insertion_point(field_set:sensors.Log.__res1)
+}
+inline std::string* Log::mutable___res1() {
+  // @@protoc_insertion_point(field_mutable:sensors.Log.__res1)
+  return _internal_mutable___res1();
+}
+inline const std::string& Log::_internal___res1() const {
+  return __res1_.Get();
+}
+inline void Log::_internal_set___res1(const std::string& value) {
+  
+  __res1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline std::string* Log::_internal_mutable___res1() {
+  
+  return __res1_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Log::release___res1() {
+  // @@protoc_insertion_point(field_release:sensors.Log.__res1)
+  return __res1_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Log::set_allocated___res1(std::string* __res1) {
+  if (__res1 != nullptr) {
+    
+  } else {
+    
+  }
+  __res1_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), __res1,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:sensors.Log.__res1)
+}
+
+// bytes data = 7;
+inline void Log::clear_data() {
+  data_.ClearToEmpty();
+}
+inline const std::string& Log::data() const {
+  // @@protoc_insertion_point(field_get:sensors.Log.data)
+  return _internal_data();
+}
+template <typename ArgT0, typename... ArgT>
+PROTOBUF_ALWAYS_INLINE
+inline void Log::set_data(ArgT0&& arg0, ArgT... args) {
+ 
+ data_.SetBytes(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArena());
+  // @@protoc_insertion_point(field_set:sensors.Log.data)
+}
+inline std::string* Log::mutable_data() {
+  // @@protoc_insertion_point(field_mutable:sensors.Log.data)
+  return _internal_mutable_data();
+}
+inline const std::string& Log::_internal_data() const {
+  return data_.Get();
+}
+inline void Log::_internal_set_data(const std::string& value) {
+  
+  data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline std::string* Log::_internal_mutable_data() {
+  
+  return data_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Log::release_data() {
+  // @@protoc_insertion_point(field_release:sensors.Log.data)
+  return data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Log::set_allocated_data(std::string* data) {
+  if (data != nullptr) {
+    
+  } else {
+    
+  }
+  data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:sensors.Log.data)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

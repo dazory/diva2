@@ -8,6 +8,7 @@ test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o: ../test/
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o: ../test/service/gps_packet.h
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o: ../test/service/zmq_helper.h
 
+test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o: ../service/ImuPacket.h
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o: ../test/sender_toCloud/ImuSenderThread.cpp
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o: ../test/sender_toCloud/ImuSenderThread.h
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o: ../test/service/ImuPacket.h

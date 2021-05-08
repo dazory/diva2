@@ -13,6 +13,7 @@ test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o: ../test/servi
 test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o: ../test/service/gps_packet.h
 test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o: ../test/service/zmq_helper.h
 
+test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o: ../service/ImuPacket.h
 test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o: ../test/sensor_parsing/ImuParsingThread.cpp
 test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o: ../test/sensor_parsing/ImuParsingThread.h
 test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o: ../test/service/ImuPacket.h
