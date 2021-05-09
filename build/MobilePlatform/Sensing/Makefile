@@ -179,6 +179,33 @@ GpsSensingThread.cpp.s:
 	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s
 .PHONY : GpsSensingThread.cpp.s
 
+ImuSensingThread.o: ImuSensingThread.cpp.o
+
+.PHONY : ImuSensingThread.o
+
+# target to build an object file
+ImuSensingThread.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o
+.PHONY : ImuSensingThread.cpp.o
+
+ImuSensingThread.i: ImuSensingThread.cpp.i
+
+.PHONY : ImuSensingThread.i
+
+# target to preprocess a source file
+ImuSensingThread.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i
+.PHONY : ImuSensingThread.cpp.i
+
+ImuSensingThread.s: ImuSensingThread.cpp.s
+
+.PHONY : ImuSensingThread.s
+
+# target to generate assembly for a file
+ImuSensingThread.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s
+.PHONY : ImuSensingThread.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -248,6 +275,9 @@ help:
 	@echo "... GpsSensingThread.o"
 	@echo "... GpsSensingThread.i"
 	@echo "... GpsSensingThread.s"
+	@echo "... ImuSensingThread.o"
+	@echo "... ImuSensingThread.i"
+	@echo "... ImuSensingThread.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

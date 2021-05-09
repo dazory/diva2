@@ -113,9 +113,17 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake-mod
 
 # 실행파일 만들기
 set(SOURCE_MAIN main.cpp)
-add_executable(diva2 ${SOURCE_MAIN})                           # 생성할 실행파일 이름 지정
-target_include_directories(diva2 PUBLIC ${ZeroMQ_INCLUDE_DIR})  # add the include directory to our compile directives
-target_link_libraries(diva2 PUBLIC ${ZeroMQ_LIBRARY} /usr/share/c++-mscl/libmscl.so)           # at the 0mq library to our link directive
+add_executable(diva2 ${SOURCE_MAIN}
+    ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} 
+    )# 생성할 실행파일 이름 지정
+
+target_include_directories(diva2 PUBLIC 
+    ${ZeroMQ_INCLUDE_DIR}
+    )  # add the include directory to our compile directives
+target_link_libraries(diva2 PUBLIC 
+    ${ZeroMQ_LIBRARY} 
+    /usr/share/c++-mscl/libmscl.so
+    )
 
 # 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
 add_subdirectory(MobilePlatform/Sensing)
@@ -123,27 +131,26 @@ add_subdirectory(MobilePlatform/Visualization)
 
 add_subdirectory(GroundStation/Playback)
 
+# add_subdirectory(test/zmq)
+# add_subdirectory(test/ouster)
+# add_subdirectory(test/protobuf)
+# add_subdirectory(test/receiver_fromMobile)
+# add_subdirectory(test/receiver_fromMobile_proto)
+# add_subdirectory(test/sender_toCloud)
+# add_subdirectory(test/sender_toCloud_protobuf)
 
+# add_subdirectory(test/sensing_proto)
+# add_subdirectory(test/sensor_connect)
+# add_subdirectory(test/sensor_parsing)
 
+# add_subdirectory(test/zmq_filetransfer)
+# add_subdirectory(test/socketCan)
+# add_subdirectory(test/zmq_protobuf/client)
+# add_subdirectory(test/zmq_protobuf/server)
 
-add_subdirectory(test/zmq)
-# 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
-add_subdirectory(test/ouster)
-add_subdirectory(test/protobuf)
-add_subdirectory(test/receiver_fromMobile)
-add_subdirectory(test/receiver_fromMobile_proto)
-add_subdirectory(test/sender_toCloud)
-add_subdirectory(test/sender_toCloud_protobuf)
-add_subdirectory(test/sensing_proto)
-add_subdirectory(test/sensor_connect)
-add_subdirectory(test/sensor_parsing)
-add_subdirectory(test/zmq_filetransfer)
-add_subdirectory(test/socketCan)
-add_subdirectory(test/zmq_protobuf/client)
-add_subdirectory(test/zmq_protobuf/server)
 # add_subdirectory(test/openCv)
 # add_subdirectory(test/openCv2)
 #add_subdirectory(test/zmq_imgtransfer)
 
-add_subdirectory(test_GroundStation/AlgorithmTesting)
-add_subdirectory(test_GroundStation/ReceiverFromMobile)
+# add_subdirectory(test_GroundStation/AlgorithmTesting)
+# add_subdirectory(test_GroundStation/ReceiverFromMobile)

@@ -63,7 +63,8 @@ void CamVisualization::run(void *contextSub)
         // [OPTIONS]
         // <DELETE ALL GLOBAL OBJECTS ALLOCATED BY LIBPROTOBUF>
         google::protobuf::ShutdownProtobufLibrary();
-
+        // sleep(1);
+        
     }
 
 }

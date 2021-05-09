@@ -19,8 +19,11 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
     printf("[MobilePlatform/Sensing/CamSensingThread] Connect the CAM device\n");
   }
 
+  time_t time_bef = time(NULL); 
+  time_t time_now = time(NULL);
   while (open)
   {
+    time_now = time(NULL);
     if (USE_CAM == 1)
     {
       // [SENSING FROM CAMERA]
@@ -54,14 +57,19 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
         cam.SerializeToArray(data, data_len);
         printf("[MobilePlatform/Sensing/CamSensingThread] complete to serialize (size=%d)\n",data_len);
                 
-        // <Send Topic>
-        s_send_idx(*pubSock, SENSOR_CAM);
-
         // <Send>
-        zmq::message_t zmqData(data_len);
-        memcpy((void *)zmqData.data(), data, data_len);
-        s_send(*pubSock, zmqData);
-        printf("[MobilePlatform/Sensing/CamSensingThread] complete to send (size=%d)\n",zmqData.size());
+        // <Send Message>
+        if(time_now - time_bef >= 1)
+        {
+          zmq::message_t zmqData(data_len);
+          memcpy((void *)zmqData.data(), data, data_len);
+          s_send_idx(*pubSock, SENSOR_CAM);
+          s_send(*pubSock, zmqData);
+          printf("[MobilePlatform/Sensing/CamSensingThread] complete to send (size=%d)\n",zmqData.size());
+                
+          time_bef = time_now;
+        }
+        
       }// end : if (!frame.empty())
 
       // [Store the CAM data]
@@ -83,6 +91,7 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
       out.close();
       printf("[MobilePlatform/Sensing/CamSensingThread] complete to make json file at \"%s\"\n",path.c_str());
       
+
       // <Make JPG file> 
       time_t curTime = time(NULL); 
       struct tm *pLocal = localtime(&curTime); 
@@ -94,14 +103,14 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
 
       char cFn[50];
       sprintf(cFn, "%s/%04d-%02d-%02dT%02d-%02d-%02d.jpg", cPath,
-        pLocal->tm_year + 1900, pLocal->tm_mon + 1, pLocal->tm_mday,  
-        pLocal->tm_hour, pLocal->tm_min, pLocal->tm_sec);
+      pLocal->tm_year + 1900, pLocal->tm_mon + 1, pLocal->tm_mday,  
+      pLocal->tm_hour, pLocal->tm_min, pLocal->tm_sec);
       cv::imwrite(cFn, frame);
       printf("[MobilePlatform/Sensing/CamSensingThread] complete to save jpg file at \"%s\"\n", cFn);
 
       // [Options]
-      // usleep(100);
-      sleep(1);
+      usleep(100);
+      // sleep(1);
 
     } // end : if(USE_CAM)
   }// end : while(open)

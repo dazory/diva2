@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.cpp" "/home/diva2/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o"
   "/home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp" "/home/diva2/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o"
+  "/home/diva2/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp" "/home/diva2/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o"
   "/home/diva2/diva2/MobilePlatform/Sensing/main.cpp" "/home/diva2/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o"
   "/home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc" "/home/diva2/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
   )

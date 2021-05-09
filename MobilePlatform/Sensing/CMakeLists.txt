@@ -54,7 +54,7 @@ set(SOURCE_MP_sensing
     main.cpp 
     GpsSensingThread.cpp 
     CamSensingThread.cpp 
-    #ImuSensingThread.cpp
+    ImuSensingThread.cpp
 )
 add_executable(MP_sensing ${SOURCE_MP_sensing} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer

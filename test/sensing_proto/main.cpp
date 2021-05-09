@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
     // CanSensingThread canSensingThread;
     // std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
   
-    // sensingthread_can.join();
+    // sensingthread_can.join();sudo chmod 777 /dev/ttyACM0
     sensingthread_gps.join();
     // sensingthread_cam.join();
 }

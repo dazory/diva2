@@ -179,6 +179,33 @@ GpsVisualization.cpp.s:
 	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/GpsVisualization.cpp.s
 .PHONY : GpsVisualization.cpp.s
 
+ImuVisualization.o: ImuVisualization.cpp.o
+
+.PHONY : ImuVisualization.o
+
+# target to build an object file
+ImuVisualization.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/ImuVisualization.cpp.o
+.PHONY : ImuVisualization.cpp.o
+
+ImuVisualization.i: ImuVisualization.cpp.i
+
+.PHONY : ImuVisualization.i
+
+# target to preprocess a source file
+ImuVisualization.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/ImuVisualization.cpp.i
+.PHONY : ImuVisualization.cpp.i
+
+ImuVisualization.s: ImuVisualization.cpp.s
+
+.PHONY : ImuVisualization.s
+
+# target to generate assembly for a file
+ImuVisualization.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/ImuVisualization.cpp.s
+.PHONY : ImuVisualization.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -248,6 +275,9 @@ help:
 	@echo "... GpsVisualization.o"
 	@echo "... GpsVisualization.i"
 	@echo "... GpsVisualization.s"
+	@echo "... ImuVisualization.o"
+	@echo "... ImuVisualization.i"
+	@echo "... ImuVisualization.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

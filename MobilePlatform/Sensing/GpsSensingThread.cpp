@@ -28,10 +28,11 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
         printf("[MobilePlatform/Sensing/GpsSensingThread] connect GPS device\n");
     }
 
-    int count=0;
+    time_t time_bef = time(NULL); 
+    time_t time_now = time(NULL);
     while (1)
     {
-        
+        time_now = time(NULL);
         // [Read 255bytes from GPS]
         int nRet = 0;
         char cBuff[255];
@@ -94,9 +95,6 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
                 gps.set_horizontaldilutionofprecision(stod(strBuff[8].c_str()));
 
             // [Send to PUB socket]
-            // <Send Topic>
-            s_send_idx(*pubSock, SENSOR_GPS);
-
             // <Serialization>
             int data_len = gps.ByteSize();
             unsigned char data[data_len] = "\0";
@@ -107,10 +105,16 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
             printf("\n");
 
             // <Send Message>
-            zmq::message_t zmqData(data_len);
-            memcpy((void *)zmqData.data(), data, data_len);
-            s_send(*pubSock, zmqData);
-            printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
+            if(time_now - time_bef >= 1)
+            {
+                zmq::message_t zmqData(data_len);
+                memcpy((void *)zmqData.data(), data, data_len);
+                s_send_idx(*pubSock, SENSOR_GPS);
+                s_send(*pubSock, zmqData);
+                printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
+                
+                time_bef = time_now;
+            }
         } // end "Parsing to Proto"
 
         // [Store the GPS data]
@@ -145,7 +149,8 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
         printf("[MobilePlatform/Sensing/GpsSensingThread] complete to make json file at \"%s\"\n",path.c_str());
         
         // [OPTION]
-        // usleep(100);
+        usleep(100);
+        // sleep(1);
         
     } // end: while(1)
 

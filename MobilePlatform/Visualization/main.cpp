@@ -1,6 +1,7 @@
 #pragma once
 #include "GpsVisualization.h"
 #include "CamVisualization.h"
+#include "ImuVisualization.h"
 
 #include <thread> 
 #include <string>
@@ -25,7 +26,12 @@ int main(int argc, char *argv[]){
     CamVisualization mCamVisualization;
     thread camVisualizationThread(&CamVisualization::run, &mCamVisualization, &contextSub);
     
+    // IMU
+    ImuVisualization mImuVisualization;
+    thread imuVisualizationThread(&ImuVisualization::run, &mImuVisualization, &contextSub);
+
     gpsVisualizationThread.join();
     camVisualizationThread.join();
+    imuVisualizationThread.join();
     
 }

@@ -68,15 +68,15 @@ GroundStation/Playback/sensors.pb.h: GroundStation/Playback/sensors.pb.cc
 GroundStation/Playback/CMakeFiles/GS_playback.dir/main.cpp.o: GroundStation/Playback/CMakeFiles/GS_playback.dir/flags.make
 GroundStation/Playback/CMakeFiles/GS_playback.dir/main.cpp.o: ../GroundStation/Playback/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object GroundStation/Playback/CMakeFiles/GS_playback.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GS_playback.dir/main.cpp.o -c /home/diva2/diva2/GroundStation/Playback/main.cpp
+	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GS_playback.dir/main.cpp.o -c /home/diva2/diva2/GroundStation/Playback/main.cpp
 
 GroundStation/Playback/CMakeFiles/GS_playback.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GS_playback.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/GroundStation/Playback/main.cpp > CMakeFiles/GS_playback.dir/main.cpp.i
+	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/GroundStation/Playback/main.cpp > CMakeFiles/GS_playback.dir/main.cpp.i
 
 GroundStation/Playback/CMakeFiles/GS_playback.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GS_playback.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/GroundStation/Playback/main.cpp -o CMakeFiles/GS_playback.dir/main.cpp.s
+	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/GroundStation/Playback/main.cpp -o CMakeFiles/GS_playback.dir/main.cpp.s
 
 GroundStation/Playback/CMakeFiles/GS_playback.dir/main.cpp.o.requires:
 
@@ -92,15 +92,15 @@ GroundStation/Playback/CMakeFiles/GS_playback.dir/main.cpp.o.provides.build: Gro
 GroundStation/Playback/CMakeFiles/GS_playback.dir/sensors.pb.cc.o: GroundStation/Playback/CMakeFiles/GS_playback.dir/flags.make
 GroundStation/Playback/CMakeFiles/GS_playback.dir/sensors.pb.cc.o: GroundStation/Playback/sensors.pb.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object GroundStation/Playback/CMakeFiles/GS_playback.dir/sensors.pb.cc.o"
-	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GS_playback.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc
+	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GS_playback.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc
 
 GroundStation/Playback/CMakeFiles/GS_playback.dir/sensors.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GS_playback.dir/sensors.pb.cc.i"
-	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc > CMakeFiles/GS_playback.dir/sensors.pb.cc.i
+	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc > CMakeFiles/GS_playback.dir/sensors.pb.cc.i
 
 GroundStation/Playback/CMakeFiles/GS_playback.dir/sensors.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GS_playback.dir/sensors.pb.cc.s"
-	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc -o CMakeFiles/GS_playback.dir/sensors.pb.cc.s
+	cd /home/diva2/diva2/build/GroundStation/Playback && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc -o CMakeFiles/GS_playback.dir/sensors.pb.cc.s
 
 GroundStation/Playback/CMakeFiles/GS_playback.dir/sensors.pb.cc.o.requires:
 

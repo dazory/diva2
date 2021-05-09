@@ -60,15 +60,15 @@ include test/zmq_filetransfer/CMakeFiles/pub.dir/flags.make
 test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.o: test/zmq_filetransfer/CMakeFiles/pub.dir/flags.make
 test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.o: ../test/zmq_filetransfer/pub.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.o"
-	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pub.dir/pub.cpp.o -c /home/diva2/diva2/test/zmq_filetransfer/pub.cpp
+	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pub.dir/pub.cpp.o -c /home/diva2/diva2/test/zmq_filetransfer/pub.cpp
 
 test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pub.dir/pub.cpp.i"
-	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/zmq_filetransfer/pub.cpp > CMakeFiles/pub.dir/pub.cpp.i
+	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/zmq_filetransfer/pub.cpp > CMakeFiles/pub.dir/pub.cpp.i
 
 test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pub.dir/pub.cpp.s"
-	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/zmq_filetransfer/pub.cpp -o CMakeFiles/pub.dir/pub.cpp.s
+	cd /home/diva2/diva2/build/test/zmq_filetransfer && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/zmq_filetransfer/pub.cpp -o CMakeFiles/pub.dir/pub.cpp.s
 
 test/zmq_filetransfer/CMakeFiles/pub.dir/pub.cpp.o.requires:
 
