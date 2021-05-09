@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diva2/diva2
+CMAKE_SOURCE_DIR = /home/dahye/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diva2/diva2/build
+CMAKE_BINARY_DIR = /home/dahye/diva2/build
 
 # Include any dependencies generated for this target.
 include test/sensing_proto/CMakeFiles/sensing_proto.dir/depend.make
@@ -59,24 +59,24 @@ include test/sensing_proto/CMakeFiles/sensing_proto.dir/flags.make
 
 test/sensing_proto/sensors.pb.cc: ../test/protobuf/sensors.proto
 test/sensing_proto/sensors.pb.cc: /usr/local/bin/protoc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running C++ protocol buffer compiler on ../protobuf/sensors.proto"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/local/bin/protoc --cpp_out=/home/diva2/diva2/build/test/sensing_proto -I /home/diva2/diva2/test/protobuf /home/diva2/diva2/test/protobuf/sensors.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running C++ protocol buffer compiler on ../protobuf/sensors.proto"
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/local/bin/protoc --cpp_out=/home/dahye/diva2/build/test/sensing_proto -I /home/dahye/diva2/test/protobuf /home/dahye/diva2/test/protobuf/sensors.proto
 
 test/sensing_proto/sensors.pb.h: test/sensing_proto/sensors.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate test/sensing_proto/sensors.pb.h
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o: test/sensing_proto/CMakeFiles/sensing_proto.dir/flags.make
 test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o: ../test/sensing_proto/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/main.cpp.o -c /home/diva2/diva2/test/sensing_proto/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o"
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/main.cpp.o -c /home/dahye/diva2/test/sensing_proto/main.cpp
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensing_proto.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sensing_proto/main.cpp > CMakeFiles/sensing_proto.dir/main.cpp.i
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/test/sensing_proto/main.cpp > CMakeFiles/sensing_proto.dir/main.cpp.i
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensing_proto.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sensing_proto/main.cpp -o CMakeFiles/sensing_proto.dir/main.cpp.s
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/test/sensing_proto/main.cpp -o CMakeFiles/sensing_proto.dir/main.cpp.s
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o.requires:
 
@@ -91,16 +91,16 @@ test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o.provides.build: test/
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o: test/sensing_proto/CMakeFiles/sensing_proto.dir/flags.make
 test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o: ../test/sensing_proto/GpsSensing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o -c /home/diva2/diva2/test/sensing_proto/GpsSensing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o"
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o -c /home/dahye/diva2/test/sensing_proto/GpsSensing.cpp
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensing_proto.dir/GpsSensing.cpp.i"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sensing_proto/GpsSensing.cpp > CMakeFiles/sensing_proto.dir/GpsSensing.cpp.i
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/test/sensing_proto/GpsSensing.cpp > CMakeFiles/sensing_proto.dir/GpsSensing.cpp.i
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensing_proto.dir/GpsSensing.cpp.s"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sensing_proto/GpsSensing.cpp -o CMakeFiles/sensing_proto.dir/GpsSensing.cpp.s
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/test/sensing_proto/GpsSensing.cpp -o CMakeFiles/sensing_proto.dir/GpsSensing.cpp.s
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o.requires:
 
@@ -115,16 +115,16 @@ test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o.provides.build:
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o: test/sensing_proto/CMakeFiles/sensing_proto.dir/flags.make
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o: ../test/sensing_proto/CamSensing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/CamSensing.cpp.o -c /home/diva2/diva2/test/sensing_proto/CamSensing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o"
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/CamSensing.cpp.o -c /home/dahye/diva2/test/sensing_proto/CamSensing.cpp
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensing_proto.dir/CamSensing.cpp.i"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sensing_proto/CamSensing.cpp > CMakeFiles/sensing_proto.dir/CamSensing.cpp.i
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/test/sensing_proto/CamSensing.cpp > CMakeFiles/sensing_proto.dir/CamSensing.cpp.i
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensing_proto.dir/CamSensing.cpp.s"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sensing_proto/CamSensing.cpp -o CMakeFiles/sensing_proto.dir/CamSensing.cpp.s
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/test/sensing_proto/CamSensing.cpp -o CMakeFiles/sensing_proto.dir/CamSensing.cpp.s
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.requires:
 
@@ -139,16 +139,16 @@ test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o.provides.build:
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o: test/sensing_proto/CMakeFiles/sensing_proto.dir/flags.make
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o: ../test/sensing_proto/CanSensingThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o -c /home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o"
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o -c /home/dahye/diva2/test/sensing_proto/CanSensingThread.cpp
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.i"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp > CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.i
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/test/sensing_proto/CanSensingThread.cpp > CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.i
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.s"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp -o CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.s
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/test/sensing_proto/CanSensingThread.cpp -o CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.s
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o.requires:
 
@@ -163,16 +163,16 @@ test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o.provides.
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o: test/sensing_proto/CMakeFiles/sensing_proto.dir/flags.make
 test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o: test/sensing_proto/sensors.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o"
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sensing_proto.dir/sensors.pb.cc.o -c /home/dahye/diva2/build/test/sensing_proto/sensors.pb.cc
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sensing_proto.dir/sensors.pb.cc.i"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc > CMakeFiles/sensing_proto.dir/sensors.pb.cc.i
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/build/test/sensing_proto/sensors.pb.cc > CMakeFiles/sensing_proto.dir/sensors.pb.cc.i
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sensing_proto.dir/sensors.pb.cc.s"
-	cd /home/diva2/diva2/build/test/sensing_proto && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc -o CMakeFiles/sensing_proto.dir/sensors.pb.cc.s
+	cd /home/dahye/diva2/build/test/sensing_proto && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/build/test/sensing_proto/sensors.pb.cc -o CMakeFiles/sensing_proto.dir/sensors.pb.cc.s
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o.requires:
 
@@ -247,8 +247,8 @@ test/sensing_proto/sensing_proto: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.
 test/sensing_proto/sensing_proto: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
 test/sensing_proto/sensing_proto: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 test/sensing_proto/sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable sensing_proto"
-	cd /home/diva2/diva2/build/test/sensing_proto && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sensing_proto.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable sensing_proto"
+	cd /home/dahye/diva2/build/test/sensing_proto && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sensing_proto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/sensing_proto/CMakeFiles/sensing_proto.dir/build: test/sensing_proto/sensing_proto
@@ -264,11 +264,11 @@ test/sensing_proto/CMakeFiles/sensing_proto.dir/requires: test/sensing_proto/CMa
 .PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/requires
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/clean:
-	cd /home/diva2/diva2/build/test/sensing_proto && $(CMAKE_COMMAND) -P CMakeFiles/sensing_proto.dir/cmake_clean.cmake
+	cd /home/dahye/diva2/build/test/sensing_proto && $(CMAKE_COMMAND) -P CMakeFiles/sensing_proto.dir/cmake_clean.cmake
 .PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/clean
 
 test/sensing_proto/CMakeFiles/sensing_proto.dir/depend: test/sensing_proto/sensors.pb.cc
 test/sensing_proto/CMakeFiles/sensing_proto.dir/depend: test/sensing_proto/sensors.pb.h
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/diva2/diva2 /home/diva2/diva2/test/sensing_proto /home/diva2/diva2/build /home/diva2/diva2/build/test/sensing_proto /home/diva2/diva2/build/test/sensing_proto/CMakeFiles/sensing_proto.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dahye/diva2 /home/dahye/diva2/test/sensing_proto /home/dahye/diva2/build /home/dahye/diva2/build/test/sensing_proto /home/dahye/diva2/build/test/sensing_proto/CMakeFiles/sensing_proto.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/depend
 

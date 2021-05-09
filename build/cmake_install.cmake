@@ -1,4 +1,4 @@
-# Install script for directory: /home/diva2/diva2
+# Install script for directory: /home/dahye/diva2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,24 +39,24 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/diva2/diva2/build/MobilePlatform/Sensing/cmake_install.cmake")
-  include("/home/diva2/diva2/build/MobilePlatform/Visualization/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/zmq/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/ouster/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/protobuf/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/receiver_fromMobile/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/receiver_fromMobile_proto/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/sender_toCloud/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/sender_toCloud_protobuf/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/sensing_proto/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/sensor_connect/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/sensor_parsing/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/zmq_filetransfer/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/socketCan/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/zmq_protobuf/client/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test/zmq_protobuf/server/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test_GroundStation/AlgorithmTesting/cmake_install.cmake")
-  include("/home/diva2/diva2/build/test_GroundStation/ReceiverFromMobile/cmake_install.cmake")
+  include("/home/dahye/diva2/build/MobilePlatform/Sensing/cmake_install.cmake")
+  include("/home/dahye/diva2/build/MobilePlatform/Visualization/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/zmq/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/ouster/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/protobuf/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/receiver_fromMobile/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/receiver_fromMobile_proto/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/sender_toCloud/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/sender_toCloud_protobuf/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/sensing_proto/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/sensor_connect/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/sensor_parsing/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/zmq_filetransfer/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/socketCan/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/zmq_protobuf/client/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test/zmq_protobuf/server/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test_GroundStation/AlgorithmTesting/cmake_install.cmake")
+  include("/home/dahye/diva2/build/test_GroundStation/ReceiverFromMobile/cmake_install.cmake")
 
 endif()
 
@@ -68,5 +68,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/diva2/diva2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dahye/diva2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

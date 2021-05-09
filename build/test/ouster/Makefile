@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diva2/diva2
+CMAKE_SOURCE_DIR = /home/dahye/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diva2/diva2/build
+CMAKE_BINARY_DIR = /home/dahye/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/test/ouster/CMakeFiles/progress.marks
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles /home/dahye/diva2/build/test/ouster/CMakeFiles/progress.marks
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/clean
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,87 +97,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-test/ouster/CMakeFiles/ouster.dir/rule:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/ouster/CMakeFiles/ouster.dir/rule
-.PHONY : test/ouster/CMakeFiles/ouster.dir/rule
-
-# Convenience name for target.
-ouster: test/ouster/CMakeFiles/ouster.dir/rule
-
-.PHONY : ouster
-
-# fast build rule for target.
-ouster/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/build
-.PHONY : ouster/fast
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-sensors.pb.o: sensors.pb.cc.o
-
-.PHONY : sensors.pb.o
-
-# target to build an object file
-sensors.pb.cc.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.o
-.PHONY : sensors.pb.cc.o
-
-sensors.pb.i: sensors.pb.cc.i
-
-.PHONY : sensors.pb.i
-
-# target to preprocess a source file
-sensors.pb.cc.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.i
-.PHONY : sensors.pb.cc.i
-
-sensors.pb.s: sensors.pb.cc.s
-
-.PHONY : sensors.pb.s
-
-# target to generate assembly for a file
-sensors.pb.cc.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/ouster/CMakeFiles/ouster.dir/build.make test/ouster/CMakeFiles/ouster.dir/sensors.pb.cc.s
-.PHONY : sensors.pb.cc.s
 
 # Help Target
 help:
@@ -186,14 +117,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... ouster"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... sensors.pb.o"
-	@echo "... sensors.pb.i"
-	@echo "... sensors.pb.s"
 .PHONY : help
 
 
@@ -205,6 +129,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

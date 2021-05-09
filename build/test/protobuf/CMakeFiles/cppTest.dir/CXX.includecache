@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/diva2/diva2/build/test/protobuf/AddressBook.pb.cc
+/home/dahye/diva2/build/test/protobuf/AddressBook.pb.cc
 AddressBook.pb.h
-/home/diva2/diva2/build/test/protobuf/AddressBook.pb.h
+/home/dahye/diva2/build/test/protobuf/AddressBook.pb.h
 algorithm
 -
 google/protobuf/io/coded_stream.h
@@ -30,7 +30,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/build/test/protobuf/AddressBook.pb.h
+/home/dahye/diva2/build/test/protobuf/AddressBook.pb.h
 limits
 -
 string
@@ -68,7 +68,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/test/protobuf/AddressBook.pb.h
+/home/dahye/diva2/test/protobuf/AddressBook.pb.h
 limits
 -
 string
@@ -106,7 +106,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/test/protobuf/main.cpp
+/home/dahye/diva2/test/protobuf/main.cpp
 iostream
 -
 fstream
@@ -114,7 +114,7 @@ fstream
 vector
 -
 AddressBook.pb.h
-/home/diva2/diva2/test/protobuf/AddressBook.pb.h
+/home/dahye/diva2/test/protobuf/AddressBook.pb.h
 
 /usr/local/include/google/protobuf/any.h
 string

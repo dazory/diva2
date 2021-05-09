@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/diva2/diva2/test/receiver_fromMobile/GpsReceiverThread.cpp" "/home/diva2/diva2/build/test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/GpsReceiverThread.cpp.o"
-  "/home/diva2/diva2/test/receiver_fromMobile/main.cpp" "/home/diva2/diva2/build/test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/main.cpp.o"
+  "/home/dahye/diva2/test/receiver_fromMobile/GpsReceiverThread.cpp" "/home/dahye/diva2/build/test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/GpsReceiverThread.cpp.o"
+  "/home/dahye/diva2/test/receiver_fromMobile/main.cpp" "/home/dahye/diva2/build/test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

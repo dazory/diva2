@@ -1,0 +1,13 @@
+// #pragma once
+// #include <string>
+// #include <iostream>
+// #include "LiDAR_Sensing.h"
+// #include "../service/Timestamp.h"
+// #include <pcl/PCLPointCloud2.h>
+
+
+// class LiDAR_SensingThread{
+//     public:
+//     LiDAR_SensingThread(){};
+//     static void run(zmq::socket_t *socket);
+// };

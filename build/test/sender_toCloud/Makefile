@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diva2/diva2
+CMAKE_SOURCE_DIR = /home/dahye/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diva2/diva2/build
+CMAKE_BINARY_DIR = /home/dahye/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/test/sender_toCloud/CMakeFiles/progress.marks
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles /home/dahye/diva2/build/test/sender_toCloud/CMakeFiles/progress.marks
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/clean
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/sender_toCloud/CMakeFiles/senderTocloud.dir/rule:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/CMakeFiles/senderTocloud.dir/rule
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sender_toCloud/CMakeFiles/senderTocloud.dir/rule
 .PHONY : test/sender_toCloud/CMakeFiles/senderTocloud.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ senderTocloud: test/sender_toCloud/CMakeFiles/senderTocloud.dir/rule
 
 # fast build rule for target.
 senderTocloud/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/build
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/build
 .PHONY : senderTocloud/fast
 
 GpsSenderThread.o: GpsSenderThread.cpp.o
@@ -131,7 +131,7 @@ GpsSenderThread.o: GpsSenderThread.cpp.o
 
 # target to build an object file
 GpsSenderThread.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.o
 .PHONY : GpsSenderThread.cpp.o
 
 GpsSenderThread.i: GpsSenderThread.cpp.i
@@ -140,7 +140,7 @@ GpsSenderThread.i: GpsSenderThread.cpp.i
 
 # target to preprocess a source file
 GpsSenderThread.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.i
 .PHONY : GpsSenderThread.cpp.i
 
 GpsSenderThread.s: GpsSenderThread.cpp.s
@@ -149,7 +149,7 @@ GpsSenderThread.s: GpsSenderThread.cpp.s
 
 # target to generate assembly for a file
 GpsSenderThread.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/GpsSenderThread.cpp.s
 .PHONY : GpsSenderThread.cpp.s
 
 ImuSenderThread.o: ImuSenderThread.cpp.o
@@ -158,7 +158,7 @@ ImuSenderThread.o: ImuSenderThread.cpp.o
 
 # target to build an object file
 ImuSenderThread.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.o
 .PHONY : ImuSenderThread.cpp.o
 
 ImuSenderThread.i: ImuSenderThread.cpp.i
@@ -167,7 +167,7 @@ ImuSenderThread.i: ImuSenderThread.cpp.i
 
 # target to preprocess a source file
 ImuSenderThread.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.i
 .PHONY : ImuSenderThread.cpp.i
 
 ImuSenderThread.s: ImuSenderThread.cpp.s
@@ -176,7 +176,7 @@ ImuSenderThread.s: ImuSenderThread.cpp.s
 
 # target to generate assembly for a file
 ImuSenderThread.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/ImuSenderThread.cpp.s
 .PHONY : ImuSenderThread.cpp.s
 
 main.o: main.cpp.o
@@ -185,7 +185,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -194,7 +194,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -203,7 +203,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -235,6 +235,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -7,7 +7,7 @@
 #include "../service/zmq_helper.h"
 
 #include "mscl/mscl.h"
-#include <czmq.h>
+// #include <czmq.h>
 #include <fstream>
 using namespace std;
 

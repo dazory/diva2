@@ -45,9 +45,46 @@ include_directories(${PROTOBUF_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../../protobuf/sensors.proto" )
 
+## Use PCL
+find_package(Eigen3 REQUIRED)
+find_package(PCL 1.11.1 REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS} ${PCL_LIBRARIES}) #헤더 디렉토리 지정(-I)
+link_directories(${PCL_LIBRARY_DIRS}) #라이브러리 디렉토리 지정 (-L)
+add_definitions(${PCL_DEFINITIONS}) #전처리기 메크로 추가 (-D)
+
+# json cpp
+pkg_check_modules(JSONCPP jsoncpp)
+link_libraries(${JSONCPP_LIBRARIES})
+
+## ouster-LiDAR
+add_library(ouster_helper STATIC ../../service/ouster/client.cpp 
+                          ../../service/ouster/os1_util.cpp 
+                          ../../service/ouster/impl/netcompat.cpp 
+                          ../../service/ouster/types.cpp)
+set_target_properties(ouster_helper PROPERTIES POSITION_INDEPENDENT_CODE ON)
+target_link_libraries(ouster_helper jsoncpp)
+target_include_directories(ouster_helper PUBLIC include)
+target_include_directories(ouster_helper SYSTEM PRIVATE ${jsoncpp_INCLUDE_DIRS})
+
+## Use VTK
+set( VTK_DIR "$ENV{PCL_ROOT}/3rdParty/VTK" )
+find_package(VTK REQUIRED COMPONENTS vtkCommonCore NO_MODULE)
+include_directories( ${VTK_INCLUDE_DIRS})
+# Load additional vtk components; prefer newer vtk opengl module
+set(VIZ_VTK_COMPONENTS vtkCommonCore vtkCommonDataModel vtkCommonMath
+  vtkCommonTransforms vtkFiltersSources vtkImagingCore vtkInteractionStyle
+  vtkRenderingCore
+  )
+if(TARGET vtkRenderingOpenGL2)
+  list(APPEND VIZ_VTK_COMPONENTS vtkRenderingOpenGL2)
+else()
+  list(APPEND VIZ_VTK_COMPONENTS vtkRenderingOpenGL)
+endif()
+find_package(VTK REQUIRED COMPONENTS ${VIZ_VTK_COMPONENTS} NO_MODULE)
+include(${VTK_USE_FILE})
 
 # 실행파일 만들기
-set(SOURCE_MP_sensing main.cpp GpsSensingThread.cpp)
+set(SOURCE_MP_sensing main.cpp GpsSensingThread.cpp LiDARSensingThread.cpp)
 add_executable(MP_sensing ${SOURCE_MP_sensing} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer
     ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC}    # MSCL
@@ -60,7 +97,11 @@ target_link_libraries(MP_sensing PUBLIC
     ${ZeroMQ_LIBRARY}               # ZeroMQ
     ${OpenCV_LIBS}                  # OpenCV
     ${PROTOBUF_LIBRARIES}           # Google Protocol Buffer
+    ${PCL_LIBRARIES}                # PCL
+    ${VTK_LIBRARIES}                # VTk  
+    ${JSONCPP_LIBRARIES}            # json cpp
     /usr/share/c++-mscl/libmscl.so  # MSCL
+    ouster_helper                   # LiDAR - ouster exmaple
     ) # at the 0mq library to our link directive
 
 
