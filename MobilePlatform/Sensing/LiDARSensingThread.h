@@ -56,10 +56,6 @@ extern int USE_LiDAR;
 class LiDAR_SensingThread
 {
 public:
-int lidar_port = 0;
-    int imu_port = 0;
-    int W = 1024;
-    int H = OS1::pixels_per_column;
     LiDAR_SensingThread(){};
     static void run(zmq::socket_t *socket);
 };

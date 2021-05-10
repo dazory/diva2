@@ -524,9 +524,6 @@ diva2_SOURCE_DIR:STATIC=/home/dahye/diva2
 flann_DIR:PATH=flann_DIR-NOTFOUND
 
 //Dependencies for the target
-ouster_LIB_DEPENDS:STATIC=general;mscl;general;pthread;general;GL;general;GLU;general;glut;general;GLEW;general;glfw;general;X11;general;Xxf86vm;general;Xrandr;general;pthread;general;Xi;general;dl;general;Xinerama;general;Xcursor;general;m;general;mscl;general;pthread;general;GL;general;GLU;general;glut;general;GLEW;general;glfw;general;X11;general;Xxf86vm;general;Xrandr;general;pthread;general;Xi;general;dl;general;Xinerama;general;Xcursor;general;m;general;jsoncpp;general;jsoncpp;
-
-//Dependencies for the target
 ouster_helper_LIB_DEPENDS:STATIC=general;mscl;general;pthread;general;GL;general;GLU;general;glut;general;GLEW;general;glfw;general;X11;general;Xxf86vm;general;Xrandr;general;pthread;general;Xi;general;dl;general;Xinerama;general;Xcursor;general;m;general;mscl;general;pthread;general;GL;general;GLU;general;glut;general;GLEW;general;glfw;general;X11;general;Xxf86vm;general;Xrandr;general;pthread;general;Xi;general;dl;general;Xinerama;general;Xcursor;general;m;general;jsoncpp;general;jsoncpp;
 
 

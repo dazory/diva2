@@ -1,7 +1,6 @@
 # Hashes of file build rules.
 7be718f448cc3506aee1537d8d4b0498 MobilePlatform/Sensing/sensors.pb.cc
 86730e852f67b985760f9eb2da52442a MobilePlatform/Visualization/sensors.pb.cc
-d53e49357fe99f5129ce13f0268485df test/ouster/sensors.pb.cc
 299ef1ec2025af2524d4183e6b347dc5 test/protobuf/AddressBook.pb.cc
 9478b5390e58ece44a302e336b2d000d test/receiver_fromMobile_proto/sensors.pb.cc
 edd348571969b29943940f918dda015c test/sender_toCloud_protobuf/sensors.pb.cc
