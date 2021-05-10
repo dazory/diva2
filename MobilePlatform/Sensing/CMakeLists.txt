@@ -84,7 +84,7 @@ find_package(VTK REQUIRED COMPONENTS ${VIZ_VTK_COMPONENTS} NO_MODULE)
 include(${VTK_USE_FILE})
 
 # 실행파일 만들기
-set(SOURCE_MP_sensing main.cpp GpsSensingThread.cpp LiDARSensingThread.cpp)
+set(SOURCE_MP_sensing main.cpp GpsSensingThread.cpp LiDAR_SensingThread.cpp LiDAR_Sensing.cpp ImuSensingThread.cpp CamSensingThread.cpp)
 add_executable(MP_sensing ${SOURCE_MP_sensing} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer
     ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC}    # MSCL

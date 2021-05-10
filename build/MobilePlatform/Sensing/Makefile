@@ -140,6 +140,33 @@ MP_sensing/fast:
 	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
 .PHONY : MP_sensing/fast
 
+CamSensingThread.o: CamSensingThread.cpp.o
+
+.PHONY : CamSensingThread.o
+
+# target to build an object file
+CamSensingThread.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o
+.PHONY : CamSensingThread.cpp.o
+
+CamSensingThread.i: CamSensingThread.cpp.i
+
+.PHONY : CamSensingThread.i
+
+# target to preprocess a source file
+CamSensingThread.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i
+.PHONY : CamSensingThread.cpp.i
+
+CamSensingThread.s: CamSensingThread.cpp.s
+
+.PHONY : CamSensingThread.s
+
+# target to generate assembly for a file
+CamSensingThread.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s
+.PHONY : CamSensingThread.cpp.s
+
 GpsSensingThread.o: GpsSensingThread.cpp.o
 
 .PHONY : GpsSensingThread.o
@@ -167,32 +194,86 @@ GpsSensingThread.cpp.s:
 	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s
 .PHONY : GpsSensingThread.cpp.s
 
-LiDARSensingThread.o: LiDARSensingThread.cpp.o
+ImuSensingThread.o: ImuSensingThread.cpp.o
 
-.PHONY : LiDARSensingThread.o
+.PHONY : ImuSensingThread.o
 
 # target to build an object file
-LiDARSensingThread.cpp.o:
-	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o
-.PHONY : LiDARSensingThread.cpp.o
+ImuSensingThread.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o
+.PHONY : ImuSensingThread.cpp.o
 
-LiDARSensingThread.i: LiDARSensingThread.cpp.i
+ImuSensingThread.i: ImuSensingThread.cpp.i
 
-.PHONY : LiDARSensingThread.i
+.PHONY : ImuSensingThread.i
 
 # target to preprocess a source file
-LiDARSensingThread.cpp.i:
-	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.i
-.PHONY : LiDARSensingThread.cpp.i
+ImuSensingThread.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i
+.PHONY : ImuSensingThread.cpp.i
 
-LiDARSensingThread.s: LiDARSensingThread.cpp.s
+ImuSensingThread.s: ImuSensingThread.cpp.s
 
-.PHONY : LiDARSensingThread.s
+.PHONY : ImuSensingThread.s
 
 # target to generate assembly for a file
-LiDARSensingThread.cpp.s:
-	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.s
-.PHONY : LiDARSensingThread.cpp.s
+ImuSensingThread.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s
+.PHONY : ImuSensingThread.cpp.s
+
+LiDAR_Sensing.o: LiDAR_Sensing.cpp.o
+
+.PHONY : LiDAR_Sensing.o
+
+# target to build an object file
+LiDAR_Sensing.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o
+.PHONY : LiDAR_Sensing.cpp.o
+
+LiDAR_Sensing.i: LiDAR_Sensing.cpp.i
+
+.PHONY : LiDAR_Sensing.i
+
+# target to preprocess a source file
+LiDAR_Sensing.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.i
+.PHONY : LiDAR_Sensing.cpp.i
+
+LiDAR_Sensing.s: LiDAR_Sensing.cpp.s
+
+.PHONY : LiDAR_Sensing.s
+
+# target to generate assembly for a file
+LiDAR_Sensing.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.s
+.PHONY : LiDAR_Sensing.cpp.s
+
+LiDAR_SensingThread.o: LiDAR_SensingThread.cpp.o
+
+.PHONY : LiDAR_SensingThread.o
+
+# target to build an object file
+LiDAR_SensingThread.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o
+.PHONY : LiDAR_SensingThread.cpp.o
+
+LiDAR_SensingThread.i: LiDAR_SensingThread.cpp.i
+
+.PHONY : LiDAR_SensingThread.i
+
+# target to preprocess a source file
+LiDAR_SensingThread.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.i
+.PHONY : LiDAR_SensingThread.cpp.i
+
+LiDAR_SensingThread.s: LiDAR_SensingThread.cpp.s
+
+.PHONY : LiDAR_SensingThread.s
+
+# target to generate assembly for a file
+LiDAR_SensingThread.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.s
+.PHONY : LiDAR_SensingThread.cpp.s
 
 __/__/service/ouster/client.o: __/__/service/ouster/client.cpp.o
 
@@ -366,12 +447,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... ouster_helper"
 	@echo "... MP_sensing"
+	@echo "... CamSensingThread.o"
+	@echo "... CamSensingThread.i"
+	@echo "... CamSensingThread.s"
 	@echo "... GpsSensingThread.o"
 	@echo "... GpsSensingThread.i"
 	@echo "... GpsSensingThread.s"
-	@echo "... LiDARSensingThread.o"
-	@echo "... LiDARSensingThread.i"
-	@echo "... LiDARSensingThread.s"
+	@echo "... ImuSensingThread.o"
+	@echo "... ImuSensingThread.i"
+	@echo "... ImuSensingThread.s"
+	@echo "... LiDAR_Sensing.o"
+	@echo "... LiDAR_Sensing.i"
+	@echo "... LiDAR_Sensing.s"
+	@echo "... LiDAR_SensingThread.o"
+	@echo "... LiDAR_SensingThread.i"
+	@echo "... LiDAR_SensingThread.s"
 	@echo "... __/__/service/ouster/client.o"
 	@echo "... __/__/service/ouster/client.i"
 	@echo "... __/__/service/ouster/client.s"

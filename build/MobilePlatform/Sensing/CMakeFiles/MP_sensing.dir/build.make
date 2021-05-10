@@ -113,33 +113,105 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.provides
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o
 
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o: ../MobilePlatform/Sensing/LiDARSensingThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o"
-	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o -c /home/dahye/diva2/MobilePlatform/Sensing/LiDARSensingThread.cpp
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o: ../MobilePlatform/Sensing/LiDAR_SensingThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o -c /home/dahye/diva2/MobilePlatform/Sensing/LiDAR_SensingThread.cpp
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.i"
-	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/MobilePlatform/Sensing/LiDARSensingThread.cpp > CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.i
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.i"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/MobilePlatform/Sensing/LiDAR_SensingThread.cpp > CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.i
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.s"
-	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/MobilePlatform/Sensing/LiDARSensingThread.cpp -o CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.s
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.s"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/MobilePlatform/Sensing/LiDAR_SensingThread.cpp -o CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.s
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o.requires:
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.requires:
 
-.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o.requires
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.requires
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o.requires
-	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o.provides.build
-.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o.provides
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.requires
+	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.provides.build
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.provides
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o
+
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o: ../MobilePlatform/Sensing/LiDAR_Sensing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o -c /home/dahye/diva2/MobilePlatform/Sensing/LiDAR_Sensing.cpp
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.i"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/MobilePlatform/Sensing/LiDAR_Sensing.cpp > CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.i
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.s"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/MobilePlatform/Sensing/LiDAR_Sensing.cpp -o CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.s
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.requires:
+
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.requires
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.requires
+	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.provides.build
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.provides
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o
+
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o: ../MobilePlatform/Sensing/ImuSensingThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o -c /home/dahye/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp > CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp -o CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.requires:
+
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.requires
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.requires
+	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.provides.build
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.provides
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o
+
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o: ../MobilePlatform/Sensing/CamSensingThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o -c /home/dahye/diva2/MobilePlatform/Sensing/CamSensingThread.cpp
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dahye/diva2/MobilePlatform/Sensing/CamSensingThread.cpp > CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s"
+	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dahye/diva2/MobilePlatform/Sensing/CamSensingThread.cpp -o CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires:
+
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires
+	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides.build
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o
 
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o: MobilePlatform/Sensing/sensors.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
 	cd /home/dahye/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/sensors.pb.cc.o -c /home/dahye/diva2/build/MobilePlatform/Sensing/sensors.pb.cc
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.i: cmake_force
@@ -165,7 +237,10 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o.provides.build:
 MP_sensing_OBJECTS = \
 "CMakeFiles/MP_sensing.dir/main.cpp.o" \
 "CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o" \
-"CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o" \
+"CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o" \
+"CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o" \
+"CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o" \
+"CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o" \
 "CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
 
 # External object files for target MP_sensing
@@ -173,7 +248,10 @@ MP_sensing_EXTERNAL_OBJECTS =
 
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o
-MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o
+MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o
+MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o
+MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o
+MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make
 MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libzmq.so
@@ -318,7 +396,7 @@ MobilePlatform/Sensing/MP_sensing: /opt/Qt5.12.5/5.12.5/gcc_64/lib/libQt5Widgets
 MobilePlatform/Sensing/MP_sensing: /opt/Qt5.12.5/5.12.5/gcc_64/lib/libQt5Gui.so.5.12.5
 MobilePlatform/Sensing/MP_sensing: /opt/Qt5.12.5/5.12.5/gcc_64/lib/libQt5Core.so.5.12.5
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MP_sensing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dahye/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable MP_sensing"
 	cd /home/dahye/diva2/build/MobilePlatform/Sensing && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MP_sensing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -328,7 +406,10 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build: MobilePlatform/Sensing/M
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o.requires
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.requires
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o.requires
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.requires
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.requires
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.requires
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o.requires
 
 .PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires
