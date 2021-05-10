@@ -9,41 +9,15 @@ package sensors;
 import "google/protobuf/timestamp.proto";
 
 message Gps{
-    
-    google.protobuf.Timestamp timestamp=1;
-    string gpgga = 2;
-    
-    optional double latitude = 3;
-    optional bool isNorth = 4; // true=north; false=south;
-    optional double longitude = 5;
-    optional bool isEast = 6; // true=east; false=west;
-    optional int32 gpsQuality = 7;
-    optional int32 numberOfSatellitesInUse = 8;
-    optional double horizontalDilutionOfPrecision = 9;
-    optional double antennaAltitudeMeters = 10;
-    optional double geoidalSeparationMeters = 11;
-    optional double ageOfDifferentialGPSDataSeconds = 12;
-    optional int32 differentialReferenceStationID = 13;
+    double latitude = 1;
+    double longitude = 2;
+    double horizontalDilutionOfPrecision = 3;
 }
 
 message Imu{
-    google.protobuf.Timestamp timestamp=1;
-
-    optional float scaledAccelX = 2;
-    optional float scaledAccelY = 3;
-    optional float scaledAccelZ = 4;
-    optional float scaledGyroX = 5;
-    optional float scaledGyroY = 6;
-    optional float scaledGyroZ = 7;
-    optional float scaledMagX = 8;
-    optional float scaledMagY = 9;
-    optional float scaledMagZ = 10;
-    optional float estRoll = 11;
-    optional float estPitch = 12;
-    optional float estYaw = 13;
-    optional float estRollUncert =14;
-    optional float estPitchUncert = 15;
-    optional float estYawUncert = 16;
+    float scaledAccelX = 1;
+    float scaledAccelY = 2;
+    float scaledAccelZ = 3;
 }
 
 enum ChannelOrder {
@@ -56,34 +30,20 @@ enum ChannelOrder {
 }
 
 message Cam{
-    google.protobuf.Timestamp timestamp=1;
-
-    ChannelOrder channel_order = 2;
-    int32 cols = 3;
-    int32 rows = 4;
-    
-    bytes image_data = 5;
-    /*
-    optional bytes green_data = 6;
-    optional bytes blue_data = 7;
-    optional uint32 image_data =8;
-
-    message Data{
-        bytes r = 9;
-    }
-
-    repeated Data Datas = 10;
-    */
+    // ChannelOrder channel_order = 2; // 필요없어?????
+    int32 cols = 1;
+    int32 rows = 2;
+    bytes image_data = 3;
 }
 
-
 message Lidar{
-    message xyz{
+    float size=1;
+     message xyz{
     float x=1;
     float y=2;
     float z=3;
     }
-    repeated xyz data=1;
+    repeated xyz data=2;
 }
 
 message Can{
