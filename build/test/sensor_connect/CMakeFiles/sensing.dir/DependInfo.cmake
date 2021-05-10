@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/diva2/diva2/test/sensor_connect/main.cpp" "/home/diva2/diva2/build/test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.o"
+  "/home/dahye/diva2/test/sensor_connect/main.cpp" "/home/dahye/diva2/build/test/sensor_connect/CMakeFiles/sensing.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

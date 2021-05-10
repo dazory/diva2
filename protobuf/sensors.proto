@@ -78,7 +78,12 @@ message Cam{
 
 
 message Lidar{
-    google.protobuf.Timestamp timestamp=1;
+    message xyz{
+    float x=1;
+    float y=2;
+    float z=3;
+    }
+    repeated xyz data=1;
 }
 
 message Can{

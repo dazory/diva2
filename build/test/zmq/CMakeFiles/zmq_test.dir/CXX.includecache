@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/diva2/diva2/test/zmq/main.cpp
+/home/dahye/diva2/test/zmq/main.cpp
 zmq.h
 -
 string.h

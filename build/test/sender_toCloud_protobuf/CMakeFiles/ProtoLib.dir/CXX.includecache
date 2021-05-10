@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/diva2/diva2/test/protobuf/sensors.pb.cc
+/home/dahye/diva2/test/protobuf/sensors.pb.cc
 sensors.pb.h
-/home/diva2/diva2/test/protobuf/sensors.pb.h
+/home/dahye/diva2/test/protobuf/sensors.pb.h
 algorithm
 -
 google/protobuf/io/coded_stream.h
@@ -30,7 +30,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/test/protobuf/sensors.pb.h
+/home/dahye/diva2/test/protobuf/sensors.pb.h
 limits
 -
 string

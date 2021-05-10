@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/diva2/diva2/build/test/socketCan/sensors.pb.cc
+/home/dahye/diva2/build/test/socketCan/sensors.pb.cc
 sensors.pb.h
-/home/diva2/diva2/build/test/socketCan/sensors.pb.h
+/home/dahye/diva2/build/test/socketCan/sensors.pb.h
 algorithm
 -
 google/protobuf/io/coded_stream.h
@@ -30,7 +30,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/build/test/socketCan/sensors.pb.h
+/home/dahye/diva2/build/test/socketCan/sensors.pb.h
 limits
 -
 string
@@ -70,7 +70,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/test/protobuf/sensors.pb.h
+/home/dahye/diva2/test/protobuf/sensors.pb.h
 limits
 -
 string
@@ -110,7 +110,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/diva2/diva2/test/socketCan/test.cpp
+/home/dahye/diva2/test/socketCan/test.cpp
 stdio.h
 -
 stdlib.h
@@ -132,7 +132,7 @@ linux/can.h
 linux/can/raw.h
 -
 ../protobuf/sensors.pb.h
-/home/diva2/diva2/test/protobuf/sensors.pb.h
+/home/dahye/diva2/test/protobuf/sensors.pb.h
 
 /usr/local/include/google/protobuf/any.h
 string

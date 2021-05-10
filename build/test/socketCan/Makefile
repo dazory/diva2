@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diva2/diva2
+CMAKE_SOURCE_DIR = /home/dahye/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diva2/diva2/build
+CMAKE_BINARY_DIR = /home/dahye/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/test/socketCan/CMakeFiles/progress.marks
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles /home/dahye/diva2/build/test/socketCan/CMakeFiles/progress.marks
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/clean
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/socketCan/CMakeFiles/socketCan.dir/rule:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/CMakeFiles/socketCan.dir/rule
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/socketCan/CMakeFiles/socketCan.dir/rule
 .PHONY : test/socketCan/CMakeFiles/socketCan.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ socketCan: test/socketCan/CMakeFiles/socketCan.dir/rule
 
 # fast build rule for target.
 socketCan/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/build
+	cd /home/dahye/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/build
 .PHONY : socketCan/fast
 
 sensors.pb.o: sensors.pb.cc.o
@@ -131,7 +131,7 @@ sensors.pb.o: sensors.pb.cc.o
 
 # target to build an object file
 sensors.pb.cc.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.o
 .PHONY : sensors.pb.cc.o
 
 sensors.pb.i: sensors.pb.cc.i
@@ -140,7 +140,7 @@ sensors.pb.i: sensors.pb.cc.i
 
 # target to preprocess a source file
 sensors.pb.cc.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.i
 .PHONY : sensors.pb.cc.i
 
 sensors.pb.s: sensors.pb.cc.s
@@ -149,7 +149,7 @@ sensors.pb.s: sensors.pb.cc.s
 
 # target to generate assembly for a file
 sensors.pb.cc.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/sensors.pb.cc.s
 .PHONY : sensors.pb.cc.s
 
 test.o: test.cpp.o
@@ -158,7 +158,7 @@ test.o: test.cpp.o
 
 # target to build an object file
 test.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.o
 .PHONY : test.cpp.o
 
 test.i: test.cpp.i
@@ -167,7 +167,7 @@ test.i: test.cpp.i
 
 # target to preprocess a source file
 test.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.i
 .PHONY : test.cpp.i
 
 test.s: test.cpp.s
@@ -176,7 +176,7 @@ test.s: test.cpp.s
 
 # target to generate assembly for a file
 test.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/test.cpp.s
 .PHONY : test.cpp.s
 
 # Help Target
@@ -205,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

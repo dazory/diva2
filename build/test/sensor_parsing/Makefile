@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diva2/diva2
+CMAKE_SOURCE_DIR = /home/dahye/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diva2/diva2/build
+CMAKE_BINARY_DIR = /home/dahye/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/test/sensor_parsing/CMakeFiles/progress.marks
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles /home/dahye/diva2/build/test/sensor_parsing/CMakeFiles/progress.marks
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/clean
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/sensor_parsing/CMakeFiles/parsing.dir/rule:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/CMakeFiles/parsing.dir/rule
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensor_parsing/CMakeFiles/parsing.dir/rule
 .PHONY : test/sensor_parsing/CMakeFiles/parsing.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ parsing: test/sensor_parsing/CMakeFiles/parsing.dir/rule
 
 # fast build rule for target.
 parsing/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/build
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/build
 .PHONY : parsing/fast
 
 CamParsingThread.o: CamParsingThread.cpp.o
@@ -131,7 +131,7 @@ CamParsingThread.o: CamParsingThread.cpp.o
 
 # target to build an object file
 CamParsingThread.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.o
 .PHONY : CamParsingThread.cpp.o
 
 CamParsingThread.i: CamParsingThread.cpp.i
@@ -140,7 +140,7 @@ CamParsingThread.i: CamParsingThread.cpp.i
 
 # target to preprocess a source file
 CamParsingThread.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.i
 .PHONY : CamParsingThread.cpp.i
 
 CamParsingThread.s: CamParsingThread.cpp.s
@@ -149,7 +149,7 @@ CamParsingThread.s: CamParsingThread.cpp.s
 
 # target to generate assembly for a file
 CamParsingThread.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/CamParsingThread.cpp.s
 .PHONY : CamParsingThread.cpp.s
 
 GpsParsingThread.o: GpsParsingThread.cpp.o
@@ -158,7 +158,7 @@ GpsParsingThread.o: GpsParsingThread.cpp.o
 
 # target to build an object file
 GpsParsingThread.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.o
 .PHONY : GpsParsingThread.cpp.o
 
 GpsParsingThread.i: GpsParsingThread.cpp.i
@@ -167,7 +167,7 @@ GpsParsingThread.i: GpsParsingThread.cpp.i
 
 # target to preprocess a source file
 GpsParsingThread.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.i
 .PHONY : GpsParsingThread.cpp.i
 
 GpsParsingThread.s: GpsParsingThread.cpp.s
@@ -176,7 +176,7 @@ GpsParsingThread.s: GpsParsingThread.cpp.s
 
 # target to generate assembly for a file
 GpsParsingThread.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/GpsParsingThread.cpp.s
 .PHONY : GpsParsingThread.cpp.s
 
 ImuParsingThread.o: ImuParsingThread.cpp.o
@@ -185,7 +185,7 @@ ImuParsingThread.o: ImuParsingThread.cpp.o
 
 # target to build an object file
 ImuParsingThread.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.o
 .PHONY : ImuParsingThread.cpp.o
 
 ImuParsingThread.i: ImuParsingThread.cpp.i
@@ -194,7 +194,7 @@ ImuParsingThread.i: ImuParsingThread.cpp.i
 
 # target to preprocess a source file
 ImuParsingThread.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.i
 .PHONY : ImuParsingThread.cpp.i
 
 ImuParsingThread.s: ImuParsingThread.cpp.s
@@ -203,7 +203,7 @@ ImuParsingThread.s: ImuParsingThread.cpp.s
 
 # target to generate assembly for a file
 ImuParsingThread.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/ImuParsingThread.cpp.s
 .PHONY : ImuParsingThread.cpp.s
 
 main.o: main.cpp.o
@@ -212,7 +212,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -221,7 +221,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -230,7 +230,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -265,6 +265,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

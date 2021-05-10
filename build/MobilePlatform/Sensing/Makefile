@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diva2/diva2
+CMAKE_SOURCE_DIR = /home/dahye/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diva2/diva2/build
+CMAKE_BINARY_DIR = /home/dahye/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/MobilePlatform/Sensing/CMakeFiles/progress.marks
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles /home/dahye/diva2/build/MobilePlatform/Sensing/CMakeFiles/progress.marks
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/clean
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,37 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/preinstall
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/rule:
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/rule
+.PHONY : MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/rule
+
+# Convenience name for target.
+ouster_helper: MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/rule
+
+.PHONY : ouster_helper
+
+# fast build rule for target.
+ouster_helper/fast:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build
+.PHONY : ouster_helper/fast
+
+# Convenience name for target.
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/rule:
-	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/rule
+	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/rule
 .PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/rule
 
 # Convenience name for target.
@@ -122,7 +137,7 @@ MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/rule
 
 # fast build rule for target.
 MP_sensing/fast:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
 .PHONY : MP_sensing/fast
 
 GpsSensingThread.o: GpsSensingThread.cpp.o
@@ -131,7 +146,7 @@ GpsSensingThread.o: GpsSensingThread.cpp.o
 
 # target to build an object file
 GpsSensingThread.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o
 .PHONY : GpsSensingThread.cpp.o
 
 GpsSensingThread.i: GpsSensingThread.cpp.i
@@ -140,7 +155,7 @@ GpsSensingThread.i: GpsSensingThread.cpp.i
 
 # target to preprocess a source file
 GpsSensingThread.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i
 .PHONY : GpsSensingThread.cpp.i
 
 GpsSensingThread.s: GpsSensingThread.cpp.s
@@ -149,8 +164,143 @@ GpsSensingThread.s: GpsSensingThread.cpp.s
 
 # target to generate assembly for a file
 GpsSensingThread.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s
 .PHONY : GpsSensingThread.cpp.s
+
+LiDARSensingThread.o: LiDARSensingThread.cpp.o
+
+.PHONY : LiDARSensingThread.o
+
+# target to build an object file
+LiDARSensingThread.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.o
+.PHONY : LiDARSensingThread.cpp.o
+
+LiDARSensingThread.i: LiDARSensingThread.cpp.i
+
+.PHONY : LiDARSensingThread.i
+
+# target to preprocess a source file
+LiDARSensingThread.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.i
+.PHONY : LiDARSensingThread.cpp.i
+
+LiDARSensingThread.s: LiDARSensingThread.cpp.s
+
+.PHONY : LiDARSensingThread.s
+
+# target to generate assembly for a file
+LiDARSensingThread.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDARSensingThread.cpp.s
+.PHONY : LiDARSensingThread.cpp.s
+
+__/__/service/ouster/client.o: __/__/service/ouster/client.cpp.o
+
+.PHONY : __/__/service/ouster/client.o
+
+# target to build an object file
+__/__/service/ouster/client.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/client.cpp.o
+.PHONY : __/__/service/ouster/client.cpp.o
+
+__/__/service/ouster/client.i: __/__/service/ouster/client.cpp.i
+
+.PHONY : __/__/service/ouster/client.i
+
+# target to preprocess a source file
+__/__/service/ouster/client.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/client.cpp.i
+.PHONY : __/__/service/ouster/client.cpp.i
+
+__/__/service/ouster/client.s: __/__/service/ouster/client.cpp.s
+
+.PHONY : __/__/service/ouster/client.s
+
+# target to generate assembly for a file
+__/__/service/ouster/client.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/client.cpp.s
+.PHONY : __/__/service/ouster/client.cpp.s
+
+__/__/service/ouster/impl/netcompat.o: __/__/service/ouster/impl/netcompat.cpp.o
+
+.PHONY : __/__/service/ouster/impl/netcompat.o
+
+# target to build an object file
+__/__/service/ouster/impl/netcompat.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/impl/netcompat.cpp.o
+.PHONY : __/__/service/ouster/impl/netcompat.cpp.o
+
+__/__/service/ouster/impl/netcompat.i: __/__/service/ouster/impl/netcompat.cpp.i
+
+.PHONY : __/__/service/ouster/impl/netcompat.i
+
+# target to preprocess a source file
+__/__/service/ouster/impl/netcompat.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/impl/netcompat.cpp.i
+.PHONY : __/__/service/ouster/impl/netcompat.cpp.i
+
+__/__/service/ouster/impl/netcompat.s: __/__/service/ouster/impl/netcompat.cpp.s
+
+.PHONY : __/__/service/ouster/impl/netcompat.s
+
+# target to generate assembly for a file
+__/__/service/ouster/impl/netcompat.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/impl/netcompat.cpp.s
+.PHONY : __/__/service/ouster/impl/netcompat.cpp.s
+
+__/__/service/ouster/os1_util.o: __/__/service/ouster/os1_util.cpp.o
+
+.PHONY : __/__/service/ouster/os1_util.o
+
+# target to build an object file
+__/__/service/ouster/os1_util.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/os1_util.cpp.o
+.PHONY : __/__/service/ouster/os1_util.cpp.o
+
+__/__/service/ouster/os1_util.i: __/__/service/ouster/os1_util.cpp.i
+
+.PHONY : __/__/service/ouster/os1_util.i
+
+# target to preprocess a source file
+__/__/service/ouster/os1_util.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/os1_util.cpp.i
+.PHONY : __/__/service/ouster/os1_util.cpp.i
+
+__/__/service/ouster/os1_util.s: __/__/service/ouster/os1_util.cpp.s
+
+.PHONY : __/__/service/ouster/os1_util.s
+
+# target to generate assembly for a file
+__/__/service/ouster/os1_util.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/os1_util.cpp.s
+.PHONY : __/__/service/ouster/os1_util.cpp.s
+
+__/__/service/ouster/types.o: __/__/service/ouster/types.cpp.o
+
+.PHONY : __/__/service/ouster/types.o
+
+# target to build an object file
+__/__/service/ouster/types.cpp.o:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/types.cpp.o
+.PHONY : __/__/service/ouster/types.cpp.o
+
+__/__/service/ouster/types.i: __/__/service/ouster/types.cpp.i
+
+.PHONY : __/__/service/ouster/types.i
+
+# target to preprocess a source file
+__/__/service/ouster/types.cpp.i:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/types.cpp.i
+.PHONY : __/__/service/ouster/types.cpp.i
+
+__/__/service/ouster/types.s: __/__/service/ouster/types.cpp.s
+
+.PHONY : __/__/service/ouster/types.s
+
+# target to generate assembly for a file
+__/__/service/ouster/types.cpp.s:
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/__/__/service/ouster/types.cpp.s
+.PHONY : __/__/service/ouster/types.cpp.s
 
 main.o: main.cpp.o
 
@@ -158,7 +308,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -167,7 +317,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.i
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -176,7 +326,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.s
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 sensors.pb.o: sensors.pb.cc.o
@@ -185,7 +335,7 @@ sensors.pb.o: sensors.pb.cc.o
 
 # target to build an object file
 sensors.pb.cc.o:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o
 .PHONY : sensors.pb.cc.o
 
 sensors.pb.i: sensors.pb.cc.i
@@ -194,7 +344,7 @@ sensors.pb.i: sensors.pb.cc.i
 
 # target to preprocess a source file
 sensors.pb.cc.i:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.i
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.i
 .PHONY : sensors.pb.cc.i
 
 sensors.pb.s: sensors.pb.cc.s
@@ -203,7 +353,7 @@ sensors.pb.s: sensors.pb.cc.s
 
 # target to generate assembly for a file
 sensors.pb.cc.s:
-	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.s
+	cd /home/dahye/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.s
 .PHONY : sensors.pb.cc.s
 
 # Help Target
@@ -213,11 +363,27 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... MP_sensing"
 	@echo "... edit_cache"
+	@echo "... ouster_helper"
+	@echo "... MP_sensing"
 	@echo "... GpsSensingThread.o"
 	@echo "... GpsSensingThread.i"
 	@echo "... GpsSensingThread.s"
+	@echo "... LiDARSensingThread.o"
+	@echo "... LiDARSensingThread.i"
+	@echo "... LiDARSensingThread.s"
+	@echo "... __/__/service/ouster/client.o"
+	@echo "... __/__/service/ouster/client.i"
+	@echo "... __/__/service/ouster/client.s"
+	@echo "... __/__/service/ouster/impl/netcompat.o"
+	@echo "... __/__/service/ouster/impl/netcompat.i"
+	@echo "... __/__/service/ouster/impl/netcompat.s"
+	@echo "... __/__/service/ouster/os1_util.o"
+	@echo "... __/__/service/ouster/os1_util.i"
+	@echo "... __/__/service/ouster/os1_util.s"
+	@echo "... __/__/service/ouster/types.o"
+	@echo "... __/__/service/ouster/types.i"
+	@echo "... __/__/service/ouster/types.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -235,6 +401,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
