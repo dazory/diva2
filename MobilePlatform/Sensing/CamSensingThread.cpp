@@ -58,7 +58,7 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
                 
         // <Send>
         // <Send Message>
-        if(time_now - time_bef >= 1)
+        if(time_now - time_bef >= 0.1)
         {
           zmq::message_t zmqData(data_len);
           memcpy((void *)zmqData.data(), data, data_len);

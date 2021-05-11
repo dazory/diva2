@@ -21,7 +21,7 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
     if (USE_GPS == 1) // real
     {
         // [connect GPS device]
-        iDev = initialize("/dev/ttyACM0");
+        iDev = initialize("/dev/ttyACM1");
         speed = B1200;
         cs.init_serial(iDev, speed);
         lk.init_keyboard();
@@ -105,7 +105,7 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
             // printf("\n");
             std::cout<<gps.latitude()<<" "<<gps.longitude()<<" "<<gps.horizontaldilutionofprecision()<<std::endl;
             // <Send Message>
-            if(time_now - time_bef >= 1)
+            if(time_now - time_bef >= 0.1)
             {
                 zmq::message_t zmqData(data_len);
                 memcpy((void *)zmqData.data(), data, data_len);

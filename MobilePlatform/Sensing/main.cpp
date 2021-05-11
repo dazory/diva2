@@ -16,7 +16,8 @@ using namespace std;
 int USE_GPS =0; int USE_IMU =0; int USE_CAM =0; int USE_LiDAR =0; int USE_CAN =0; 
 
 int main(int argc, char *argv[]){
-    // sudo chmod 777 /dev/ttyACM0
+    ///[USB 포트연결] : (imu, gps, cam)
+    //sudo chmod 777 /dev/ttyACM0
     
     // [Sensing Process]
     zmq::context_t context(1);
@@ -38,18 +39,18 @@ int main(int argc, char *argv[]){
     // CanSensingThread canSensingThread;
     // std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
   
-     USE_IMU = 1;
-    ImuSensingThread imuSensingThread;
-    std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
+    //  USE_IMU = 1;
+    // ImuSensingThread imuSensingThread;
+    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
 
-    // // USE_LiDAR = 1;
-    // LiDAR_SensingThread mLiDARSensingThread;
-    // thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket);
+    USE_LiDAR = 1;
+    LiDAR_SensingThread mLiDARSensingThread;
+    thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket);
 
     // sensingthread_can.join();
-   // sensingthread_gps.join();
-    // sensingthread_LiDAR.join();
+//    sensingthread_gps.join();
+    sensingthread_LiDAR.join();
     // sensingthread_cam.join();
-    sensingthread_imu.join();
+    // sensingthread_imu.join();
 
 }

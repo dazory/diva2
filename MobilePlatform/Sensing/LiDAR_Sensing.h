@@ -22,11 +22,9 @@
 #include <zmq.hpp>
 #include "../../service/zmq_helper.h"
 
-//#include <vtkRenderWindow.h>
 #include <pcl/point_cloud.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
-//#include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/common/transforms.h>
 #include <pcl/console/parse.h>
 #include <pcl/filters/voxel_grid.h>
@@ -43,6 +41,7 @@
 #include <google/protobuf/util/json_util.h>
 #include "../../protobuf/sensors.pb.h"
 
+// #define os1_host "os1-991904000944"
 #define os1_host "10.5.5.1"
 #define os1_udp_dest "10.5.5.2"
 
@@ -57,12 +56,11 @@ public:
     LiDAR_Sensing();
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud; //생성할 PointCloud structure구조체(x,y,z) 정의
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered; //for downsampling
     
     bool stop_flag = false;
     bool do_config = true;
-    int lidar_port = 0;
-    int imu_port = 0;
+    
     int count = 0;
     int W = 1024;
     int H = OS1::pixels_per_column;

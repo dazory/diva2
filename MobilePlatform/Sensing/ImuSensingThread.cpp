@@ -89,8 +89,8 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
                 // <Send>
                 time_now = time(NULL);
 
-                // if(time_now - time_bef >= 1)
-                // {
+                if(time_now - time_bef >= 0.1)
+                {
                     if(count==3){
                     zmq::message_t zmqData(data_len);
                     memcpy((void *)zmqData.data(), data, data_len);
@@ -99,7 +99,7 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
                     printf("[MobilePlatform/Sensing/ImuSensingThread] complete to send (size=%d)\n",zmqData.size());
                     }
                     time_bef = time_now;
-                //}
+                }
                 
 
 

@@ -30,14 +30,12 @@ void LiDAR_Sensing::WritePCD(std::vector<double> xyz_lut, uint8_t *buf)
     //std::cout<<"WritePCD"<<std::endl;
     for (int icol = 0; icol < OS1::columns_per_buffer; icol++)
     {
-        //std::cout<<"for"<<std::endl;
         const uint8_t *col_buf = OS1::nth_col(icol, buf);
         const uint16_t m_id = OS1::col_measurement_id(col_buf);
         const int idx = H * m_id;
 
         for (uint8_t ipx = 0; ipx < H; ipx++)
         {
-            //std::cout<<"second for"<<std::endl;
             const uint8_t *px_buf = OS1::nth_px(ipx, col_buf);
             uint32_t r = OS1::px_range(px_buf);
             int ind = 3 * (idx + ipx);
