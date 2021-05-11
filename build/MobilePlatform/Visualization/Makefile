@@ -152,6 +152,33 @@ CamVisualization.cpp.s:
 	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CamVisualization.cpp.s
 .PHONY : CamVisualization.cpp.s
 
+CanVisualization.o: CanVisualization.cpp.o
+
+.PHONY : CanVisualization.o
+
+# target to build an object file
+CanVisualization.cpp.o:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CanVisualization.cpp.o
+.PHONY : CanVisualization.cpp.o
+
+CanVisualization.i: CanVisualization.cpp.i
+
+.PHONY : CanVisualization.i
+
+# target to preprocess a source file
+CanVisualization.cpp.i:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CanVisualization.cpp.i
+.PHONY : CanVisualization.cpp.i
+
+CanVisualization.s: CanVisualization.cpp.s
+
+.PHONY : CanVisualization.s
+
+# target to generate assembly for a file
+CanVisualization.cpp.s:
+	cd /home/diva2/diva2/build && $(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/CanVisualization.cpp.s
+.PHONY : CanVisualization.cpp.s
+
 GpsVisualization.o: GpsVisualization.cpp.o
 
 .PHONY : GpsVisualization.o
@@ -272,6 +299,9 @@ help:
 	@echo "... CamVisualization.o"
 	@echo "... CamVisualization.i"
 	@echo "... CamVisualization.s"
+	@echo "... CanVisualization.o"
+	@echo "... CanVisualization.i"
+	@echo "... CanVisualization.s"
 	@echo "... GpsVisualization.o"
 	@echo "... GpsVisualization.i"
 	@echo "... GpsVisualization.s"

@@ -25,6 +25,8 @@ int protoTypeToCV(const sensors::ChannelOrder& proto_type);
 
 void CamVisualization::run(void *contextSub)
 {
+  int c=0;
+        
     printf("[MobilePlatform/Sensing/CamVisualization] run\n");
 
     // [Connect with SUB socket]
@@ -34,6 +36,8 @@ void CamVisualization::run(void *contextSub)
     printf("[MobilePlatform/Sensing/CamVisualization] connect with SUB socket\n");
 
     // int cnt = 0;
+    clock_t clk_bef = clock();
+    clock_t clk_now = clock();
     while (1)
     { 
         sensors::Cam cam;
@@ -45,8 +49,10 @@ void CamVisualization::run(void *contextSub)
 
         // [receive the message_t from SUB socket]
         zmq::message_t msgData;
+        clk_now = clock();
         socketSub.recv(&msgData);
-        printf("[MobilePlatform/Sensing/CamVisualization] receive %dbytes\n",msgData.size());
+        printf("(%d)(%dms)[MobilePlatform/Sensing/CamVisualization] receive %dbytes\n",c++,(float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000,msgData.size());
+        clk_bef = clk_now;
 
         // [Parsing to proto]
         unsigned char data[msgData.size()] = "\0";

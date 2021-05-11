@@ -7,6 +7,7 @@
 #include "GpsSensingThread.h"
 #include "CamSensingThread.h"
 #include "ImuSensingThread.h"
+#include "CanSensingThread.h"
 
 using namespace std;
 
@@ -23,24 +24,24 @@ int main(int argc, char *argv[]){
     socket.bind(protocol::SENSING_PUB);
     printf("[MobilePlatform/Sensing] binding\n");
 
-    USE_GPS = 2;
-    GpsSensingThread mGpsSensingThread;
-    std::thread sensingthread_gps(mGpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // USE_GPS = 2;
+    // GpsSensingThread mGpsSensingThread;
+    // std::thread sensingthread_gps(mGpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
-    USE_CAM = 1;
-    CamSensingThread camSensingThread;
-    std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // USE_CAM = 1;
+    // CamSensingThread camSensingThread;
+    // std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
-    USE_IMU = 2;
-    ImuSensingThread imuSensingThread;
-    std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
+    // USE_IMU = 2;
+    // ImuSensingThread imuSensingThread;
+    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
     
-    // USE_CAN = 2;
-    // CanSensingThread canSensingThread;
-    // std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    USE_CAN = 1;
+    CanSensingThread canSensingThread;
+    std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
   
-    // sensingthread_can.join();
-    sensingthread_gps.join();
-    sensingthread_cam.join();
-    sensingthread_imu.join();
+    sensingthread_can.join();
+    // sensingthread_gps.join();
+    // sensingthread_cam.join();
+    // sensingthread_imu.join();
 }

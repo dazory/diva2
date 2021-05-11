@@ -20,8 +20,8 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
 
     int count=0;
 
-    time_t time_bef = time(NULL); 
-    time_t time_now = time(NULL);
+    clock_t clk_bef = clock(); 
+    clock_t clk_now = clock();
     if(USE_IMU==1)
     {
         // [Connect the IMU device]
@@ -33,8 +33,6 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
         printf("[MobilePlatform/Sensing/ImuSensingThread] connect to IMU device\n");
 
         while(1){
-            time_now = time(NULL);
-
             sensors::Imu imu;
 
             // <Get MipDataPackets>
@@ -86,18 +84,18 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
                 printf("[MobilePlatform/Sensing/ImuSensingThread] complete to serialize (size=%d)\n",data_len);
                         
                 // <Send>
-                if(time_now - time_bef >= 1)
+                clk_now = clock();
+                if((float)(clk_now - clk_bef)/CLOCKS_PER_SEC >= 0.1)
                 {
                     zmq::message_t zmqData(data_len);
                     memcpy((void *)zmqData.data(), data, data_len);
                     s_send_idx(*pubSock, SENSOR_IMU);
                     s_send(*pubSock, zmqData);
-                    printf("[MobilePlatform/Sensing/ImuSensingThread] complete to send (size=%d)\n",zmqData.size());
+                    printf("(%dms)[MobilePlatform/Sensing/ImuSensingThread] Complete to send to PUB Socket\n", (float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000);
                     
-                    time_bef = time_now;
+                    clk_bef = clk_now;
                 }
-                
-
+        
 
                 // [STORING]
                 // <add a json to json_dataset>
@@ -119,8 +117,6 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
     } // End : if(USE_IMU==1)
     else if(USE_IMU==2){
         while(1){
-            time_now = time(NULL);
-            printf("(%d)=== \n", count); count ++;
             sensors::Imu imu;
 
             // [write fake IMU data]
@@ -140,15 +136,16 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
             printf("[MobilePlatform/Sensing/ImuSensingThread] complete to serialize (size=%d)\n",data_len);
                         
             // <Send>
-            if(time_now - time_bef >= 1)
+            clk_now = clock();
+            if((float)(clk_now - clk_bef)/CLOCKS_PER_SEC >= 0.1)
             {
                 zmq::message_t zmqData(data_len);
                 memcpy((void *)zmqData.data(), data, data_len);
                 s_send_idx(*pubSock, SENSOR_IMU);
                 s_send(*pubSock, zmqData);
-                printf("[MobilePlatform/Sensing/ImuSensingThread] complete to send (size=%d)\n",zmqData.size());
-                
-                time_bef = time_now;
+                printf("(%dms)[MobilePlatform/Sensing/ImuSensingThread] Complete to send to PUB Socket\n", (float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000);
+                    
+                clk_bef = clk_now;
             }
             
             // [Store the GPS data]

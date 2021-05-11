@@ -51,6 +51,7 @@ set(SOURCE_MP_visualization main.cpp
     GpsVisualization.cpp 
     CamVisualization.cpp
     ImuVisualization.cpp
+    CanVisualization.cpp
     )
 add_executable(MP_visualization ${SOURCE_MP_visualization} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer

@@ -73,13 +73,8 @@ struct LidarDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LidarDefaultTypeInternal _Lidar_default_instance_;
 constexpr Can::Can(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : __pad_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , __res0_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , __res1_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , timestamp_(nullptr)
-  , can_id_(0u)
-  , can_dlc_(0u){}
+  : type_(0)
+  , data_(0){}
 struct CanDefaultTypeInternal {
   constexpr CanDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -147,12 +142,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::sensors::Can, timestamp_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Can, can_id_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Can, can_dlc_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Can, __pad_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Can, __res0_),
-  PROTOBUF_FIELD_OFFSET(::sensors::Can, __res1_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Can, type_),
   PROTOBUF_FIELD_OFFSET(::sensors::Can, data_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Log, _internal_metadata_),
@@ -172,7 +162,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 16, -1, sizeof(::sensors::Cam)},
   { 24, -1, sizeof(::sensors::Lidar)},
   { 30, -1, sizeof(::sensors::Can)},
-  { 42, -1, sizeof(::sensors::Log)},
+  { 37, -1, sizeof(::sensors::Log)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -193,22 +183,19 @@ const char descriptor_table_protodef_sensors_2eproto[] PROTOBUF_SECTION_VARIABLE
   "dAccelZ\030\003 \001(\002\"5\n\003Cam\022\014\n\004cols\030\001 \001(\005\022\014\n\004ro"
   "ws\030\002 \001(\005\022\022\n\nimage_data\030\003 \001(\014\"6\n\005Lidar\022-\n"
   "\ttimestamp\030\001 \001(\0132\032.google.protobuf.Times"
-  "tamp\"\222\001\n\003Can\022-\n\ttimestamp\030\001 \001(\0132\032.google"
-  ".protobuf.Timestamp\022\016\n\006can_id\030\002 \001(\r\022\017\n\007c"
-  "an_dlc\030\003 \001(\r\022\r\n\005__pad\030\004 \001(\014\022\016\n\006__res0\030\005 "
-  "\001(\014\022\016\n\006__res1\030\006 \001(\014\022\014\n\004data\030\007 \001(\014\"c\n\003Log"
-  "\022\016\n\006can_id\030\002 \001(\r\022\017\n\007can_dlc\030\003 \001(\r\022\r\n\005__p"
-  "ad\030\004 \001(\014\022\016\n\006__res0\030\005 \001(\014\022\016\n\006__res1\030\006 \001(\014"
-  "\022\014\n\004data\030\007 \001(\014*U\n\014ChannelOrder\022\r\n\tGRAYSC"
-  "ALE\020\000\022\007\n\003BGR\020\001\022\007\n\003RGB\020\002\022\010\n\004BGRA\020\003\022\010\n\004RGB"
-  "A\020\004\022\020\n\014OPTICAL_FLOW\020\005b\006proto3"
+  "tamp\"!\n\003Can\022\014\n\004type\030\001 \001(\002\022\014\n\004data\030\002 \001(\002\""
+  "c\n\003Log\022\016\n\006can_id\030\002 \001(\r\022\017\n\007can_dlc\030\003 \001(\r\022"
+  "\r\n\005__pad\030\004 \001(\014\022\016\n\006__res0\030\005 \001(\014\022\016\n\006__res1"
+  "\030\006 \001(\014\022\014\n\004data\030\007 \001(\014*U\n\014ChannelOrder\022\r\n\t"
+  "GRAYSCALE\020\000\022\007\n\003BGR\020\001\022\007\n\003RGB\020\002\022\010\n\004BGRA\020\003\022"
+  "\010\n\004RGBA\020\004\022\020\n\014OPTICAL_FLOW\020\005b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_sensors_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_sensors_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_sensors_2eproto = {
-  false, false, 669, descriptor_table_protodef_sensors_2eproto, "sensors.proto", 
+  false, false, 555, descriptor_table_protodef_sensors_2eproto, "sensors.proto", 
   &descriptor_table_sensors_2eproto_once, descriptor_table_sensors_2eproto_deps, 1, 6,
   schemas, file_default_instances, TableStruct_sensors_2eproto::offsets,
   file_level_metadata_sensors_2eproto, file_level_enum_descriptors_sensors_2eproto, file_level_service_descriptors_sensors_2eproto,
@@ -1196,19 +1183,8 @@ void Lidar::InternalSwap(Lidar* other) {
 
 class Can::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const Can* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::Timestamp&
-Can::_Internal::timestamp(const Can* msg) {
-  return *msg->timestamp_;
-}
-void Can::clear_timestamp() {
-  if (GetArena() == nullptr && timestamp_ != nullptr) {
-    delete timestamp_;
-  }
-  timestamp_ = nullptr;
-}
 Can::Can(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -1218,46 +1194,17 @@ Can::Can(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 Can::Can(const Can& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  __pad_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal___pad().empty()) {
-    __pad_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal___pad(), 
-      GetArena());
-  }
-  __res0_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal___res0().empty()) {
-    __res0_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal___res0(), 
-      GetArena());
-  }
-  __res1_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal___res1().empty()) {
-    __res1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal___res1(), 
-      GetArena());
-  }
-  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_data().empty()) {
-    data_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_data(), 
-      GetArena());
-  }
-  if (from._internal_has_timestamp()) {
-    timestamp_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.timestamp_);
-  } else {
-    timestamp_ = nullptr;
-  }
-  ::memcpy(&can_id_, &from.can_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&can_dlc_) -
-    reinterpret_cast<char*>(&can_id_)) + sizeof(can_dlc_));
+  ::memcpy(&type_, &from.type_,
+    static_cast<size_t>(reinterpret_cast<char*>(&data_) -
+    reinterpret_cast<char*>(&type_)) + sizeof(data_));
   // @@protoc_insertion_point(copy_constructor:sensors.Can)
 }
 
 void Can::SharedCtor() {
-__pad_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-__res0_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-__res1_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&timestamp_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&can_dlc_) -
-    reinterpret_cast<char*>(&timestamp_)) + sizeof(can_dlc_));
+    reinterpret_cast<char*>(&type_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&data_) -
+    reinterpret_cast<char*>(&type_)) + sizeof(data_));
 }
 
 Can::~Can() {
@@ -1268,11 +1215,6 @@ Can::~Can() {
 
 void Can::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  __pad_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  __res0_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  __res1_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete timestamp_;
 }
 
 void Can::ArenaDtor(void* object) {
@@ -1291,17 +1233,9 @@ void Can::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  __pad_.ClearToEmpty();
-  __res0_.ClearToEmpty();
-  __res1_.ClearToEmpty();
-  data_.ClearToEmpty();
-  if (GetArena() == nullptr && timestamp_ != nullptr) {
-    delete timestamp_;
-  }
-  timestamp_ = nullptr;
-  ::memset(&can_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&can_dlc_) -
-      reinterpret_cast<char*>(&can_id_)) + sizeof(can_dlc_));
+  ::memset(&type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&data_) -
+      reinterpret_cast<char*>(&type_)) + sizeof(data_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1311,57 +1245,18 @@ const char* Can::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::intern
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .google.protobuf.Timestamp timestamp = 1;
+      // float type = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
-          CHK_(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
+          type_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
-      // uint32 can_id = 2;
+      // float data = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          can_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // uint32 can_dlc = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          can_dlc_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bytes __pad = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          auto str = _internal_mutable___pad();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bytes __res0 = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          auto str = _internal_mutable___res0();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bytes __res1 = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          auto str = _internal_mutable___res1();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bytes data = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          auto str = _internal_mutable_data();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21)) {
+          data_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       default: {
@@ -1393,48 +1288,16 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
+  // float type = 1;
+  if (!(this->type() <= 0 && this->type() >= 0)) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::timestamp(this), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_type(), target);
   }
 
-  // uint32 can_id = 2;
-  if (this->can_id() != 0) {
+  // float data = 2;
+  if (!(this->data() <= 0 && this->data() >= 0)) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_can_id(), target);
-  }
-
-  // uint32 can_dlc = 3;
-  if (this->can_dlc() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_can_dlc(), target);
-  }
-
-  // bytes __pad = 4;
-  if (this->__pad().size() > 0) {
-    target = stream->WriteBytesMaybeAliased(
-        4, this->_internal___pad(), target);
-  }
-
-  // bytes __res0 = 5;
-  if (this->__res0().size() > 0) {
-    target = stream->WriteBytesMaybeAliased(
-        5, this->_internal___res0(), target);
-  }
-
-  // bytes __res1 = 6;
-  if (this->__res1().size() > 0) {
-    target = stream->WriteBytesMaybeAliased(
-        6, this->_internal___res1(), target);
-  }
-
-  // bytes data = 7;
-  if (this->data().size() > 0) {
-    target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_data(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_data(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1453,53 +1316,14 @@ size_t Can::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // bytes __pad = 4;
-  if (this->__pad().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal___pad());
+  // float type = 1;
+  if (!(this->type() <= 0 && this->type() >= 0)) {
+    total_size += 1 + 4;
   }
 
-  // bytes __res0 = 5;
-  if (this->__res0().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal___res0());
-  }
-
-  // bytes __res1 = 6;
-  if (this->__res1().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal___res1());
-  }
-
-  // bytes data = 7;
-  if (this->data().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_data());
-  }
-
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *timestamp_);
-  }
-
-  // uint32 can_id = 2;
-  if (this->can_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->_internal_can_id());
-  }
-
-  // uint32 can_dlc = 3;
-  if (this->can_dlc() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->_internal_can_dlc());
+  // float data = 2;
+  if (!(this->data() <= 0 && this->data() >= 0)) {
+    total_size += 1 + 4;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1533,26 +1357,11 @@ void Can::MergeFrom(const Can& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.__pad().size() > 0) {
-    _internal_set___pad(from._internal___pad());
+  if (!(from.type() <= 0 && from.type() >= 0)) {
+    _internal_set_type(from._internal_type());
   }
-  if (from.__res0().size() > 0) {
-    _internal_set___res0(from._internal___res0());
-  }
-  if (from.__res1().size() > 0) {
-    _internal_set___res1(from._internal___res1());
-  }
-  if (from.data().size() > 0) {
+  if (!(from.data() <= 0 && from.data() >= 0)) {
     _internal_set_data(from._internal_data());
-  }
-  if (from.has_timestamp()) {
-    _internal_mutable_timestamp()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_timestamp());
-  }
-  if (from.can_id() != 0) {
-    _internal_set_can_id(from._internal_can_id());
-  }
-  if (from.can_dlc() != 0) {
-    _internal_set_can_dlc(from._internal_can_dlc());
   }
 }
 
@@ -1577,16 +1386,12 @@ bool Can::IsInitialized() const {
 void Can::InternalSwap(Can* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  __pad_.Swap(&other->__pad_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  __res0_.Swap(&other->__res0_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  __res1_.Swap(&other->__res1_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  data_.Swap(&other->data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Can, can_dlc_)
-      + sizeof(Can::can_dlc_)
-      - PROTOBUF_FIELD_OFFSET(Can, timestamp_)>(
-          reinterpret_cast<char*>(&timestamp_),
-          reinterpret_cast<char*>(&other->timestamp_));
+      PROTOBUF_FIELD_OFFSET(Can, data_)
+      + sizeof(Can::data_)
+      - PROTOBUF_FIELD_OFFSET(Can, type_)>(
+          reinterpret_cast<char*>(&type_),
+          reinterpret_cast<char*>(&other->type_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Can::GetMetadata() const {

@@ -162,6 +162,45 @@ GS_playback/fast:
 	$(MAKE) -f GroundStation/Playback/CMakeFiles/GS_playback.dir/build.make GroundStation/Playback/CMakeFiles/GS_playback.dir/build
 .PHONY : GS_playback/fast
 
+#=============================================================================
+# Target rules for targets named sensing_proto
+
+# Build rule for target.
+sensing_proto: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensing_proto
+.PHONY : sensing_proto
+
+# fast build rule for target.
+sensing_proto/fast:
+	$(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/build
+.PHONY : sensing_proto/fast
+
+#=============================================================================
+# Target rules for targets named socketCan
+
+# Build rule for target.
+socketCan: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 socketCan
+.PHONY : socketCan
+
+# fast build rule for target.
+socketCan/fast:
+	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/build
+.PHONY : socketCan/fast
+
+#=============================================================================
+# Target rules for targets named candbcparser
+
+# Build rule for target.
+candbcparser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 candbcparser
+.PHONY : candbcparser
+
+# fast build rule for target.
+candbcparser/fast:
+	$(MAKE) -f test/can_dbcparser/CMakeFiles/candbcparser.dir/build.make test/can_dbcparser/CMakeFiles/candbcparser.dir/build
+.PHONY : candbcparser/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -201,6 +240,9 @@ help:
 	@echo "... MP_sensing"
 	@echo "... MP_visualization"
 	@echo "... GS_playback"
+	@echo "... sensing_proto"
+	@echo "... socketCan"
+	@echo "... candbcparser"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

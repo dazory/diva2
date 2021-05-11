@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/diva2/diva2/build
 CMakeFiles/diva2.dir/all:
 	$(MAKE) -f CMakeFiles/diva2.dir/build.make CMakeFiles/diva2.dir/depend
 	$(MAKE) -f CMakeFiles/diva2.dir/build.make CMakeFiles/diva2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=19,20 "Built target diva2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=26,27 "Built target diva2"
 .PHONY : CMakeFiles/diva2.dir/all
 
 # Include target in all.
@@ -121,7 +121,7 @@ MobilePlatform/Sensing/preinstall:
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/all:
 	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/depend
 	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=5,6,7,8,9,10,11 "Built target MP_sensing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12 "Built target MP_sensing"
 .PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/all
 
 # Include target in all.
@@ -131,7 +131,7 @@ all: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/all
 
 # Build rule for subdir invocation for target.
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
 .PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/rule
@@ -176,7 +176,7 @@ MobilePlatform/Visualization/preinstall:
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/all:
 	$(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/depend
 	$(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=12,13,14,15,16,17,18 "Built target MP_visualization"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20 "Built target MP_visualization"
 .PHONY : MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/all
 
 # Include target in all.
@@ -186,7 +186,7 @@ all: MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/all
 
 # Build rule for subdir invocation for target.
 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
 .PHONY : MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/rule
@@ -258,6 +258,171 @@ GroundStation/Playback/CMakeFiles/GS_playback.dir/clean:
 
 # clean rule for target.
 clean: GroundStation/Playback/CMakeFiles/GS_playback.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test/sensing_proto
+
+# Convenience name for "all" pass in the directory.
+test/sensing_proto/all: test/sensing_proto/CMakeFiles/sensing_proto.dir/all
+
+.PHONY : test/sensing_proto/all
+
+# Convenience name for "clean" pass in the directory.
+test/sensing_proto/clean: test/sensing_proto/CMakeFiles/sensing_proto.dir/clean
+
+.PHONY : test/sensing_proto/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/sensing_proto/preinstall:
+
+.PHONY : test/sensing_proto/preinstall
+
+#=============================================================================
+# Target rules for target test/sensing_proto/CMakeFiles/sensing_proto.dir
+
+# All Build rule for target.
+test/sensing_proto/CMakeFiles/sensing_proto.dir/all:
+	$(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/depend
+	$(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=28,29,30,31,32,33,34 "Built target sensing_proto"
+.PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/all
+
+# Include target in all.
+all: test/sensing_proto/CMakeFiles/sensing_proto.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/sensing_proto/CMakeFiles/sensing_proto.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/CMakeFiles/sensing_proto.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/rule
+
+# Convenience name for target.
+sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/rule
+
+.PHONY : sensing_proto
+
+# clean rule for target.
+test/sensing_proto/CMakeFiles/sensing_proto.dir/clean:
+	$(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/clean
+.PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/clean
+
+# clean rule for target.
+clean: test/sensing_proto/CMakeFiles/sensing_proto.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test/socketCan
+
+# Convenience name for "all" pass in the directory.
+test/socketCan/all: test/socketCan/CMakeFiles/socketCan.dir/all
+
+.PHONY : test/socketCan/all
+
+# Convenience name for "clean" pass in the directory.
+test/socketCan/clean: test/socketCan/CMakeFiles/socketCan.dir/clean
+
+.PHONY : test/socketCan/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/socketCan/preinstall:
+
+.PHONY : test/socketCan/preinstall
+
+#=============================================================================
+# Target rules for target test/socketCan/CMakeFiles/socketCan.dir
+
+# All Build rule for target.
+test/socketCan/CMakeFiles/socketCan.dir/all:
+	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/depend
+	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=35,36,37,38 "Built target socketCan"
+.PHONY : test/socketCan/CMakeFiles/socketCan.dir/all
+
+# Include target in all.
+all: test/socketCan/CMakeFiles/socketCan.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/socketCan/CMakeFiles/socketCan.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 test/socketCan/CMakeFiles/socketCan.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/socketCan/CMakeFiles/socketCan.dir/rule
+
+# Convenience name for target.
+socketCan: test/socketCan/CMakeFiles/socketCan.dir/rule
+
+.PHONY : socketCan
+
+# clean rule for target.
+test/socketCan/CMakeFiles/socketCan.dir/clean:
+	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/clean
+.PHONY : test/socketCan/CMakeFiles/socketCan.dir/clean
+
+# clean rule for target.
+clean: test/socketCan/CMakeFiles/socketCan.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test/can_dbcparser
+
+# Convenience name for "all" pass in the directory.
+test/can_dbcparser/all: test/can_dbcparser/CMakeFiles/candbcparser.dir/all
+
+.PHONY : test/can_dbcparser/all
+
+# Convenience name for "clean" pass in the directory.
+test/can_dbcparser/clean: test/can_dbcparser/CMakeFiles/candbcparser.dir/clean
+
+.PHONY : test/can_dbcparser/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/can_dbcparser/preinstall:
+
+.PHONY : test/can_dbcparser/preinstall
+
+#=============================================================================
+# Target rules for target test/can_dbcparser/CMakeFiles/candbcparser.dir
+
+# All Build rule for target.
+test/can_dbcparser/CMakeFiles/candbcparser.dir/all:
+	$(MAKE) -f test/can_dbcparser/CMakeFiles/candbcparser.dir/build.make test/can_dbcparser/CMakeFiles/candbcparser.dir/depend
+	$(MAKE) -f test/can_dbcparser/CMakeFiles/candbcparser.dir/build.make test/can_dbcparser/CMakeFiles/candbcparser.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=21,22,23,24,25 "Built target candbcparser"
+.PHONY : test/can_dbcparser/CMakeFiles/candbcparser.dir/all
+
+# Include target in all.
+all: test/can_dbcparser/CMakeFiles/candbcparser.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/can_dbcparser/CMakeFiles/candbcparser.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 test/can_dbcparser/CMakeFiles/candbcparser.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+.PHONY : test/can_dbcparser/CMakeFiles/candbcparser.dir/rule
+
+# Convenience name for target.
+candbcparser: test/can_dbcparser/CMakeFiles/candbcparser.dir/rule
+
+.PHONY : candbcparser
+
+# clean rule for target.
+test/can_dbcparser/CMakeFiles/candbcparser.dir/clean:
+	$(MAKE) -f test/can_dbcparser/CMakeFiles/candbcparser.dir/build.make test/can_dbcparser/CMakeFiles/candbcparser.dir/clean
+.PHONY : test/can_dbcparser/CMakeFiles/candbcparser.dir/clean
+
+# clean rule for target.
+clean: test/can_dbcparser/CMakeFiles/candbcparser.dir/clean
 
 .PHONY : clean
 

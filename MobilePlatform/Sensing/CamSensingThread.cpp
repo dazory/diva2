@@ -19,11 +19,10 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
     printf("[MobilePlatform/Sensing/CamSensingThread] Connect the CAM device\n");
   }
 
-  time_t time_bef = time(NULL); 
-  time_t time_now = time(NULL);
+  clock_t clk_bef = clock(); 
+  clock_t clk_now = clock();
   while (open)
   {
-    time_now = time(NULL);
     if (USE_CAM == 1)
     {
       // [SENSING FROM CAMERA]
@@ -32,6 +31,7 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
       cap.read(frame);
       // resize(frame, frame, Size(320, 240));
       printf("[MobilePlatform/Sensing/CamSensingThread] read a frame (size:%dx%d, %d)\n",frame.cols, frame.rows, frame.type());
+      
   
       if (!frame.empty())
       {
@@ -59,15 +59,16 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
                 
         // <Send>
         // <Send Message>
-        if(time_now - time_bef >= 1)
+        clk_now = clock();
+        if((float)(clk_now - clk_bef)/CLOCKS_PER_SEC >= 0.1)
         {
           zmq::message_t zmqData(data_len);
           memcpy((void *)zmqData.data(), data, data_len);
           s_send_idx(*pubSock, SENSOR_CAM);
           s_send(*pubSock, zmqData);
-          printf("[MobilePlatform/Sensing/CamSensingThread] complete to send (size=%d)\n",zmqData.size());
+          printf("(%dms)[MobilePlatform/Sensing/CamSensingThread] complete to send (size=%d)\n",(float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000,zmqData.size());
                 
-          time_bef = time_now;
+          clk_bef = clk_now;
         }
         
       }// end : if (!frame.empty())
@@ -93,18 +94,28 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
       
 
       // <Make JPG file> 
-      time_t curTime = time(NULL); 
-      struct tm *pLocal = localtime(&curTime); 
-      char cPath[10]; sprintf(cPath, "cam");  
+      // time_t curTime = time(NULL); 
+      // struct tm *pLocal = localtime(&curTime);
+      
+      char cFn[50];
+      
+      auto time = chrono::system_clock::now();
+      auto mill = chrono::duration_cast<chrono::milliseconds>(time.time_since_epoch());
+      long long currentTimeMillis = mill.count();
+      int msc = currentTimeMillis % 1000;
+      long nowTime = currentTimeMillis/1000;
+      tm *ts = localtime(&nowTime);
+
+      char cPath[15]; // sprintf(cPath, "cam");  
+      sprintf(cPath, "%04d-%02d-%02d/CAM", ts->tm_year+1900, ts->tm_mon+1, ts->tm_mday);
+      
       int nResult = mkdir(cPath, 0776); 
       if( nResult == 0 ){
         printf("[MobilePlatform/Sensing/CamSensingThread] make directory (%s)\n", cPath);
       }// if(nResult == -1 ) : already exists
 
-      char cFn[50];
-      sprintf(cFn, "%s/%04d-%02d-%02dT%02d-%02d-%02d.jpg", cPath,
-      pLocal->tm_year + 1900, pLocal->tm_mon + 1, pLocal->tm_mday,  
-      pLocal->tm_hour, pLocal->tm_min, pLocal->tm_sec);
+      sprintf(cFn, "%s/%02d-%02d-%02d-%03d.jpg", cPath,
+      ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
       cv::imwrite(cFn, frame);
       printf("[MobilePlatform/Sensing/CamSensingThread] complete to save jpg file at \"%s\"\n", cFn);
 

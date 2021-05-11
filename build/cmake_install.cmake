@@ -42,6 +42,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/diva2/diva2/build/MobilePlatform/Sensing/cmake_install.cmake")
   include("/home/diva2/diva2/build/MobilePlatform/Visualization/cmake_install.cmake")
   include("/home/diva2/diva2/build/GroundStation/Playback/cmake_install.cmake")
+  include("/home/diva2/diva2/build/test/sensing_proto/cmake_install.cmake")
+  include("/home/diva2/diva2/build/test/socketCan/cmake_install.cmake")
+  include("/home/diva2/diva2/build/test/can_dbcparser/cmake_install.cmake")
 
 endif()
 

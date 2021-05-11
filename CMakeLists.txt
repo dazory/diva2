@@ -139,18 +139,19 @@ add_subdirectory(GroundStation/Playback)
 # add_subdirectory(test/sender_toCloud)
 # add_subdirectory(test/sender_toCloud_protobuf)
 
-# add_subdirectory(test/sensing_proto)
+add_subdirectory(test/sensing_proto)
 # add_subdirectory(test/sensor_connect)
 # add_subdirectory(test/sensor_parsing)
 
 # add_subdirectory(test/zmq_filetransfer)
-# add_subdirectory(test/socketCan)
+add_subdirectory(test/socketCan)
 # add_subdirectory(test/zmq_protobuf/client)
 # add_subdirectory(test/zmq_protobuf/server)
 
 # add_subdirectory(test/openCv)
 # add_subdirectory(test/openCv2)
 #add_subdirectory(test/zmq_imgtransfer)
+add_subdirectory(test/can_dbcparser)
 
 # add_subdirectory(test_GroundStation/AlgorithmTesting)
 # add_subdirectory(test_GroundStation/ReceiverFromMobile)

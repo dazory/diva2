@@ -2,6 +2,7 @@
 #include "GpsVisualization.h"
 #include "CamVisualization.h"
 #include "ImuVisualization.h"
+#include "CanVisualization.h"
 
 #include <thread> 
 #include <string>
@@ -30,8 +31,13 @@ int main(int argc, char *argv[]){
     ImuVisualization mImuVisualization;
     thread imuVisualizationThread(&ImuVisualization::run, &mImuVisualization, &contextSub);
 
+    // CAM
+    CanVisualization mCanVisualization;
+    thread canVisualizationThread(&CanVisualization::run, &mCanVisualization, &contextSub);
+    
     gpsVisualizationThread.join();
     camVisualizationThread.join();
     imuVisualizationThread.join();
+    canVisualizationThread.join();
     
 }

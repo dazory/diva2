@@ -22,6 +22,8 @@ void GpsVisualization::run(void *contextSub)
     // SubSock.setsockopt(ZMQ_SUBSCRIBE, "", 0);
     printf("[MobilePlatform/Visualization/GpsVisualization] Connet with SUB socket\n");
 
+    clock_t time_bef = clock();
+    clock_t time_now = clock();
     while (1)
     {
         int USE_PROTO = 1;
@@ -35,7 +37,9 @@ void GpsVisualization::run(void *contextSub)
         sensors::Gps gps;
         zmq::message_t msgData;
         SubSock.recv(&msgData);
-        printf("[MobilePlatform/Visualization/GpsVisualization] Receive %dbytes\n",msgData.size());
+        time_now = clock();
+        printf("(%dms)[MobilePlatform/Visualization/GpsVisualization] Receive %dbytes\n",(float)(time_now-time_bef)/CLOCKS_PER_SEC*1000,msgData.size());
+        time_bef = time_now;
         int data_len = msgData.size();
         unsigned char cBytes[data_len];
         memcpy(cBytes, msgData.data(), msgData.size());

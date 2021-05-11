@@ -26,6 +26,11 @@
 },
 {
   "directory": "/home/diva2/diva2/build/MobilePlatform/Sensing",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Sensing  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/CanSensingThread.cpp",
+  "file": "/home/diva2/diva2/MobilePlatform/Sensing/CanSensingThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/MobilePlatform/Sensing",
   "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Sensing  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_sensing.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc",
   "file": "/home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc"
 },
@@ -51,6 +56,11 @@
 },
 {
   "directory": "/home/diva2/diva2/build/MobilePlatform/Visualization",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Visualization  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_visualization.dir/CanVisualization.cpp.o -c /home/diva2/diva2/MobilePlatform/Visualization/CanVisualization.cpp",
+  "file": "/home/diva2/diva2/MobilePlatform/Visualization/CanVisualization.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/MobilePlatform/Visualization",
   "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/MobilePlatform/Visualization  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/MP_visualization.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc",
   "file": "/home/diva2/diva2/build/MobilePlatform/Visualization/sensors.pb.cc"
 },
@@ -63,5 +73,60 @@
   "directory": "/home/diva2/diva2/build/GroundStation/Playback",
   "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/GroundStation/Playback  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/GS_playback.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc",
   "file": "/home/diva2/diva2/build/GroundStation/Playback/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/main.cpp.o -c /home/diva2/diva2/test/sensing_proto/main.cpp",
+  "file": "/home/diva2/diva2/test/sensing_proto/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o -c /home/diva2/diva2/test/sensing_proto/GpsSensing.cpp",
+  "file": "/home/diva2/diva2/test/sensing_proto/GpsSensing.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/CamSensing.cpp.o -c /home/diva2/diva2/test/sensing_proto/CamSensing.cpp",
+  "file": "/home/diva2/diva2/test/sensing_proto/CamSensing.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o -c /home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp",
+  "file": "/home/diva2/diva2/test/sensing_proto/CanSensingThread.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/sensing_proto",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto  -g   -std=c++11 -std=c++11 -std=gnu++11 -o CMakeFiles/sensing_proto.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test/sensing_proto/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/socketCan",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/socketCan  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/socketCan.dir/test.cpp.o -c /home/diva2/diva2/test/socketCan/test.cpp",
+  "file": "/home/diva2/diva2/test/socketCan/test.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/socketCan",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/socketCan  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/socketCan.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/test/socketCan/sensors.pb.cc",
+  "file": "/home/diva2/diva2/build/test/socketCan/sensors.pb.cc"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/can_dbcparser",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/candbcparser.dir/dbciterator.cpp.o -c /home/diva2/diva2/test/can_dbcparser/dbciterator.cpp",
+  "file": "/home/diva2/diva2/test/can_dbcparser/dbciterator.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/can_dbcparser",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/candbcparser.dir/main.cpp.o -c /home/diva2/diva2/test/can_dbcparser/main.cpp",
+  "file": "/home/diva2/diva2/test/can_dbcparser/main.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/can_dbcparser",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/candbcparser.dir/message.cpp.o -c /home/diva2/diva2/test/can_dbcparser/message.cpp",
+  "file": "/home/diva2/diva2/test/can_dbcparser/message.cpp"
+},
+{
+  "directory": "/home/diva2/diva2/build/test/can_dbcparser",
+  "command": "/usr/bin/g++-7  -DBOOST_ERROR_CODE_HEADER_ONLY -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/include/opencv  -g   -std=c++11 -std=gnu++11 -o CMakeFiles/candbcparser.dir/signal.cpp.o -c /home/diva2/diva2/test/can_dbcparser/signal.cpp",
+  "file": "/home/diva2/diva2/test/can_dbcparser/signal.cpp"
 }
 ]

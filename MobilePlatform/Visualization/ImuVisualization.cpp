@@ -25,6 +25,8 @@ void ImuVisualization::run(void *contextSub)
     printf("[MobilePlatform/Visualization/ImuVisualization] Connet with SUB socket\n");
 
     int cnt = 0;
+    clock_t clk_bef = clock();
+    clock_t clk_now = clock();
     while (1)
     {
         int USE_PROTO = 1;
@@ -38,7 +40,9 @@ void ImuVisualization::run(void *contextSub)
         sensors::Imu imu;
         zmq::message_t msgData;
         SubSock.recv(&msgData);
-        printf("(%d) [MobilePlatform/Visualization/ImuVisualization] Receive %dbytes\n",cnt, msgData.size()); cnt++;
+        clk_now = clock();
+        printf("(%dms)[MobilePlatform/Visualization/ImuVisualization] Receive %dbytes\n",(float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000, msgData.size()); cnt++;
+        clk_bef = clk_now;
         int data_len = msgData.size();
         unsigned char cBytes[data_len];
         memcpy(cBytes, msgData.data(), msgData.size());

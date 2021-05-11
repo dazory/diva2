@@ -28,11 +28,10 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
         printf("[MobilePlatform/Sensing/GpsSensingThread] connect GPS device\n");
     }
 
-    time_t time_bef = time(NULL); 
-    time_t time_now = time(NULL);
+    clock_t clk_bef = clock(); 
+    time_t clk_now = clock();
     while (1)
     {
-        time_now = time(NULL);
         // [Read 255bytes from GPS]
         int nRet = 0;
         char cBuff[255];
@@ -104,22 +103,23 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
                 printf("%02X ", data[i]);
             printf("\n");
 
-            // <Send Message>
-            if(time_now - time_bef >= 1)
+            // <Send Message
+            clk_now = clock();
+            if((float)(clk_now - clk_bef)/CLOCKS_PER_SEC >= 0.1)
             {
                 zmq::message_t zmqData(data_len);
                 memcpy((void *)zmqData.data(), data, data_len);
                 s_send_idx(*pubSock, SENSOR_GPS);
                 s_send(*pubSock, zmqData);
-                printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
-                
-                time_bef = time_now;
+                printf("(%dms)[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n", ((float)(clk_now-clk_bef)/CLOCKS_PER_SEC)*1000);
+                clk_bef = clk_now;
             }
         } // end "Parsing to Proto"
 
         // [Store the GPS data]
         // <Make json object>
         Json::Value json_dataset;
+        
         string path = "gps.json"; // TO-DO: the rule of file name
         ifstream in(path.c_str());
         if(in.is_open()) in >> json_dataset;
