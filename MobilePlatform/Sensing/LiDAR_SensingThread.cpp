@@ -5,13 +5,15 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
     LiDAR_Sensing mLiDAR_Sensing;
 
     Timestamp ts;
-    string dir;
+    time_t time_bef = time(NULL);
+    time_t time_now = time(NULL);
+
     bool stop_flag = false;
     bool do_config = true;
 
     int lidar_port = 0;
     int imu_port = 0;
-    
+
     int W = 1024;
     int H = OS1::pixels_per_column;
 
@@ -51,20 +53,23 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
             {
                 string ch_ts = ts.getMilliTime();
                 string name = "/home/dahye/LiDAR/PCD/i30_LiDAR_" + ch_ts + ".pcd"; //pcd 포맷은 헤더정보(전체 포인트 수, 데이터 타입, 크기 등의 정보) + 데이터(x,y,z)
-                                                                                   
-                // downsampling                                                             
+                string name2 = "/home/dahye/LiDAR/PCD_filtered/i30_LiDAR_" + ch_ts + ".pcd";
+
+                pcl::io::savePCDFile(name, *mLiDAR_Sensing.cloud, true);
+
+                // downsampling
                 pcl::VoxelGrid<pcl::PointXYZ> sor;
-                sor.setInputCloud(mLiDAR_Sensing.cloud);                          //입력
-                sor.setLeafSize(0.1f, 0.1f, 0.1f);                             //leaf size  1cm
-                sor.filter(*mLiDAR_Sensing.cloud_filtered);                       //출력
-                
+                sor.setInputCloud(mLiDAR_Sensing.cloud);    //입력
+                sor.setLeafSize(0.1f, 0.1f, 0.1f);          //leaf size 조절
+                sor.filter(*mLiDAR_Sensing.cloud_filtered); //출력
+
                 //pcd파일 저장
-                pcl::io::savePCDFile(name, *mLiDAR_Sensing.cloud_filtered, true); 
-                cout << "pcd saved" << endl;
-                cout << "point size: " << mLiDAR_Sensing.cloud_filtered->size() << endl;
+                pcl::io::savePCDFile(name2, *mLiDAR_Sensing.cloud_filtered, true);
+                // cout << "pcd saved" << endl;
+                // cout << "point size: " << mLiDAR_Sensing.cloud_filtered->size() << endl;
                 pLiDAR.set_size(mLiDAR_Sensing.cloud_filtered->size());
-                cout << "point size in protobuf: " << pLiDAR.size() << endl;
-                
+                // cout << "point size in protobuf: " << pLiDAR.size() << endl;
+
                 // [Parsing to Proto]
                 for (const auto &point : *mLiDAR_Sensing.cloud_filtered)
                 {
@@ -85,12 +90,14 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
                 printf("[MobilePlatform/Sensing/LiDARSensingThread] Serialize\n");
 
                 // <Send>
-                //s_send_idx(*socket, SENSOR_LIDAR);
-                zmq::message_t zmqData(data_len);
-                memcpy((void *)zmqData.data(), data, data_len);
-                s_send_idx(*socket, SENSOR_LIDAR);
-                s_send(*socket, zmqData);
-                printf("[MobilePlatform/Sensing/LiDARSensingThread] Complete to send to PUB Socket\n");
+                if (time_now - time_bef >= 0.1)
+                {
+                    zmq::message_t zmqData(data_len);
+                    memcpy((void *)zmqData.data(), data, data_len);
+                    s_send_idx(*socket, SENSOR_LIDAR);
+                    s_send(*socket, zmqData);
+                    printf("[MobilePlatform/Sensing/LiDARSensingThread] Complete to send to PUB Socket\n");
+                }
 
                 ////~~~~~~ json 형식으로 출력 "Key" : Value ~~~~~~
                 string json_string;
@@ -102,15 +109,15 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
                 //cout << json_string << endl;
 
                 // [Store the LiDAR data]
-                // <Make .json File>
-                std::ofstream ost;
-                int cnt = 1;
-                ost.open("LiDAR.json", std::ios_base::out | std::ios_base::app);
-                ost << json_string;
-                ost << "PCD count : " << cnt;
-                cout << "saved" << endl
-                     << endl;
-                cnt++;
+                // // <Make .json File>
+                // std::ofstream ost;
+                // int cnt = 1;
+                // ost.open("LiDAR.json", std::ios_base::out | std::ios_base::app);
+                // ost << json_string;
+                // // ost << "PCD count : " << cnt;
+                // // cout << "saved" << endl
+                // //  << endl;
+                // cnt++;
 
                 if (mLiDAR_Sensing.writeFile.is_open())
                 {
@@ -119,12 +126,10 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
                 mLiDAR_Sensing.cloud.reset(new pcl::PointCloud<pcl::PointXYZ>);
                 mLiDAR_Sensing.cloud_filtered.reset(new pcl::PointCloud<pcl::PointXYZ>);
                 mLiDAR_Sensing.resetCount();
+
+                // [Options]
+                usleep(100);
             }
         }
     }
 }
-
-// void lidarThread::stop(){
-//     stop_flag = true;
-//     writeFile.close();
-// }
