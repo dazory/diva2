@@ -1,8 +1,13 @@
 #pragma once
 #include "GpsVisualization.h"
-#include "../../service/global_name.hpp"
+#include "CamVisualization.h"
+#include "ImuVisualization.h"
+#include "CanVisualization.h"
+
 #include <thread> 
 #include <string>
+
+#include "../../service/global_name.hpp"
 
 using namespace std;
 
@@ -18,6 +23,21 @@ int main(int argc, char *argv[]){
     GpsVisualization mGpsVisualization;
     thread gpsVisualizationThread(&GpsVisualization::run, &mGpsVisualization, &contextSub);
     
+    // CAM
+    CamVisualization mCamVisualization;
+    thread camVisualizationThread(&CamVisualization::run, &mCamVisualization, &contextSub);
+    
+    // IMU
+    ImuVisualization mImuVisualization;
+    thread imuVisualizationThread(&ImuVisualization::run, &mImuVisualization, &contextSub);
+
+    // CAM
+    CanVisualization mCanVisualization;
+    thread canVisualizationThread(&CanVisualization::run, &mCanVisualization, &contextSub);
+    
     gpsVisualizationThread.join();
+    camVisualizationThread.join();
+    imuVisualizationThread.join();
+    canVisualizationThread.join();
     
 }

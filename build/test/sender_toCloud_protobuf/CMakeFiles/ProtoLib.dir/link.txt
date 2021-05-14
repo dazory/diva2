@@ -1,2 +1,0 @@
-/usr/bin/ar qc libProtoLib.a  CMakeFiles/ProtoLib.dir/__/protobuf/sensors.pb.cc.o
-/usr/bin/ranlib libProtoLib.a

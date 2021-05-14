@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <time.h>
+#include "unistd.h"
 
 using namespace std;
 

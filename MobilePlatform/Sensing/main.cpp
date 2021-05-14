@@ -5,9 +5,10 @@
 
 #include "../../service/global_name.hpp"
 #include "GpsSensingThread.h"
-#include "LiDAR_SensingThread.h"
 #include "CamSensingThread.h"
 #include "ImuSensingThread.h"
+#include "CanSensingThread.h"
+#include "LiDAR_SensingThread.h"
 
 using namespace std;
 
@@ -35,9 +36,13 @@ int main(int argc, char *argv[]){
     // CamSensingThread camSensingThread;
     // std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
-    // USE_CAN = 2;
-    // CanSensingThread canSensingThread;
-    // std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // USE_IMU = 2;
+    // ImuSensingThread imuSensingThread;
+    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
+    
+    USE_CAN = 1;
+    CanSensingThread canSensingThread;
+    std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
   
     //  USE_IMU = 1;
     // ImuSensingThread imuSensingThread;

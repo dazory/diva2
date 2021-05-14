@@ -1,4 +1,4 @@
-# Install script for directory: /home/dahye/diva2/MobilePlatform/Visualization
+# Install script for directory: /home/diva2/diva2/MobilePlatform/Visualization
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

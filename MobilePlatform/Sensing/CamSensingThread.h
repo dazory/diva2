@@ -5,6 +5,7 @@
 #include "opencv2/highgui/highgui.hpp"
 #include <opencv2/imgcodecs.hpp>
 
+#include <chrono>
 #include <iostream>
 #include <sstream>
 #include <time.h>
@@ -23,11 +24,12 @@
 #pragma comment(lib, "jsoncpp\\lib\\lib_json.lib")
 #pragma warning(disable : 4996) //error C4996 뜨는 경우
 
+// #include "boost/"
+
 using namespace cv;
 using namespace std;
 
 extern int USE_CAM;
-
 
 class CamSensingThread
 {

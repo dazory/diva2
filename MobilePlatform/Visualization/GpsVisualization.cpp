@@ -19,9 +19,11 @@ void GpsVisualization::run(void *contextSub)
     zmq::socket_t SubSock(*(zmq::context_t *)contextSub, ZMQ_SUB);
     SubSock.connect(protocol::SENSING_SUB);
     SubSock.setsockopt(ZMQ_SUBSCRIBE, "GPS", 3);
+    // SubSock.setsockopt(ZMQ_SUBSCRIBE, "", 0);
     printf("[MobilePlatform/Visualization/GpsVisualization] Connet with SUB socket\n");
 
-    int cnt = 0;
+    clock_t time_bef = clock();
+    clock_t time_now = clock();
     while (1)
     {
         int USE_PROTO = 1;
@@ -35,18 +37,26 @@ void GpsVisualization::run(void *contextSub)
         sensors::Gps gps;
         zmq::message_t msgData;
         SubSock.recv(&msgData);
-        printf("[MobilePlatform/Visualization/GpsVisualization] Receive %dbytes\n",msgData.size());
+        time_now = clock();
+        printf("(%dms)[MobilePlatform/Visualization/GpsVisualization] Receive %dbytes\n",(float)(time_now-time_bef)/CLOCKS_PER_SEC*1000,msgData.size());
+        time_bef = time_now;
+        int data_len = msgData.size();
+        unsigned char cBytes[data_len];
+        memcpy(cBytes, msgData.data(), msgData.size());
+        for (auto i = 0; i < data_len; i++)
+            printf("%02X ", cBytes[i]);
+        printf("\n");
+
+        printf("\n");
         gps.ParseFromArray(msgData.data(), msgData.size());
         
         printf("latitude=%f, longitude=%f\n",gps.latitude(), gps.longitude());
 
-
-       
         // [OPTIONAL: DELETE ALL GLOBAL OBJECTS ALLOCATED BY LIBPROTOBUF]
         google::protobuf::ShutdownProtobufLibrary();
 
         
         // [OPTIONS]
-        cnt++;
+        // sleep(1);
     }
 }

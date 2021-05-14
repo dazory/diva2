@@ -45,6 +45,27 @@ include_directories(${PROTOBUF_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../../protobuf/sensors.proto" )
 
+## Use json
+pkg_check_modules(JSONCPP jsoncpp)
+link_libraries(${JSONCPP_LIBRARIES})
+
+## Use Boost Library
+# find_package( Boost REQUIRED COMPONENTS) # program_options regex )
+# set(Boost_USE_STATIC_LIBS OFF) 
+# set(Boost_USE_MULTITHREADED ON)  
+# set(Boost_USE_STATIC_RUNTIME OFF) 
+# find_package(Boost 1.45.0 COMPONENTS) #*boost libraries here*) 
+# if(Boost_FOUND)
+#     include_directories(${Boost_INCLUDE_DIRS}) 
+#     add_executable(progname file1.cxx file2.cxx) 
+#     target_link_libraries(progname ${Boost_LIBRARIES})
+# endif()
+# Boost
+set(Boost_USE_MULTITHREADED ON)
+find_package(Boost 1.47.0 COMPONENTS system filesystem thread REQUIRED )
+set(INCLUDES ${INCLUDES} ${Boost_INCLUDE_DIRS} )
+set(LIBS ${LIBS} ${Boost_LIBRARIES} )
+
 ## Use PCL
 find_package(Eigen3 REQUIRED)
 find_package(PCL 1.11.1 REQUIRED)
@@ -84,7 +105,15 @@ find_package(VTK REQUIRED COMPONENTS ${VIZ_VTK_COMPONENTS} NO_MODULE)
 include(${VTK_USE_FILE})
 
 # 실행파일 만들기
-set(SOURCE_MP_sensing main.cpp GpsSensingThread.cpp LiDAR_SensingThread.cpp LiDAR_Sensing.cpp ImuSensingThread.cpp CamSensingThread.cpp)
+# 실행파일 만들기
+set(SOURCE_MP_sensing 
+    main.cpp 
+    GpsSensingThread.cpp 
+    CamSensingThread.cpp 
+    ImuSensingThread.cpp
+    CanSensingThread.cpp
+    LiDAR_SensingThread.cpp LiDAR_Sensing.cpp
+)
 add_executable(MP_sensing ${SOURCE_MP_sensing} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer
     ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC}    # MSCL
@@ -92,6 +121,7 @@ add_executable(MP_sensing ${SOURCE_MP_sensing}
     )
 target_include_directories(MP_sensing PUBLIC 
     ${ZeroMQ_INCLUDE_DIR}   # ZeroMQ
+    ${Boost_INCLUDE_DIRS}   # Boost libarary
     ) # add the include directory to our compile directives
 target_link_libraries(MP_sensing PUBLIC 
     ${ZeroMQ_LIBRARY}               # ZeroMQ
@@ -101,6 +131,7 @@ target_link_libraries(MP_sensing PUBLIC
     ${VTK_LIBRARIES}                # VTk  
     ${JSONCPP_LIBRARIES}            # json cpp
     /usr/share/c++-mscl/libmscl.so  # MSCL
+    ${Boost_PROGRAM_OPTIONS_LIBRARY} ${Boost_REGEX_LIBRARY}     # Boost library
     ouster_helper                   # LiDAR - ouster exmaple
     ) # at the 0mq library to our link directive
 

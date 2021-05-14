@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dahye/diva2
+CMAKE_SOURCE_DIR = /home/diva2/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dahye/diva2/build
+CMAKE_BINARY_DIR = /home/diva2/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles /home/dahye/diva2/build/test/sensing_proto/CMakeFiles/progress.marks
-	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles 0
+	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/test/sensing_proto/CMakeFiles/progress.marks
+	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/clean
+	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/preinstall
+	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/preinstall
+	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/sensing_proto/CMakeFiles/sensing_proto.dir/rule:
-	cd /home/dahye/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/CMakeFiles/sensing_proto.dir/rule
+	cd /home/diva2/diva2/build && $(MAKE) -f CMakeFiles/Makefile2 test/sensing_proto/CMakeFiles/sensing_proto.dir/rule
 .PHONY : test/sensing_proto/CMakeFiles/sensing_proto.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ sensing_proto: test/sensing_proto/CMakeFiles/sensing_proto.dir/rule
 
 # fast build rule for target.
 sensing_proto/fast:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/build
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/build
 .PHONY : sensing_proto/fast
 
 CamSensing.o: CamSensing.cpp.o
@@ -131,7 +131,7 @@ CamSensing.o: CamSensing.cpp.o
 
 # target to build an object file
 CamSensing.cpp.o:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.o
 .PHONY : CamSensing.cpp.o
 
 CamSensing.i: CamSensing.cpp.i
@@ -140,7 +140,7 @@ CamSensing.i: CamSensing.cpp.i
 
 # target to preprocess a source file
 CamSensing.cpp.i:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.i
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.i
 .PHONY : CamSensing.cpp.i
 
 CamSensing.s: CamSensing.cpp.s
@@ -149,7 +149,7 @@ CamSensing.s: CamSensing.cpp.s
 
 # target to generate assembly for a file
 CamSensing.cpp.s:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.s
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CamSensing.cpp.s
 .PHONY : CamSensing.cpp.s
 
 CanSensingThread.o: CanSensingThread.cpp.o
@@ -158,7 +158,7 @@ CanSensingThread.o: CanSensingThread.cpp.o
 
 # target to build an object file
 CanSensingThread.cpp.o:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.o
 .PHONY : CanSensingThread.cpp.o
 
 CanSensingThread.i: CanSensingThread.cpp.i
@@ -167,7 +167,7 @@ CanSensingThread.i: CanSensingThread.cpp.i
 
 # target to preprocess a source file
 CanSensingThread.cpp.i:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.i
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.i
 .PHONY : CanSensingThread.cpp.i
 
 CanSensingThread.s: CanSensingThread.cpp.s
@@ -176,7 +176,7 @@ CanSensingThread.s: CanSensingThread.cpp.s
 
 # target to generate assembly for a file
 CanSensingThread.cpp.s:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.s
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/CanSensingThread.cpp.s
 .PHONY : CanSensingThread.cpp.s
 
 GpsSensing.o: GpsSensing.cpp.o
@@ -185,7 +185,7 @@ GpsSensing.o: GpsSensing.cpp.o
 
 # target to build an object file
 GpsSensing.cpp.o:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.o
 .PHONY : GpsSensing.cpp.o
 
 GpsSensing.i: GpsSensing.cpp.i
@@ -194,7 +194,7 @@ GpsSensing.i: GpsSensing.cpp.i
 
 # target to preprocess a source file
 GpsSensing.cpp.i:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.i
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.i
 .PHONY : GpsSensing.cpp.i
 
 GpsSensing.s: GpsSensing.cpp.s
@@ -203,7 +203,7 @@ GpsSensing.s: GpsSensing.cpp.s
 
 # target to generate assembly for a file
 GpsSensing.cpp.s:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.s
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/GpsSensing.cpp.s
 .PHONY : GpsSensing.cpp.s
 
 main.o: main.cpp.o
@@ -212,7 +212,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -221,7 +221,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.i
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -230,7 +230,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.s
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 sensors.pb.o: sensors.pb.cc.o
@@ -239,7 +239,7 @@ sensors.pb.o: sensors.pb.cc.o
 
 # target to build an object file
 sensors.pb.cc.o:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.o
 .PHONY : sensors.pb.cc.o
 
 sensors.pb.i: sensors.pb.cc.i
@@ -248,7 +248,7 @@ sensors.pb.i: sensors.pb.cc.i
 
 # target to preprocess a source file
 sensors.pb.cc.i:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.i
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.i
 .PHONY : sensors.pb.cc.i
 
 sensors.pb.s: sensors.pb.cc.s
@@ -257,7 +257,7 @@ sensors.pb.s: sensors.pb.cc.s
 
 # target to generate assembly for a file
 sensors.pb.cc.s:
-	cd /home/dahye/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.s
+	cd /home/diva2/diva2/build && $(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/sensors.pb.cc.s
 .PHONY : sensors.pb.cc.s
 
 # Help Target
@@ -295,6 +295,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dahye/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/diva2/diva2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

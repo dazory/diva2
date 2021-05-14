@@ -37,7 +37,7 @@ void CanSensingThread::run(zmq::socket_t *socket){
 		
 		if(USE_CAN==1){
 			// printf("======= REAL Can DATA ========\n");
-			// s_send_idx(*socket, SENSOR_Can);
+			// s_send_idx(*socket, SENSOR_CAN);
 
 			// // Read 255bytes from Can
 			// int nRet = 0; char cBuff[255];

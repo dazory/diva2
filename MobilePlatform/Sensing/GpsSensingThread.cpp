@@ -28,11 +28,10 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
         printf("[MobilePlatform/Sensing/GpsSensingThread] connect GPS device\n");
     }
 
-    time_t time_bef = time(NULL); 
-    time_t time_now = time(NULL);
+    clock_t clk_bef = clock(); 
+    time_t clk_now = clock();
     while (1)
     {
-        time_now = time(NULL);
         // [Read 255bytes from GPS]
         int nRet = 0;
         char cBuff[255];
@@ -100,20 +99,24 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
             unsigned char data[data_len] = "\0";
             gps.SerializeToArray(data, data_len);
             printf("[MobilePlatform/Sensing/GpsSensingThread] Serialize\n");
-            // for (auto i = 0; i < data_len; i++)
-            //     printf("%02X ", data[i]);
-            // printf("\n");
-            std::cout<<gps.latitude()<<" "<<gps.longitude()<<" "<<gps.horizontaldilutionofprecision()<<std::endl;
-            // <Send Message>
-            if(time_now - time_bef >= 0.1)
-            {
+            for (auto i = 0; i < data_len; i++)
+                printf("%02X ", data[i]);
+            printf("\n");
+
+            // <Send Message
+            clk_now = clock();
+            if((float)(clk_now - clk_bef)/CLOCKS_PER_SEC >= 0.1){
+                // for (auto i = 0; i < data_len; i++)
+                //     printf("%02X ", data[i]);
+                // printf("\n");
+                
+                // <Send Message>
                 zmq::message_t zmqData(data_len);
                 memcpy((void *)zmqData.data(), data, data_len);
                 s_send_idx(*pubSock, SENSOR_GPS);
                 s_send(*pubSock, zmqData);
-                printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
-                
-                time_bef = time_now;
+                printf("(%dms)[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n", ((float)(clk_now-clk_bef)/CLOCKS_PER_SEC)*1000);
+                clk_bef = clk_now;
             }
         } // end "Parsing to Proto"
 

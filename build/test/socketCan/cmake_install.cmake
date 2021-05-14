@@ -1,4 +1,4 @@
-# Install script for directory: /home/dahye/diva2/test/socketCan
+# Install script for directory: /home/diva2/diva2/test/socketCan
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

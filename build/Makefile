@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dahye/diva2
+CMAKE_SOURCE_DIR = /home/diva2/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dahye/diva2/build
+CMAKE_BINARY_DIR = /home/diva2/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles /home/dahye/diva2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dahye/diva2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -163,95 +163,17 @@ MP_visualization/fast:
 .PHONY : MP_visualization/fast
 
 #=============================================================================
-# Target rules for targets named zmq_test
+# Target rules for targets named GS_playback
 
 # Build rule for target.
-zmq_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 zmq_test
-.PHONY : zmq_test
+GS_playback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GS_playback
+.PHONY : GS_playback
 
 # fast build rule for target.
-zmq_test/fast:
-	$(MAKE) -f test/zmq/CMakeFiles/zmq_test.dir/build.make test/zmq/CMakeFiles/zmq_test.dir/build
-.PHONY : zmq_test/fast
-
-#=============================================================================
-# Target rules for targets named cppTest
-
-# Build rule for target.
-cppTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cppTest
-.PHONY : cppTest
-
-# fast build rule for target.
-cppTest/fast:
-	$(MAKE) -f test/protobuf/CMakeFiles/cppTest.dir/build.make test/protobuf/CMakeFiles/cppTest.dir/build
-.PHONY : cppTest/fast
-
-#=============================================================================
-# Target rules for targets named receiverFrommobile
-
-# Build rule for target.
-receiverFrommobile: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 receiverFrommobile
-.PHONY : receiverFrommobile
-
-# fast build rule for target.
-receiverFrommobile/fast:
-	$(MAKE) -f test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build.make test/receiver_fromMobile/CMakeFiles/receiverFrommobile.dir/build
-.PHONY : receiverFrommobile/fast
-
-#=============================================================================
-# Target rules for targets named receiverFromMobile
-
-# Build rule for target.
-receiverFromMobile: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 receiverFromMobile
-.PHONY : receiverFromMobile
-
-# fast build rule for target.
-receiverFromMobile/fast:
-	$(MAKE) -f test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build.make test/receiver_fromMobile_proto/CMakeFiles/receiverFromMobile.dir/build
-.PHONY : receiverFromMobile/fast
-
-#=============================================================================
-# Target rules for targets named senderTocloud
-
-# Build rule for target.
-senderTocloud: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 senderTocloud
-.PHONY : senderTocloud
-
-# fast build rule for target.
-senderTocloud/fast:
-	$(MAKE) -f test/sender_toCloud/CMakeFiles/senderTocloud.dir/build.make test/sender_toCloud/CMakeFiles/senderTocloud.dir/build
-.PHONY : senderTocloud/fast
-
-#=============================================================================
-# Target rules for targets named ProtoLib
-
-# Build rule for target.
-ProtoLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ProtoLib
-.PHONY : ProtoLib
-
-# fast build rule for target.
-ProtoLib/fast:
-	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/ProtoLib.dir/build
-.PHONY : ProtoLib/fast
-
-#=============================================================================
-# Target rules for targets named senderToCloud
-
-# Build rule for target.
-senderToCloud: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 senderToCloud
-.PHONY : senderToCloud
-
-# fast build rule for target.
-senderToCloud/fast:
-	$(MAKE) -f test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build.make test/sender_toCloud_protobuf/CMakeFiles/senderToCloud.dir/build
-.PHONY : senderToCloud/fast
+GS_playback/fast:
+	$(MAKE) -f GroundStation/Playback/CMakeFiles/GS_playback.dir/build.make GroundStation/Playback/CMakeFiles/GS_playback.dir/build
+.PHONY : GS_playback/fast
 
 #=============================================================================
 # Target rules for targets named sensing_proto
@@ -267,58 +189,6 @@ sensing_proto/fast:
 .PHONY : sensing_proto/fast
 
 #=============================================================================
-# Target rules for targets named sensing
-
-# Build rule for target.
-sensing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensing
-.PHONY : sensing
-
-# fast build rule for target.
-sensing/fast:
-	$(MAKE) -f test/sensor_connect/CMakeFiles/sensing.dir/build.make test/sensor_connect/CMakeFiles/sensing.dir/build
-.PHONY : sensing/fast
-
-#=============================================================================
-# Target rules for targets named parsing
-
-# Build rule for target.
-parsing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 parsing
-.PHONY : parsing
-
-# fast build rule for target.
-parsing/fast:
-	$(MAKE) -f test/sensor_parsing/CMakeFiles/parsing.dir/build.make test/sensor_parsing/CMakeFiles/parsing.dir/build
-.PHONY : parsing/fast
-
-#=============================================================================
-# Target rules for targets named pub
-
-# Build rule for target.
-pub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pub
-.PHONY : pub
-
-# fast build rule for target.
-pub/fast:
-	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/pub.dir/build.make test/zmq_filetransfer/CMakeFiles/pub.dir/build
-.PHONY : pub/fast
-
-#=============================================================================
-# Target rules for targets named sub
-
-# Build rule for target.
-sub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sub
-.PHONY : sub
-
-# fast build rule for target.
-sub/fast:
-	$(MAKE) -f test/zmq_filetransfer/CMakeFiles/sub.dir/build.make test/zmq_filetransfer/CMakeFiles/sub.dir/build
-.PHONY : sub/fast
-
-#=============================================================================
 # Target rules for targets named socketCan
 
 # Build rule for target.
@@ -332,56 +202,17 @@ socketCan/fast:
 .PHONY : socketCan/fast
 
 #=============================================================================
-# Target rules for targets named client
+# Target rules for targets named candbcparser
 
 # Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 client
-.PHONY : client
+candbcparser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 candbcparser
+.PHONY : candbcparser
 
 # fast build rule for target.
-client/fast:
-	$(MAKE) -f test/zmq_protobuf/client/CMakeFiles/client.dir/build.make test/zmq_protobuf/client/CMakeFiles/client.dir/build
-.PHONY : client/fast
-
-#=============================================================================
-# Target rules for targets named server
-
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) -f test/zmq_protobuf/server/CMakeFiles/server.dir/build.make test/zmq_protobuf/server/CMakeFiles/server.dir/build
-.PHONY : server/fast
-
-#=============================================================================
-# Target rules for targets named algorithmTesting
-
-# Build rule for target.
-algorithmTesting: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 algorithmTesting
-.PHONY : algorithmTesting
-
-# fast build rule for target.
-algorithmTesting/fast:
-	$(MAKE) -f test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/build.make test_GroundStation/AlgorithmTesting/CMakeFiles/algorithmTesting.dir/build
-.PHONY : algorithmTesting/fast
-
-#=============================================================================
-# Target rules for targets named gs_receiverFromMobile
-
-# Build rule for target.
-gs_receiverFromMobile: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gs_receiverFromMobile
-.PHONY : gs_receiverFromMobile
-
-# fast build rule for target.
-gs_receiverFromMobile/fast:
-	$(MAKE) -f test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/build.make test_GroundStation/ReceiverFromMobile/CMakeFiles/gs_receiverFromMobile.dir/build
-.PHONY : gs_receiverFromMobile/fast
+candbcparser/fast:
+	$(MAKE) -f test/can_dbcparser/CMakeFiles/candbcparser.dir/build.make test/can_dbcparser/CMakeFiles/candbcparser.dir/build
+.PHONY : candbcparser/fast
 
 main.o: main.cpp.o
 
@@ -422,23 +253,10 @@ help:
 	@echo "... ouster_helper"
 	@echo "... MP_sensing"
 	@echo "... MP_visualization"
-	@echo "... zmq_test"
-	@echo "... cppTest"
-	@echo "... receiverFrommobile"
-	@echo "... receiverFromMobile"
-	@echo "... senderTocloud"
-	@echo "... ProtoLib"
-	@echo "... senderToCloud"
+	@echo "... GS_playback"
 	@echo "... sensing_proto"
-	@echo "... sensing"
-	@echo "... parsing"
-	@echo "... pub"
-	@echo "... sub"
 	@echo "... socketCan"
-	@echo "... client"
-	@echo "... server"
-	@echo "... algorithmTesting"
-	@echo "... gs_receiverFromMobile"
+	@echo "... candbcparser"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

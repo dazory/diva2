@@ -6,7 +6,7 @@
 
 syntax = "proto3";
 package sensors;
-import "google/protobuf/timestamp.proto";
+// import "google/protobuf/timestamp.proto";
 
 message Gps{
     double latitude = 1;
@@ -47,14 +47,8 @@ message Lidar{
 }
 
 message Can{
-    google.protobuf.Timestamp timestamp=1;
-
-    uint32 can_id = 2 ;  /* 32 bit CAN_ID + EFF/RTR/ERR flags */
-	uint32    can_dlc = 3; /* frame payload length in byte (0 .. CAN_MAX_DLEN) */
-	bytes    __pad = 4 ;   /* padding */
-	bytes    __res0 = 5 ;  /* reserved / padding */
-	bytes    __res1 = 6 ;  /* reserved / padding */
-	bytes    data = 7;
+    float type = 1;
+    float data = 2;
 
 }
 

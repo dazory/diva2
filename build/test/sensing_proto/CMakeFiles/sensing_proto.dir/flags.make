@@ -6,5 +6,5 @@ CXX_FLAGS =   -I/usr/include/x86_64-linux-gnu -std=c++11 -std=c++11 -std=gnu++11
 
 CXX_DEFINES = -DBOOST_ERROR_CODE_HEADER_ONLY
 
-CXX_INCLUDES = -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/dahye/diva2/build/test/sensing_proto 
+CXX_INCLUDES = -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -isystem /usr/include/opencv -I/usr/local/include -I/home/diva2/diva2/build/test/sensing_proto 
 

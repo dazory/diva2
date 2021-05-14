@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
     socket.bind("tcp://*:5563"); //protocol::SENSING_PUB);
     printf("bind complete!\n");
 
-    // USE_GPS = 2;
+    // USE_GPS = 1;
     // GpsSensingThread gpsSensingThread;
     // std::thread sensingthread_gps(gpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
     
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
     CanSensingThread canSensingThread;
     std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
   
-    sensingthread_can.join();
+    sensingthread_can.join(); // sudo chmod 777 /dev/ttyACM0
     // sensingthread_gps.join();
     // sensingthread_cam.join();
 }
