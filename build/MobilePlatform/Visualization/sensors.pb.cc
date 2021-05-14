@@ -59,9 +59,24 @@ struct CamDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CamDefaultTypeInternal _Cam_default_instance_;
+constexpr Lidar_xyz::Lidar_xyz(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : x_(0)
+  , y_(0)
+  , z_(0){}
+struct Lidar_xyzDefaultTypeInternal {
+  constexpr Lidar_xyzDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~Lidar_xyzDefaultTypeInternal() {}
+  union {
+    Lidar_xyz _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT Lidar_xyzDefaultTypeInternal _Lidar_xyz_default_instance_;
 constexpr Lidar::Lidar(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : timestamp_(nullptr){}
+  : data_()
+  , size_(0){}
 struct LidarDefaultTypeInternal {
   constexpr LidarDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -102,7 +117,7 @@ struct LogDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LogDefaultTypeInternal _Log_default_instance_;
 }  // namespace sensors
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_sensors_2eproto[6];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_sensors_2eproto[7];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_sensors_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_sensors_2eproto = nullptr;
 
@@ -132,11 +147,20 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::sensors::Cam, rows_),
   PROTOBUF_FIELD_OFFSET(::sensors::Cam, image_data_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::sensors::Lidar_xyz, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::sensors::Lidar_xyz, x_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Lidar_xyz, y_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Lidar_xyz, z_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Lidar, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::sensors::Lidar, timestamp_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Lidar, size_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Lidar, data_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Can, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -160,43 +184,43 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 0, -1, sizeof(::sensors::Gps)},
   { 8, -1, sizeof(::sensors::Imu)},
   { 16, -1, sizeof(::sensors::Cam)},
-  { 24, -1, sizeof(::sensors::Lidar)},
-  { 30, -1, sizeof(::sensors::Can)},
-  { 37, -1, sizeof(::sensors::Log)},
+  { 24, -1, sizeof(::sensors::Lidar_xyz)},
+  { 32, -1, sizeof(::sensors::Lidar)},
+  { 39, -1, sizeof(::sensors::Can)},
+  { 46, -1, sizeof(::sensors::Log)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::sensors::_Gps_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::sensors::_Imu_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::sensors::_Cam_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::sensors::_Lidar_xyz_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::sensors::_Lidar_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::sensors::_Can_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::sensors::_Log_default_instance_),
 };
 
 const char descriptor_table_protodef_sensors_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rsensors.proto\022\007sensors\032\037google/protobu"
-  "f/timestamp.proto\"Q\n\003Gps\022\020\n\010latitude\030\001 \001"
-  "(\001\022\021\n\tlongitude\030\002 \001(\001\022%\n\035horizontalDilut"
-  "ionOfPrecision\030\003 \001(\001\"G\n\003Imu\022\024\n\014scaledAcc"
-  "elX\030\001 \001(\002\022\024\n\014scaledAccelY\030\002 \001(\002\022\024\n\014scale"
-  "dAccelZ\030\003 \001(\002\"5\n\003Cam\022\014\n\004cols\030\001 \001(\005\022\014\n\004ro"
-  "ws\030\002 \001(\005\022\022\n\nimage_data\030\003 \001(\014\"6\n\005Lidar\022-\n"
-  "\ttimestamp\030\001 \001(\0132\032.google.protobuf.Times"
-  "tamp\"!\n\003Can\022\014\n\004type\030\001 \001(\002\022\014\n\004data\030\002 \001(\002\""
-  "c\n\003Log\022\016\n\006can_id\030\002 \001(\r\022\017\n\007can_dlc\030\003 \001(\r\022"
-  "\r\n\005__pad\030\004 \001(\014\022\016\n\006__res0\030\005 \001(\014\022\016\n\006__res1"
-  "\030\006 \001(\014\022\014\n\004data\030\007 \001(\014*U\n\014ChannelOrder\022\r\n\t"
-  "GRAYSCALE\020\000\022\007\n\003BGR\020\001\022\007\n\003RGB\020\002\022\010\n\004BGRA\020\003\022"
-  "\010\n\004RGBA\020\004\022\020\n\014OPTICAL_FLOW\020\005b\006proto3"
+  "\n\rsensors.proto\022\007sensors\"Q\n\003Gps\022\020\n\010latit"
+  "ude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022%\n\035horizont"
+  "alDilutionOfPrecision\030\003 \001(\001\"G\n\003Imu\022\024\n\014sc"
+  "aledAccelX\030\001 \001(\002\022\024\n\014scaledAccelY\030\002 \001(\002\022\024"
+  "\n\014scaledAccelZ\030\003 \001(\002\"5\n\003Cam\022\014\n\004cols\030\001 \001("
+  "\005\022\014\n\004rows\030\002 \001(\005\022\022\n\nimage_data\030\003 \001(\014\"_\n\005L"
+  "idar\022\014\n\004size\030\001 \001(\002\022 \n\004data\030\002 \003(\0132\022.senso"
+  "rs.Lidar.xyz\032&\n\003xyz\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001("
+  "\002\022\t\n\001z\030\003 \001(\002\"!\n\003Can\022\014\n\004type\030\001 \001(\002\022\014\n\004dat"
+  "a\030\002 \001(\002\"c\n\003Log\022\016\n\006can_id\030\002 \001(\r\022\017\n\007can_dl"
+  "c\030\003 \001(\r\022\r\n\005__pad\030\004 \001(\014\022\016\n\006__res0\030\005 \001(\014\022\016"
+  "\n\006__res1\030\006 \001(\014\022\014\n\004data\030\007 \001(\014*U\n\014ChannelO"
+  "rder\022\r\n\tGRAYSCALE\020\000\022\007\n\003BGR\020\001\022\007\n\003RGB\020\002\022\010\n"
+  "\004BGRA\020\003\022\010\n\004RGBA\020\004\022\020\n\014OPTICAL_FLOW\020\005b\006pro"
+  "to3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_sensors_2eproto_deps[1] = {
-  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_sensors_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_sensors_2eproto = {
-  false, false, 555, descriptor_table_protodef_sensors_2eproto, "sensors.proto", 
-  &descriptor_table_sensors_2eproto_once, descriptor_table_sensors_2eproto_deps, 1, 6,
+  false, false, 563, descriptor_table_protodef_sensors_2eproto, "sensors.proto", 
+  &descriptor_table_sensors_2eproto_once, nullptr, 0, 7,
   schemas, file_default_instances, TableStruct_sensors_2eproto::offsets,
   file_level_metadata_sensors_2eproto, file_level_enum_descriptors_sensors_2eproto, file_level_service_descriptors_sensors_2eproto,
 };
@@ -970,40 +994,269 @@ void Cam::InternalSwap(Cam* other) {
 
 // ===================================================================
 
-class Lidar::_Internal {
+class Lidar_xyz::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const Lidar* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::Timestamp&
-Lidar::_Internal::timestamp(const Lidar* msg) {
-  return *msg->timestamp_;
-}
-void Lidar::clear_timestamp() {
-  if (GetArena() == nullptr && timestamp_ != nullptr) {
-    delete timestamp_;
-  }
-  timestamp_ = nullptr;
-}
-Lidar::Lidar(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+Lidar_xyz::Lidar_xyz(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:sensors.Lidar.xyz)
+}
+Lidar_xyz::Lidar_xyz(const Lidar_xyz& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&x_, &from.x_,
+    static_cast<size_t>(reinterpret_cast<char*>(&z_) -
+    reinterpret_cast<char*>(&x_)) + sizeof(z_));
+  // @@protoc_insertion_point(copy_constructor:sensors.Lidar.xyz)
+}
+
+void Lidar_xyz::SharedCtor() {
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&x_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&z_) -
+    reinterpret_cast<char*>(&x_)) + sizeof(z_));
+}
+
+Lidar_xyz::~Lidar_xyz() {
+  // @@protoc_insertion_point(destructor:sensors.Lidar.xyz)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void Lidar_xyz::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void Lidar_xyz::ArenaDtor(void* object) {
+  Lidar_xyz* _this = reinterpret_cast< Lidar_xyz* >(object);
+  (void)_this;
+}
+void Lidar_xyz::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void Lidar_xyz::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void Lidar_xyz::Clear() {
+// @@protoc_insertion_point(message_clear_start:sensors.Lidar.xyz)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&x_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&z_) -
+      reinterpret_cast<char*>(&x_)) + sizeof(z_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* Lidar_xyz::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // float x = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
+          x_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float y = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21)) {
+          y_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // float z = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 29)) {
+          z_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Lidar_xyz::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:sensors.Lidar.xyz)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // float x = 1;
+  if (!(this->x() <= 0 && this->x() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_x(), target);
+  }
+
+  // float y = 2;
+  if (!(this->y() <= 0 && this->y() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_y(), target);
+  }
+
+  // float z = 3;
+  if (!(this->z() <= 0 && this->z() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_z(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:sensors.Lidar.xyz)
+  return target;
+}
+
+size_t Lidar_xyz::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:sensors.Lidar.xyz)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // float x = 1;
+  if (!(this->x() <= 0 && this->x() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float y = 2;
+  if (!(this->y() <= 0 && this->y() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float z = 3;
+  if (!(this->z() <= 0 && this->z() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Lidar_xyz::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:sensors.Lidar.xyz)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Lidar_xyz* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Lidar_xyz>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sensors.Lidar.xyz)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:sensors.Lidar.xyz)
+    MergeFrom(*source);
+  }
+}
+
+void Lidar_xyz::MergeFrom(const Lidar_xyz& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:sensors.Lidar.xyz)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!(from.x() <= 0 && from.x() >= 0)) {
+    _internal_set_x(from._internal_x());
+  }
+  if (!(from.y() <= 0 && from.y() >= 0)) {
+    _internal_set_y(from._internal_y());
+  }
+  if (!(from.z() <= 0 && from.z() >= 0)) {
+    _internal_set_z(from._internal_z());
+  }
+}
+
+void Lidar_xyz::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:sensors.Lidar.xyz)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Lidar_xyz::CopyFrom(const Lidar_xyz& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:sensors.Lidar.xyz)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Lidar_xyz::IsInitialized() const {
+  return true;
+}
+
+void Lidar_xyz::InternalSwap(Lidar_xyz* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Lidar_xyz, z_)
+      + sizeof(Lidar_xyz::z_)
+      - PROTOBUF_FIELD_OFFSET(Lidar_xyz, x_)>(
+          reinterpret_cast<char*>(&x_),
+          reinterpret_cast<char*>(&other->x_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Lidar_xyz::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_sensors_2eproto_getter, &descriptor_table_sensors_2eproto_once,
+      file_level_metadata_sensors_2eproto[3]);
+}
+
+// ===================================================================
+
+class Lidar::_Internal {
+ public:
+};
+
+Lidar::Lidar(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  data_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:sensors.Lidar)
 }
 Lidar::Lidar(const Lidar& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      data_(from.data_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_timestamp()) {
-    timestamp_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.timestamp_);
-  } else {
-    timestamp_ = nullptr;
-  }
+  size_ = from.size_;
   // @@protoc_insertion_point(copy_constructor:sensors.Lidar)
 }
 
 void Lidar::SharedCtor() {
-timestamp_ = nullptr;
+size_ = 0;
 }
 
 Lidar::~Lidar() {
@@ -1014,7 +1267,6 @@ Lidar::~Lidar() {
 
 void Lidar::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete timestamp_;
 }
 
 void Lidar::ArenaDtor(void* object) {
@@ -1033,10 +1285,8 @@ void Lidar::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && timestamp_ != nullptr) {
-    delete timestamp_;
-  }
-  timestamp_ = nullptr;
+  data_.Clear();
+  size_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1046,11 +1296,23 @@ const char* Lidar::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .google.protobuf.Timestamp timestamp = 1;
+      // float size = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
-          CHK_(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
+          size_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // repeated .sensors.Lidar.xyz data = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_data(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1082,12 +1344,18 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
+  // float size = 1;
+  if (!(this->size() <= 0 && this->size() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_size(), target);
+  }
+
+  // repeated .sensors.Lidar.xyz data = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_data_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::timestamp(this), target, stream);
+      InternalWriteMessage(2, this->_internal_data(i), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1106,11 +1374,16 @@ size_t Lidar::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *timestamp_);
+  // repeated .sensors.Lidar.xyz data = 2;
+  total_size += 1UL * this->_internal_data_size();
+  for (const auto& msg : this->data_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // float size = 1;
+  if (!(this->size() <= 0 && this->size() >= 0)) {
+    total_size += 1 + 4;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1144,8 +1417,9 @@ void Lidar::MergeFrom(const Lidar& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_timestamp()) {
-    _internal_mutable_timestamp()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_timestamp());
+  data_.MergeFrom(from.data_);
+  if (!(from.size() <= 0 && from.size() >= 0)) {
+    _internal_set_size(from._internal_size());
   }
 }
 
@@ -1170,13 +1444,14 @@ bool Lidar::IsInitialized() const {
 void Lidar::InternalSwap(Lidar* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(timestamp_, other->timestamp_);
+  data_.InternalSwap(&other->data_);
+  swap(size_, other->size_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Lidar::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_sensors_2eproto_getter, &descriptor_table_sensors_2eproto_once,
-      file_level_metadata_sensors_2eproto[3]);
+      file_level_metadata_sensors_2eproto[4]);
 }
 
 // ===================================================================
@@ -1397,7 +1672,7 @@ void Can::InternalSwap(Can* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Can::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_sensors_2eproto_getter, &descriptor_table_sensors_2eproto_once,
-      file_level_metadata_sensors_2eproto[4]);
+      file_level_metadata_sensors_2eproto[5]);
 }
 
 // ===================================================================
@@ -1754,7 +2029,7 @@ void Log::InternalSwap(Log* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Log::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_sensors_2eproto_getter, &descriptor_table_sensors_2eproto_once,
-      file_level_metadata_sensors_2eproto[5]);
+      file_level_metadata_sensors_2eproto[6]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -1768,6 +2043,9 @@ template<> PROTOBUF_NOINLINE ::sensors::Imu* Arena::CreateMaybeMessage< ::sensor
 }
 template<> PROTOBUF_NOINLINE ::sensors::Cam* Arena::CreateMaybeMessage< ::sensors::Cam >(Arena* arena) {
   return Arena::CreateMessageInternal< ::sensors::Cam >(arena);
+}
+template<> PROTOBUF_NOINLINE ::sensors::Lidar_xyz* Arena::CreateMaybeMessage< ::sensors::Lidar_xyz >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::sensors::Lidar_xyz >(arena);
 }
 template<> PROTOBUF_NOINLINE ::sensors::Lidar* Arena::CreateMaybeMessage< ::sensors::Lidar >(Arena* arena) {
   return Arena::CreateMessageInternal< ::sensors::Lidar >(arena);

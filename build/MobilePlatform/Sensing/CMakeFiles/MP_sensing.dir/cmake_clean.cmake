@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o"
   "CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o"
   "CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o"
+  "CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o"
+  "CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o"
   "CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
   "MP_sensing.pdb"
   "MP_sensing"

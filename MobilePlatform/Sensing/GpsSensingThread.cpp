@@ -21,7 +21,7 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
     if (USE_GPS == 1) // real
     {
         // [connect GPS device]
-        iDev = initialize("/dev/ttyACM0");
+        iDev = initialize("/dev/ttyACM1");
         speed = B1200;
         cs.init_serial(iDev, speed);
         lk.init_keyboard();
@@ -105,8 +105,12 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
 
             // <Send Message
             clk_now = clock();
-            if((float)(clk_now - clk_bef)/CLOCKS_PER_SEC >= 0.1)
-            {
+            if((float)(clk_now - clk_bef)/CLOCKS_PER_SEC >= 0.1){
+                // for (auto i = 0; i < data_len; i++)
+                //     printf("%02X ", data[i]);
+                // printf("\n");
+                
+                // <Send Message>
                 zmq::message_t zmqData(data_len);
                 memcpy((void *)zmqData.data(), data, data_len);
                 s_send_idx(*pubSock, SENSOR_GPS);
@@ -118,39 +122,38 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
 
         // [Store the GPS data]
         // <Make json object>
-        Json::Value json_dataset;
-        
-        string path = "gps.json"; // TO-DO: the rule of file name
-        ifstream in(path.c_str());
-        if(in.is_open()) in >> json_dataset;
-        printf("[MobilePlatform/Sensing/GpsSensingThread] Make Json Object (path:%s)\n",path.c_str()); 
+        // Json::Value json_dataset;
+        // string path = "gps.json"; // TO-DO: the rule of file name
+        // ifstream in(path.c_str());
+        // if(in.is_open()) in >> json_dataset;
+        // printf("[MobilePlatform/Sensing/GpsSensingThread] Make Json Object (path:%s)\n",path.c_str()); 
 
-        Json::Value json_data; 
-        // json_data["gpgga"] = string(cBuff); // TO-DO: gpgga?
-        json_data["latitude"] = strBuff[2]; 
-        json_data["isNorth"] = strBuff[3]; 
-        json_data["longitude"] = strBuff[4]; 
-        json_data["isEast"] = strBuff[5]; 
-        json_data["gpsQuality"] = strBuff[6]; 
-        json_data["NumberOfSatellitesInUse"] = strBuff[7]; 
-        json_data["HorizontalDilutionOfPrecision"] = strBuff[8];
-        json_data["AntennaAltitudeMeters"] = strBuff[9];
-        json_data["GeoidalSeparationMeters"] = strBuff[11];
-        json_data["AgeOfDifferentialGPSDataSeconds"] = strBuff[13];
-        json_data["DifferentialReferenceStationID"] = strBuff[14];
-        json_data["checksum"] = strBuff[15];
-        json_dataset.append(json_data);
-        printf("[MobilePlatform/Sensing/GpsSensingThread] Append a json data\n");
+        // Json::Value json_data; 
+        // // json_data["gpgga"] = string(cBuff); // TO-DO: gpgga?
+        // json_data["latitude"] = strBuff[2]; 
+        // json_data["isNorth"] = strBuff[3]; 
+        // json_data["longitude"] = strBuff[4]; 
+        // json_data["isEast"] = strBuff[5]; 
+        // json_data["gpsQuality"] = strBuff[6]; 
+        // json_data["NumberOfSatellitesInUse"] = strBuff[7]; 
+        // json_data["HorizontalDilutionOfPrecision"] = strBuff[8];
+        // json_data["AntennaAltitudeMeters"] = strBuff[9];
+        // json_data["GeoidalSeparationMeters"] = strBuff[11];
+        // json_data["AgeOfDifferentialGPSDataSeconds"] = strBuff[13];
+        // json_data["DifferentialReferenceStationID"] = strBuff[14];
+        // json_data["checksum"] = strBuff[15];
+        // json_dataset.append(json_data);
+        // printf("[MobilePlatform/Sensing/GpsSensingThread] Append a json data\n");
 
-        Json::StyledWriter jsonWriter;
-        ofstream out(path.c_str());
-        out<<jsonWriter.write(json_dataset);
-        out.close();
-        printf("[MobilePlatform/Sensing/GpsSensingThread] complete to make json file at \"%s\"\n",path.c_str());
+        // Json::StyledWriter jsonWriter;
+        // ofstream out(path.c_str());
+        // out<<jsonWriter.write(json_dataset);
+        // out.close();
+        // printf("[MobilePlatform/Sensing/GpsSensingThread] complete to make json file at \"%s\"\n",path.c_str());
         
-        // [OPTION]
-        usleep(100);
-        // sleep(1);
+        // // [OPTION]
+        // usleep(100);
+        // // sleep(1);
         
     } // end: while(1)
 

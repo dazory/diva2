@@ -5,7 +5,8 @@
 
 #include <string>
 #include <iostream>
-#include <czmq.h>
+//#include <czmq.h>
+#include <zmq.hpp>
 #include <fstream>
 #include <random>
 

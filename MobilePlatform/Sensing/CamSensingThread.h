@@ -38,4 +38,3 @@ public:
     CamSensingThread();
     static void run(zmq::socket_t *publisher); //const int devicename, zmq::context_t *context,
 };
-

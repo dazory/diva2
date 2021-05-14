@@ -8,7 +8,8 @@
                 "/usr/share/c++-mscl/source",
                 "/usr/share/c++-mscl/Boost/include",
                 "/usr/include",
-                "/home/diva2/develop/ouster_example-master/ouster_client"
+                "/home/diva2/develop/ouster_example-master/ouster_client",
+                "/usr/local/include/pcl-1.11"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

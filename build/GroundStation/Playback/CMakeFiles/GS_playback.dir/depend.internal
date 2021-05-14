@@ -50,7 +50,6 @@ GroundStation/Playback/CMakeFiles/GS_playback.dir/sensors.pb.cc.o
  /usr/local/include/google/protobuf/stubs/stl_util.h
  /usr/local/include/google/protobuf/stubs/stringpiece.h
  /usr/local/include/google/protobuf/stubs/strutil.h
- /usr/local/include/google/protobuf/timestamp.pb.h
  /usr/local/include/google/protobuf/unknown_field_set.h
  /usr/local/include/google/protobuf/wire_format.h
  /usr/local/include/google/protobuf/wire_format_lite.h

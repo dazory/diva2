@@ -68,15 +68,15 @@ MobilePlatform/Sensing/sensors.pb.h: MobilePlatform/Sensing/sensors.pb.cc
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o: ../MobilePlatform/Sensing/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/main.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/main.cpp
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/main.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/main.cpp
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/main.cpp.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/main.cpp > CMakeFiles/MP_sensing.dir/main.cpp.i
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/main.cpp > CMakeFiles/MP_sensing.dir/main.cpp.i
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/main.cpp.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/main.cpp -o CMakeFiles/MP_sensing.dir/main.cpp.s
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/main.cpp -o CMakeFiles/MP_sensing.dir/main.cpp.s
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o.requires:
 
@@ -92,15 +92,15 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o.provides.build: Mobi
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o: ../MobilePlatform/Sensing/GpsSensingThread.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp > CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp > CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp -o CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp -o CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.requires:
 
@@ -116,15 +116,15 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.provides
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o: ../MobilePlatform/Sensing/CamSensingThread.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.cpp
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.cpp
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.cpp > CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.cpp > CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.cpp -o CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/CamSensingThread.cpp -o CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires:
 
@@ -140,15 +140,15 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o: ../MobilePlatform/Sensing/ImuSensingThread.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp > CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp > CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp -o CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp -o CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.requires:
 
@@ -164,15 +164,15 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.provides
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o: ../MobilePlatform/Sensing/CanSensingThread.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/CanSensingThread.cpp
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/CanSensingThread.cpp
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/CanSensingThread.cpp > CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.i
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/CanSensingThread.cpp > CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.i
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/CanSensingThread.cpp -o CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.s
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/CanSensingThread.cpp -o CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.s
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o.requires:
 
@@ -185,18 +185,66 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o.provides
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o
 
 
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o: ../MobilePlatform/Sensing/LiDAR_SensingThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o"
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/LiDAR_SensingThread.cpp
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.i"
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/LiDAR_SensingThread.cpp > CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.i
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.s"
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/LiDAR_SensingThread.cpp -o CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.s
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.requires:
+
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.requires
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.requires
+	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.provides.build
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.provides
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o
+
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o: ../MobilePlatform/Sensing/LiDAR_Sensing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o"
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o -c /home/diva2/diva2/MobilePlatform/Sensing/LiDAR_Sensing.cpp
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.i"
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/MobilePlatform/Sensing/LiDAR_Sensing.cpp > CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.i
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.s"
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/MobilePlatform/Sensing/LiDAR_Sensing.cpp -o CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.s
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.requires:
+
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.requires
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.requires
+	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.provides.build
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.provides
+
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o
+
+
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o: MobilePlatform/Sensing/sensors.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/sensors.pb.cc.o -c /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/sensors.pb.cc.i"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc > CMakeFiles/MP_sensing.dir/sensors.pb.cc.i
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc > CMakeFiles/MP_sensing.dir/sensors.pb.cc.i
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/sensors.pb.cc.s"
-	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc -o CMakeFiles/MP_sensing.dir/sensors.pb.cc.s
+	cd /home/diva2/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diva2/diva2/build/MobilePlatform/Sensing/sensors.pb.cc -o CMakeFiles/MP_sensing.dir/sensors.pb.cc.s
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o.requires:
 
@@ -216,6 +264,8 @@ MP_sensing_OBJECTS = \
 "CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o" \
 "CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o" \
 "CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o" \
+"CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o" \
+"CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o" \
 "CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
 
 # External object files for target MP_sensing
@@ -226,6 +276,8 @@ MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o
+MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o
+MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make
 MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libzmq.so
@@ -256,6 +308,44 @@ MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libprotobuf.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_surface.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_keypoints.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_tracking.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_recognition.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_stereo.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_outofcore.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_people.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libboost_system.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libboost_filesystem.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libboost_date_time.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libboost_iostreams.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libboost_serialization.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libboost_regex.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libqhull.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkChartsCore-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkInfovisCore-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libfreetype.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libz.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libjpeg.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libpng.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libtiff.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkIOLegacy-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkViewsContext2D-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkViewsCore-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingQt-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkGUISupportQt-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libflann_cpp.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libz.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libjpeg.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libpng.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libtiff.so
+MobilePlatform/Sensing/MP_sensing: /usr/share/c++-mscl/libmscl.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libboost_regex.so
+MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/libouster_helper.a
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libqhull.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libjpeg.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libpng.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libtiff.so
 MobilePlatform/Sensing/MP_sensing: /usr/share/c++-mscl/libmscl.so
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_video.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.3.2.0
@@ -263,6 +353,10 @@ MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_phase_unw
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.3.2.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkIOPLY-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkIOGeometry-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingLOD-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingContextOpenGL-6.3.so.6.3.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.3.2.0
@@ -272,8 +366,72 @@ MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_videoio.s
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
 MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_registration.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_segmentation.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_features.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_filters.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_sample_consensus.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_ml.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_visualization.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_search.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_kdtree.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_io.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_octree.so
+MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libpcl_common.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingContext2D-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkInteractionWidgets-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersModeling-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersHybrid-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkImagingGeneral-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkImagingSources-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingAnnotation-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkImagingColor-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingVolume-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersTexture-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkInteractionStyle-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingOpenGL-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkImagingHybrid-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkIOImage-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkDICOMParser-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkIOCore-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkmetaio-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libz.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libGLU.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libSM.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libICE.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libX11.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libXext.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libXt.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingLabel-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingFreeType-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkRenderingCore-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonColor-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersExtraction-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersStatistics-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkImagingFourier-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkImagingCore-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkalglib-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersGeometry-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersSources-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersGeneral-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkFiltersCore-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonExecutionModel-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonComputationalGeometry-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonDataModel-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonMisc-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonTransforms-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonMath-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonSystem-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkCommonCore-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtksys-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libvtkftgl-6.3.so.6.3.0
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libfreetype.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libGL.so
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
+MobilePlatform/Sensing/MP_sensing: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable MP_sensing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diva2/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable MP_sensing"
 	cd /home/diva2/diva2/build/MobilePlatform/Sensing && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MP_sensing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -286,6 +444,8 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensin
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o.requires
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o.requires
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_SensingThread.cpp.o.requires
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/LiDAR_Sensing.cpp.o.requires
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o.requires
 
 .PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires

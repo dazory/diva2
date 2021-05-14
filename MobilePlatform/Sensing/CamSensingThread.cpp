@@ -3,7 +3,6 @@
 
 sensors::ChannelOrder imTypeToProto(const int& cv_type);
 
-
 CamSensingThread::CamSensingThread()
 {
 }
@@ -67,7 +66,6 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
           s_send_idx(*pubSock, SENSOR_CAM);
           s_send(*pubSock, zmqData);
           printf("(%dms)[MobilePlatform/Sensing/CamSensingThread] complete to send (size=%d)\n",(float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000,zmqData.size());
-                
           clk_bef = clk_now;
         }
         

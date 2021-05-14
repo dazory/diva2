@@ -32,13 +32,15 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
         mscl::InertialNode msclNode = mscl::InertialNode(connection);
         printf("[MobilePlatform/Sensing/ImuSensingThread] connect to IMU device\n");
 
-        while(1){
+        while(1)
+        {
             sensors::Imu imu;
 
             // <Get MipDataPackets>
             mscl::MipDataPackets msclPackets = msclNode.getDataPackets(500);
                 
-            for(mscl::MipDataPacket packet : msclPackets){ //
+            for(mscl::MipDataPacket packet : msclPackets)
+            {
                 packet.descriptorSet();
                 mscl::MipDataPoints points = packet.data();
                     
@@ -54,6 +56,7 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
                 printf("[MobilePlatform/Sensing/ImuSensingThread] Make Json Object (path:%s)\n",path.c_str()); 
 
                 Json::Value json_data; 
+                int count =0;
                 for(mscl::MipDataPoint dataPoint : points)
                 {    
                     // [Parsing to Proto]
@@ -62,11 +65,11 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
 
                     switch(ImuMap[cName]){
                     case IMU_ACCELX:
-                        {imu.set_scaledaccelx(dataPoint.as_float()); break;}
+                        {count++; imu.set_scaledaccelx(dataPoint.as_float()); break;}
                     case IMU_ACCELY:
-                        {imu.set_scaledaccely(dataPoint.as_float()); break;}
+                        {count++; imu.set_scaledaccely(dataPoint.as_float()); break;}
                     case IMU_ACCELZ:
-                        {imu.set_scaledaccelz(dataPoint.as_float()); break;}
+                        {count++; imu.set_scaledaccelz(dataPoint.as_float()); break;}
                     default:
                         {}
                     }
@@ -87,6 +90,7 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
                 clk_now = clock();
                 if((float)(clk_now - clk_bef)/CLOCKS_PER_SEC >= 0.1)
                 {
+                    if(count==3){
                     zmq::message_t zmqData(data_len);
                     memcpy((void *)zmqData.data(), data, data_len);
                     s_send_idx(*pubSock, SENSOR_IMU);
@@ -94,6 +98,7 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
                     printf("(%dms)[MobilePlatform/Sensing/ImuSensingThread] Complete to send to PUB Socket\n", (float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000);
                     
                     clk_bef = clk_now;
+                    }
                 }
         
 
@@ -112,10 +117,11 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
             } // End : read all packet lines
         
             // [Options]
-            usleep (100);
+            //usleep (100);
+            
         } // End : while(1)
     } // End : if(USE_IMU==1)
-    else if(USE_IMU==2){
+    if(USE_IMU==2){
         while(1){
             sensors::Imu imu;
 
