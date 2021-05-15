@@ -9,6 +9,10 @@ CamSensingThread::CamSensingThread()
 
 void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq::context_t *context,
 {
+  // <make txt file>
+  fstream dataFile;
+  dataFile.open("cam.txt", ios::out);
+
   // [Connect CAM device]
   int open;
   VideoCapture cap;
@@ -117,12 +121,17 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
       cv::imwrite(cFn, frame);
       printf("[MobilePlatform/Sensing/CamSensingThread] complete to save jpg file at \"%s\"\n", cFn);
 
+      // <save txt file>
+      dataFile<<cFn<<std::endl;
+
       // [Options]
       usleep(100);
       // sleep(1);
 
     } // end : if(USE_CAM)
   }// end : while(open)
+  // <close txt file>
+  dataFile.close();
 }// end : CamSensingThread::run
 
 

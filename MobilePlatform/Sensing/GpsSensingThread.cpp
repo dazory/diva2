@@ -30,6 +30,10 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
 
     clock_t clk_bef = clock(); 
     time_t clk_now = clock();
+    // <make csv file>
+    fstream dataFile;
+    dataFile.open("gps.csv", ios::out);
+
     while (1)
     {
         // [Read 255bytes from GPS]
@@ -118,6 +122,9 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
                 printf("(%dms)[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n", ((float)(clk_now-clk_bef)/CLOCKS_PER_SEC)*1000);
                 clk_bef = clk_now;
             }
+            // <save csv file>
+            dataFile<<strBuff[2]<<","<<strBuff[3]<<","<<strBuff[4]<<","<<strBuff[5]<<","<<strBuff[6]<<","<<strBuff[7]<<","<<strBuff[8]<<","<<strBuff[9]<<","<<strBuff[11]<<std::endl;
+
         } // end "Parsing to Proto"
 
         // [Store the GPS data]
@@ -156,6 +163,9 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
         // // sleep(1);
         
     } // end: while(1)
+    // <close csv file>
+    dataFile.close();
+
 
     if (USE_GPS)
     {
