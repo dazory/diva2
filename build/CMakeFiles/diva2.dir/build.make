@@ -90,7 +90,6 @@ diva2_EXTERNAL_OBJECTS =
 
 diva2: CMakeFiles/diva2.dir/main.cpp.o
 diva2: CMakeFiles/diva2.dir/build.make
-diva2: /usr/local/lib/libzmq.so
 diva2: CMakeFiles/diva2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kayeon/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable diva2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/diva2.dir/link.txt --verbose=$(VERBOSE)

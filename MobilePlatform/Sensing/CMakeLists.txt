@@ -20,17 +20,17 @@ find_package( Threads )
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS}) 
 
-# ## use mscl
-# find_library(MSCL_LIB_PATH NAMES libmscl.so PATHS "/usr/share/c++-mscl" DOC "MSCL Library" NO_DEFAULT_PATH)
-# find_library(BOOST_LIB_PATH NAMES libboost_chrono.so PATHS "/usr/share/c++-mscl/Boost/lib" NO_DEFAULT_PATH)
-# set(MSCL_INC_PATH "/usr/share/c++-mscl/source")
-# set(BOOST_INC_PATH "/usr/share/c++-mscl/Boost/include")
-# set(MSCL_LIB "/usr/share/c++-mscl")
-# add_definitions(-std=c++11)
-# include_directories(/usr/share/c++-mscl/source /usr/share/c++-mscl/Boost/include /usr/include)
-# link_directories(/usr/share/c++-mscl)
-# link_libraries(mscl pthread GL GLU glut GLEW glfw X11 Xxf86vm Xrandr pthread Xi dl Xinerama Xcursor m)
-# add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
+## use mscl
+find_library(MSCL_LIB_PATH NAMES libmscl.so PATHS "/usr/share/c++-mscl" DOC "MSCL Library" NO_DEFAULT_PATH)
+find_library(BOOST_LIB_PATH NAMES libboost_chrono.so PATHS "/usr/share/c++-mscl/Boost/lib" NO_DEFAULT_PATH)
+set(MSCL_INC_PATH "/usr/share/c++-mscl/source")
+set(BOOST_INC_PATH "/usr/share/c++-mscl/Boost/include")
+set(MSCL_LIB "/usr/share/c++-mscl")
+add_definitions(-std=c++11)
+include_directories(/usr/share/c++-mscl/source /usr/share/c++-mscl/Boost/include /usr/include)
+link_directories(/usr/share/c++-mscl)
+link_libraries(mscl pthread GL GLU glut GLEW glfw X11 Xxf86vm Xrandr pthread Xi dl Xinerama Xcursor m)
+add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 
 ## Use Protobuf
@@ -110,8 +110,8 @@ set(SOURCE_MP_sensing
     main.cpp 
     # GpsSensingThread.cpp 
     # CamSensingThread.cpp 
-    # ImuSensingThread.cpp
-    CanSensingThread.cpp
+    ImuSensingThread.cpp
+    # CanSensingThread.cpp
     # LiDAR_SensingThread.cpp LiDAR_Sensing.cpp
 )
 add_executable(MP_sensing ${SOURCE_MP_sensing} 
@@ -130,7 +130,7 @@ target_link_libraries(MP_sensing PUBLIC
     # ${PCL_LIBRARIES}                # PCL
     # ${VTK_LIBRARIES}                # VTk  
     ${JSONCPP_LIBRARIES}            # json cpp
-    # /usr/share/c++-mscl/libmscl.so  # MSCL
+    /usr/share/c++-mscl/libmscl.so  # MSCL
     # ${Boost_PROGRAM_OPTIONS_LIBRARY} ${Boost_REGEX_LIBRARY}     # Boost library
     # ouster_helper                   # LiDAR - ouster exmaple
     ) # at the 0mq library to our link directive

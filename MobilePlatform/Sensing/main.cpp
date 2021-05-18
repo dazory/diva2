@@ -6,8 +6,8 @@
 #include "../../service/global_name.hpp"
 // #include "GpsSensingThread.h"
 // #include "CamSensingThread.h"
-// #include "ImuSensingThread.h"
-#include "CanSensingThread.h"
+#include "ImuSensingThread.h"
+// #include "CanSensingThread.h"
 // #include "LiDAR_SensingThread.h"
 
 using namespace std;
@@ -40,22 +40,22 @@ int main(int argc, char *argv[]){
     // ImuSensingThread imuSensingThread;
     // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
     
-    USE_CAN = 1;
-    CanSensingThread canSensingThread;
-    std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // USE_CAN = 1;
+    // CanSensingThread canSensingThread;
+    // std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
   
-    //  USE_IMU = 1;
-    // ImuSensingThread imuSensingThread;
-    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
+     USE_IMU = 1;
+    ImuSensingThread imuSensingThread;
+    std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
 
     // USE_LiDAR = 1;
     // LiDAR_SensingThread mLiDARSensingThread;
     // thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket);
 
-    sensingthread_can.join();
+    // sensingthread_can.join();
 //    sensingthread_gps.join();
     // sensingthread_LiDAR.join();
     // sensingthread_cam.join();
-    // sensingthread_imu.join();
+    sensingthread_imu.join();
 
 }

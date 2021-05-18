@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/diva2.dir/main.cpp.o  -o diva2 -Wl,-rpath,/usr/local/lib /usr/local/lib/libzmq.so 
+/usr/bin/c++     CMakeFiles/diva2.dir/main.cpp.o  -o diva2 

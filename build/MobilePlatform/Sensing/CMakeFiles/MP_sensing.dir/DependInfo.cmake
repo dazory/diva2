@@ -4,16 +4,23 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kayeon/diva2/MobilePlatform/Sensing/CanSensingThread.cpp" "/home/kayeon/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o"
+  "/home/kayeon/diva2/MobilePlatform/Sensing/ImuSensingThread.cpp" "/home/kayeon/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o"
   "/home/kayeon/diva2/MobilePlatform/Sensing/main.cpp" "/home/kayeon/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o"
   "/home/kayeon/diva2/build/MobilePlatform/Sensing/sensors.pb.cc" "/home/kayeon/diva2/build/MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "BOOST_ERROR_CODE_HEADER_ONLY"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include"
   "/usr/local/include/opencv"
+  "/usr/share/c++-mscl/source"
+  "/usr/share/c++-mscl/Boost/include"
   "MobilePlatform/Sensing"
   )
 
