@@ -22,6 +22,7 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
 
     clock_t clk_bef = clock(); 
     clock_t clk_now = clock();
+
     if(USE_IMU==1)
     {
         // [Connect the IMU device]

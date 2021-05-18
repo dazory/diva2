@@ -23,6 +23,10 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
 
     const char *ifname = "can0"; // CAN DEVICE NAME
 
+    // <make csv file>
+    fstream dataFile;
+    dataFile.open("can.csv", ios::out);
+
     if((s = socket(PF_CAN, SOCK_RAW, CAN_RAW)) == -1) {
 		perror("Error while opening socket");
 		exit(-1);
@@ -44,6 +48,11 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
     
     clock_t clk_bef = clock(); 
     time_t clk_now = clock();
+    float handleAngle =0.0;
+    float turnLight = 0.0;
+    float vehicleSpeed = 0.0;
+    float gear = 0.0;
+
     while (1)
     {
         // [Read 255bytes from GPS]
@@ -56,7 +65,7 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
 
         int fid = frame.can_id;
 		switch (fid)
-        {/*
+        {
         case HANDLE_ANGLE: // HANDLE_ANGLE
         {
             // (DBC) 주어진 것
@@ -71,10 +80,12 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
 				// printf("%02X ", data[i]);
 			}
 			int dec = fromBytesToDec(data, bit_start, bit_length);
-			printf("Handle Angle=%fDeg\n",offset + scale * (float)dec);
+            handleAngle = offset + scale * (float)dec;
+			printf("Handle Angle=%fDeg\n",handleAngle);
             
-            sendCAN(HANDLE_ANGLE, (float)(offset + scale*(float)dec), pubSock);
-            
+            sendCAN(HANDLE_ANGLE,handleAngle, pubSock);
+            dataFile<<clock()<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
+        
             break;
         }
         case TURN_LIGHT: // TURN LIGHT
@@ -107,12 +118,15 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
             if(l_bin[0]==1) dec = 1;
             if(r_bin[0]==1) dec = 2;
             if(l_bin[0]==1&&r_bin[0]==1) dec = 3;
-            sendCAN(HANDLE_ANGLE, (float)dec, pubSock);
+            turnLight = dec;
+            sendCAN(HANDLE_ANGLE, turnLight, pubSock);
+            dataFile<<clock()<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
 
 			usleep(1000);
 
+
             break;
-        }*/
+        }
         case VEHICLE_SPEED: // VEHICLE SPEED
         {
             // (DBC) 주어진 것
@@ -127,13 +141,14 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
 			}
 			int dec = fromBytesToDec(data, bit_start, bit_length);
 			printf("Vehicle Speed=%frpm\n",offset + scale * (float)dec);
-
-            sendCAN(HANDLE_ANGLE, (float)(offset+scale*(float)dec), pubSock);
-
+            
+            vehicleSpeed = (float)(offset+scale*(float)dec);
+            sendCAN(HANDLE_ANGLE, vehicleSpeed, pubSock);
+            dataFile<<clock()<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
 			usleep(1000);
             
             break;
-        }/*
+        }
         case GEAR: // GEAR
         {
             // (DBC) 주어진 것
@@ -156,12 +171,14 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
             if(bin[1]) dec = 2;
             if(bin[2]) dec = 3;
             if(bin[3]) dec = 4;
-            sendCAN(HANDLE_ANGLE, (float)dec, pubSock);
+            gear = dec;
+            sendCAN(HANDLE_ANGLE, gear, pubSock);
+            dataFile<<clock()<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
 
 			usleep(1000);
 
             break;
-        }*/
+        }
         default:
         {
                 break;
@@ -192,8 +209,11 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
         // [OPTION]
         usleep(100);
         // sleep(1);
+        // <save csv file>
         
     } // end: while(1)
+    // <close csv file>
+    dataFile.close();
 
 }
 

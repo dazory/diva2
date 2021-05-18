@@ -1,2 +1,0 @@
-/usr/bin/ar qc libouster_helper.a  CMakeFiles/ouster_helper.dir/__/__/service/ouster/client.cpp.o CMakeFiles/ouster_helper.dir/__/__/service/ouster/os1_util.cpp.o CMakeFiles/ouster_helper.dir/__/__/service/ouster/impl/netcompat.cpp.o CMakeFiles/ouster_helper.dir/__/__/service/ouster/types.cpp.o
-/usr/bin/ranlib libouster_helper.a
