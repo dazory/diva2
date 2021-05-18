@@ -91,17 +91,17 @@ mark_as_advanced(
     ${CMAKE_FIND_PACKAGE_NAME}_LIBRARIES ${CMAKE_FIND_PACKAGE_NAME}_INCLUDE_DIRS
 )
 
-## use mscl
-find_library(MSCL_LIB_PATH NAMES libmscl.so PATHS "/usr/share/c++-mscl" DOC "MSCL Library" NO_DEFAULT_PATH)
-find_library(BOOST_LIB_PATH NAMES libboost_chrono.so PATHS "/usr/share/c++-mscl/Boost/lib" NO_DEFAULT_PATH)
-set(MSCL_INC_PATH "/usr/share/c++-mscl/source")
-set(BOOST_INC_PATH "/usr/share/c++-mscl/Boost/include")
-set(MSCL_LIB "/usr/share/c++-mscl")
-add_definitions(-std=c++11)
-include_directories(/usr/share/c++-mscl/source /usr/share/c++-mscl/Boost/include /usr/include)
-link_directories(/usr/share/c++-mscl)
-link_libraries(mscl pthread GL GLU glut GLEW glfw X11 Xxf86vm Xrandr pthread Xi dl Xinerama Xcursor m)
-add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
+# ## use mscl
+# find_library(MSCL_LIB_PATH NAMES libmscl.so PATHS "/usr/share/c++-mscl" DOC "MSCL Library" NO_DEFAULT_PATH)
+# find_library(BOOST_LIB_PATH NAMES libboost_chrono.so PATHS "/usr/share/c++-mscl/Boost/lib" NO_DEFAULT_PATH)
+# set(MSCL_INC_PATH "/usr/share/c++-mscl/source")
+# set(BOOST_INC_PATH "/usr/share/c++-mscl/Boost/include")
+# set(MSCL_LIB "/usr/share/c++-mscl")
+# add_definitions(-std=c++11)
+# include_directories(/usr/share/c++-mscl/source /usr/share/c++-mscl/Boost/include /usr/include)
+# link_directories(/usr/share/c++-mscl)
+# link_libraries(mscl pthread GL GLU glut GLEW glfw X11 Xxf86vm Xrandr pthread Xi dl Xinerama Xcursor m)
+# add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 ## Use OpenCV
 find_package(OpenCV REQUIRED)
@@ -122,14 +122,14 @@ target_include_directories(diva2 PUBLIC
     )  # add the include directory to our compile directives
 target_link_libraries(diva2 PUBLIC 
     ${ZeroMQ_LIBRARY} 
-    /usr/share/c++-mscl/libmscl.so
+    # /usr/share/c++-mscl/libmscl.so
     )
 
 # 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
 add_subdirectory(MobilePlatform/Sensing)
-add_subdirectory(MobilePlatform/Visualization)
+# add_subdirectory(MobilePlatform/Visualization)
 
-add_subdirectory(GroundStation/Playback)
+# add_subdirectory(GroundStation/Playback)
 
 # add_subdirectory(test/zmq)
 # add_subdirectory(test/ouster)
@@ -139,19 +139,19 @@ add_subdirectory(GroundStation/Playback)
 # add_subdirectory(test/sender_toCloud)
 # add_subdirectory(test/sender_toCloud_protobuf)
 
-add_subdirectory(test/sensing_proto)
+# add_subdirectory(test/sensing_proto)
 # add_subdirectory(test/sensor_connect)
 # add_subdirectory(test/sensor_parsing)
 
 # add_subdirectory(test/zmq_filetransfer)
-add_subdirectory(test/socketCan)
+# add_subdirectory(test/socketCan)
 # add_subdirectory(test/zmq_protobuf/client)
 # add_subdirectory(test/zmq_protobuf/server)
 
 # add_subdirectory(test/openCv)
 # add_subdirectory(test/openCv2)
 #add_subdirectory(test/zmq_imgtransfer)
-add_subdirectory(test/can_dbcparser)
+# add_subdirectory(test/can_dbcparser)
 
 # add_subdirectory(test_GroundStation/AlgorithmTesting)
 # add_subdirectory(test_GroundStation/ReceiverFromMobile)

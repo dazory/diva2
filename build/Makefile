@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diva2/diva2
+CMAKE_SOURCE_DIR = /home/kayeon/diva2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diva2/diva2/build
+CMAKE_BINARY_DIR = /home/kayeon/diva2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles /home/diva2/diva2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayeon/diva2/build/CMakeFiles /home/kayeon/diva2/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diva2/diva2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kayeon/diva2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,19 +124,6 @@ diva2/fast:
 .PHONY : diva2/fast
 
 #=============================================================================
-# Target rules for targets named ouster_helper
-
-# Build rule for target.
-ouster_helper: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ouster_helper
-.PHONY : ouster_helper
-
-# fast build rule for target.
-ouster_helper/fast:
-	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build.make MobilePlatform/Sensing/CMakeFiles/ouster_helper.dir/build
-.PHONY : ouster_helper/fast
-
-#=============================================================================
 # Target rules for targets named MP_sensing
 
 # Build rule for target.
@@ -148,71 +135,6 @@ MP_sensing: cmake_check_build_system
 MP_sensing/fast:
 	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
 .PHONY : MP_sensing/fast
-
-#=============================================================================
-# Target rules for targets named MP_visualization
-
-# Build rule for target.
-MP_visualization: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MP_visualization
-.PHONY : MP_visualization
-
-# fast build rule for target.
-MP_visualization/fast:
-	$(MAKE) -f MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build.make MobilePlatform/Visualization/CMakeFiles/MP_visualization.dir/build
-.PHONY : MP_visualization/fast
-
-#=============================================================================
-# Target rules for targets named GS_playback
-
-# Build rule for target.
-GS_playback: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GS_playback
-.PHONY : GS_playback
-
-# fast build rule for target.
-GS_playback/fast:
-	$(MAKE) -f GroundStation/Playback/CMakeFiles/GS_playback.dir/build.make GroundStation/Playback/CMakeFiles/GS_playback.dir/build
-.PHONY : GS_playback/fast
-
-#=============================================================================
-# Target rules for targets named sensing_proto
-
-# Build rule for target.
-sensing_proto: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensing_proto
-.PHONY : sensing_proto
-
-# fast build rule for target.
-sensing_proto/fast:
-	$(MAKE) -f test/sensing_proto/CMakeFiles/sensing_proto.dir/build.make test/sensing_proto/CMakeFiles/sensing_proto.dir/build
-.PHONY : sensing_proto/fast
-
-#=============================================================================
-# Target rules for targets named socketCan
-
-# Build rule for target.
-socketCan: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 socketCan
-.PHONY : socketCan
-
-# fast build rule for target.
-socketCan/fast:
-	$(MAKE) -f test/socketCan/CMakeFiles/socketCan.dir/build.make test/socketCan/CMakeFiles/socketCan.dir/build
-.PHONY : socketCan/fast
-
-#=============================================================================
-# Target rules for targets named candbcparser
-
-# Build rule for target.
-candbcparser: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 candbcparser
-.PHONY : candbcparser
-
-# fast build rule for target.
-candbcparser/fast:
-	$(MAKE) -f test/can_dbcparser/CMakeFiles/candbcparser.dir/build.make test/can_dbcparser/CMakeFiles/candbcparser.dir/build
-.PHONY : candbcparser/fast
 
 main.o: main.cpp.o
 
@@ -250,13 +172,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... diva2"
 	@echo "... edit_cache"
-	@echo "... ouster_helper"
 	@echo "... MP_sensing"
-	@echo "... MP_visualization"
-	@echo "... GS_playback"
-	@echo "... sensing_proto"
-	@echo "... socketCan"
-	@echo "... candbcparser"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
