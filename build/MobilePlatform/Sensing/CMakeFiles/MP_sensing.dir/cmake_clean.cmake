@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "sensors.pb.cc"
   "sensors.pb.h"
   "CMakeFiles/MP_sensing.dir/main.cpp.o"
-  "CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o"
+  "CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o"
   "CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
   "MP_sensing.pdb"
   "MP_sensing"

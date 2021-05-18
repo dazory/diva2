@@ -125,32 +125,32 @@ MP_sensing/fast:
 	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
 .PHONY : MP_sensing/fast
 
-CanSensingThread.o: CanSensingThread.cpp.o
+ImuSensingThread.o: ImuSensingThread.cpp.o
 
-.PHONY : CanSensingThread.o
+.PHONY : ImuSensingThread.o
 
 # target to build an object file
-CanSensingThread.cpp.o:
-	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.o
-.PHONY : CanSensingThread.cpp.o
+ImuSensingThread.cpp.o:
+	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.o
+.PHONY : ImuSensingThread.cpp.o
 
-CanSensingThread.i: CanSensingThread.cpp.i
+ImuSensingThread.i: ImuSensingThread.cpp.i
 
-.PHONY : CanSensingThread.i
+.PHONY : ImuSensingThread.i
 
 # target to preprocess a source file
-CanSensingThread.cpp.i:
-	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.i
-.PHONY : CanSensingThread.cpp.i
+ImuSensingThread.cpp.i:
+	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.i
+.PHONY : ImuSensingThread.cpp.i
 
-CanSensingThread.s: CanSensingThread.cpp.s
+ImuSensingThread.s: ImuSensingThread.cpp.s
 
-.PHONY : CanSensingThread.s
+.PHONY : ImuSensingThread.s
 
 # target to generate assembly for a file
-CanSensingThread.cpp.s:
-	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CanSensingThread.cpp.s
-.PHONY : CanSensingThread.cpp.s
+ImuSensingThread.cpp.s:
+	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/ImuSensingThread.cpp.s
+.PHONY : ImuSensingThread.cpp.s
 
 main.o: main.cpp.o
 
@@ -215,9 +215,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MP_sensing"
 	@echo "... edit_cache"
-	@echo "... CanSensingThread.o"
-	@echo "... CanSensingThread.i"
-	@echo "... CanSensingThread.s"
+	@echo "... ImuSensingThread.o"
+	@echo "... ImuSensingThread.i"
+	@echo "... ImuSensingThread.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
