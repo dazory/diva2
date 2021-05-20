@@ -5,7 +5,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    QPixmap bg("/home/kayeon/Desktop/color.jpeg");
+    QPixmap bg("/home/kayeon/diva2/GroundStation/Algorithmtest/color.jpeg");
 
            QPalette p(palette());
            p.setBrush(QPalette::Background, bg);
