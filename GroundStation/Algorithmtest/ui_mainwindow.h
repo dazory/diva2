@@ -14,8 +14,10 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -28,14 +30,13 @@ public:
     QWidget *centralwidget;
     QComboBox *comboBox;
     QComboBox *comboBox_2;
-    QComboBox *comboBox_3;
-    QGraphicsView *graphicsView;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
     QGraphicsView *graphicsView_2;
-    QLabel *label_4;
     QLabel *label_5;
+    QListView *listView;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -44,7 +45,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1512, 689);
+        MainWindow->resize(1512, 735);
         MainWindow->setStyleSheet(QString::fromUtf8("QLabel{ \n"
 "border-radius: 2px;\n"
 "padding: 2px;\n"
@@ -61,6 +62,14 @@ public:
 "    border-width: 1px;\n"
 "    border-style: solid;\n"
 "    padding: 1px 0px 1px 3px; /*This makes text colour work*/\n"
+"}\n"
+"\n"
+"QPushButton{ \n"
+"border-radius: 2px;\n"
+"padding: 2px;\n"
+"background-color: rgba(0, 0, 128, 1.0);\n"
+"font: bold italic 15px;\n"
+"color:white;\n"
 "}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -77,15 +86,6 @@ public:
         comboBox_2->addItem(QString());
         comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
         comboBox_2->setGeometry(QRect(20, 210, 191, 25));
-        comboBox_3 = new QComboBox(centralwidget);
-        comboBox_3->addItem(QString());
-        comboBox_3->addItem(QString());
-        comboBox_3->addItem(QString());
-        comboBox_3->setObjectName(QString::fromUtf8("comboBox_3"));
-        comboBox_3->setGeometry(QRect(20, 290, 191, 25));
-        graphicsView = new QGraphicsView(centralwidget);
-        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(250, 70, 561, 531));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 100, 61, 21));
@@ -94,16 +94,19 @@ public:
         label_2->setGeometry(QRect(20, 180, 91, 21));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(20, 260, 51, 21));
+        label_3->setGeometry(QRect(20, 260, 71, 21));
         graphicsView_2 = new QGraphicsView(centralwidget);
         graphicsView_2->setObjectName(QString::fromUtf8("graphicsView_2"));
-        graphicsView_2->setGeometry(QRect(820, 70, 561, 531));
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(500, 30, 51, 21));
+        graphicsView_2->setGeometry(QRect(340, 70, 1041, 531));
         label_5 = new QLabel(centralwidget);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(1060, 30, 61, 21));
+        label_5->setGeometry(QRect(840, 30, 61, 21));
+        listView = new QListView(centralwidget);
+        listView->setObjectName(QString::fromUtf8("listView"));
+        listView->setGeometry(QRect(20, 290, 256, 311));
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(100, 620, 89, 25));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -133,15 +136,11 @@ public:
         comboBox_2->setItemText(0, QApplication::translate("MainWindow", "Lane Detection", nullptr));
         comboBox_2->setItemText(1, QApplication::translate("MainWindow", "Object Detection", nullptr));
 
-        comboBox_3->setItemText(0, QApplication::translate("MainWindow", "image", nullptr));
-        comboBox_3->setItemText(1, QApplication::translate("MainWindow", "video", nullptr));
-        comboBox_3->setItemText(2, QApplication::translate("MainWindow", "real time", nullptr));
-
         label->setText(QApplication::translate("MainWindow", "Sensor", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Algorithm", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", "Mode", nullptr));
-        label_4->setText(QApplication::translate("MainWindow", "Input", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "File list", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "Result", nullptr));
+        pushButton->setText(QApplication::translate("MainWindow", "play", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
