@@ -38,7 +38,12 @@ padding: 2px;
 background-color: rgba(0, 0, 128, 1.0);
 font: bold italic 15px;
 color:white;
-}</string>
+}
+
+background-color : rgb(173, 127, 168)
+
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QComboBox" name="comboBox">
@@ -122,19 +127,6 @@ color:white;
      <string>Algorithm</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>260</y>
-      <width>71</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>File list</string>
-    </property>
-   </widget>
    <widget class="QGraphicsView" name="graphicsView_2">
     <property name="geometry">
      <rect>
@@ -143,6 +135,9 @@ color:white;
       <width>1041</width>
       <height>531</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -179,6 +174,19 @@ color:white;
     </property>
     <property name="text">
      <string>play</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>File list</string>
     </property>
    </widget>
   </widget>
