@@ -1102,7 +1102,13 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QToolBar \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtoolbar.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QWidget
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QWidget \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QFileDialog \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qdir.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qdialog.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
