@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QDebug>
+#include <QListWidget>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -92,12 +93,12 @@ MainWindow::MainWindow(QWidget *parent)
 //    qDebug()<<dir;
 //}
 
-void MainWindow::on_pushButton_clicked()
-{
-//    QString file = QFileDialog::getOpenFileName(this, "file", "/home/kayeon", "Files (*.*)");
-//    //각자의 파일 경로로 바꿔야 함
-//    qDebug() << file;
-}
+//void MainWindow::on_pushButton_clicked()
+//{
+////    QString file = QFileDialog::getOpenFileName(this, "file", "/home/kayeon", "Files (*.*)");
+////    //각자의 파일 경로로 바꿔야 함
+////    qDebug() << file;
+//}
 
 MainWindow::~MainWindow()
 {
@@ -105,9 +106,59 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_pushButton_2_clicked()
+//void MainWindow::on_pushButton_2_clicked()
+//{s
+//    QString file = QFileDialog::getOpenFileName(this, "file", "/home/kayeon", "Files (*.*)");
+//    //각자의 파일 경로로 바꿔야 함
+//    qDebug() << file;
+//}
+
+//void MainWindow::on_listView_activated(const QModelIndex &index)
+//{
+
+//}
+
+void MainWindow::on_pushButton_select_clicked()
 {
-    QString file = QFileDialog::getOpenFileName(this, "file", "/home/kayeon", "Files (*.*)");
-    //각자의 파일 경로로 바꿔야 함
-    qDebug() << file;
+        // show exisiting directory
+        dir = QFileDialog::getExistingDirectory();
+        dir.setFilter(QDir::Files | QDir::NoSymLinks);
+
+        ui->listDir-> clear();
+        list = dir.entryInfoList();
+
+        // loop for file print
+        for(int i = 0; i < list.size(); ++i){
+            QFileInfo fileInfo = list.at(i);
+            ui -> listDir ->addItem(QString("%1").arg(fileInfo.fileName()));
+        }
+//        QString path, filename;
+
+//        // get filename to absolute path
+//        filename = QString("%1").arg(list.at(ui->listDir->currentIndex().row()).absoluteFilePath());
+//        QFile file(filename);
+//        file.open(QIODevice::ReadOnly);
+
+
+    //출처: https://redcoder.tistory.com/133?category=800800 [로재의 개발 일기]
 }
+
+//void MainWindow::on_pushButton_open_clicked()
+//{
+//        QString path, filename;
+
+//        // get filename to absolute path
+//        filename = QString("%1").arg(list.at(ui->listDir->currentIndex().row()).absoluteFilePath());
+//        QFile file(filename);
+//        file.open(QIODevice::ReadOnly);
+
+//        // textFile clear and print file list
+//        ui->textFile->clear();
+//        ui->textFile->append(file.readAll());
+//        file.close();
+
+//        QMessageBox msgbox;
+//        msgbox.setText("File Opened");
+//        msgbox.exec();
+
+//}

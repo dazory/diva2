@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1512</width>
-    <height>735</height>
+    <height>776</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -133,7 +133,7 @@ background-color : rgb(173, 127, 168)
       <x>340</x>
       <y>70</y>
       <width>1041</width>
-      <height>531</height>
+      <height>581</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -153,21 +153,11 @@ background-color : rgb(173, 127, 168)
      <string>Result</string>
     </property>
    </widget>
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>290</y>
-      <width>256</width>
-      <height>311</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>620</y>
+      <y>660</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -180,13 +170,36 @@ background-color : rgb(173, 127, 168)
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>260</y>
+      <y>300</y>
       <width>71</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>File list</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_select">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>select directory</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listDir">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>256</width>
+      <height>311</height>
+     </rect>
     </property>
    </widget>
   </widget>
