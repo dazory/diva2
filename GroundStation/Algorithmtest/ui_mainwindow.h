@@ -14,7 +14,7 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -34,9 +34,10 @@ public:
     QLabel *label_2;
     QGraphicsView *graphicsView_2;
     QLabel *label_5;
-    QListView *listView;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QPushButton *pushButton_select;
+    QListWidget *listDir;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -45,7 +46,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1512, 735);
+        MainWindow->resize(1512, 776);
         MainWindow->setStyleSheet(QString::fromUtf8("QLabel{ \n"
 "border-radius: 2px;\n"
 "padding: 2px;\n"
@@ -99,20 +100,23 @@ public:
         label_2->setGeometry(QRect(20, 180, 91, 21));
         graphicsView_2 = new QGraphicsView(centralwidget);
         graphicsView_2->setObjectName(QString::fromUtf8("graphicsView_2"));
-        graphicsView_2->setGeometry(QRect(340, 70, 1041, 531));
+        graphicsView_2->setGeometry(QRect(340, 70, 1041, 581));
         graphicsView_2->setStyleSheet(QString::fromUtf8(""));
         label_5 = new QLabel(centralwidget);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(840, 30, 61, 21));
-        listView = new QListView(centralwidget);
-        listView->setObjectName(QString::fromUtf8("listView"));
-        listView->setGeometry(QRect(20, 290, 256, 311));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(100, 620, 89, 25));
+        pushButton->setGeometry(QRect(100, 660, 89, 25));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(20, 260, 71, 20));
+        pushButton_2->setGeometry(QRect(20, 300, 71, 20));
+        pushButton_select = new QPushButton(centralwidget);
+        pushButton_select->setObjectName(QString::fromUtf8("pushButton_select"));
+        pushButton_select->setGeometry(QRect(20, 260, 131, 21));
+        listDir = new QListWidget(centralwidget);
+        listDir->setObjectName(QString::fromUtf8("listDir"));
+        listDir->setGeometry(QRect(20, 330, 256, 311));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -147,6 +151,7 @@ public:
         label_5->setText(QApplication::translate("MainWindow", "Result", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "play", nullptr));
         pushButton_2->setText(QApplication::translate("MainWindow", "File list", nullptr));
+        pushButton_select->setText(QApplication::translate("MainWindow", "select directory", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

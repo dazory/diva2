@@ -812,6 +812,30 @@ moc_mainwindow.cpp: mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qicon.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QFileDialog \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qdir.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qdialog.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/QDebug \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QListWidget \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlistwidget.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlistview.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qrubberband.h \
 		moc_predefs.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/bin/moc
 	/home/kayeon/Qt5.12.5/5.12.5/gcc_64/bin/moc $(DEFINES) --include /home/kayeon/diva2/GroundStation/Algorithmtest/moc_predefs.h -I/home/kayeon/Qt5.12.5/5.12.5/gcc_64/mkspecs/linux-g++ -I/home/kayeon/diva2/GroundStation/Algorithmtest -I/home/kayeon/Qt5.12.5/5.12.5/gcc_64/include -I/home/kayeon/Qt5.12.5/5.12.5/gcc_64/include/QtWidgets -I/home/kayeon/Qt5.12.5/5.12.5/gcc_64/include/QtGui -I/home/kayeon/Qt5.12.5/5.12.5/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
@@ -944,6 +968,30 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qicon.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QFileDialog \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qdir.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qdialog.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/QDebug \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QListWidget \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlistwidget.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlistview.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qrubberband.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qapplication.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qcoreapplication.h \
@@ -1060,6 +1108,30 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qicon.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QFileDialog \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qdir.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qdialog.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/QDebug \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QListWidget \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlistwidget.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlistview.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qrubberband.h \
 		ui_mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/QVariant \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QApplication \
@@ -1071,32 +1143,16 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qinputmethod.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QComboBox \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qcombobox.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qvalidator.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qregularexpression.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qslider.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstyle.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtabbar.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qframe.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qabstractitemmodel.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QGraphicsView \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qgraphicsview.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qpainter.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qtextoption.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtGui/qpen.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qscrollarea.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qgraphicsscene.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QLabel \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlabel.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QListView \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlistview.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemview.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qitemselectionmodel.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QMenuBar \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qmenubar.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qmenu.h \
@@ -1109,13 +1165,7 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QToolBar \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qtoolbar.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QWidget \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QFileDialog \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qfiledialog.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qdir.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qfileinfo.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qdialog.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/QDebug
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
