@@ -1093,11 +1093,18 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qgraphicsscene.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QLabel \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlabel.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QListView \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlistview.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtCore/qitemselectionmodel.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QMenuBar \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qmenubar.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qmenu.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qaction.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QStatusBar \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QToolBar \

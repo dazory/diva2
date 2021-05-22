@@ -94,8 +94,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString file = QFileDialog::getOpenFileName(this, "file", "/home/kayeon/", "Files (*.*)");
-    qDebug() << file;
+//    QString file = QFileDialog::getOpenFileName(this, "file", "/home/kayeon", "Files (*.*)");
+//    //각자의 파일 경로로 바꿔야 함
+//    qDebug() << file;
 }
 
 MainWindow::~MainWindow()
@@ -103,3 +104,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QString file = QFileDialog::getOpenFileName(this, "file", "/home/kayeon", "Files (*.*)");
+    //각자의 파일 경로로 바꿔야 함
+    qDebug() << file;
+}

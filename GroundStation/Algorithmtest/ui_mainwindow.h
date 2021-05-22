@@ -32,11 +32,11 @@ public:
     QComboBox *comboBox_2;
     QLabel *label;
     QLabel *label_2;
-    QLabel *label_3;
     QGraphicsView *graphicsView_2;
     QLabel *label_5;
     QListView *listView;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -70,7 +70,12 @@ public:
 "background-color: rgba(0, 0, 128, 1.0);\n"
 "font: bold italic 15px;\n"
 "color:white;\n"
-"}"));
+"}\n"
+"\n"
+"background-color : rgb(173, 127, 168)\n"
+"\n"
+"\n"
+""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         comboBox = new QComboBox(centralwidget);
@@ -92,12 +97,10 @@ public:
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(20, 180, 91, 21));
-        label_3 = new QLabel(centralwidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(20, 260, 71, 21));
         graphicsView_2 = new QGraphicsView(centralwidget);
         graphicsView_2->setObjectName(QString::fromUtf8("graphicsView_2"));
         graphicsView_2->setGeometry(QRect(340, 70, 1041, 531));
+        graphicsView_2->setStyleSheet(QString::fromUtf8(""));
         label_5 = new QLabel(centralwidget);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(840, 30, 61, 21));
@@ -107,6 +110,9 @@ public:
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(100, 620, 89, 25));
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(20, 260, 71, 20));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -138,9 +144,9 @@ public:
 
         label->setText(QApplication::translate("MainWindow", "Sensor", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Algorithm", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", "File list", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "Result", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "play", nullptr));
+        pushButton_2->setText(QApplication::translate("MainWindow", "File list", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
