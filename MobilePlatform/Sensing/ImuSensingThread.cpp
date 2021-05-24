@@ -12,7 +12,7 @@ ImuSensingThread::ImuSensingThread(){
 
 }
 
-void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl::uint32 baudrate)
+void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl::uint32 baudrate, mutex &m)
 {
     
     printf("[MobilePlatform/Sensing/ImuSensingThread] run (MSCL VER.%s)\n", mscl::MSCL_VERSION.str());
@@ -114,8 +114,10 @@ void ImuSensingThread::run(zmq::socket_t *pubSock, const char *devicename, mscl:
                     if(count==3){
                     zmq::message_t zmqData(data_len);
                     memcpy((void *)zmqData.data(), data, data_len);
+                    m.lock();
                     s_send_idx(*pubSock, SENSOR_IMU);
                     s_send(*pubSock, zmqData);
+                    m.unlock();
                     printf("(%dms)[MobilePlatform/Sensing/ImuSensingThread] Complete to send to PUB Socket\n", (float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000);
                     
                     clk_bef = clk_now;

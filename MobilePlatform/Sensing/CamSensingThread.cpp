@@ -7,7 +7,7 @@ CamSensingThread::CamSensingThread()
 {
 }
 
-void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq::context_t *context,
+void CamSensingThread::run(zmq::socket_t *pubSock, mutex& m) // const int devicename, zmq::context_t *context,
 {
   // <make txt file>
   fstream dataFile;
@@ -19,6 +19,10 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
   if (USE_CAM == 1)
   {
     open = cap.open(0);
+    cap.set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'));
+    cap.set(cv::CAP_PROP_FRAME_WIDTH, 1920);
+    cap.set(cv::CAP_PROP_FRAME_HEIGHT, 1080);
+    cap.set(CV_CAP_PROP_FPS, 30);
     printf("[MobilePlatform/Sensing/CamSensingThread] Connect the CAM device\n");
   }
 
@@ -30,8 +34,8 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
     {
       // [SENSING FROM CAMERA]
       sensors::Cam cam;
-      Mat frame;
-      cap.read(frame);
+      Mat frame_org, frame;
+      cap.read(frame_org);
       // resize(frame, frame, Size(320, 240));
       printf("[MobilePlatform/Sensing/CamSensingThread] read a frame (size:%dx%d, %d)\n",frame.cols, frame.rows, frame.type());
       
@@ -42,6 +46,7 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
         // sensors::ChannelOrder co = imTypeToProto(frame.type());
         // cam.set_channel_order(co);
         // <Set cols and rows>
+        resize(frame_org, frame, Size(640, 360),0,0,CV_INTER_LINEAR);
         cam.set_cols(frame.cols);
         cam.set_rows(frame.rows);
         
@@ -67,8 +72,10 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
         {
           zmq::message_t zmqData(data_len);
           memcpy((void *)zmqData.data(), data, data_len);
+          m.lock();
           s_send_idx(*pubSock, SENSOR_CAM);
           s_send(*pubSock, zmqData);
+          m.unlock();
           printf("(%dms)[MobilePlatform/Sensing/CamSensingThread] complete to send (size=%d)\n",(float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000,zmqData.size());
           clk_bef = clk_now;
         }
@@ -118,7 +125,7 @@ void CamSensingThread::run(zmq::socket_t *pubSock) // const int devicename, zmq:
 
       sprintf(cFn, "%s/%02d-%02d-%02d-%03d.jpg", cPath,
       ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
-      cv::imwrite(cFn, frame);
+      cv::imwrite(cFn, frame_org);
       printf("[MobilePlatform/Sensing/CamSensingThread] complete to save jpg file at \"%s\"\n", cFn);
 
       // <save txt file>
