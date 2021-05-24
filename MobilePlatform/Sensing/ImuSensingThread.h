@@ -26,5 +26,5 @@ class ImuSensingThread
 {
 public:
     ImuSensingThread();
-    static void run(zmq::socket_t *socket, const char *devicename, mscl::uint32 baudrate);
+    static void run(zmq::socket_t *socket, const char *devicename, mscl::uint32 baudrate, mutex &m);
 };

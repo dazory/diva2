@@ -1,6 +1,6 @@
 #include "LiDAR_SensingThread.h"
 
-void LiDAR_SensingThread::run(zmq::socket_t *socket)
+void LiDAR_SensingThread::run(zmq::socket_t *socket, mutex &m)
 {
     LiDAR_Sensing mLiDAR_Sensing;
 
@@ -94,8 +94,10 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
                 {
                     zmq::message_t zmqData(data_len);
                     memcpy((void *)zmqData.data(), data, data_len);
+                    m.lock();
                     s_send_idx(*socket, SENSOR_LIDAR);
                     s_send(*socket, zmqData);
+                    m.unlock();
                     printf("[MobilePlatform/Sensing/LiDARSensingThread] Complete to send to PUB Socket\n");
                 }
 

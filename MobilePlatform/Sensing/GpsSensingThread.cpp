@@ -9,7 +9,7 @@ GpsSensingThread::GpsSensingThread()
 {
 }
 
-void GpsSensingThread::run(zmq::socket_t *pubSock)
+void GpsSensingThread::run(zmq::socket_t *pubSock, mutex &m)
 {
     printf("[MobilePlatform/Sensing/GpsSensingThread] run\n");
 
@@ -117,8 +117,10 @@ void GpsSensingThread::run(zmq::socket_t *pubSock)
                 // <Send Message>
                 zmq::message_t zmqData(data_len);
                 memcpy((void *)zmqData.data(), data, data_len);
+                m.lock();
                 s_send_idx(*pubSock, SENSOR_GPS);
                 s_send(*pubSock, zmqData);
+                m.unlock();
                 printf("(%dms)[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n", ((float)(clk_now-clk_bef)/CLOCKS_PER_SEC)*1000);
                 clk_bef = clk_now;
             }

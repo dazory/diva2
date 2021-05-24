@@ -10,7 +10,7 @@ CanSensingThread::CanSensingThread()
 {
 }
 
-void CanSensingThread::run(zmq::socket_t *pubSock)
+void CanSensingThread::run(zmq::socket_t *pubSock, mutex &m)
 {
     printf("[MobilePlatform/Sensing/CanSensingThread] run\n");
 
@@ -119,7 +119,7 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
             if(r_bin[0]==1) dec = 2;
             if(l_bin[0]==1&&r_bin[0]==1) dec = 3;
             turnLight = dec;
-            sendCAN(HANDLE_ANGLE, turnLight, pubSock);
+            sendCAN(HANDLE_ANGLE, turnLight, pubSock, m);
             dataFile<<clock()<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
 
 			usleep(1000);
@@ -217,7 +217,7 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
 
 }
 
-void sendCAN(int can_type, float can_data, zmq::socket_t *pubSock){
+void sendCAN(int can_type, float can_data, zmq::socket_t *pubSock, mutex &m){
     // [Parsing to Proto]
     sensors::Can can;
     can.set_type((float)can_type);
@@ -236,8 +236,10 @@ void sendCAN(int can_type, float can_data, zmq::socket_t *pubSock){
     // <Send Message
     zmq::message_t zmqData(data_len);
     memcpy((void *)zmqData.data(), data, data_len);
+    m.lock();
     s_send_idx(*pubSock, SENSOR_CAN);
     s_send(*pubSock, zmqData);
+    m.unlock();
     printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
         
 }

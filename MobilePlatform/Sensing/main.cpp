@@ -2,13 +2,14 @@
 #include <iostream>
 #include <thread>
 #include <zmq.hpp>
+#include <mutex>
 
 #include "../../service/global_name.hpp"
-// #include "GpsSensingThread.h"
-// #include "CamSensingThread.h"
+#include "GpsSensingThread.h"
+#include "CamSensingThread.h"
 #include "ImuSensingThread.h"
-// #include "CanSensingThread.h"
-// #include "LiDAR_SensingThread.h"
+#include "CanSensingThread.h"
+#include "LiDAR_SensingThread.h"
 
 using namespace std;
 
@@ -20,6 +21,8 @@ int main(int argc, char *argv[]){
     ///[USB 포트연결] : (imu, gps, cam)
     //sudo chmod 777 /dev/ttyACM0
     
+    mutex m;
+
     // [Sensing Process]
     zmq::context_t context(1);
     zmq::socket_t socket(context, ZMQ_PUB);
@@ -30,23 +33,23 @@ int main(int argc, char *argv[]){
 
     // USE_GPS = 1;
     // GpsSensingThread mGpsSensingThread;
-    // std::thread sensingthread_gps(mGpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // std::thread sensingthread_gps(mGpsSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
     
     // USE_CAM = 1;
     // CamSensingThread camSensingThread;
-    // std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // std::thread sensingthread_cam(camSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
     
     // USE_IMU = 2;
     // ImuSensingThread imuSensingThread;
-    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
+    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200, ref(m));
     
     // USE_CAN = 1;
     // CanSensingThread canSensingThread;
-    // std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // std::thread sensingthread_can(canSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
   
      USE_IMU = 1;
     ImuSensingThread imuSensingThread;
-    std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
+    std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200, ref(m));
 
     // USE_LiDAR = 1;
     // LiDAR_SensingThread mLiDARSensingThread;
