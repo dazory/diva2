@@ -170,7 +170,7 @@ background-color : rgb(173, 127, 168)
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>300</y>
+      <y>330</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -183,7 +183,7 @@ background-color : rgb(173, 127, 168)
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>260</y>
+      <y>290</y>
       <width>131</width>
       <height>21</height>
      </rect>
@@ -196,10 +196,36 @@ background-color : rgb(173, 127, 168)
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>330</y>
+      <y>360</y>
       <width>256</width>
-      <height>311</height>
+      <height>281</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>select model</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>250</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>select weight</string>
     </property>
    </widget>
   </widget>
