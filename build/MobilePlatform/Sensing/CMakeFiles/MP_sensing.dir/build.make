@@ -89,28 +89,28 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o.provides: MobilePlat
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o
 
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o: ../MobilePlatform/Sensing/CamSensingThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayeon/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o"
-	cd /home/kayeon/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o -c /home/kayeon/diva2/MobilePlatform/Sensing/CamSensingThread.cpp
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o: ../MobilePlatform/Sensing/GpsSensingThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kayeon/diva2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o"
+	cd /home/kayeon/diva2/build/MobilePlatform/Sensing && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o -c /home/kayeon/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i"
-	cd /home/kayeon/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayeon/diva2/MobilePlatform/Sensing/CamSensingThread.cpp > CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i"
+	cd /home/kayeon/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayeon/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp > CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s"
-	cd /home/kayeon/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayeon/diva2/MobilePlatform/Sensing/CamSensingThread.cpp -o CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s"
+	cd /home/kayeon/diva2/build/MobilePlatform/Sensing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayeon/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp -o CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires:
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.requires:
 
-.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.requires
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires
-	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides.build
-.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.provides: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.requires
+	$(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.provides.build
+.PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.provides
 
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.provides.build: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o
 
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/flags.make
@@ -140,14 +140,14 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o.provides.build:
 # Object files for target MP_sensing
 MP_sensing_OBJECTS = \
 "CMakeFiles/MP_sensing.dir/main.cpp.o" \
-"CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o" \
+"CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o" \
 "CMakeFiles/MP_sensing.dir/sensors.pb.cc.o"
 
 # External object files for target MP_sensing
 MP_sensing_EXTERNAL_OBJECTS =
 
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o
-MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o
+MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o
 MobilePlatform/Sensing/MP_sensing: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make
 MobilePlatform/Sensing/MP_sensing: /usr/local/lib/libzmq.so
@@ -211,7 +211,7 @@ MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build: MobilePlatform/Sensing/M
 .PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
 
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/main.cpp.o.requires
-MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o.requires
+MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o.requires
 MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires: MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/sensors.pb.cc.o.requires
 
 .PHONY : MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/requires

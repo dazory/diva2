@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/kayeon/diva2/MobilePlatform/Sensing/CamSensingThread.cpp
-CamSensingThread.h
-/home/kayeon/diva2/MobilePlatform/Sensing/CamSensingThread.h
-
 /home/kayeon/diva2/MobilePlatform/Sensing/CamSensingThread.h
 opencv2/opencv.hpp
 -
@@ -79,6 +75,12 @@ linux/can/raw.h
 /home/kayeon/diva2/protobuf/sensors.pb.h
 jsoncpp/json/json.h
 /home/kayeon/diva2/MobilePlatform/Sensing/jsoncpp/json/json.h
+
+/home/kayeon/diva2/MobilePlatform/Sensing/GpsSensingThread.cpp
+GpsSensingThread.h
+/home/kayeon/diva2/MobilePlatform/Sensing/GpsSensingThread.h
+unistd.h
+-
 
 /home/kayeon/diva2/MobilePlatform/Sensing/GpsSensingThread.h
 mscl/mscl.h
