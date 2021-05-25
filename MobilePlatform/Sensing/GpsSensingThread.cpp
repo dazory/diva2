@@ -21,7 +21,7 @@ void GpsSensingThread::run(zmq::socket_t *pubSock, mutex &m)
     if (USE_GPS == 1) // real
     {
         // [connect GPS device]
-        iDev = initialize("/dev/ttyACM1");
+        iDev = initialize("/dev/ttyACM0");
         speed = B1200;
         cs.init_serial(iDev, speed);
         lk.init_keyboard();
@@ -124,8 +124,21 @@ void GpsSensingThread::run(zmq::socket_t *pubSock, mutex &m)
                 printf("(%dms)[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n", ((float)(clk_now-clk_bef)/CLOCKS_PER_SEC)*1000);
                 clk_bef = clk_now;
             }
+
+            char cSn[50];
+
+            //timestamp
+            auto time = chrono::system_clock::now();
+            auto mill = chrono::duration_cast<chrono::milliseconds>(time.time_since_epoch());
+            long long currentTimeMillis = mill.count();
+            int msc = currentTimeMillis % 1000;
+            long nowTime = currentTimeMillis/1000;
+            tm *ts = localtime(&nowTime);
+            
+            sprintf(cSn, "%04d%02d%02d%02d%02d%02d%03d",
+            ts->tm_year+1900, ts->tm_mon+1, ts->tm_mday, ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
             // <save csv file>
-            dataFile<<strBuff[2]<<","<<strBuff[3]<<","<<strBuff[4]<<","<<strBuff[5]<<","<<strBuff[6]<<","<<strBuff[7]<<","<<strBuff[8]<<","<<strBuff[9]<<","<<strBuff[11]<<std::endl;
+            dataFile<<cSn<<strBuff[2]<<","<<strBuff[3]<<","<<strBuff[4]<<","<<strBuff[5]<<","<<strBuff[6]<<","<<strBuff[7]<<","<<strBuff[8]<<","<<strBuff[9]<<","<<strBuff[11]<<std::endl;
 
         } // end "Parsing to Proto"
 

@@ -108,8 +108,8 @@ link_libraries(${JSONCPP_LIBRARIES})
 # 실행파일 만들기
 set(SOURCE_MP_sensing 
     main.cpp 
-    # GpsSensingThread.cpp 
-    CamSensingThread.cpp 
+    GpsSensingThread.cpp 
+    # CamSensingThread.cpp 
     # ImuSensingThread.cpp
     # CanSensingThread.cpp
     # LiDAR_SensingThread.cpp LiDAR_Sensing.cpp

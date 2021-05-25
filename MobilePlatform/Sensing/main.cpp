@@ -31,13 +31,13 @@ int main(int argc, char *argv[]){
     // socket_LiDAR.bind(protocol::SENSING_PUB); //address already in use -> 서로 다른 주소 사용해야함
     printf("[MobilePlatform/Sensing] binding\n");
 
-    // USE_GPS = 1;
-    // GpsSensingThread mGpsSensingThread;
-    // std::thread sensingthread_gps(mGpsSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
+    USE_GPS = 1;
+    GpsSensingThread mGpsSensingThread;
+    std::thread sensingthread_gps(mGpsSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
     
-    USE_CAM = 1;
-    CamSensingThread camSensingThread;
-    std::thread sensingthread_cam(camSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
+    // USE_CAM = 1;
+    // CamSensingThread camSensingThread;
+    // std::thread sensingthread_cam(camSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
     
     // USE_IMU = 2;
     // ImuSensingThread imuSensingThread;
@@ -56,9 +56,9 @@ int main(int argc, char *argv[]){
     // thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket);
 
     // sensingthread_can.join();
-//    sensingthread_gps.join();
+   sensingthread_gps.join();
     // sensingthread_LiDAR.join();
-    sensingthread_cam.join();
+    // sensingthread_cam.join();
     // sensingthread_imu.join();
 
 }

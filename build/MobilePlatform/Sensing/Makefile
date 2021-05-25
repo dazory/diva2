@@ -125,32 +125,32 @@ MP_sensing/fast:
 	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build
 .PHONY : MP_sensing/fast
 
-CamSensingThread.o: CamSensingThread.cpp.o
+GpsSensingThread.o: GpsSensingThread.cpp.o
 
-.PHONY : CamSensingThread.o
+.PHONY : GpsSensingThread.o
 
 # target to build an object file
-CamSensingThread.cpp.o:
-	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.o
-.PHONY : CamSensingThread.cpp.o
+GpsSensingThread.cpp.o:
+	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.o
+.PHONY : GpsSensingThread.cpp.o
 
-CamSensingThread.i: CamSensingThread.cpp.i
+GpsSensingThread.i: GpsSensingThread.cpp.i
 
-.PHONY : CamSensingThread.i
+.PHONY : GpsSensingThread.i
 
 # target to preprocess a source file
-CamSensingThread.cpp.i:
-	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.i
-.PHONY : CamSensingThread.cpp.i
+GpsSensingThread.cpp.i:
+	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.i
+.PHONY : GpsSensingThread.cpp.i
 
-CamSensingThread.s: CamSensingThread.cpp.s
+GpsSensingThread.s: GpsSensingThread.cpp.s
 
-.PHONY : CamSensingThread.s
+.PHONY : GpsSensingThread.s
 
 # target to generate assembly for a file
-CamSensingThread.cpp.s:
-	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/CamSensingThread.cpp.s
-.PHONY : CamSensingThread.cpp.s
+GpsSensingThread.cpp.s:
+	cd /home/kayeon/diva2/build && $(MAKE) -f MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/build.make MobilePlatform/Sensing/CMakeFiles/MP_sensing.dir/GpsSensingThread.cpp.s
+.PHONY : GpsSensingThread.cpp.s
 
 main.o: main.cpp.o
 
@@ -215,9 +215,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MP_sensing"
 	@echo "... edit_cache"
-	@echo "... CamSensingThread.o"
-	@echo "... CamSensingThread.i"
-	@echo "... CamSensingThread.s"
+	@echo "... GpsSensingThread.o"
+	@echo "... GpsSensingThread.i"
+	@echo "... GpsSensingThread.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
