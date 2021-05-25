@@ -38,6 +38,8 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_select;
     QListWidget *listDir;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -110,13 +112,19 @@ public:
         pushButton->setGeometry(QRect(100, 660, 89, 25));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(20, 300, 71, 20));
+        pushButton_2->setGeometry(QRect(20, 330, 71, 20));
         pushButton_select = new QPushButton(centralwidget);
         pushButton_select->setObjectName(QString::fromUtf8("pushButton_select"));
-        pushButton_select->setGeometry(QRect(20, 260, 131, 21));
+        pushButton_select->setGeometry(QRect(20, 290, 131, 21));
         listDir = new QListWidget(centralwidget);
         listDir->setObjectName(QString::fromUtf8("listDir"));
-        listDir->setGeometry(QRect(20, 330, 256, 311));
+        listDir->setGeometry(QRect(20, 360, 256, 281));
+        pushButton_3 = new QPushButton(centralwidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setGeometry(QRect(20, 250, 101, 21));
+        pushButton_4 = new QPushButton(centralwidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(130, 250, 111, 21));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -152,6 +160,8 @@ public:
         pushButton->setText(QApplication::translate("MainWindow", "play", nullptr));
         pushButton_2->setText(QApplication::translate("MainWindow", "File list", nullptr));
         pushButton_select->setText(QApplication::translate("MainWindow", "select directory", nullptr));
+        pushButton_3->setText(QApplication::translate("MainWindow", "select model", nullptr));
+        pushButton_4->setText(QApplication::translate("MainWindow", "select weight", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

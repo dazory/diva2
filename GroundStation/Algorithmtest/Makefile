@@ -1152,7 +1152,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qgraphicsscene.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QLabel \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qlabel.h \
-		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QListView \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/QMenuBar \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qmenubar.h \
 		../../../Qt5.12.5/5.12.5/gcc_64/include/QtWidgets/qmenu.h \

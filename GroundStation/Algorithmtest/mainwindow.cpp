@@ -162,3 +162,15 @@ void MainWindow::on_pushButton_select_clicked()
 //        msgbox.exec();
 
 //}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QString file = QFileDialog::getOpenFileName(this, "file selct","home/kayeon/", "Files(*.*)");
+    qDebug()<<file;
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    QString file = QFileDialog::getOpenFileName(this, "file selct","home/kayeon/", "Files(*.*)");
+    qDebug()<<file;
+}
