@@ -109,8 +109,8 @@ link_libraries(${JSONCPP_LIBRARIES})
 set(SOURCE_MP_sensing 
     main.cpp 
     # GpsSensingThread.cpp 
-    # CamSensingThread.cpp 
-    ImuSensingThread.cpp
+    CamSensingThread.cpp 
+    # ImuSensingThread.cpp
     # CanSensingThread.cpp
     # LiDAR_SensingThread.cpp LiDAR_Sensing.cpp
 )
