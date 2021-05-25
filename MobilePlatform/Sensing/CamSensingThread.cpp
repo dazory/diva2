@@ -18,7 +18,7 @@ void CamSensingThread::run(zmq::socket_t *pubSock, mutex& m) // const int device
   VideoCapture cap;
   if (USE_CAM == 1)
   {
-    open = cap.open(0);
+    open = cap.open(2);
     cap.set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'));
     cap.set(cv::CAP_PROP_FRAME_WIDTH, 1920);
     cap.set(cv::CAP_PROP_FRAME_HEIGHT, 1080);
@@ -107,6 +107,7 @@ void CamSensingThread::run(zmq::socket_t *pubSock, mutex& m) // const int device
       // struct tm *pLocal = localtime(&curTime);
       
       char cFn[50];
+      char cSn[50];
       
       auto time = chrono::system_clock::now();
       auto mill = chrono::duration_cast<chrono::milliseconds>(time.time_since_epoch());
@@ -116,20 +117,22 @@ void CamSensingThread::run(zmq::socket_t *pubSock, mutex& m) // const int device
       tm *ts = localtime(&nowTime);
 
       char cPath[15]; // sprintf(cPath, "cam");  
-      sprintf(cPath, "%04d-%02d-%02d/CAM", ts->tm_year+1900, ts->tm_mon+1, ts->tm_mday);
+      sprintf(cPath, "CAM_%04d%02d%02d", ts->tm_year+1900, ts->tm_mon+1, ts->tm_mday);
       
       int nResult = mkdir(cPath, 0776); 
       if( nResult == 0 ){
         printf("[MobilePlatform/Sensing/CamSensingThread] make directory (%s)\n", cPath);
       }// if(nResult == -1 ) : already exists
 
-      sprintf(cFn, "%s/%02d-%02d-%02d-%03d.jpg", cPath,
+      sprintf(cFn, "%s%02d%02d%02d%03d.jpg", cPath,
       ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
       cv::imwrite(cFn, frame_org);
       printf("[MobilePlatform/Sensing/CamSensingThread] complete to save jpg file at \"%s\"\n", cFn);
 
+      sprintf(cSn, "%04d%02d%02d%02d%02d%02d%03d",
+      ts->tm_year+1900, ts->tm_mon+1, ts->tm_mday, ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
       // <save txt file>
-      dataFile<<cFn<<std::endl;
+      dataFile<<cSn<<std::endl;
 
       // [Options]
       usleep(100);
