@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kayeon/diva2/main.cpp
+/home/dahye/diva2/main.cpp
 iostream
 -
 string.h

@@ -53,7 +53,7 @@ int main(int argc, char *argv[]){
 
     // USE_LiDAR = 1;
     // LiDAR_SensingThread mLiDARSensingThread;
-    // thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket);
+    // thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket, ref(m), 0.1f);
 
     // sensingthread_can.join();
    sensingthread_gps.join();

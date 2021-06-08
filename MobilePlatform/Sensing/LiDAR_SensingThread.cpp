@@ -1,6 +1,6 @@
 #include "LiDAR_SensingThread.h"
 
-void LiDAR_SensingThread::run(zmq::socket_t *socket, mutex &m)
+void LiDAR_SensingThread::run(zmq::socket_t *socket, mutex &m, float leaf_size)
 {
     LiDAR_Sensing mLiDAR_Sensing;
 
@@ -60,7 +60,7 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket, mutex &m)
                 // downsampling
                 pcl::VoxelGrid<pcl::PointXYZ> sor;
                 sor.setInputCloud(mLiDAR_Sensing.cloud);    //입력
-                sor.setLeafSize(0.1f, 0.1f, 0.1f);          //leaf size 조절
+                sor.setLeafSize(leaf_size, leaf_size, leaf_size);          //leaf size 조절
                 sor.filter(*mLiDAR_Sensing.cloud_filtered); //출력
 
                 //pcd파일 저장

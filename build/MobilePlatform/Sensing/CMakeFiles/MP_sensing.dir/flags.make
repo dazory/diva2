@@ -6,5 +6,5 @@ CXX_FLAGS =   -I/usr/include/x86_64-linux-gnu -std=c++11 -std=gnu++11
 
 CXX_DEFINES = -DBOOST_ERROR_CODE_HEADER_ONLY
 
-CXX_INCLUDES = -isystem /usr/local/include -isystem /usr/local/include/opencv -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/home/kayeon/diva2/build/MobilePlatform/Sensing 
+CXX_INCLUDES = -isystem /usr/include/opencv -I/usr/share/c++-mscl/source -I/usr/share/c++-mscl/Boost/include -I/usr/local/include -I/home/dahye/diva2/build/MobilePlatform/Sensing 
 
