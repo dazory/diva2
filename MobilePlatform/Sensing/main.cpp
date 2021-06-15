@@ -10,6 +10,8 @@
 #include "CanSensingThread.h"
 #include "LiDAR_SensingThread.h"
 
+#include <mutex>
+
 using namespace std;
 
 // [Global Variables]
@@ -20,6 +22,8 @@ int main(int argc, char *argv[]){
     ///[USB 포트연결] : (imu, gps, cam)
     //sudo chmod 777 /dev/ttyACM0
     
+    mutex m;
+
     // [Sensing Process]
     zmq::context_t context(1);
     zmq::socket_t socket(context, ZMQ_PUB);
@@ -30,32 +34,27 @@ int main(int argc, char *argv[]){
 
     // USE_GPS = 1;
     // GpsSensingThread mGpsSensingThread;
-    // std::thread sensingthread_gps(mGpsSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    // std::thread sensingthread_gps(mGpsSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
     
-    // USE_CAM = 1;
-    // CamSensingThread camSensingThread;
-    // std::thread sensingthread_cam(camSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
+    USE_CAM = 1;
+    CamSensingThread camSensingThread;
+    std::thread sensingthread_cam(camSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
     
-    // USE_IMU = 2;
+    // USE_IMU = 1;
     // ImuSensingThread imuSensingThread;
-    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
+    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM1", 115200, ref(m));
     
-    USE_CAN = 1;
-    CanSensingThread canSensingThread;
-    std::thread sensingthread_can(canSensingThread.run, &socket); // , "/dev/ttyACM0", "9600"
-  
-    //  USE_IMU = 1;
-    // ImuSensingThread imuSensingThread;
-    // std::thread sensingthread_imu(imuSensingThread.run, &socket, "/dev/ttyACM0", 115200);
+    // USE_CAN = 1;
+    // CanSensingThread canSensingThread;
+    // std::thread sensingthread_can(canSensingThread.run, &socket, ref(m)); // , "/dev/ttyACM0", "9600"
 
-    USE_LiDAR = 1;
-    LiDAR_SensingThread mLiDARSensingThread;
-    thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket);
+    // USE_LiDAR = 1;
+    // LiDAR_SensingThread mLiDARSensingThread;
+    // thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket, ref(m));
 
-    // sensingthread_can.join();
-//    sensingthread_gps.join();
-    sensingthread_LiDAR.join();
-    // sensingthread_cam.join();
-    // sensingthread_imu.join();
-
+//      sensingthread_can.join();
+//     sensingthread_gps.join();
+//  sensingthread_LiDAR.join();
+   sensingthread_cam.join();
+//   sensingthread_imu.join();
 }

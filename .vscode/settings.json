@@ -63,7 +63,11 @@
         "core": "cpp",
         "random": "cpp",
         "typeindex": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "strstream": "cpp",
+        "codecvt": "cpp",
+        "future": "cpp",
+        "cfenv": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
     

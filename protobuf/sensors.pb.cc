@@ -21,7 +21,8 @@ constexpr Gps::Gps(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : latitude_(0)
   , longitude_(0)
-  , horizontaldilutionofprecision_(0){}
+  , horizontaldilutionofprecision_(0)
+  , timestamp_(0){}
 struct GpsDefaultTypeInternal {
   constexpr GpsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -35,6 +36,7 @@ constexpr Imu::Imu(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : scaledaccelx_(0)
   , scaledaccely_(0)
+  , timestamp_(0)
   , scaledaccelz_(0){}
 struct ImuDefaultTypeInternal {
   constexpr ImuDefaultTypeInternal()
@@ -49,7 +51,8 @@ constexpr Cam::Cam(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : image_data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , cols_(0)
-  , rows_(0){}
+  , rows_(0)
+  , timestamp_(0){}
 struct CamDefaultTypeInternal {
   constexpr CamDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -76,6 +79,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT Lidar_xyzDefaultTypeInternal _L
 constexpr Lidar::Lidar(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : data_()
+  , timestamp_(0)
   , size_(0){}
 struct LidarDefaultTypeInternal {
   constexpr LidarDefaultTypeInternal()
@@ -89,7 +93,8 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LidarDefaultTypeInternal _Lidar
 constexpr Can::Can(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : type_(0)
-  , data_(0){}
+  , data_(0)
+  , timestamp_(0){}
 struct CanDefaultTypeInternal {
   constexpr CanDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -130,6 +135,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::sensors::Gps, latitude_),
   PROTOBUF_FIELD_OFFSET(::sensors::Gps, longitude_),
   PROTOBUF_FIELD_OFFSET(::sensors::Gps, horizontaldilutionofprecision_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Gps, timestamp_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Imu, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -138,6 +144,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::sensors::Imu, scaledaccelx_),
   PROTOBUF_FIELD_OFFSET(::sensors::Imu, scaledaccely_),
   PROTOBUF_FIELD_OFFSET(::sensors::Imu, scaledaccelz_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Imu, timestamp_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Cam, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -146,6 +153,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::sensors::Cam, cols_),
   PROTOBUF_FIELD_OFFSET(::sensors::Cam, rows_),
   PROTOBUF_FIELD_OFFSET(::sensors::Cam, image_data_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Cam, timestamp_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Lidar_xyz, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -161,6 +169,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::sensors::Lidar, size_),
   PROTOBUF_FIELD_OFFSET(::sensors::Lidar, data_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Lidar, timestamp_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Can, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -168,6 +177,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::sensors::Can, type_),
   PROTOBUF_FIELD_OFFSET(::sensors::Can, data_),
+  PROTOBUF_FIELD_OFFSET(::sensors::Can, timestamp_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::sensors::Log, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -182,12 +192,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensors_2eproto::offsets[] PRO
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::sensors::Gps)},
-  { 8, -1, sizeof(::sensors::Imu)},
-  { 16, -1, sizeof(::sensors::Cam)},
-  { 24, -1, sizeof(::sensors::Lidar_xyz)},
-  { 32, -1, sizeof(::sensors::Lidar)},
-  { 39, -1, sizeof(::sensors::Can)},
-  { 46, -1, sizeof(::sensors::Log)},
+  { 9, -1, sizeof(::sensors::Imu)},
+  { 18, -1, sizeof(::sensors::Cam)},
+  { 27, -1, sizeof(::sensors::Lidar_xyz)},
+  { 35, -1, sizeof(::sensors::Lidar)},
+  { 43, -1, sizeof(::sensors::Can)},
+  { 51, -1, sizeof(::sensors::Log)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -201,26 +211,32 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_sensors_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rsensors.proto\022\007sensors\"Q\n\003Gps\022\020\n\010latit"
-  "ude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022%\n\035horizont"
-  "alDilutionOfPrecision\030\003 \001(\001\"G\n\003Imu\022\024\n\014sc"
-  "aledAccelX\030\001 \001(\002\022\024\n\014scaledAccelY\030\002 \001(\002\022\024"
-  "\n\014scaledAccelZ\030\003 \001(\002\"5\n\003Cam\022\014\n\004cols\030\001 \001("
-  "\005\022\014\n\004rows\030\002 \001(\005\022\022\n\nimage_data\030\003 \001(\014\"_\n\005L"
-  "idar\022\014\n\004size\030\001 \001(\002\022 \n\004data\030\002 \003(\0132\022.senso"
-  "rs.Lidar.xyz\032&\n\003xyz\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001("
-  "\002\022\t\n\001z\030\003 \001(\002\"!\n\003Can\022\014\n\004type\030\001 \001(\002\022\014\n\004dat"
-  "a\030\002 \001(\002\"c\n\003Log\022\016\n\006can_id\030\002 \001(\r\022\017\n\007can_dl"
-  "c\030\003 \001(\r\022\r\n\005__pad\030\004 \001(\014\022\016\n\006__res0\030\005 \001(\014\022\016"
-  "\n\006__res1\030\006 \001(\014\022\014\n\004data\030\007 \001(\014*U\n\014ChannelO"
-  "rder\022\r\n\tGRAYSCALE\020\000\022\007\n\003BGR\020\001\022\007\n\003RGB\020\002\022\010\n"
-  "\004BGRA\020\003\022\010\n\004RGBA\020\004\022\020\n\014OPTICAL_FLOW\020\005b\006pro"
-  "to3"
+  "\n\rsensors.proto\022\007sensors\032\037google/protobu"
+  "f/timestamp.proto\"d\n\003Gps\022\020\n\010latitude\030\001 \001"
+  "(\001\022\021\n\tlongitude\030\002 \001(\001\022%\n\035horizontalDilut"
+  "ionOfPrecision\030\003 \001(\001\022\021\n\ttimestamp\030\004 \001(\001\""
+  "Z\n\003Imu\022\024\n\014scaledAccelX\030\001 \001(\002\022\024\n\014scaledAc"
+  "celY\030\002 \001(\002\022\024\n\014scaledAccelZ\030\003 \001(\002\022\021\n\ttime"
+  "stamp\030\004 \001(\001\"H\n\003Cam\022\014\n\004cols\030\001 \001(\005\022\014\n\004rows"
+  "\030\002 \001(\005\022\022\n\nimage_data\030\003 \001(\014\022\021\n\ttimestamp\030"
+  "\004 \001(\001\"r\n\005Lidar\022\014\n\004size\030\001 \001(\002\022 \n\004data\030\002 \003"
+  "(\0132\022.sensors.Lidar.xyz\022\021\n\ttimestamp\030\003 \001("
+  "\001\032&\n\003xyz\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\022\t\n\001z\030\003 \001("
+  "\002\"4\n\003Can\022\014\n\004type\030\001 \001(\002\022\014\n\004data\030\002 \001(\002\022\021\n\t"
+  "timestamp\030\003 \001(\001\"c\n\003Log\022\016\n\006can_id\030\002 \001(\r\022\017"
+  "\n\007can_dlc\030\003 \001(\r\022\r\n\005__pad\030\004 \001(\014\022\016\n\006__res0"
+  "\030\005 \001(\014\022\016\n\006__res1\030\006 \001(\014\022\014\n\004data\030\007 \001(\014*U\n\014"
+  "ChannelOrder\022\r\n\tGRAYSCALE\020\000\022\007\n\003BGR\020\001\022\007\n\003"
+  "RGB\020\002\022\010\n\004BGRA\020\003\022\010\n\004RGBA\020\004\022\020\n\014OPTICAL_FLO"
+  "W\020\005b\006proto3"
   ;
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_sensors_2eproto_deps[1] = {
+  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
+};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_sensors_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_sensors_2eproto = {
-  false, false, 563, descriptor_table_protodef_sensors_2eproto, "sensors.proto", 
-  &descriptor_table_sensors_2eproto_once, nullptr, 0, 7,
+  false, false, 691, descriptor_table_protodef_sensors_2eproto, "sensors.proto", 
+  &descriptor_table_sensors_2eproto_once, descriptor_table_sensors_2eproto_deps, 1, 7,
   schemas, file_default_instances, TableStruct_sensors_2eproto::offsets,
   file_level_metadata_sensors_2eproto, file_level_enum_descriptors_sensors_2eproto, file_level_service_descriptors_sensors_2eproto,
 };
@@ -266,16 +282,16 @@ Gps::Gps(const Gps& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&latitude_, &from.latitude_,
-    static_cast<size_t>(reinterpret_cast<char*>(&horizontaldilutionofprecision_) -
-    reinterpret_cast<char*>(&latitude_)) + sizeof(horizontaldilutionofprecision_));
+    static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
+    reinterpret_cast<char*>(&latitude_)) + sizeof(timestamp_));
   // @@protoc_insertion_point(copy_constructor:sensors.Gps)
 }
 
 void Gps::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&latitude_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&horizontaldilutionofprecision_) -
-    reinterpret_cast<char*>(&latitude_)) + sizeof(horizontaldilutionofprecision_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
+    reinterpret_cast<char*>(&latitude_)) + sizeof(timestamp_));
 }
 
 Gps::~Gps() {
@@ -305,8 +321,8 @@ void Gps::Clear() {
   (void) cached_has_bits;
 
   ::memset(&latitude_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&horizontaldilutionofprecision_) -
-      reinterpret_cast<char*>(&latitude_)) + sizeof(horizontaldilutionofprecision_));
+      reinterpret_cast<char*>(&timestamp_) -
+      reinterpret_cast<char*>(&latitude_)) + sizeof(timestamp_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -334,6 +350,13 @@ const char* Gps::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::intern
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
           horizontaldilutionofprecision_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // double timestamp = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 33)) {
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else goto handle_unusual;
         continue;
@@ -384,6 +407,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_horizontaldilutionofprecision(), target);
   }
 
+  // double timestamp = 4;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_timestamp(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -412,6 +441,11 @@ size_t Gps::ByteSizeLong() const {
 
   // double horizontalDilutionOfPrecision = 3;
   if (!(this->horizontaldilutionofprecision() <= 0 && this->horizontaldilutionofprecision() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  // double timestamp = 4;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
     total_size += 1 + 8;
   }
 
@@ -455,6 +489,9 @@ void Gps::MergeFrom(const Gps& from) {
   if (!(from.horizontaldilutionofprecision() <= 0 && from.horizontaldilutionofprecision() >= 0)) {
     _internal_set_horizontaldilutionofprecision(from._internal_horizontaldilutionofprecision());
   }
+  if (!(from.timestamp() <= 0 && from.timestamp() >= 0)) {
+    _internal_set_timestamp(from._internal_timestamp());
+  }
 }
 
 void Gps::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -479,8 +516,8 @@ void Gps::InternalSwap(Gps* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Gps, horizontaldilutionofprecision_)
-      + sizeof(Gps::horizontaldilutionofprecision_)
+      PROTOBUF_FIELD_OFFSET(Gps, timestamp_)
+      + sizeof(Gps::timestamp_)
       - PROTOBUF_FIELD_OFFSET(Gps, latitude_)>(
           reinterpret_cast<char*>(&latitude_),
           reinterpret_cast<char*>(&other->latitude_));
@@ -579,6 +616,13 @@ const char* Imu::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::intern
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
+      // double timestamp = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 33)) {
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag == 0) || ((tag & 7) == 4)) {
@@ -626,6 +670,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_scaledaccelz(), target);
   }
 
+  // double timestamp = 4;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_timestamp(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -650,6 +700,11 @@ size_t Imu::ByteSizeLong() const {
   // float scaledAccelY = 2;
   if (!(this->scaledaccely() <= 0 && this->scaledaccely() >= 0)) {
     total_size += 1 + 4;
+  }
+
+  // double timestamp = 4;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    total_size += 1 + 8;
   }
 
   // float scaledAccelZ = 3;
@@ -693,6 +748,9 @@ void Imu::MergeFrom(const Imu& from) {
   }
   if (!(from.scaledaccely() <= 0 && from.scaledaccely() >= 0)) {
     _internal_set_scaledaccely(from._internal_scaledaccely());
+  }
+  if (!(from.timestamp() <= 0 && from.timestamp() >= 0)) {
+    _internal_set_timestamp(from._internal_timestamp());
   }
   if (!(from.scaledaccelz() <= 0 && from.scaledaccelz() >= 0)) {
     _internal_set_scaledaccelz(from._internal_scaledaccelz());
@@ -755,8 +813,8 @@ Cam::Cam(const Cam& from)
       GetArena());
   }
   ::memcpy(&cols_, &from.cols_,
-    static_cast<size_t>(reinterpret_cast<char*>(&rows_) -
-    reinterpret_cast<char*>(&cols_)) + sizeof(rows_));
+    static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
+    reinterpret_cast<char*>(&cols_)) + sizeof(timestamp_));
   // @@protoc_insertion_point(copy_constructor:sensors.Cam)
 }
 
@@ -764,8 +822,8 @@ void Cam::SharedCtor() {
 image_data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&cols_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&rows_) -
-    reinterpret_cast<char*>(&cols_)) + sizeof(rows_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
+    reinterpret_cast<char*>(&cols_)) + sizeof(timestamp_));
 }
 
 Cam::~Cam() {
@@ -797,8 +855,8 @@ void Cam::Clear() {
 
   image_data_.ClearToEmpty();
   ::memset(&cols_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&rows_) -
-      reinterpret_cast<char*>(&cols_)) + sizeof(rows_));
+      reinterpret_cast<char*>(&timestamp_) -
+      reinterpret_cast<char*>(&cols_)) + sizeof(timestamp_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -828,6 +886,13 @@ const char* Cam::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::intern
           auto str = _internal_mutable_image_data();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // double timestamp = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 33)) {
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else goto handle_unusual;
         continue;
       default: {
@@ -877,6 +942,12 @@ failure:
         3, this->_internal_image_data(), target);
   }
 
+  // double timestamp = 4;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_timestamp(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -912,6 +983,11 @@ size_t Cam::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_rows());
+  }
+
+  // double timestamp = 4;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    total_size += 1 + 8;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -954,6 +1030,9 @@ void Cam::MergeFrom(const Cam& from) {
   if (from.rows() != 0) {
     _internal_set_rows(from._internal_rows());
   }
+  if (!(from.timestamp() <= 0 && from.timestamp() >= 0)) {
+    _internal_set_timestamp(from._internal_timestamp());
+  }
 }
 
 void Cam::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -979,8 +1058,8 @@ void Cam::InternalSwap(Cam* other) {
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   image_data_.Swap(&other->image_data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Cam, rows_)
-      + sizeof(Cam::rows_)
+      PROTOBUF_FIELD_OFFSET(Cam, timestamp_)
+      + sizeof(Cam::timestamp_)
       - PROTOBUF_FIELD_OFFSET(Cam, cols_)>(
           reinterpret_cast<char*>(&cols_),
           reinterpret_cast<char*>(&other->cols_));
@@ -1251,12 +1330,17 @@ Lidar::Lidar(const Lidar& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       data_(from.data_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  size_ = from.size_;
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&size_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(size_));
   // @@protoc_insertion_point(copy_constructor:sensors.Lidar)
 }
 
 void Lidar::SharedCtor() {
-size_ = 0;
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&timestamp_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&size_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(size_));
 }
 
 Lidar::~Lidar() {
@@ -1286,7 +1370,9 @@ void Lidar::Clear() {
   (void) cached_has_bits;
 
   data_.Clear();
-  size_ = 0;
+  ::memset(&timestamp_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&size_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(size_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1313,6 +1399,13 @@ const char* Lidar::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // double timestamp = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else goto handle_unusual;
         continue;
       default: {
@@ -1358,6 +1451,12 @@ failure:
       InternalWriteMessage(2, this->_internal_data(i), target, stream);
   }
 
+  // double timestamp = 3;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_timestamp(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1379,6 +1478,11 @@ size_t Lidar::ByteSizeLong() const {
   for (const auto& msg : this->data_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // double timestamp = 3;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    total_size += 1 + 8;
   }
 
   // float size = 1;
@@ -1418,6 +1522,9 @@ void Lidar::MergeFrom(const Lidar& from) {
   (void) cached_has_bits;
 
   data_.MergeFrom(from.data_);
+  if (!(from.timestamp() <= 0 && from.timestamp() >= 0)) {
+    _internal_set_timestamp(from._internal_timestamp());
+  }
   if (!(from.size() <= 0 && from.size() >= 0)) {
     _internal_set_size(from._internal_size());
   }
@@ -1445,7 +1552,12 @@ void Lidar::InternalSwap(Lidar* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   data_.InternalSwap(&other->data_);
-  swap(size_, other->size_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Lidar, size_)
+      + sizeof(Lidar::size_)
+      - PROTOBUF_FIELD_OFFSET(Lidar, timestamp_)>(
+          reinterpret_cast<char*>(&timestamp_),
+          reinterpret_cast<char*>(&other->timestamp_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Lidar::GetMetadata() const {
@@ -1470,16 +1582,16 @@ Can::Can(const Can& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&type_, &from.type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&data_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(data_));
+    static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
+    reinterpret_cast<char*>(&type_)) + sizeof(timestamp_));
   // @@protoc_insertion_point(copy_constructor:sensors.Can)
 }
 
 void Can::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&type_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&data_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(data_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&timestamp_) -
+    reinterpret_cast<char*>(&type_)) + sizeof(timestamp_));
 }
 
 Can::~Can() {
@@ -1509,8 +1621,8 @@ void Can::Clear() {
   (void) cached_has_bits;
 
   ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&data_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(data_));
+      reinterpret_cast<char*>(&timestamp_) -
+      reinterpret_cast<char*>(&type_)) + sizeof(timestamp_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1532,6 +1644,13 @@ const char* Can::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::intern
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21)) {
           data_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
+        } else goto handle_unusual;
+        continue;
+      // double timestamp = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
         } else goto handle_unusual;
         continue;
       default: {
@@ -1575,6 +1694,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_data(), target);
   }
 
+  // double timestamp = 3;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_timestamp(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1599,6 +1724,11 @@ size_t Can::ByteSizeLong() const {
   // float data = 2;
   if (!(this->data() <= 0 && this->data() >= 0)) {
     total_size += 1 + 4;
+  }
+
+  // double timestamp = 3;
+  if (!(this->timestamp() <= 0 && this->timestamp() >= 0)) {
+    total_size += 1 + 8;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1638,6 +1768,9 @@ void Can::MergeFrom(const Can& from) {
   if (!(from.data() <= 0 && from.data() >= 0)) {
     _internal_set_data(from._internal_data());
   }
+  if (!(from.timestamp() <= 0 && from.timestamp() >= 0)) {
+    _internal_set_timestamp(from._internal_timestamp());
+  }
 }
 
 void Can::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -1662,8 +1795,8 @@ void Can::InternalSwap(Can* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Can, data_)
-      + sizeof(Can::data_)
+      PROTOBUF_FIELD_OFFSET(Can, timestamp_)
+      + sizeof(Can::timestamp_)
       - PROTOBUF_FIELD_OFFSET(Can, type_)>(
           reinterpret_cast<char*>(&type_),
           reinterpret_cast<char*>(&other->type_));

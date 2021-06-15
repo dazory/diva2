@@ -10,5 +10,5 @@ extern int USE_LiDAR;
 class LiDAR_SensingThread{
     public:
     LiDAR_SensingThread(){};
-    static void run(zmq::socket_t *socket);
+    static void run(zmq::socket_t *socket, mutex &m);
 };

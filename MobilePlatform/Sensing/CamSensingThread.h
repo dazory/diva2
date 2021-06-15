@@ -15,6 +15,7 @@
 #include <sys/stat.h> // mkdir
 #include <sys/types.h>
 #include <errno.h>		//errno
+#include <mutex>
 
 #include "../../protobuf/sensors.pb.h"
 #include "../../service/zmq_helper.h"
@@ -36,5 +37,5 @@ class CamSensingThread
 
 public:
     CamSensingThread();
-    static void run(zmq::socket_t *publisher); //const int devicename, zmq::context_t *context,
+    static void run(zmq::socket_t *publisher, mutex &m); //const int devicename, zmq::context_t *context,
 };

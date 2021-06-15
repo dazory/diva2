@@ -6,18 +6,20 @@
 
 syntax = "proto3";
 package sensors;
-// import "google/protobuf/timestamp.proto";
+import "google/protobuf/timestamp.proto";
 
 message Gps{
     double latitude = 1;
     double longitude = 2;
     double horizontalDilutionOfPrecision = 3;
+    double timestamp = 4;
 }
 
 message Imu{
     float scaledAccelX = 1;
     float scaledAccelY = 2;
     float scaledAccelZ = 3;
+    double timestamp = 4;
 }
 
 enum ChannelOrder {
@@ -34,6 +36,7 @@ message Cam{
     int32 cols = 1;
     int32 rows = 2;
     bytes image_data = 3;
+    double timestamp = 4;
 }
 
 message Lidar{
@@ -44,11 +47,13 @@ message Lidar{
     float z=3;
     }
     repeated xyz data=2;
+    double timestamp = 3;
 }
 
 message Can{
     float type = 1;
     float data = 2;
+    double timestamp = 3;
 
 }
 

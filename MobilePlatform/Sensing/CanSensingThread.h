@@ -36,5 +36,5 @@ class CanSensingThread
 {
 public:
     CanSensingThread();
-    static void run(zmq::socket_t *socket);
+    static void run(zmq::socket_t *socket, mutex &m);
 };

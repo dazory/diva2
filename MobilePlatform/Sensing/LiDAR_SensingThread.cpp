@@ -1,10 +1,13 @@
+#pragma once
 #include "LiDAR_SensingThread.h"
 
-void LiDAR_SensingThread::run(zmq::socket_t *socket)
+void LiDAR_SensingThread::run(zmq::socket_t *socket, mutex &m)
 {
+    fstream dataFile;
+    dataFile.open("lidar.csv", ios::out);
     LiDAR_Sensing mLiDAR_Sensing;
 
-    Timestamp ts;
+    // Timestamp ts;
     time_t time_bef = time(NULL);
     time_t time_now = time(NULL);
 
@@ -19,8 +22,26 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
 
     LiDAR::lidar_mode mode = LiDAR::MODE_1024x10;
 
-    string path = "/home/dahye/LiDAR/i30_LiDAR_ts_" + ts.getMilliTime() + ".txt"; // 데이터(x,y,z)
+
+    char cSn[50];
+
+            //timestamp
+            auto time = chrono::system_clock::now();
+            auto mill = chrono::duration_cast<chrono::milliseconds>(time.time_since_epoch());
+            long long currentTimeMillis = mill.count();
+            int msc = currentTimeMillis % 1000;
+            long nowTime = currentTimeMillis/1000;
+            tm *ts = localtime(&nowTime);
+            
+            sprintf(cSn, "%04d%02d%02d%02d%02d%02d%03d",
+            ts->tm_year+1900, ts->tm_mon+1, ts->tm_mday, ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
+    string ttt(cSn);
+    string path = "/home/yh/real/diva2/build/MobilePlatform/Sensing/LiDAR" + ttt + ".txt"; // 데이터(x,y,z)
+
     mLiDAR_Sensing.writeFile.open(path.c_str());
+
+    // string path = "/home/dahye/LiDAR/i30_LiDAR_ts_" + ts.getMilliTime() + ".txt"; // 데이터(x,y,z)
+    // mLiDAR_Sensing.writeFile.open(path.c_str());
 
     std::shared_ptr<LiDAR::client> cli;
     if (USE_LiDAR == 1)
@@ -51,11 +72,23 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
 
             if (mLiDAR_Sensing.getCount() == W * H)
             {
-                string ch_ts = ts.getMilliTime();
-                string name = "/home/dahye/LiDAR/PCD/i30_LiDAR_" + ch_ts + ".pcd"; //pcd 포맷은 헤더정보(전체 포인트 수, 데이터 타입, 크기 등의 정보) + 데이터(x,y,z)
-                string name2 = "/home/dahye/LiDAR/PCD_filtered/i30_LiDAR_" + ch_ts + ".pcd";
-
+                auto time = chrono::system_clock::now();
+            auto mill = chrono::duration_cast<chrono::milliseconds>(time.time_since_epoch());
+            long long currentTimeMillis = mill.count();
+            int msc = currentTimeMillis % 1000;
+            long nowTime = currentTimeMillis/1000;
+            tm *ts = localtime(&nowTime);
+            
+            sprintf(cSn, "%04d%02d%02d%02d%02d%02d%03d",
+            ts->tm_year+1900, ts->tm_mon+1, ts->tm_mday, ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
+    string ttt(cSn);
+    string name = "/home/yh/real/diva2/build/MobilePlatform/Sensing/LiDAR/LiDAR_" + ttt + ".pcd";
                 pcl::io::savePCDFile(name, *mLiDAR_Sensing.cloud, true);
+                //string ch_ts = ts.getMilliTime();
+                // string name = "/home/dahye/LiDAR/PCD/i30_LiDAR_" + ch_ts + ".pcd"; //pcd 포맷은 헤더정보(전체 포인트 수, 데이터 타입, 크기 등의 정보) + 데이터(x,y,z)
+                // string name2 = "/home/dahye/LiDAR/PCD_filtered/i30_LiDAR_" + ch_ts + ".pcd";
+
+                // pcl::io::savePCDFile(name, *mLiDAR_Sensing.cloud, true);
 
                 // downsampling
                 pcl::VoxelGrid<pcl::PointXYZ> sor;
@@ -64,7 +97,7 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
                 sor.filter(*mLiDAR_Sensing.cloud_filtered); //출력
 
                 //pcd파일 저장
-                pcl::io::savePCDFile(name2, *mLiDAR_Sensing.cloud_filtered, true);
+                //pcl::io::savePCDFile(name2, *mLiDAR_Sensing.cloud_filtered, true);
                 // cout << "pcd saved" << endl;
                 // cout << "point size: " << mLiDAR_Sensing.cloud_filtered->size() << endl;
                 pLiDAR.set_size(mLiDAR_Sensing.cloud_filtered->size());
@@ -78,6 +111,9 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
                     xyz->set_y(point.y);
                     xyz->set_z(point.z);
                 }
+                struct timeval tv;
+                gettimeofday(&tv, NULL);
+                pLiDAR.set_timestamp((tv.tv_sec*1000000) + (tv.tv_usec));
 
                 // [Sender to PUB socket]
                 // <Serialization>
@@ -89,23 +125,26 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
                 printf("\n");
                 printf("[MobilePlatform/Sensing/LiDARSensingThread] Serialize\n");
 
+                dataFile<<cSn<<endl;
                 // <Send>
-                if (time_now - time_bef >= 0.1)
-                {
+                // if (time_now - time_bef >= 0.1)
+                // {
                     zmq::message_t zmqData(data_len);
                     memcpy((void *)zmqData.data(), data, data_len);
+                    m.lock();
                     s_send_idx(*socket, SENSOR_LIDAR);
                     s_send(*socket, zmqData);
+                    m.unlock();
                     printf("[MobilePlatform/Sensing/LiDARSensingThread] Complete to send to PUB Socket\n");
-                }
+//                }
 
                 ////~~~~~~ json 형식으로 출력 "Key" : Value ~~~~~~
-                string json_string;
-                google::protobuf::util::JsonPrintOptions options;
-                options.add_whitespace = true;
-                options.always_print_primitive_fields = true;
-                options.preserve_proto_field_names = true;
-                google::protobuf::util::MessageToJsonString(pLiDAR, &json_string, options);
+                // string json_string;
+                // google::protobuf::util::JsonPrintOptions options;
+                // options.add_whitespace = true;
+                // options.always_print_primitive_fields = true;
+                // options.preserve_proto_field_names = true;
+                // google::protobuf::util::MessageToJsonString(pLiDAR, &json_string, options);
                 //cout << json_string << endl;
 
                 // [Store the LiDAR data]
@@ -121,7 +160,7 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
 
                 if (mLiDAR_Sensing.writeFile.is_open())
                 {
-                    mLiDAR_Sensing.writeFile << ch_ts << "\n"; //취득 시점의 timestamp저장(txt).
+                    //mLiDAR_Sensing.writeFile << ch_ts << "\n"; //취득 시점의 timestamp저장(txt).
                 }
                 mLiDAR_Sensing.cloud.reset(new pcl::PointCloud<pcl::PointXYZ>);
                 mLiDAR_Sensing.cloud_filtered.reset(new pcl::PointCloud<pcl::PointXYZ>);
@@ -132,4 +171,5 @@ void LiDAR_SensingThread::run(zmq::socket_t *socket)
             }
         }
     }
+    dataFile.close();
 }

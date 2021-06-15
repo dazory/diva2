@@ -1,16 +1,21 @@
 #pragma once
 #include "CanSensingThread.h"
 #include <unistd.h>
+#include <sys/time.h>
+
+#include <mutex>
+std::mutex mtx_lock2;
 
 void fromBitToDec(char* data, int bit_start, int bit_length, int* dst);
 int fromBytesToDec(char* data, int bit_start, int bit_length);
-void sendCAN(int can_type, float can_data, zmq::socket_t *pubSock);
+// void sendCAN(int can_type, float can_data, zmq::socket_t *pubSock);
+void sendCAN(sensors::Can can, zmq::socket_t *pubSock, mutex &m);
 
 CanSensingThread::CanSensingThread()
 {
 }
 
-void CanSensingThread::run(zmq::socket_t *pubSock)
+void CanSensingThread::run(zmq::socket_t *pubSock, mutex &m)
 {
     printf("[MobilePlatform/Sensing/CanSensingThread] run\n");
 
@@ -21,7 +26,16 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
 	struct can_frame frame;
 	struct ifreq ifr;
 
+    float handleAngle =0.0;
+    float turnLight = 0.0;
+    float vehicleSpeed = 0.0;
+    float gear = 0.0;
+
     const char *ifname = "can0"; // CAN DEVICE NAME
+
+     // <make csv file>
+    fstream dataFile;
+    dataFile.open("can.csv", ios::out);
 
     if((s = socket(PF_CAN, SOCK_RAW, CAN_RAW)) == -1) {
 		perror("Error while opening socket");
@@ -49,14 +63,35 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
         // [Read 255bytes from GPS]
         int nbytes;
 		nbytes = read(s, &frame, sizeof(struct can_frame));
-		if (nbytes < 0) {
+        
+        // < timestamp >
+        sensors::Can can;
+        struct timeval tv;
+        gettimeofday(&tv, NULL);
+        can.set_timestamp((tv.tv_sec*1000000) + (tv.tv_usec));
+		
+        if (nbytes < 0) {
 			perror("[MobilePlatform/Sensing/CanSensingThread] Read Error!");
 			exit(1);
 		}
 
+            char cSn[50];
+
+            //timestamp
+            auto time = chrono::system_clock::now();
+            auto mill = chrono::duration_cast<chrono::milliseconds>(time.time_since_epoch());
+            long long currentTimeMillis = mill.count();
+            int msc = currentTimeMillis % 1000;
+            long nowTime = currentTimeMillis/1000;
+            tm *ts = localtime(&nowTime);
+            
+            sprintf(cSn, "%04d%02d%02d%02d%02d%02d%03d",
+            ts->tm_year+1900, ts->tm_mon+1, ts->tm_mday, ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
+
+
         int fid = frame.can_id;
 		switch (fid)
-        {/*
+        {
         case HANDLE_ANGLE: // HANDLE_ANGLE
         {
             // (DBC) 주어진 것
@@ -71,10 +106,15 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
 				// printf("%02X ", data[i]);
 			}
 			int dec = fromBytesToDec(data, bit_start, bit_length);
-			printf("Handle Angle=%fDeg\n",offset + scale * (float)dec);
+			handleAngle = offset + scale * (float)dec;
+            printf("Handle Angle=%fDeg\n",offset + scale * (float)dec);
             
-            sendCAN(HANDLE_ANGLE, (float)(offset + scale*(float)dec), pubSock);
+            // [send CAN]
+            can.set_type(HANDLE_ANGLE);
+            can.set_data(handleAngle);
+            sendCAN(can, pubSock, m);
             
+            dataFile<<cSn<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
             break;
         }
         case TURN_LIGHT: // TURN LIGHT
@@ -107,19 +147,31 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
             if(l_bin[0]==1) dec = 1;
             if(r_bin[0]==1) dec = 2;
             if(l_bin[0]==1&&r_bin[0]==1) dec = 3;
-            sendCAN(HANDLE_ANGLE, (float)dec, pubSock);
+            
+            turnLight = dec;
+            // [send CAN]
+            // sendCAN(TURN_LIGHT, (float)dec, pubSock);
+            can.set_type(TURN_LIGHT);
+            can.set_data(turnLight);
+            sendCAN(can, pubSock, m);
+            dataFile<<cSn<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
 
 			usleep(1000);
 
             break;
-        }*/
+        }
         case VEHICLE_SPEED: // VEHICLE SPEED
         {
             // (DBC) 주어진 것
-			int bit_start = 16;
-			int bit_length = 16;
-			float scale = 0.25;
-			int offset = 0;
+			// int bit_start = 16;
+			// int bit_length = 16;
+			// float scale = 0.25;
+			// int offset = 0;
+
+            int bit_start=48;
+            int bit_length=8;
+            float scale=1.0;
+            int offset=0;
 
 			char data[frame.can_dlc];
 			for(int i=0; i<frame.can_dlc; i++){
@@ -128,12 +180,18 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
 			int dec = fromBytesToDec(data, bit_start, bit_length);
 			printf("Vehicle Speed=%frpm\n",offset + scale * (float)dec);
 
-            sendCAN(HANDLE_ANGLE, (float)(offset+scale*(float)dec), pubSock);
+            vehicleSpeed = (float)(offset+scale*(float)dec);
+            // [send CAN]
+            // sendCAN(VEHICLE_SPEED, (float)(offset+scale*(float)dec), pubSock);
+            can.set_type(VEHICLE_SPEED);
+            can.set_data(vehicleSpeed);
+            sendCAN(can, pubSock,m);
+            dataFile<<cSn<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
 
 			usleep(1000);
             
             break;
-        }/*
+        }
         case GEAR: // GEAR
         {
             // (DBC) 주어진 것
@@ -156,12 +214,18 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
             if(bin[1]) dec = 2;
             if(bin[2]) dec = 3;
             if(bin[3]) dec = 4;
-            sendCAN(HANDLE_ANGLE, (float)dec, pubSock);
+            gear=dec;
+            // [send CAN]
+            // sendCAN(GEAR, (float)dec, pubSock);
+            can.set_type(GEAR);
+            can.set_data((float)dec);
+            sendCAN(can, pubSock, m);
+            dataFile<<cSn<<","<<handleAngle<<","<<turnLight<<","<<vehicleSpeed<<","<<gear<<endl;
 
 			usleep(1000);
 
             break;
-        }*/
+        }
         default:
         {
                 break;
@@ -194,15 +258,35 @@ void CanSensingThread::run(zmq::socket_t *pubSock)
         // sleep(1);
         
     } // end: while(1)
-
+    dataFile.close();
 }
 
-void sendCAN(int can_type, float can_data, zmq::socket_t *pubSock){
-    // [Parsing to Proto]
-    sensors::Can can;
-    can.set_type((float)can_type);
-    can.set_data(can_data);
+// void sendCAN(int can_type, float can_data, zmq::socket_t *pubSock){
+//     // [Parsing to Proto]
+//     sensors::Can can;
+//     can.set_type((float)can_type);
+//     can.set_data(can_data);
 
+//     // <Serialization>
+//     int data_len = can.ByteSize();
+//     unsigned char data[data_len] = "\0";
+//     can.SerializeToArray(data, data_len);
+//     printf("[MobilePlatform/Sensing/CanSensingThread] Serialize\n");
+//     for (auto i = 0; i < data_len; i++)
+//         printf("%02X ", data[i]);
+//     printf("\n");
+
+//     // [Send to PUB socket]
+//     // <Send Message
+//     zmq::message_t zmqData(data_len);
+//     memcpy((void *)zmqData.data(), data, data_len);
+//     s_send_idx(*pubSock, SENSOR_CAN);
+//     s_send(*pubSock, zmqData);
+//     printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
+        
+// }
+
+void sendCAN(sensors::Can can, zmq::socket_t *pubSock, mutex &m){
     // <Serialization>
     int data_len = can.ByteSize();
     unsigned char data[data_len] = "\0";
@@ -216,8 +300,10 @@ void sendCAN(int can_type, float can_data, zmq::socket_t *pubSock){
     // <Send Message
     zmq::message_t zmqData(data_len);
     memcpy((void *)zmqData.data(), data, data_len);
+    m.lock();
     s_send_idx(*pubSock, SENSOR_CAN);
     s_send(*pubSock, zmqData);
+    m.unlock();
     printf("[MobilePlatform/Sensing/GpsSensingThread] Complete to send to PUB Socket\n");
         
 }

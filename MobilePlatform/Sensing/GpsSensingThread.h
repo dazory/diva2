@@ -27,5 +27,5 @@ class GpsSensingThread
 {
 public:
     GpsSensingThread();
-    static void run(zmq::socket_t *socket);
+    static void run(zmq::socket_t *socket, mutex &m);
 };

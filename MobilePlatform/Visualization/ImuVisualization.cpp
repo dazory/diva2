@@ -1,4 +1,5 @@
 #include "ImuVisualization.h"
+#include <sys/time.h>
 
 #include <fstream>
 
@@ -27,6 +28,9 @@ void ImuVisualization::run(void *contextSub)
     int cnt = 0;
     clock_t clk_bef = clock();
     clock_t clk_now = clock();
+
+    fstream dataFile;
+    dataFile.open("IMU_DELAY.csv", ios::out);
     while (1)
     {
         int USE_PROTO = 1;
@@ -40,6 +44,15 @@ void ImuVisualization::run(void *contextSub)
         sensors::Imu imu;
         zmq::message_t msgData;
         SubSock.recv(&msgData);
+
+
+        // < timestamp >
+        // struct timeval tv;
+        // auto *end_ts = new google::protobuf::Timestamp();
+        // gettimeofday(&tv, NULL);
+        // end_ts->set_seconds(tv.tv_sec);
+        // end_ts->set_nanos(tv.tv_usec*1000);
+
         clk_now = clock();
         printf("(%dms)[MobilePlatform/Visualization/ImuVisualization] Receive %dbytes\n",(float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000, msgData.size()); cnt++;
         clk_bef = clk_now;
@@ -52,6 +65,13 @@ void ImuVisualization::run(void *contextSub)
 
         printf("\n");
         imu.ParseFromArray(msgData.data(), msgData.size());
+
+        // <TIME>
+        // auto *dur_ts = new google::protobuf::Timestamp();
+        // dur_ts->set_seconds(end_ts->seconds()-imu.timestamp().seconds());
+        // dur_ts->set_nanos(end_ts->nanos()-imu.timestamp().nanos());
+        // printf("dur:%f,  %f\n", dur_ts->seconds(), dur_ts->nanos());
+        // dataFile<<dur_ts->seconds()<<","<<dur_ts->nanos()<<","<<dur_ts->seconds()*1000+dur_ts->nanos()<<endl;
         
         printf("ScaleAccelX=%f, ScaleAccelY=%f, ScaleAccelZ=%f\n",imu.scaledaccelx(), imu.scaledaccely(), imu.scaledaccelz());
 
@@ -62,4 +82,6 @@ void ImuVisualization::run(void *contextSub)
         // [OPTIONS]
         // sleep(1);
     }
+
+    dataFile.close();
 }

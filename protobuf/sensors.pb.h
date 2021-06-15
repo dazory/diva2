@@ -32,6 +32,7 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
+#include <google/protobuf/timestamp.pb.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_sensors_2eproto
@@ -229,6 +230,7 @@ class Gps PROTOBUF_FINAL :
     kLatitudeFieldNumber = 1,
     kLongitudeFieldNumber = 2,
     kHorizontalDilutionOfPrecisionFieldNumber = 3,
+    kTimestampFieldNumber = 4,
   };
   // double latitude = 1;
   void clear_latitude();
@@ -257,6 +259,15 @@ class Gps PROTOBUF_FINAL :
   void _internal_set_horizontaldilutionofprecision(double value);
   public:
 
+  // double timestamp = 4;
+  void clear_timestamp();
+  double timestamp() const;
+  void set_timestamp(double value);
+  private:
+  double _internal_timestamp() const;
+  void _internal_set_timestamp(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:sensors.Gps)
  private:
   class _Internal;
@@ -267,6 +278,7 @@ class Gps PROTOBUF_FINAL :
   double latitude_;
   double longitude_;
   double horizontaldilutionofprecision_;
+  double timestamp_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
 };
@@ -381,6 +393,7 @@ class Imu PROTOBUF_FINAL :
   enum : int {
     kScaledAccelXFieldNumber = 1,
     kScaledAccelYFieldNumber = 2,
+    kTimestampFieldNumber = 4,
     kScaledAccelZFieldNumber = 3,
   };
   // float scaledAccelX = 1;
@@ -401,6 +414,15 @@ class Imu PROTOBUF_FINAL :
   void _internal_set_scaledaccely(float value);
   public:
 
+  // double timestamp = 4;
+  void clear_timestamp();
+  double timestamp() const;
+  void set_timestamp(double value);
+  private:
+  double _internal_timestamp() const;
+  void _internal_set_timestamp(double value);
+  public:
+
   // float scaledAccelZ = 3;
   void clear_scaledaccelz();
   float scaledaccelz() const;
@@ -419,6 +441,7 @@ class Imu PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   float scaledaccelx_;
   float scaledaccely_;
+  double timestamp_;
   float scaledaccelz_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
@@ -535,6 +558,7 @@ class Cam PROTOBUF_FINAL :
     kImageDataFieldNumber = 3,
     kColsFieldNumber = 1,
     kRowsFieldNumber = 2,
+    kTimestampFieldNumber = 4,
   };
   // bytes image_data = 3;
   void clear_image_data();
@@ -568,6 +592,15 @@ class Cam PROTOBUF_FINAL :
   void _internal_set_rows(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
+  // double timestamp = 4;
+  void clear_timestamp();
+  double timestamp() const;
+  void set_timestamp(double value);
+  private:
+  double _internal_timestamp() const;
+  void _internal_set_timestamp(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:sensors.Cam)
  private:
   class _Internal;
@@ -578,6 +611,7 @@ class Cam PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr image_data_;
   ::PROTOBUF_NAMESPACE_ID::int32 cols_;
   ::PROTOBUF_NAMESPACE_ID::int32 rows_;
+  double timestamp_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
 };
@@ -846,6 +880,7 @@ class Lidar PROTOBUF_FINAL :
 
   enum : int {
     kDataFieldNumber = 2,
+    kTimestampFieldNumber = 3,
     kSizeFieldNumber = 1,
   };
   // repeated .sensors.Lidar.xyz data = 2;
@@ -866,6 +901,15 @@ class Lidar PROTOBUF_FINAL :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::sensors::Lidar_xyz >&
       data() const;
 
+  // double timestamp = 3;
+  void clear_timestamp();
+  double timestamp() const;
+  void set_timestamp(double value);
+  private:
+  double _internal_timestamp() const;
+  void _internal_set_timestamp(double value);
+  public:
+
   // float size = 1;
   void clear_size();
   float size() const;
@@ -883,6 +927,7 @@ class Lidar PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::sensors::Lidar_xyz > data_;
+  double timestamp_;
   float size_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
@@ -998,6 +1043,7 @@ class Can PROTOBUF_FINAL :
   enum : int {
     kTypeFieldNumber = 1,
     kDataFieldNumber = 2,
+    kTimestampFieldNumber = 3,
   };
   // float type = 1;
   void clear_type();
@@ -1017,6 +1063,15 @@ class Can PROTOBUF_FINAL :
   void _internal_set_data(float value);
   public:
 
+  // double timestamp = 3;
+  void clear_timestamp();
+  double timestamp() const;
+  void set_timestamp(double value);
+  private:
+  double _internal_timestamp() const;
+  void _internal_set_timestamp(double value);
+  public:
+
   // @@protoc_insertion_point(class_scope:sensors.Can)
  private:
   class _Internal;
@@ -1026,6 +1081,7 @@ class Can PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   float type_;
   float data_;
+  double timestamp_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_sensors_2eproto;
 };
@@ -1306,6 +1362,26 @@ inline void Gps::set_horizontaldilutionofprecision(double value) {
   // @@protoc_insertion_point(field_set:sensors.Gps.horizontalDilutionOfPrecision)
 }
 
+// double timestamp = 4;
+inline void Gps::clear_timestamp() {
+  timestamp_ = 0;
+}
+inline double Gps::_internal_timestamp() const {
+  return timestamp_;
+}
+inline double Gps::timestamp() const {
+  // @@protoc_insertion_point(field_get:sensors.Gps.timestamp)
+  return _internal_timestamp();
+}
+inline void Gps::_internal_set_timestamp(double value) {
+  
+  timestamp_ = value;
+}
+inline void Gps::set_timestamp(double value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:sensors.Gps.timestamp)
+}
+
 // -------------------------------------------------------------------
 
 // Imu
@@ -1368,6 +1444,26 @@ inline void Imu::_internal_set_scaledaccelz(float value) {
 inline void Imu::set_scaledaccelz(float value) {
   _internal_set_scaledaccelz(value);
   // @@protoc_insertion_point(field_set:sensors.Imu.scaledAccelZ)
+}
+
+// double timestamp = 4;
+inline void Imu::clear_timestamp() {
+  timestamp_ = 0;
+}
+inline double Imu::_internal_timestamp() const {
+  return timestamp_;
+}
+inline double Imu::timestamp() const {
+  // @@protoc_insertion_point(field_get:sensors.Imu.timestamp)
+  return _internal_timestamp();
+}
+inline void Imu::_internal_set_timestamp(double value) {
+  
+  timestamp_ = value;
+}
+inline void Imu::set_timestamp(double value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:sensors.Imu.timestamp)
 }
 
 // -------------------------------------------------------------------
@@ -1457,6 +1553,26 @@ inline void Cam::set_allocated_image_data(std::string* image_data) {
   image_data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), image_data,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:sensors.Cam.image_data)
+}
+
+// double timestamp = 4;
+inline void Cam::clear_timestamp() {
+  timestamp_ = 0;
+}
+inline double Cam::_internal_timestamp() const {
+  return timestamp_;
+}
+inline double Cam::timestamp() const {
+  // @@protoc_insertion_point(field_get:sensors.Cam.timestamp)
+  return _internal_timestamp();
+}
+inline void Cam::_internal_set_timestamp(double value) {
+  
+  timestamp_ = value;
+}
+inline void Cam::set_timestamp(double value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:sensors.Cam.timestamp)
 }
 
 // -------------------------------------------------------------------
@@ -1586,6 +1702,26 @@ Lidar::data() const {
   return data_;
 }
 
+// double timestamp = 3;
+inline void Lidar::clear_timestamp() {
+  timestamp_ = 0;
+}
+inline double Lidar::_internal_timestamp() const {
+  return timestamp_;
+}
+inline double Lidar::timestamp() const {
+  // @@protoc_insertion_point(field_get:sensors.Lidar.timestamp)
+  return _internal_timestamp();
+}
+inline void Lidar::_internal_set_timestamp(double value) {
+  
+  timestamp_ = value;
+}
+inline void Lidar::set_timestamp(double value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:sensors.Lidar.timestamp)
+}
+
 // -------------------------------------------------------------------
 
 // Can
@@ -1628,6 +1764,26 @@ inline void Can::_internal_set_data(float value) {
 inline void Can::set_data(float value) {
   _internal_set_data(value);
   // @@protoc_insertion_point(field_set:sensors.Can.data)
+}
+
+// double timestamp = 3;
+inline void Can::clear_timestamp() {
+  timestamp_ = 0;
+}
+inline double Can::_internal_timestamp() const {
+  return timestamp_;
+}
+inline double Can::timestamp() const {
+  // @@protoc_insertion_point(field_get:sensors.Can.timestamp)
+  return _internal_timestamp();
+}
+inline void Can::_internal_set_timestamp(double value) {
+  
+  timestamp_ = value;
+}
+inline void Can::set_timestamp(double value) {
+  _internal_set_timestamp(value);
+  // @@protoc_insertion_point(field_set:sensors.Can.timestamp)
 }
 
 // -------------------------------------------------------------------
