@@ -22,7 +22,6 @@ void LiDAR_Sensing::addCount(){
 }
 int LiDAR_Sensing::getCount(){
     return count;
-
 }
 
 void LiDAR_Sensing::WritePCD(std::vector<double> xyz_lut, uint8_t *buf)

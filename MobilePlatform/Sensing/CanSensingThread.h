@@ -18,6 +18,7 @@
 #include "../../service/Can_serial.h"
 #include "../../service/Linux_keyboard.h"
 #include "../../protobuf/sensors.pb.h"
+#include "../../service/Timestamp.h"
 
 // JSON
 #include "jsoncpp/json/json.h"

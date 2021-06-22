@@ -19,6 +19,7 @@
 
 #include "../../protobuf/sensors.pb.h"
 #include "../../service/zmq_helper.h"
+#include "../../service/Timestamp.h"
 
 // JSON
 #include "jsoncpp/json/json.h"
@@ -37,5 +38,12 @@ class CamSensingThread
 
 public:
     CamSensingThread();
-    static void run(zmq::socket_t *publisher, mutex &m); //const int devicename, zmq::context_t *context,
+    static void run(zmq::socket_t *publisher, mutex &m, string dir); //const int devicename, zmq::context_t *context,
 };
+
+// class CamSensingThread
+// {
+// public:
+//     CamSensingThread();
+//     static void run(void *context, mutex &m, string dir); //const int devicename, zmq::context_t *context,
+// };
