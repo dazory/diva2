@@ -12,6 +12,7 @@
 #include "../../protobuf/sensors.pb.h"
 #include "jsoncpp/json/json.h"
 #include "mscl/mscl.h"
+#include "../../service/Timestamp.h"
 
 // JSON
 #include "jsoncpp/json/json.h"
@@ -29,3 +30,10 @@ public:
     GpsSensingThread();
     static void run(zmq::socket_t *socket, mutex &m);
 };
+
+// class GpsSensingThread
+// {
+// public:
+//     GpsSensingThread();
+//     static void run(mutex &m);
+// };

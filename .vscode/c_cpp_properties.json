@@ -4,12 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}",
+                "/usr/include/eigen3",
+                "/usr/local/include/pcl-1.11",
                 "/usr/share/c++-mscl/source",
-                "/usr/share/c++-mscl/Boost/include",
-                "/usr/include",
-                "/home/diva2/develop/ouster_example-master/ouster_client",
-                "/usr/local/include/pcl-1.11"
+                "/usr/share/c++-mscl/Boost/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
