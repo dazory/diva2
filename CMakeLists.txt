@@ -131,3 +131,4 @@ add_subdirectory(MobilePlatform/Visualization)
 
 add_subdirectory(GroundStation/Playback)
 add_subdirectory(test)
+add_subdirectory(test/can_dbcparser)
