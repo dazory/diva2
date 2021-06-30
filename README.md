@@ -6,9 +6,7 @@
   <img width="150" align="center" src="./storage/diva2.png" alt="diva2"/>
 </p>
 
-<h1 align="center">DIVA2
-    <div style="font-size:12px;">자율주행차량의 실시간 다중센서데이터 수집·정제·분석 및 관제 통합 플랫폼 개발</div>
-</h1>
+<div style="font-size:12px;">자율주행차량의 실시간 다중센서데이터 수집·정제·분석 및 관제 통합 플랫폼 개발</div>
 
 Manual : https://github.com/dazory/diva2/wiki
 
@@ -20,7 +18,6 @@ Manual : https://github.com/dazory/diva2/wiki
 | ------------ | ------------------------------------------------------------ |
 | 프로젝트명   | 자율주행차량의 실시간 다중센서데이터 수집·정제·분석 및 관제 통합 플랫폼 개발 |
 | 기간         | 2020.12.23 ~ 2021.06.18                                      |
-| Contributors |                                                              |
 
 
 
@@ -60,7 +57,7 @@ DIVA2의 전체 시스템 구성도는 다음과 같습니다.
    | **IMU**    | Microstrain  3DM-GX5-25                                      |
    | **GPS**    | Ublox  C94 M8P                                               |
    | **CAN**    | i30 내장                                                     |
-   | **PC**     | CPU :  Intel® core™ i7-7820HK CPU @2.90GHz  RAM : 8G  GPU :  NVIDIA® GeForce® GTX 1070 |
+   | **PC**     | CPU :  Intel® core™ i7-7820HK <br>CPU @2.90GHz  <br>RAM : 8G  <br>GPU :  NVIDIA® GeForce® GTX 1070 |
 
 2. **Server**
 
