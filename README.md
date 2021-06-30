@@ -6,9 +6,7 @@
   <img width="150" align="center" src="./storage/diva2.png" alt="diva2"/>
 </p>
 
-<p align="center">
-  <div style="font-size:12px;">자율주행차량의 실시간 다중센서데이터 수집·정제·분석 및 관제 통합 플랫폼 개발</div>
-</p>
+<div align="center" style="font-weight:bold;">자율주행차량의 실시간 다중센서데이터 수집·정제·분석 및 관제 통합 플랫폼 개발</div>
 
 
 
