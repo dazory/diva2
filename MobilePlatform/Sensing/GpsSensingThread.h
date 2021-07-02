@@ -22,18 +22,10 @@
 using namespace std;
 
 extern int USE_GPS;
-extern map<string, tuple<string, int>> SensorInfoMap;
 
 class GpsSensingThread
 {
 public:
     GpsSensingThread();
-    static void run(zmq::socket_t *socket, mutex &m);
+    static void run(zmq::socket_t *socket, const char *devicename, mutex &m);
 };
-
-// class GpsSensingThread
-// {
-// public:
-//     GpsSensingThread();
-//     static void run(mutex &m);
-// };
