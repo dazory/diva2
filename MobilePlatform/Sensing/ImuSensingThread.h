@@ -28,10 +28,3 @@ public:
     ImuSensingThread();
     static void run(zmq::socket_t *socket, const char *devicename, mscl::uint32 baudrate, mutex &m);
 };
-
-// class ImuSensingThread
-// {
-// public:
-//     ImuSensingThread();
-//     static void run(const char *devicename, mscl::uint32 baudrate, mutex &m);
-// };
