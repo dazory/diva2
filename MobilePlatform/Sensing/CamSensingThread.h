@@ -40,10 +40,3 @@ public:
     CamSensingThread();
     static void run(zmq::socket_t *publisher, mutex &m, string dir); //const int devicename, zmq::context_t *context,
 };
-
-// class CamSensingThread
-// {
-// public:
-//     CamSensingThread();
-//     static void run(void *context, mutex &m, string dir); //const int devicename, zmq::context_t *context,
-// };
