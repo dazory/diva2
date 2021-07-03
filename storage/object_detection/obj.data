@@ -1,7 +1,0 @@
-classes= 2
-train  = data/train.txt
-valid  = data/train.txt
-test = data/test.txt
-names = data/obj.names
-backup = /content/darknet/backup
-
