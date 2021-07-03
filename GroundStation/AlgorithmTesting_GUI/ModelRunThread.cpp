@@ -15,14 +15,21 @@ void ModelRunThread::run(){
     printf("   data file:%s\n", this->str_datafile.c_str());
     printf("   config file:%s\n", this->str_configfile.c_str());
     printf("   weight file:%s\n", this->str_weightfile.c_str());
+    printf("   input file:%s\n", this->str_inputfile.c_str());
     printf("\n");
 
     string command;
     if(sensorIdx == Sensor::cam){
         if(algorithmIdx==0) // lane detection
         {
-            command += "cd /home/diva2/diva2/GroundStation/AlgorithmTesting/Algorithm/ ";
+            command += "cd /home/diva2/diva2/GroundStation/AlgorithmTesting/lane_detection_algorithm/ ";
             command += "&& python3 model.py ";
+            command += " ";
+            command += this->str_datafile;
+            command += " ";
+            command += this->str_weightfile;
+            command += " ";
+            command += this->str_inputfile;
         }else if(algorithmIdx==1) // object detection
         {
             command += "cd /home/diva2/diva2/GroundStation/obj_detection/darknet/ ";
@@ -57,4 +64,7 @@ void ModelRunThread::set_configfile(string configfile){
 }
 void ModelRunThread::set_weightfile(string weightfile){
     this->str_weightfile = weightfile;
+}
+void ModelRunThread::set_inputfile(string inputfile){
+    this->str_inputfile = inputfile;
 }
