@@ -29,6 +29,7 @@ public:
     void set_datafile(string datafile);
     void set_configfile(string configfile);
     void set_weightfile(string weightfile);
+    void set_inputfile(string inputfile);
 	
 private slots:
     void stop();
@@ -40,6 +41,7 @@ private:
     string str_datafile;
     string str_configfile;
     string str_weightfile;
+    string str_inputfile;
 
 
 };
