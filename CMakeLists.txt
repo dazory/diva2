@@ -130,6 +130,7 @@ add_subdirectory(MobilePlatform/Sensing)
 add_subdirectory(MobilePlatform/Visualization)
 add_subdirectory(GroundStation/Playback)
 add_subdirectory(GroundStation/AlgorithmTesting)
+add_subdirectory(GroundStation/AlgorithmTesting_GUI)
 
 add_subdirectory(test)
 add_subdirectory(test/can_dbcparser)
