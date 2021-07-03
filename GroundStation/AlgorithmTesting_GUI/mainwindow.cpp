@@ -127,8 +127,6 @@ void MainWindow::on_pb_Play_clicked()
 
     // [ Set the Environments ]
     // < Set Algorithm Thread to Run >
-    sensorIdx = 1;
-    algorithmIdx = 1;
     algorithmThread = new AlgorithmThread(this);
     algorithmThread->set_sensorIdx(sensorIdx);
     algorithmThread->set_algorithmIdx(algorithmIdx);
