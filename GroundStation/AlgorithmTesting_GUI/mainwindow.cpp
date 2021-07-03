@@ -130,8 +130,6 @@ void MainWindow::on_pb_Play_clicked()
     algorithmThread = new AlgorithmThread(this);
     algorithmThread->set_sensorIdx(sensorIdx);
     algorithmThread->set_algorithmIdx(algorithmIdx);
-//    string tmp = "/home/diva2/algorithm_resources/test";
-//    algorithmThread->set_input_path(tmp);
     algorithmThread->set_input_path(this->input_path.path().toStdString());
     algorithmThread->start();
     modelRunThread = new ModelRunThread(this);
@@ -140,12 +138,7 @@ void MainWindow::on_pb_Play_clicked()
     modelRunThread->set_datafile(this->data_path.path().toStdString());
     modelRunThread->set_configfile(this->config_path.path().toStdString());
     modelRunThread->set_weightfile(this->weight_path.path().toStdString());
-//    tmp = "/home/diva2/algorithm_resources/coco.data";
-//    modelRunThread->set_datafile(tmp);
-//    tmp = "/home/diva2/algorithm_resources/yolov4.cfg";
-//    modelRunThread->set_configfile(tmp);
-//    tmp = "/home/diva2/algorithm_resources/yolov4.weights";
-//    modelRunThread->set_weightfile(tmp);
+    modelRunThread->set_inputfile(this->input_path.path().toStdString());
     modelRunThread->start();
     connect(algorithmThread, SIGNAL(send_qimage(QImage, QImage, QString)), this, SLOT(display_original(QImage, QImage, QString)));
 
