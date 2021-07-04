@@ -150,7 +150,8 @@ Ground Station의 주요 기능은 다음과 같습니다.
 1. Download and unzip [diva2](https://github.com/dazory/diva2/archive/refs/heads/main.zip) from this repository : https://github.com/dazory/diva2
 
 2. ```shell
-   cd diva2/build
+   cd diva2
+   mkdir build && cd build
    cmake ..
    make
    ```
