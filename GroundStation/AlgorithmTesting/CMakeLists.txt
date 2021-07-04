@@ -43,15 +43,15 @@ endif()
 
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
-PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../../protobuf/sensors.proto" )
+PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../../../protobuf/sensors.proto" )
 
 
 # 실행파일 만들기
 set(SOURCE_GS_algorithm 
     main.cpp
-    Module_Input.cpp
-    Module_Function.cpp
-    Module_Input_CAM.cpp
+    # Module_Input.cpp
+    # Module_Function.cpp
+    # Module_Input_CAM.cpp
     ) # GpsVisualization.cpp CamVisualization.cpp)
 add_executable(GS_algorithm ${SOURCE_GS_algorithm} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer
@@ -69,4 +69,4 @@ target_link_libraries(GS_algorithm PUBLIC
     ) # at the 0mq library to our link directive
 
 
-add_subdirectory(lane_detection_algorithm)
+# add_subdirectory(lane_detection_algorithm)

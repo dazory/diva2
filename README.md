@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
 <p align="center">
   <img width="150" align="center" src="https://user-images.githubusercontent.com/81455416/124372597-67521500-dcc6-11eb-99b5-149581fb9451.png" alt="diva2"/>
-=======
 
-
-
-<p align="center">
-  <img width="150" align="center" src="./storage/diva2.png" alt="diva2"/>
->>>>>>> 133c720bfde9d1871cc149b4fb0168203229e2ce
 </p>
 
 <div align="center" style="font-weight:bold;">자율주행차량의 실시간 다중센서데이터 수집·정제·분석 및 관제 통합 플랫폼 개발</div>
@@ -16,9 +9,10 @@
 ---
 
 
-
 Manual : https://github.com/dazory/diva2/wiki
 
+
+<br>
 
 
 ## 📋 Description
@@ -29,18 +23,14 @@ Manual : https://github.com/dazory/diva2/wiki
 | 기간         | 2020.12.23 ~ 2021.06.18                                      |
 
 
-
+<br>
 
 
 ## 🚘 System Configuration
 
 DIVA2의 전체 시스템 구성도는 다음과 같습니다.
 <p align="center">
-<<<<<<< HEAD
   <img width="700" align="center" src="https://user-images.githubusercontent.com/81455416/124372626-98324a00-dcc6-11eb-98c4-526a60db8b69.png" alt="system-configuration"/>
-=======
-  <img width="700" align="center" src="./storage/system-configuration.png" alt="system-configuration"/>
->>>>>>> 133c720bfde9d1871cc149b4fb0168203229e2ce
 </p>
 
 - <b>Mobile Platform</b> : 차량에 장착된 PC로, 센서 데이터 취득 및 처리를 담당
@@ -48,7 +38,7 @@ DIVA2의 전체 시스템 구성도는 다음과 같습니다.
 - <b>Ground Station</b> : 차량 외부에 위치하며 실시간으로 차량 상태 관제 및 테스트를 담당
 
 
-
+<br>
 
 
 ## ✨ Experiments
@@ -59,11 +49,7 @@ DIVA2의 전체 시스템 구성도는 다음과 같습니다.
 
 1. **Mobile Platform**
 
-<<<<<<< HEAD
    ![mobile-platform](https://user-images.githubusercontent.com/81455416/124372603-72a54080-dcc6-11eb-80d9-a8990d7b8329.png)
-=======
-   ![image-20210630155330526](./storage/mobile-platform.png)
->>>>>>> 133c720bfde9d1871cc149b4fb0168203229e2ce
 
    
 
@@ -101,31 +87,17 @@ DIVA2의 전체 시스템 구성도는 다음과 같습니다.
 ### ✨ Demo
 
 Ground Station의 주요 기능은 다음과 같습니다.
-- <b>Real-time Visualization</b> : Mobile Platform으로부터 실시간으로 데이터를 수신하여 차량의 상태를 시각화
-- <b>Playback</b> : Server에 저장된 데이터를 수신하여 차량의 상태를 시각화
-- <b>Algorithm Test</b> : Server에 저장된 데이터를 이용하여 알고리즘 테스트
-
-
+> - <b>Real-time Visualization</b> : Mobile Platform으로부터 실시간으로 데이터를 수신하여 차량의 상태를 시각화
+> - <b>Playback</b> : Server에 저장된 데이터를 수신하여 차량의 상태를 시각화
+> - <b>Algorithm Test</b> : Server에 저장된 데이터를 이용하여 알고리즘 테스트
 
 1. **Real-time Visualization**
 
-<<<<<<< HEAD
 [![realtime-visualization](https://img.youtube.com/vi/LOaPA7vAb78/0.jpg)](https://youtu.be/LOaPA7vAb78?t=0s)
-=======
-   <p align="center">
-     <img width="700" align="center" src="./storage/realtime-visualization.gif" alt="realtime-visualization"/>
-   </p>
->>>>>>> 133c720bfde9d1871cc149b4fb0168203229e2ce
-
-   
 
 2. **Playback**
 
-   <p align="center">
-     <img width="700" align="center" src="./storage/playback.gif" alt="playback"/>
-   </p>
-
-   
+[![playback](https://img.youtube.com/vi/aTknWwIAsPE/0.jpg)](https://youtu.be/aTknWwIAsPE?t=0s)
 
 3. **Algorithm Test**
 
@@ -134,7 +106,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
    </p>
 
 
-
+<br>
 
 
 ## 📁 Document Structure
@@ -143,7 +115,8 @@ Ground Station의 주요 기능은 다음과 같습니다.
 ├─ diva2
 │  │  README.md
 │  ├─ Server
-│  │      └─(diva2-server 합치기)
+│  │      ├─ TimeSynchronize
+│  │      └─ DBStoring
 │  ├─ GroundStation
 │  │      ├─ Playback
 │  │      ├─ Visualization
@@ -157,8 +130,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
 │          이미지
 ```
 
-
-
+<br>
 
 
 ## 🚀 Usage
@@ -169,7 +141,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
 | :---------------: | :----------------------------------------------------------: |
 |     개발환경      |                    Linux Ubuntu 18.04 LTS                    |
 |  GUI 개발 플랫폼  |                          QT 5.12.5                           |
-| 라이브러리·API 등 | CMake 3.10.2, OpenCV 3.2.0, OpenGL 4.4  QTI-4.0.47, PCL 1.11.1, VTK 7.1, tomcat*, zeromq, libmscl , libusb 1.0, flann  1.8, eigen3, boost, qhull*, freeglut3, protobuf |
+| 라이브러리·API 등 | [QT 5.12.5, CMake 3.10.2, OpenCV 3.2.0, OpenGL 4.4, QTI-4.0.47, PCL 1.11.1, VTK 7.1, mscl, PostgreSQL 10.17, protobuf 3.17.3,PostgreSQL 10.17 , tomcat*, zeromq, libmscl , libusb 1.0, flann 1.8, eigen3, boost, qhull*, freeglut3, protobuf 3.17.3, libpqxx, expect](https://www.notion.so/API-25736c98854646f28a9d14996fa229fb)  |
 
 
 
@@ -202,18 +174,27 @@ Ground Station의 주요 기능은 다음과 같습니다.
        ```
 
    * Server
+ 
+     * TimeSynchronize
 
-     ```shell
-     cd diva2/build/Server/blah-blah
-     ./MP_Sensing
-     ```
+       ```shell
+       cd diva2/build/Server/TimeSynchronize
+       ./timesynchronize
+       ```
+       
+     * DBStoring
+
+       ```shell
+       cd diva2/build/Server/DBStoring
+       ./dbstoring
+       ```
+
 
    * Ground Station
 
-     ```
-     cd diva2/build/GroundStation/ddads
-     ./MP_Sensing
-     ```
+     * Algorithm
+        [wiki](https://github.com/dazory/diva2/wiki/Ground-Station-Algorithm-Test) 확인 바람
+     
 
 
 

@@ -67,3 +67,12 @@ message Log{
 	bytes    data = 7;
 
 }
+
+message algorithm_img
+{
+    int32 cols = 1;
+    int32 rows = 2;
+    bytes image_original = 3;
+    bytes image_result = 4;
+    float millis_term = 5;
+}
