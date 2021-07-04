@@ -12,7 +12,6 @@ inline static std::string s_recv(zmq::socket_t & socket, int flags = 0) {
 
 AlgorithmThread::AlgorithmThread(QObject *parent) : QThread(parent)
 {
-
 }
 
 void AlgorithmThread::lane_detection(){
@@ -110,9 +109,10 @@ void AlgorithmThread::obj_detection(){
             fileList.push_back(d_name);
         }
         for(int i=0;i<fileList.size();i++) {
-            printf("... %s\n",fileList[i].c_str());
+            printf("... [%d] %s\n",i, fileList[i].c_str());
             // doSomething(fileList[i]);
         }
+        printf("[AlgorithmThread::obj_detection] the size of fileList = %d\n", fileList.size());
         closedir(d);
     }
     
@@ -134,7 +134,8 @@ void AlgorithmThread::obj_detection(){
 
     int len;
     string fn;
-    while(!stop_flag){
+    //while(!stop_flag){
+    for(int j=0; j<fileList.size(); j++){
         printf("[AlgorithmThread::obj_detection] while\n");
         // [ Setting ]
         cv::Mat frame_original;
@@ -145,10 +146,15 @@ void AlgorithmThread::obj_detection(){
         // [ Communicate ]
         // < Send a file name of original image >
         printf("[AlgorithmThread::obj_detection] [zeromq] Protocol%d: Communicate file name\n",count);
+        printf("[AlgorithmThread::obj_detection] buf = %s\n", buf);
+        printf("[AlgorithmThread::obj_detection] input_path = %s\n", get_input_path().c_str());
+        printf("[AlgorithmThread::obj_detection] count = %d\n", count);
+        
+        printf("[AlgorithmThread::obj_detection] fileList = %s\n\n", fileList[count-1].c_str());
         // len = sprintf(buf,
         //     "/home/diva2/diva2/test/obj_detection/darknet/data/test/testcone%d.jpg",count-1);
         len = sprintf(buf,
-            "%s/%s",get_input_path().c_str(), fileList[count].c_str());
+            "%s/%s",get_input_path().c_str(), fileList[count-1].c_str());
         buf[len] = '\0';
         rc = zmq_send(socketSub, buf, len+1, 0);
         assert (rc > 0);
@@ -191,7 +197,7 @@ void AlgorithmThread::obj_detection(){
         for(int i=0; i<cnt-1; i++){
             sprintf(result_filename, "%s/%s", result_filename, parsing[i]);
         }
-        len = sprintf(result_filename, "%s/%s/%s", result_filename, "result", fileList[count].c_str());
+        len = sprintf(result_filename, "%s/%s/%s", result_filename, "result", fileList[count-1].c_str());
         printf("[AlgorithmThread::obj_detection] ... ... result = %s\n", result_filename);
 
         // < Resize to 640*480>

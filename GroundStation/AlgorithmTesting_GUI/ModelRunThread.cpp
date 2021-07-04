@@ -32,7 +32,7 @@ void ModelRunThread::run(){
             command += this->str_inputfile;
         }else if(algorithmIdx==1) // object detection
         {
-            command += "cd /home/diva2/diva2/GroundStation/obj_detection/darknet/ ";
+            command += "cd /home/diva2/diva2/GroundStation/AlgorithmTesting/obj_detection/darknet/ ";
             command += "&& ./darknet detector test ";
             command += this->str_datafile;
             command +=" ";
