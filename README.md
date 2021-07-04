@@ -8,9 +8,10 @@
 ---
 
 
-
 Manual : https://github.com/dazory/diva2/wiki
 
+
+<br>
 
 
 ## 📋 Description
@@ -21,7 +22,7 @@ Manual : https://github.com/dazory/diva2/wiki
 | 기간         | 2020.12.23 ~ 2021.06.18                                      |
 
 
-
+<br>
 
 
 ## 🚘 System Configuration
@@ -36,7 +37,7 @@ DIVA2의 전체 시스템 구성도는 다음과 같습니다.
 - <b>Ground Station</b> : 차량 외부에 위치하며 실시간으로 차량 상태 관제 및 테스트를 담당
 
 
-
+<br>
 
 
 ## ✨ Experiments
@@ -85,25 +86,17 @@ DIVA2의 전체 시스템 구성도는 다음과 같습니다.
 ### ✨ Demo
 
 Ground Station의 주요 기능은 다음과 같습니다.
-- <b>Real-time Visualization</b> : Mobile Platform으로부터 실시간으로 데이터를 수신하여 차량의 상태를 시각화
-- <b>Playback</b> : Server에 저장된 데이터를 수신하여 차량의 상태를 시각화
-- <b>Algorithm Test</b> : Server에 저장된 데이터를 이용하여 알고리즘 테스트
-
-
+> - <b>Real-time Visualization</b> : Mobile Platform으로부터 실시간으로 데이터를 수신하여 차량의 상태를 시각화
+> - <b>Playback</b> : Server에 저장된 데이터를 수신하여 차량의 상태를 시각화
+> - <b>Algorithm Test</b> : Server에 저장된 데이터를 이용하여 알고리즘 테스트
 
 1. **Real-time Visualization**
 
 [![realtime-visualization](https://img.youtube.com/vi/LOaPA7vAb78/0.jpg)](https://youtu.be/LOaPA7vAb78?t=0s)
 
-   
-
 2. **Playback**
 
-   <p align="center">
-     <img width="700" align="center" src="./storage/playback.gif" alt="playback"/>
-   </p>
-
-   
+[![playback](https://img.youtube.com/vi/aTknWwIAsPE/0.jpg)](https://youtu.be/aTknWwIAsPE?t=0s)
 
 3. **Algorithm Test**
 
@@ -112,7 +105,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
    </p>
 
 
-
+<br>
 
 
 ## 📁 Document Structure
@@ -135,8 +128,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
 │          이미지
 ```
 
-
-
+<br>
 
 
 ## 🚀 Usage
