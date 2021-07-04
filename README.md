@@ -171,7 +171,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
 
        ```shell
        cd diva2/build/MobilePlatform/Visualization
-       ./MP_Sensing
+       ./MP_visualization
        ```
 
    * Server
