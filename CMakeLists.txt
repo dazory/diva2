@@ -1,3 +1,4 @@
+
 ### diva2/test/zmq
 #참고: https://www.kudryavka.me/?p=758
 
@@ -132,14 +133,12 @@ target_link_libraries(diva2 PUBLIC
     /usr/share/c++-mscl/libmscl.so
     )
 
-
 # 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
-# add_subdirectory(MobilePlatform/Sensing)
-# add_subdirectory(MobilePlatform/Visualization)
+add_subdirectory(MobilePlatform/Sensing)
+add_subdirectory(MobilePlatform/Visualization)
 add_subdirectory(GroundStation/Playback)
 add_subdirectory(GroundStation/AlgorithmTesting)
-add_subdirectory(GroundStation/AlgorithmTesting_GUI)
-# add_subdirectory(Server/TimeSynchronization)
-# add_subdirectory(Server/DBStoring)
-# add_subdirectory(test)
-# add_subdirectory(test/can_dbcparser)
+add_subdirectory(Server/TimeSynchronization)
+add_subdirectory(Server/DBStoring)
+add_subdirectory(test)
+add_subdirectory(test/can_dbcparser)
