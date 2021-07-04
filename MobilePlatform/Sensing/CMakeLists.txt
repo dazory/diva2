@@ -67,25 +67,25 @@ set(INCLUDES ${INCLUDES} ${Boost_INCLUDE_DIRS} )
 set(LIBS ${LIBS} ${Boost_LIBRARIES} )
 
 ## Use PCL
-find_package(Eigen3 REQUIRED)
-find_package(PCL 1.11.1 REQUIRED)
-include_directories(${PCL_INCLUDE_DIRS} ${PCL_LIBRARIES}) #헤더 디렉토리 지정(-I)
-link_directories(${PCL_LIBRARY_DIRS}) #라이브러리 디렉토리 지정 (-L)
-add_definitions(${PCL_DEFINITIONS}) #전처리기 메크로 추가 (-D)
+# find_package(Eigen3 REQUIRED)
+# find_package(PCL 1.11.1 REQUIRED)
+# include_directories(${PCL_INCLUDE_DIRS} ${PCL_LIBRARIES}) #헤더 디렉토리 지정(-I)
+# link_directories(${PCL_LIBRARY_DIRS}) #라이브러리 디렉토리 지정 (-L)
+# add_definitions(${PCL_DEFINITIONS}) #전처리기 메크로 추가 (-D)
 
 # json cpp
 pkg_check_modules(JSONCPP jsoncpp)
 link_libraries(${JSONCPP_LIBRARIES})
 
 ## ouster-LiDAR
-add_library(ouster_helper STATIC ../../service/ouster/client.cpp 
-                          ../../service/ouster/os1_util.cpp 
-                          ../../service/ouster/impl/netcompat.cpp 
-                          ../../service/ouster/types.cpp)
-set_target_properties(ouster_helper PROPERTIES POSITION_INDEPENDENT_CODE ON)
-target_link_libraries(ouster_helper jsoncpp)
-target_include_directories(ouster_helper PUBLIC include)
-target_include_directories(ouster_helper SYSTEM PRIVATE ${jsoncpp_INCLUDE_DIRS})
+# add_library(ouster_helper STATIC ../../service/ouster/client.cpp 
+#                           ../../service/ouster/os1_util.cpp 
+#                           ../../service/ouster/impl/netcompat.cpp 
+#                           ../../service/ouster/types.cpp)
+# set_target_properties(ouster_helper PROPERTIES POSITION_INDEPENDENT_CODE ON)
+# target_link_libraries(ouster_helper jsoncpp)
+# target_include_directories(ouster_helper PUBLIC include)
+# target_include_directories(ouster_helper SYSTEM PRIVATE ${jsoncpp_INCLUDE_DIRS})
 
 ## Use VTK
 set( VTK_DIR "$ENV{PCL_ROOT}/3rdParty/VTK" )
@@ -112,7 +112,7 @@ set(SOURCE_MP_sensing
     CamSensingThread.cpp 
     ImuSensingThread.cpp
     CanSensingThread.cpp
-    LiDAR_SensingThread.cpp LiDAR_Sensing.cpp
+    # LiDAR_SensingThread.cpp LiDAR_Sensing.cpp
 )
 add_executable(MP_sensing ${SOURCE_MP_sensing} 
     ${PROTO_SRCS} ${PROTO_HDRS}                 # Google Protocol Buffer
@@ -132,7 +132,7 @@ target_link_libraries(MP_sensing PUBLIC
     ${JSONCPP_LIBRARIES}            # json cpp
     /usr/share/c++-mscl/libmscl.so  # MSCL
     ${Boost_PROGRAM_OPTIONS_LIBRARY} ${Boost_REGEX_LIBRARY}     # Boost library
-    ouster_helper                   # LiDAR - ouster exmaple
+    # ouster_helper                   # LiDAR - ouster exmaple
     ) # at the 0mq library to our link directive
 
 

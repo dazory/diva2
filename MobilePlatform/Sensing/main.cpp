@@ -8,7 +8,7 @@
 #include "CamSensingThread.h"
 #include "ImuSensingThread.h"
 #include "CanSensingThread.h"
-#include "LiDAR_SensingThread.h"
+// #include "LiDAR_SensingThread.h"
 
 #include <mutex>
 
@@ -81,13 +81,13 @@ int main(int argc, char *argv[])
     CanSensingThread canSensingThread;
     std::thread sensingthread_can(canSensingThread.run, &socket, ref(m)); 
 
-    USE_LiDAR = 1;
-    LiDAR_SensingThread mLiDARSensingThread;
-    thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket, ref(m), 0.1f);
+    // USE_LiDAR = 1;
+    // LiDAR_SensingThread mLiDARSensingThread;
+    // thread sensingthread_LiDAR(mLiDARSensingThread.run, &socket, ref(m), 0.1f);
 
     sensingthread_can.join();
     sensingthread_gps.join();
     sensingthread_cam.join();
     sensingthread_imu.join();
-    sensingthread_LiDAR.join();
+    // sensingthread_LiDAR.join();
 }

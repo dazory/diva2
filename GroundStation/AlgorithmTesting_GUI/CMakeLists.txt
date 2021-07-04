@@ -24,13 +24,28 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 # Find the QtWidgets library
 #set( QTDIR $ENV{QTDIR} )
 #set( CMAKE_PREFIX_PATH ${QTDIR} )
-find_package(Qt5 REQUIRED Widgets Gui)
+
+
+#### FROM HERE
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+if(CMAKE_VERSION VERSION_LESS "3.7.0")
+    set(CMAKE_INCLUDE_CURRENT_DIR ON)
+endif()
+
+# find_package(Qt5 COMPONENTS Quick Core REQUIRED)
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
 ADD_DEFINITIONS (${QT_DEFINITIONS})
 find_package(Qt5 REQUIRED COMPONENTS 
     Core Gui
     # Sql X11Extras OpenGL Network PrintSupport WebEngineWidgets SerialPort SerialBus
     #Multimedia Multimediawidgets
     )
+#### TO HERE
+
+
 find_package(Protobuf REQUIRED)
 
 # find_package(Threads)

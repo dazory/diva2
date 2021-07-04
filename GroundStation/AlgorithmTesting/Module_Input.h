@@ -1,5 +1,4 @@
 #pragma once
-#include "Module_Input_CAM.h"
 
 // OpenCV
 #include <opencv2/opencv.hpp>
@@ -18,7 +17,7 @@
 #include <sys/types.h> 
 #include <sys/stat.h> 
 #include <unistd.h>
-#include "global.h"
+// #include "global.h"
 
 #include <algorithm>
 
@@ -37,17 +36,12 @@ public:
     void displayFileName();
     
     // CAM
-    // string getVideoFullName(){ printf("[Module_Input::getVideoFullName] start\n"); return cam.getVideoFullName();}
-    // Module_Input_CAM *getCAM(){return &cam;}
-    // void setVideoFullName(string strFullName) {this->cam.setVideoFullName(strFullName);}
     void setFiles();
-        void setImages();
+    void setImages();
 
-    // void setFps(int fps){this->fps = fps;}
     string getDateNameFromDir();
     
     void displayImages();
-    // vector<Mat> getImages();
     void image2video(string strFileName);
     void displayVideos(string strFileName);
 
@@ -58,7 +52,6 @@ private:
     string strFileType;
     string strExtension;
 
-    // Module_Input_CAM cam;
     int fps;
     vector<Mat> images;
     

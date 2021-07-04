@@ -33,6 +33,11 @@ using namespace std;
 
 extern int USE_CAM;
 
+enum {
+  CV_INTER_LINEAR =1,
+  CV_CAP_PROP_FPS =5
+};
+
 class CamSensingThread
 {
 
