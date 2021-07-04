@@ -1,0 +1,26 @@
+[
+   {
+      "Sensor" : "NULL",
+      "sensor_token" : "NULL"
+   },
+   {
+      "Sensor" : "GPS",
+      "sensor_token" : "c248b87d6ae33f9a"
+   },
+   {
+      "Sensor" : "CAM",
+      "sensor_token" : "62d7183a5d5789e4"
+   },
+   {
+      "Sensor" : "LiDAR",
+      "sensor_token" : "b2d6b441e2411dc7"
+   },
+   {
+      "Sensor" : "IMU",
+      "sensor_token" : "09e111c7e1e7acb6"
+   },
+   {
+      "Sensor" : "CAN",
+      "sensor_token" : "f8cac0bb2fc4c8bc"
+   }
+]

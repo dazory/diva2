@@ -1,7 +1,8 @@
 #pragma once
 #include "GpsSensingThread.h"
-// #include "ImuSensing.cpp"
+// #include "ImuSensing.cpp" //mscl error
 // #include "ImuSensing.h"
+#include "../../service/Timestamp.h"
 
 #include <string>
 #include <iostream>
@@ -11,7 +12,6 @@
 #include <random>
 
 #include "../../service/zmq_helper.h"
-// #include "../../service/ImuPacket.h"
 
 // JSON
 #include "jsoncpp/json/json.h"

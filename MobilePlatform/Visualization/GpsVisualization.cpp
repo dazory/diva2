@@ -1,4 +1,6 @@
 #include "GpsVisualization.h"
+#include <sys/time.h>
+
 #include "../../service/Timestamp.h"
 #include "../../service/global_name.hpp"
 #include "../../protobuf/sensors.pb.h"
@@ -24,6 +26,9 @@ void GpsVisualization::run(void *contextSub)
 
     clock_t time_bef = clock();
     clock_t time_now = clock();
+
+    fstream dataFile;
+    dataFile.open("GPS_DELAY.csv", ios::out);
     while (1)
     {
         int USE_PROTO = 1;
@@ -37,6 +42,14 @@ void GpsVisualization::run(void *contextSub)
         sensors::Gps gps;
         zmq::message_t msgData;
         SubSock.recv(&msgData);
+
+        // < timestamp >
+        struct timeval tv;
+        auto *end_ts = new google::protobuf::Timestamp();
+        gettimeofday(&tv, NULL);
+        end_ts->set_seconds(tv.tv_sec);
+        end_ts->set_nanos(tv.tv_usec*1000);
+
         time_now = clock();
         printf("(%dms)[MobilePlatform/Visualization/GpsVisualization] Receive %dbytes\n",(float)(time_now-time_bef)/CLOCKS_PER_SEC*1000,msgData.size());
         time_bef = time_now;
@@ -49,6 +62,8 @@ void GpsVisualization::run(void *contextSub)
 
         printf("\n");
         gps.ParseFromArray(msgData.data(), msgData.size());
+
+        // <TIME>
         
         printf("latitude=%f, longitude=%f\n",gps.latitude(), gps.longitude());
 
@@ -59,4 +74,6 @@ void GpsVisualization::run(void *contextSub)
         // [OPTIONS]
         // sleep(1);
     }
+
+    dataFile.close();
 }

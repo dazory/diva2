@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-7be718f448cc3506aee1537d8d4b0498 MobilePlatform/Sensing/sensors.pb.cc

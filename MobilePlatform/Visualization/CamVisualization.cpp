@@ -1,5 +1,6 @@
 #pragma once
 #include "CamVisualization.h"
+#include <sys/time.h>
 
 #include <fstream>
 
@@ -38,6 +39,10 @@ void CamVisualization::run(void *contextSub)
     // int cnt = 0;
     clock_t clk_bef = clock();
     clock_t clk_now = clock();
+    
+    fstream dataFile;
+    dataFile.open("CAM_DELAY.csv", ios::out);
+    
     while (1)
     { 
         sensors::Cam cam;
@@ -51,12 +56,17 @@ void CamVisualization::run(void *contextSub)
         zmq::message_t msgData;
         clk_now = clock();
         socketSub.recv(&msgData);
-        printf("(%d)(%dms)[MobilePlatform/Sensing/CamVisualization] receive %dbytes\n",c++,(float)(clk_now-clk_bef)/CLOCKS_PER_SEC*1000,msgData.size());
-        clk_bef = clk_now;
+        // < timestamp >
+        
 
         // [Parsing to proto]
         unsigned char data[msgData.size()] = "\0";
         cam.ParseFromArray(msgData.data(), msgData.size());
+
+        // <TIME>
+        
+
+
 
         // [CHECK THE IMAGE]
         // 참고: https://github.com/linklab-uva/deepracing/blob/adca1d1a724c4d930e3a5b905a039da5a143a561/data-logger/src/image_logging/utils/opencv_utils.cpp
@@ -72,6 +82,8 @@ void CamVisualization::run(void *contextSub)
         // sleep(1);
         
     }
+
+    dataFile.close();
 
 }
 

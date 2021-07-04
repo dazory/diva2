@@ -12,6 +12,7 @@
 #include "../../protobuf/sensors.pb.h"
 #include "jsoncpp/json/json.h"
 #include "mscl/mscl.h"
+#include "../../service/Timestamp.h"
 
 // JSON
 #include "jsoncpp/json/json.h"
@@ -21,11 +22,10 @@
 using namespace std;
 
 extern int USE_GPS;
-extern map<string, tuple<string, int>> SensorInfoMap;
 
 class GpsSensingThread
 {
 public:
     GpsSensingThread();
-    static void run(zmq::socket_t *socket, mutex &m);
+    static void run(zmq::socket_t *socket, const char *devicename, mutex &m);
 };

@@ -17,15 +17,6 @@ using namespace std;
 
 class Timestamp{
 public:
-    
-    // tm *ts;
-    int year;
-    int month;
-    int day;
-    int hour;
-    int min;
-    int sec;
-    int msec;
 
     string getMilliTime(){
         auto time = chrono::system_clock::now();
@@ -35,28 +26,19 @@ public:
         long nowTime = currentTimeMillis/1000;
 
         tm *ts = localtime(&nowTime);
-        // char buffer[80];
-        // strftime(buffer, 80, "%Y%m%d%H%M%S", ts);
-        // string s(buffer);
-        // this->ts = ts;
-        year = ts->tm_year;
-        month = ts->tm_mon;
-        day = ts->tm_mday;
-        hour = ts->tm_hour;
-        min = ts->tm_min;
-        sec = ts->tm_sec;
-        msec = msc;
-
+        char buffer[80];
+        strftime(buffer, 80, "%Y%m%d%H%M%S", ts);
+        string s(buffer);
 
         string str;
-    //     if(stoi(to_string(msc)) < 10){
-    //       str = s+"00"+to_string(msc);
-    //   }
-    //   else if(stoi(to_string(msc)) < 100){
-    //       str = s+"0"+to_string(msc);
-    //   }else{
-    //       str = s+to_string(msc);
-    //   }
+        if(stoi(to_string(msc)) < 10){
+          str = s+"00"+to_string(msc);
+      }
+      else if(stoi(to_string(msc)) < 100){
+          str = s+"0"+to_string(msc);
+      }else{
+          str = s+to_string(msc);
+      }
       return str;
   }
 

@@ -12,13 +12,6 @@ find_library(ZeroMQ_LIBRARY             # use the hint from about to find the lo
         NAMES zmq
         PATHS ${PC_ZeroMQ_LIBRARY_DIRS}
 )
-# Find the QtWidgets library
-#set( QTDIR $ENV{QTDIR} )
-#set( CMAKE_PREFIX_PATH ${QTDIR} )
-find_package(Qt5 REQUIRED Widgets Gui)
-ADD_DEFINITIONS (${QT_DEFINITIONS})
-find_package(Qt5 REQUIRED COMPONENTS Core Gui Sql X11Extras OpenGL Network PrintSupport WebEngineWidgets SerialPort SerialBus)
-find_package(Protobuf REQUIRED)
 
 ## use thread
 find_package( Threads )
