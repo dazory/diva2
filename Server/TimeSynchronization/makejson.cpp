@@ -415,7 +415,7 @@ bool MakeJson::Gps_Data()
             gpses["timestamp"] = iat->get_gps_timestamp(gps_data_idx);
             this->Get_LLA(gps_data_idx);
             gpses["latitude"] = latitude;//위도
-            gpses["longitude"] = longitude;//고도
+            gpses["longitude"] = longitude;//경도
             gpses["HorizontalDilutionOfPrecision"] = HorizontalDilutionOfPrecision;//수평위치오차
 
             Gps_data.append(gpses);
