@@ -134,8 +134,8 @@ target_link_libraries(diva2 PUBLIC
 
 
 # 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
-add_subdirectory(MobilePlatform/Sensing)
-add_subdirectory(MobilePlatform/Visualization)
+# add_subdirectory(MobilePlatform/Sensing)
+# add_subdirectory(MobilePlatform/Visualization)
 add_subdirectory(GroundStation/Playback)
 add_subdirectory(GroundStation/AlgorithmTesting)
 add_subdirectory(GroundStation/AlgorithmTesting_GUI)
