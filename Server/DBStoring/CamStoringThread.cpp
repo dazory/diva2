@@ -38,10 +38,10 @@ void CamStoringThread::run(){
       //Create SQL statement
       sql = "create table CAM_DATA(token text primary key references frame (frame_token), fileformat text, filename text);";
       
-      //Create a transactional object.
+      //Create a transactional object
       work W(C);
 
-      /* Execute SQL query */
+      //Execute SQL query
       W.exec( sql );
       W.commit();
 
@@ -58,12 +58,12 @@ void CamStoringThread::run(){
          temp2=std::string((Cam_datas[i]["fileformat"].asString()).c_str());
          temp3=std::string((Cam_datas[i]["filename"].asString()).c_str());
 
-         /* Create a transactional object. */
+         //Create a transactional object
          work W(C);
 	      std::string query_string;
          query_string.append("insert into CAM_DATA values('"); 
             
-         // *****Set table*****
+         //Set table
          query_string.append(temp1);
          query_string.append("','");
          query_string.append(temp2);
@@ -71,7 +71,7 @@ void CamStoringThread::run(){
          query_string.append(temp3);
          query_string.append("');");
          
-         /* Execute SQL query */
+         //Execute SQL query
          W.exec(query_string);
          W.commit();
       }

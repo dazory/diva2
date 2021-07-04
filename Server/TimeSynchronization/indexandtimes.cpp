@@ -6,6 +6,7 @@ IndexAndTimes::IndexAndTimes(string fpath)
 {
     dir = fpath;
     rf = new ReadFiles(fpath);
+    //수정시간 가장 최근인 csv 파일 읽기
     gps_csv = rf->read_csv(rf->get_path(is_GPS));
     cam_csv = rf->read_csv(rf->get_path(is_CAM));
     lidar_csv = rf->read_csv(rf->get_path(is_LiDAR));
@@ -15,6 +16,7 @@ IndexAndTimes::IndexAndTimes(string fpath)
 
 int IndexAndTimes::get_hhmmsssss(string str){ return stoi(str.substr(8,9));}
 
+//타임스탬프에 의해 cam의 index 찾기
 int IndexAndTimes::find_cam_idx_by_ts(int now, string comp_timestamp){
     int cam_start_idx = now;
     for(int i=now; i<int(cam_csv.size()); i++){
@@ -25,7 +27,7 @@ int IndexAndTimes::find_cam_idx_by_ts(int now, string comp_timestamp){
             break;
         }
     }
-    return cam_start_idx;
+    return cam_start_idx;//cam의 start index 도출
 }
 
 int IndexAndTimes::find_lidar_idx_by_ts(int now, string comp_timestamp){
@@ -81,7 +83,7 @@ int IndexAndTimes::find_can_idx_by_ts(int now, string comp_timestamp){
     return can_start_idx;
 }
 
-
+//해당 타임스탬프를 기준으로 cam의 raw data의 시작 인덱스 값 도출
 int IndexAndTimes::find_cam_start_idx(){
     int cam_start_idx = 0;
     for(int i=0; i<cam_csv.size(); i++){
@@ -142,7 +144,7 @@ int IndexAndTimes::find_can_start_idx(){
     return can_start_idx;
 }
 
-
+//가장 늦게 시작된 sensor의 timestamp
 string IndexAndTimes::find_latest_started(){
     int first_timestamps[number_of_sensors+1];
     latest_sensor = is_GPS;
@@ -182,9 +184,10 @@ string IndexAndTimes::find_latest_started(){
         latest_sensor = is_CAN;
         return can_csv[0][0];
 
-    }
+    }//그 중 가장 늦게 시작된 센서 구해서 리턴
 }
 
+//가장 빨리 종료된 sensor의 timestamp
 string IndexAndTimes::find_earliest_ended(){
     int  last_timestamps[number_of_sensors+1];
     earliest_sensor = is_GPS;
@@ -218,20 +221,22 @@ string IndexAndTimes::find_earliest_ended(){
 
         case is_CAN:
         return can_csv[can_csv.size()-1][0];
-    }
+    }//그 중 가장 일찍 끝난 센서 구해서 리턴
 }
 
+//프레임 개수
+//{gps의 마지막 index}-{gps의 처음 index}
 int IndexAndTimes::number_of_frames(){
     int number_of_frames = 0;
     int gps_start =  find_gps_start_idx();
     string last_timestamp = find_earliest_ended();
-    gps_last = find_gps_idx_by_ts(gps_start, last_timestamp);
+    gps_last = find_gps_idx_by_ts(gps_start, last_timestamp);//가장 일찍 끝난 센서의 timestamp와 가까운 gps index 도출
     if(gps_last == gps_csv.size()-1) gps_last = gps_last-1;
     number_of_frames = gps_last - gps_start;
     return number_of_frames;
 }
 
-
+//가장 늦게 취득 시작된 타임스탬프를 기준으로 각 센서의 시작 인덱스를 결정
 int* IndexAndTimes::get_start_indexes(){
    static int idxes[number_of_sensors+1];
    string start_timestamp = find_latest_started();
@@ -290,6 +295,7 @@ return idxes;
 //     return is_key_frame;
 // }
 
+//센서별 해당 index에서의 timestamp 얻기
 string IndexAndTimes::get_gps_timestamp(int gps_idx){
     return gps_csv[gps_idx][0];
 }

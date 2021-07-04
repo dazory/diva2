@@ -25,6 +25,7 @@ void ImuStoringThread::run(){
     timestamp = tm_year + tm_month + tm_date;
      
    try {
+      //Connect Database
       connection C("dbname = diva2db user = diva2 password = 1234 \
       hostaddr = 127.0.0.1 port = 5432");
       if (C.is_open()) {
@@ -34,13 +35,13 @@ void ImuStoringThread::run(){
       }
       string path = "/home/cvlab2/DIVA2/diva2/Server/DIVA2_DATA/"+timestamp+"_0/JSON/imu_data.json";
 
-      /* Create SQL statement */
+      //Create SQL statement
       sql = "create table IMU_DATA(token text primary key references frame (frame_token),scaledaccelx text, scaledaccely text, scaledaccelz text);";
       
-      /* Create a transactional object. */
+      //Create a transactional object
       work W(C);
 
-      /* Execute SQL query */
+      //Execute SQL query
       W.exec( sql );
       W.commit();
 
@@ -52,6 +53,7 @@ void ImuStoringThread::run(){
       std::string temp3;
       std::string temp4;      
 
+      //JSON parsing & DB Storing
       for(int i=0; i<Imu_datas.size(); i++){
 
          temp1=std::string((Imu_datas[i]["scaledaccelx"].asString()).c_str());
@@ -59,12 +61,12 @@ void ImuStoringThread::run(){
          temp3=std::string((Imu_datas[i]["scaledaccelz"].asString()).c_str());
          temp4=std::string((Imu_datas[i]["token"].asString()).c_str());
 
-         /* Create a transactional object. */
+         //Create a transactional object
          work W(C);
 	      std::string query_string;
          query_string.append("insert into IMU_DATA values('"); 
 
-	      // *****Set table*****
+	      //Set table
          query_string.append(temp4);
          query_string.append("','");
          query_string.append(temp1);
@@ -74,12 +76,14 @@ void ImuStoringThread::run(){
          query_string.append(temp3);
          query_string.append("');");
 
-         /* Execute SQL query */
+         //Execute SQL query
          W.exec(query_string);
          W.commit();
       }
       
       cout << "[DBStoring] imu successfully" << endl;
+
+      //Disconnect Database
       C.disconnect ();
    
    } catch (const std::exception &e) {

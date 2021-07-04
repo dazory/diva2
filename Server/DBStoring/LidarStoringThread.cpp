@@ -25,6 +25,7 @@ void LidarStoringThread::run(){
     timestamp = tm_year + tm_month + tm_date;
    
    try {
+      //Connect Database
       connection C("dbname = diva2db user = diva2 password = 1234 \
       hostaddr = 127.0.0.1 port = 5432");
       if (C.is_open()) {
@@ -35,13 +36,13 @@ void LidarStoringThread::run(){
 
       string path = "/home/cvlab2/DIVA2/diva2/Server/DIVA2_DATA/"+timestamp+"_0/JSON/lidar_data.json";
 
-      /* Create SQL statement */
+      //Create SQL statement
       sql = "create table LIDAR_DATA(token text primary key references frame (frame_token), fileformat text, filename text);";
       
-      /* Create a transactional object. */
+      //Create a transactional object
       work W(C);
 
-      /* Execute SQL query */
+      //Execute SQL query
       W.exec( sql );
       W.commit();
 
@@ -52,18 +53,18 @@ void LidarStoringThread::run(){
       std::string temp2;
       std::string temp3;
       
-
+      //JSON parsing & DB Storing
       for(int i=0; i<Lidar_datas.size(); i++){
          temp1=std::string((Lidar_datas[i]["token"].asString()).c_str());
          temp2=std::string((Lidar_datas[i]["fileformat"].asString()).c_str());
          temp3=std::string((Lidar_datas[i]["filename"].asString()).c_str());
 
-         /* Create a transactional object. */
+         //Create a transactional object
          work W(C);
 	      std::string query_string;
             query_string.append("insert into LIDAR_DATA values('"); 
             
-            // *****Set table*****
+            //Set table
             query_string.append(temp1);
             query_string.append("','");
             query_string.append(temp2);
@@ -71,12 +72,14 @@ void LidarStoringThread::run(){
             query_string.append(temp3);
             query_string.append("');");
 
-         /* Execute SQL query */
+         //Execute SQL query
          W.exec(query_string);
          W.commit();
       }
       
       cout << "[DBStoring] lidar successfully" << endl;
+
+      //Disconnect Database
       C.disconnect ();
    } catch (const std::exception &e) {
       cerr << e.what() << std::endl;

@@ -26,6 +26,7 @@ void CanStoringThread::run(){
    
    
    try {
+      //Connect Database
       connection C("dbname = diva2db user = diva2 password = 1234 \
       hostaddr = 127.0.0.1 port = 5432");
       if (C.is_open()) {
@@ -35,13 +36,13 @@ void CanStoringThread::run(){
       }
       string path = "/home/cvlab2/DIVA2/diva2/Server/DIVA2_DATA/"+timestamp+"_0/JSON/can_data.json";
 
-      /* Create SQL statement */
+      //Create SQL statement
       sql = "create table CAN_DATA(token text primary key references frame (frame_token),handleAngle text,turnLight text,vehicleSpeed text, gear text);";
       
-      /* Create a transactional object. */
+      //Create a transactional object
       work W(C);
 
-      /* Execute SQL query */
+      //Execute SQL query
       W.exec( sql );
       W.commit();
 
@@ -54,6 +55,7 @@ void CanStoringThread::run(){
       std::string temp4;
       std::string temp5;
 
+      //JSON parsing & DB Storing
       for(int i=0; i<Can_datas.size(); i++){
 
          temp1=std::string((Can_datas[i]["handleAngle"].asString()).c_str());
@@ -62,13 +64,12 @@ void CanStoringThread::run(){
          temp4=std::string((Can_datas[i]["gear"].asString()).c_str());
          temp5=std::string((Can_datas[i]["token"].asString()).c_str());
 
-
-         /* Create a transactional object. */
+         //Create a transactional object
          work W(C);
 	      std::string query_string;
          query_string.append("insert into CAN_DATA values('"); 
 
-	      // *****Set table*****
+	      //Set table
          query_string.append(temp5);
          query_string.append("','");
          query_string.append(temp1);
@@ -80,12 +81,14 @@ void CanStoringThread::run(){
          query_string.append(temp4);
          query_string.append("');");
 
-         /* Execute SQL query */
+         //Execute SQL query
          W.exec(query_string);
          W.commit();
       }
       
       cout << "[DBStoring] can successfully" << endl;
+
+      //Disconnect Database
       C.disconnect ();
    } catch (const std::exception &e) {
       cerr << e.what() << std::endl;
