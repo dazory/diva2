@@ -43,7 +43,7 @@ endif()
 
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
-PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../../protobuf/sensors.proto" )
+PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS "../../../protobuf/sensors.proto" )
 
 
 # 실행파일 만들기
