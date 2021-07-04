@@ -1,7 +1,4 @@
 
-
-
-
 <p align="center">
   <img width="150" align="center" src="https://user-images.githubusercontent.com/81455416/124372597-67521500-dcc6-11eb-99b5-149581fb9451.png" alt="diva2"/>
 </p>
@@ -96,9 +93,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
 
 1. **Real-time Visualization**
 
-   <p align="center">
-     <img width="700" align="center" src="./storage/realtime-visualization.gif" alt="realtime-visualization"/>
-   </p>
+[![realtime-visualization](https://img.youtube.com/vi/LOaPA7vAb78/0.jpg)](https://youtu.be/LOaPA7vAb78?t=0s)
 
    
 
