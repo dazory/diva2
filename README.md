@@ -114,6 +114,9 @@ Ground Station의 주요 기능은 다음과 같습니다.
 ```
 ├─ diva2
 │  │  README.md
+│  ├─ MobilePlatform
+│  │      ├─ Sensing
+│  │      └─ Visualization
 │  ├─ Server
 │  │      ├─ TimeSynchronization
 │  │      └─ DBStoring
@@ -121,9 +124,6 @@ Ground Station의 주요 기능은 다음과 같습니다.
 │  │      ├─ Playback
 │  │      ├─ Visualization
 │  │      └─ AlgorithmTest
-│  ├─ MobilePlatform
-│  │      ├─ Sensing
-│  │      └─ Visualization
 │  ├─ build
 │  └─ service
 │          이미지
@@ -176,7 +176,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
 
    * Server
  
-     * TimeSynchronize
+     * TimeSynchronization
 
        ```shell
        cd diva2/build/Server/TimeSynchronization
