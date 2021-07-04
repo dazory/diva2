@@ -108,8 +108,15 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS}) 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
 
+## use thread
+find_package( Threads )
+link_libraries(pthread)
 
-
+## use libpqxx
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lpqxx -lpq")
+set(PQXX /usr/local/include/pqxx)
+find_library(PQXX_LIB pqxx)
+find_library(PQ_LIB pq)
 
 # 실행파일 만들기
 set(SOURCE_MAIN main.cpp)
@@ -126,10 +133,11 @@ target_link_libraries(diva2 PUBLIC
     )
 
 # 서브 디렉토리에 있는 cmakeFiles을 실행시켜줌
-add_subdirectory(MobilePlatform/Sensing)
-add_subdirectory(MobilePlatform/Visualization)
-add_subdirectory(GroundStation/Playback)
-add_subdirectory(GroundStation/AlgorithmTesting)
-
-add_subdirectory(test)
-add_subdirectory(test/can_dbcparser)
+# add_subdirectory(MobilePlatform/Sensing)
+# add_subdirectory(MobilePlatform/Visualization)
+# add_subdirectory(GroundStation/Playback)
+# add_subdirectory(GroundStation/AlgorithmTesting)
+add_subdirectory(Server/TimeSynchronization)
+add_subdirectory(Server/DBStoring)
+# add_subdirectory(test)
+# add_subdirectory(test/can_dbcparser)
