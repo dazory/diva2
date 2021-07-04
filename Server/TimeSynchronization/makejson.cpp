@@ -4,10 +4,10 @@
 
 MakeJson::MakeJson(string fpath)
 {
-    dir = fpath;
+    dir = fpath;//json 파일을 저장할 path
     iat = new IndexAndTimes(dir);
 
-    gps_csv_size = iat->gps_csv.size();
+    gps_csv_size = iat->gps_csv.size();//csv 파일 사이즈 크기
     cam_csv_size = iat->cam_csv.size();
     lidar_csv_size = iat->lidar_csv.size();
     imu_csv_size = iat->imu_csv.size();
@@ -28,6 +28,7 @@ MakeJson::MakeJson(string fpath)
     this_log_start = 0;
 }
 
+//make token
 string MakeJson::generate_token(){
     srand((unsigned int)time(NULL));
     char hex_characters[] ="0123456789abcdef";
@@ -58,6 +59,7 @@ string MakeJson::generate_token_2()
     return token_string;
 }
 
+//make timestamp
 string MakeJson::generate_timestamp()
 {
     time_t system_time;

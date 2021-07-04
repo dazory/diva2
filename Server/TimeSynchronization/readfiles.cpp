@@ -27,6 +27,7 @@ string ReadFiles::get_path(int i){
     char *file_name= new char[size];
     FILE *fp;
 
+    //가장 최근에 기록된 장치들의 raw data 파일을 불러옴
     string path = dir+"/"+sensor;
     string sys_cmd = "cd "+path+" && ls -tr | grep i30 | tail -1 ";
     const char * path_c = sys_cmd.c_str();
@@ -45,11 +46,11 @@ string ReadFiles::get_path(int i){
     return result;
 }
 
-
+//csv 파일 읽어오는 함수
+//csv : comma separated version 컴마로 구분된 파일
 vector<vector<string>> ReadFiles::read_csv(string csv_file){
     ifstream in(csv_file.c_str());
     int c=0;
-    // cout<<">"<<c++<<endl;
     string line, field;
     vector< vector<string> > arr;  // the 2D array
     vector<string> v;

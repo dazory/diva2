@@ -8,6 +8,7 @@ MakeJsonThread::MakeJsonThread(){}
 
 void MakeJsonThread::run(){
 
+    //timestamp
     time_t system_time;
     struct tm* systime;
     system_time = time(NULL);
@@ -22,7 +23,8 @@ void MakeJsonThread::run(){
 
     string timestamp;
     timestamp = tm_year + tm_month + tm_date;
-
+    
+    //make log, frame, scene, lidar, cam, gps, imu, can json
     MakeJson* j = new MakeJson("/home/cvlab2/DIVA2/diva2/Server/DIVA2_DATA/"+timestamp+"_0");
     j->Sensor(5);
     

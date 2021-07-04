@@ -1,6 +1,14 @@
 
+<<<<<<< HEAD
 <p align="center">
   <img width="150" align="center" src="https://user-images.githubusercontent.com/81455416/124372597-67521500-dcc6-11eb-99b5-149581fb9451.png" alt="diva2"/>
+=======
+
+
+
+<p align="center">
+  <img width="150" align="center" src="./storage/diva2.png" alt="diva2"/>
+>>>>>>> 133c720bfde9d1871cc149b4fb0168203229e2ce
 </p>
 
 <div align="center" style="font-weight:bold;">자율주행차량의 실시간 다중센서데이터 수집·정제·분석 및 관제 통합 플랫폼 개발</div>
@@ -29,7 +37,11 @@ Manual : https://github.com/dazory/diva2/wiki
 
 DIVA2의 전체 시스템 구성도는 다음과 같습니다.
 <p align="center">
+<<<<<<< HEAD
   <img width="700" align="center" src="https://user-images.githubusercontent.com/81455416/124372626-98324a00-dcc6-11eb-98c4-526a60db8b69.png" alt="system-configuration"/>
+=======
+  <img width="700" align="center" src="./storage/system-configuration.png" alt="system-configuration"/>
+>>>>>>> 133c720bfde9d1871cc149b4fb0168203229e2ce
 </p>
 
 - <b>Mobile Platform</b> : 차량에 장착된 PC로, 센서 데이터 취득 및 처리를 담당
@@ -48,7 +60,11 @@ DIVA2의 전체 시스템 구성도는 다음과 같습니다.
 
 1. **Mobile Platform**
 
+<<<<<<< HEAD
    ![mobile-platform](https://user-images.githubusercontent.com/81455416/124372603-72a54080-dcc6-11eb-80d9-a8990d7b8329.png)
+=======
+   ![image-20210630155330526](./storage/mobile-platform.png)
+>>>>>>> 133c720bfde9d1871cc149b4fb0168203229e2ce
 
    
 
@@ -92,7 +108,13 @@ Ground Station의 주요 기능은 다음과 같습니다.
 
 1. **Real-time Visualization**
 
+<<<<<<< HEAD
 [![realtime-visualization](https://img.youtube.com/vi/LOaPA7vAb78/0.jpg)](https://youtu.be/LOaPA7vAb78?t=0s)
+=======
+   <p align="center">
+     <img width="700" align="center" src="./storage/realtime-visualization.gif" alt="realtime-visualization"/>
+   </p>
+>>>>>>> 133c720bfde9d1871cc149b4fb0168203229e2ce
 
 2. **Playback**
 
