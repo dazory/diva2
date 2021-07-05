@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1776</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DIVA _ Data Intergration for Vehicle Assistance</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>760</y>
+      <width>311</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);
+</string>
+    </property>
+    <property name="text">
+     <string>Steering Wheel Degree</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>180</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);
+color: rgb(98, 114, 164);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>830</y>
+      <width>531</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(238, 238, 236);
+background-color: rgba(238, 238, 236, 180);</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>790</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background : rgb(114, 159, 207)</string>
+    </property>
+    <property name="text">
+     <string>Download</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>430</y>
+      <width>311</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout"/>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>621</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout_3"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="P_label">
+    <property name="geometry">
+     <rect>
+      <x>1300</x>
+      <y>640</y>
+      <width>50</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 30pt &quot;Ubuntu Mono&quot;;
+color: rgb(40, 42, 54);
+background-color: rgba(255, 255, 255,0);psql -h localhost -p 5432 -U diva -d &quot;diva&quot;</string>
+    </property>
+    <property name="text">
+     <string>P</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="R_label">
+    <property name="geometry">
+     <rect>
+      <x>1350</x>
+      <y>640</y>
+      <width>50</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 30pt &quot;Ubuntu Mono&quot;;
+color: rgb(40, 42, 54);
+background-color: rgba(255, 255, 255,0);psql -h localhost -p 5432 -U diva -d &quot;diva&quot;</string>
+    </property>
+    <property name="text">
+     <string>R</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="N_label">
+    <property name="geometry">
+     <rect>
+      <x>1400</x>
+      <y>640</y>
+      <width>50</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 30pt &quot;Ubuntu Mono&quot;;
+color: rgb(40, 42, 54);
+background-color: rgba(255, 255, 255,0);psql -h localhost -p 5432 -U diva -d &quot;diva&quot;</string>
+    </property>
+    <property name="text">
+     <string>N</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="D_label">
+    <property name="geometry">
+     <rect>
+      <x>1450</x>
+      <y>640</y>
+      <width>50</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 30pt &quot;Ubuntu Mono&quot;;
+color: rgb(40, 42, 54);
+background-color: rgba(255, 255, 255,0);psql -h localhost -p 5432 -U diva -d &quot;diva&quot;</string>
+    </property>
+    <property name="text">
+     <string>D</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>1420</x>
+      <y>680</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,0)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>rightarrowbefore.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>1300</x>
+      <y>680</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,0)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>leftarrowbefore.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="total">
+    <property name="geometry">
+     <rect>
+      <x>1250</x>
+      <y>40</y>
+      <width>181</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0);</string>
+    </property>
+    <property name="text">
+     <string>Total: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="usage">
+    <property name="geometry">
+     <rect>
+      <x>1250</x>
+      <y>80</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0);
+</string>
+    </property>
+    <property name="text">
+     <string>Free: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>180</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);
+</string>
+    </property>
+    <property name="text">
+     <string>Accel X,Y,Z</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>1450</x>
+      <y>10</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>10</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);
+color: rgb(98, 114, 164);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>10</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0);</string>
+    </property>
+    <property name="text">
+     <string>Memory</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>1250</x>
+      <y>120</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="gps_cb">
+    <property name="geometry">
+     <rect>
+      <x>1460</x>
+      <y>20</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+    </property>
+    <property name="text">
+     <string>GPS</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="imu_cb">
+    <property name="geometry">
+     <rect>
+      <x>1460</x>
+      <y>80</y>
+      <width>53</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+    </property>
+    <property name="text">
+     <string>IMU</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="can_cb">
+    <property name="geometry">
+     <rect>
+      <x>1460</x>
+      <y>140</y>
+      <width>56</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+    </property>
+    <property name="text">
+     <string>CAN</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cam_cb">
+    <property name="geometry">
+     <rect>
+      <x>1460</x>
+      <y>50</y>
+      <width>58</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+    </property>
+    <property name="text">
+     <string>CAM</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="lidar_cb">
+    <property name="geometry">
+     <rect>
+      <x>1460</x>
+      <y>110</y>
+      <width>68</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+    </property>
+    <property name="text">
+     <string>LiDAR</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cam">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>621</width>
+      <height>349</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="signal1">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>845</y>
+      <width>10</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0);
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="signal2">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>840</y>
+      <width>10</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0);
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="signal3">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>830</y>
+      <width>10</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,0);
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="Scene_list">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>540</y>
+      <width>201</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="Date_list">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>430</y>
+      <width>201</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);</string>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="plot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>230</y>
+      <width>531</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logo">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>10</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,80);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_6</zorder>
+   <zorder>gps_cb</zorder>
+   <zorder>imu_cb</zorder>
+   <zorder>can_cb</zorder>
+   <zorder>cam_cb</zorder>
+   <zorder>lidar_cb</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_7</zorder>
+   <zorder>horizontalSlider</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>gridLayoutWidget_2</zorder>
+   <zorder>P_label</zorder>
+   <zorder>R_label</zorder>
+   <zorder>N_label</zorder>
+   <zorder>D_label</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>total</zorder>
+   <zorder>usage</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_10</zorder>
+   <zorder>progressBar</zorder>
+   <zorder>Cam</zorder>
+   <zorder>signal1</zorder>
+   <zorder>signal2</zorder>
+   <zorder>signal3</zorder>
+   <zorder>Scene_list</zorder>
+   <zorder>Date_list</zorder>
+   <zorder>plot</zorder>
+   <zorder>logo</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1776</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(238, 238, 236, 200);
+color: rgba(103, 73, 203, 230);</string>
+   </property>
+   <widget class="QMenu" name="menuStreaming">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>Streaming</string>
+    </property>
+    <addaction name="actionInitializing"/>
+    <addaction name="actionLive_Streaming"/>
+    <addaction name="actionStreaming_End"/>
+    <addaction name="actionSend_Data"/>
+   </widget>
+   <widget class="QMenu" name="menuPlayback">
+    <property name="title">
+     <string>PlayBack</string>
+    </property>
+    <addaction name="actionInitializing_2"/>
+    <addaction name="actionGet_Log"/>
+    <addaction name="actionAlgorithm_Test"/>
+    <addaction name="actionFinish"/>
+   </widget>
+   <addaction name="menuStreaming"/>
+   <addaction name="menuPlayback"/>
+  </widget>
+  <action name="actionLive_Streaming">
+   <property name="text">
+    <string>Live Streaming</string>
+   </property>
+  </action>
+  <action name="actionGet_Log">
+   <property name="text">
+    <string>Get Log</string>
+   </property>
+  </action>
+  <action name="actionStreaming_End">
+   <property name="text">
+    <string>Streaming End</string>
+   </property>
+  </action>
+  <action name="actionInitializing">
+   <property name="text">
+    <string>Initializing</string>
+   </property>
+  </action>
+  <action name="actionIntializing">
+   <property name="text">
+    <string>Intializing</string>
+   </property>
+  </action>
+  <action name="actionInitializing_2">
+   <property name="text">
+    <string>Initializing</string>
+   </property>
+  </action>
+  <action name="actionStroing_To_DB">
+   <property name="text">
+    <string>Stroing To DB</string>
+   </property>
+  </action>
+  <action name="actionFinish">
+   <property name="text">
+    <string>Finish</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>Test</string>
+   </property>
+  </action>
+  <action name="actionJSON_Parsing">
+   <property name="text">
+    <string>JSON Parsing</string>
+   </property>
+  </action>
+  <action name="actionDB_Storing">
+   <property name="text">
+    <string>DB Storing</string>
+   </property>
+  </action>
+  <action name="actionAlgorithm_Test">
+   <property name="text">
+    <string>Algorithm Test</string>
+   </property>
+  </action>
+  <action name="actionSend_Data">
+   <property name="text">
+    <string>Send Data</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

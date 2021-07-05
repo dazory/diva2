@@ -58,6 +58,17 @@ const char *utc_to_kst(char*s){
     return buf;
 }
 
+ string getDate(){
+    char date_buf[9];
+    auto time = chrono::system_clock::now();
+    auto mill = chrono::duration_cast<chrono::milliseconds>(time.time_since_epoch());
+    long long currentTimeMillis = mill.count();
+    long nowTime = currentTimeMillis/1000;
+    tm *ts = localtime(&nowTime);
+    strftime(date_buf, 9, "%Y%m%d", ts);
+    string date(date_buf);
+    return date;
+  }
 
 };
 

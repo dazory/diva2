@@ -30,7 +30,7 @@ int main(){
     long nowTime = currentTimeMillis / 1000;
     tm *t = localtime(&nowTime);
 
-    char cPath[15];
+    char cPath[50];
     sprintf(cPath, "/home/diva2/DIVA2_DATA/%s_0/CAM/JPG/CAM_%04d%02d%02d", timestamp.c_str(), t->tm_year + 1900, t->tm_mon + 1, t->tm_mday);
     // string cPath = "/home/diva2/DIVA2data/"+timestamp+"_0/CAM/JPG/CAM_%04d%02d%02d" + t->tm_year + 1900 + t->tm_mon + 1 + t->tm_mday;
     printf("path: %s\n", cPath);

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Kakao map start</title>
+    <style>
+        .hAddr {position:absolute;left:10px;top:10px;border-radius: 2px;background:#fff;background:rgba(255,255,255,0.8);z-index:1;padding:5px;}
+    </style>
+</head>
+<body>
+    <div id="map" style="width:570px;;height:775px;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2c94aabf2a25beec36ce54de98b63f4f&libraries=services"></script>
+    <script>
+        var container = document.getElementById('map'),
+            options = {
+                center: new kakao.maps.LatLng(37.449620, 126.653155),
+                level: 3
+            };
+        var map =  new kakao.maps.Map(container, options);     
+        var markers = [];
+        var car_pointer = './car_marker.png', 
+            car_pointer_size = new kakao.maps.Size(15,18),
+            car_marker_image = new kakao.maps.MarkerImage(car_pointer, car_pointer_size);
+		var path_pointer='./marker.png',
+			path_size = new kakao.maps.Size(10,10),
+			path_image = new kakao.maps.MarkerImage(path_pointer, path_size);
+        var geocoder = new kakao.maps.services.Geocoder();
+        var detailAddr;
+		
+		var marker = new kakao.maps.Marker({
+			position : map.getCenter(),
+			zIndex : 3
+		});
+
+
+
+        function initMap(){
+            map.panTo(new kakao.maps.LatLng(37.449620,126.653155));
+            //marker = new kakao.maps.Marker({
+            //    image : car_marker_image,
+            //    position: new kakao.maps.LatLng(37.449620,126.653155)
+            //});
+            //marker.setMap(map);
+        }
+
+        initMap();
+
+        var callback = function(result, status){
+            if(status === kakao.maps.services.Status.OK){
+                detailAddr = result[0].address.address_name;
+            }
+       };
+
+        function addMarker(lat, lng){
+            map.panTo( new kakao.maps.LatLng(lat,lng));
+			map.setCenter(new kakao.maps.LatLng(lat,lng));
+			//marker.setZIndex(1)
+
+			var path=new kakao.maps.Marker({
+				image : path_image,
+				//position : map.getCenter(),
+                position : new kakao.maps.LatLng(lat,lng),
+				zIndex : 1
+			});
+			path.setMap(map);
+
+			//marker.setPosition(map.getCenter());
+            marker.setPosition(new kakao.maps.LatLng(lat,lng));
+			marker.setMap(map);
+
+			//markers.push(path);
+           // if(markers.length == 1 || markers.length % 50 == 0){
+                geocoder.coord2Address(lng, lat, callback);
+           // }
+        }
+
+        function getAddr(){
+            return detailAddr;
+        }
+
+        function resetMarker(){
+            for(var i=0; i<markers.length; i++){
+                markers[i].setMap(null);
+            }
+        }
+       
+    </script>
+</body>
+</html>
