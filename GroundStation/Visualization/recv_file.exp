@@ -1,0 +1,12 @@
+#!/usr/bin/expect
+#서버로부터 <dir path> 디렉토리를 현재 위치로 다운받음
+#expect -f recv_file.exp <dir path>
+#~/DIVA2/diva2-server/DIVA2data/날짜
+
+set dir [lindex $argv 0]
+
+spawn rsync -avzhP cvlab2@165.246.39.124:~/DIVA2/diva2-server/DIVA2data/$dir .
+expect -re "password:"
+send "cvlab525\r"
+
+interact

@@ -22,17 +22,7 @@ message Imu{
     double timestamp = 4;
 }
 
-enum ChannelOrder {
-	GRAYSCALE = 0;
-	BGR = 1;
-	RGB = 2;
-	BGRA = 3;
-	RGBA = 4;
-	OPTICAL_FLOW = 5;
-}
-
 message Cam{
-    // ChannelOrder channel_order = 2; // 필요없어?????
     int32 cols = 1;
     int32 rows = 2;
     bytes image_data = 3;
@@ -76,3 +66,12 @@ message algorithm_img
     bytes image_result = 4;
     float millis_term = 5;
 }
+
+enum ChannelOrder {
+	GRAYSCALE = 0;
+	BGR = 1;
+	RGB = 2;
+	BGRA = 3;
+	RGBA = 4;
+	OPTICAL_FLOW = 5;
+} 
