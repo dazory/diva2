@@ -196,6 +196,13 @@ Ground Station의 주요 기능은 다음과 같습니다.
      * Algorithm
         [wiki](https://github.com/dazory/diva2/wiki/Ground-Station-Algorithm-Test) 확인 바람
      
+     * Visualization
+
+       ```shell
+       cd diva2/build/GroundStation/Visualization
+       ./GS_Visualization
+       ```
+     
 
 
 
