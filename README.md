@@ -222,11 +222,7 @@ and Thanks to [DIVA](https://github.com/kka-na/DIVA_QT) for the advance study.
 
 
 
-## 📝 License
-
-
-
----
+## 📝 Contact
 > If you have any questions, please email below. <br>
 > 
 > * dazory: 12181851@inha.edu
