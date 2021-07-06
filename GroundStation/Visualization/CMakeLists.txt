@@ -106,16 +106,11 @@ include_directories(SYSTEM
    ${PCL_LIBRARIES}
 )
 
-add_library(ouster_viz STATIC src/viz.cpp src/os1.cpp src/os1_util.cpp)
-set_target_properties(ouster_viz PROPERTIES POSITION_INDEPENDENT_CODE ON)
-target_link_libraries(ouster_viz jsoncpp ${ZeroMQ_LIBRARY})
-target_include_directories(ouster_viz PUBLIC ${ZeroMQ_INCLUDE_DIR} include)
-target_include_directories(ouster_viz SYSTEM PRIVATE)
-
 #set(project_SOURCES main.cpp mainwindow.cpp camthread.cpp glwidget.cpp gpsthread.cpp lidarthread.cpp lidarvtkwidget.cpp)
 set(project_SOURCES main.cpp  canthread.cpp imuwidget.cpp  mainwindow.cpp camthread.cpp gpsthread.cpp 
   lidarthread.cpp lidarvtkwidget.cpp  imuthread.cpp qcgaugewidget.cpp qcustomplot.cpp)
 #
+
 add_executable(${PROJECT_NAME} ${project_SOURCES} ${MSCL_INC_PATH} ${MSCL_LIB} ${MSCL_INC} ${PROTO_SRCS} ${PROTO_HDRS})
 
 target_link_libraries(${PROJECT_NAME} ${PCL_LIBRARIES} ${VTK_LIBRARIES} ${JSONCPP_LIBRARIES} ${OpenCV_LIBS} ${GTK2_LIBRARIES}
@@ -134,5 +129,4 @@ ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${CMAKE_THREAD_LIBS_INIT} ${PROTOBUF_LIBRARI
 	GL
 	GLU
 	glut
-	ouster_viz
 )
