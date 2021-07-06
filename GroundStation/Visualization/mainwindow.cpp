@@ -221,8 +221,8 @@ void MainWindow::Make(){
    redRectLabel->show();
 
 
-    QPixmap lArrowPixm("/home/dahye/diva2/GroundStation/Visualization/resource/leftarrow.png");
-    QPixmap rArrowPixm("/home/dahye/diva2/GroundStation/Visualization/resource/rightarrow.png");
+    QPixmap lArrowPixm("../../resource/leftarrow.png");
+    QPixmap rArrowPixm("../../resource/rightarrow.png");
     lArrowLabel  = new QLabel(this); lArrowLabel->setStyleSheet("QLabel { background-color: rgba(255, 255, 255, 0); }");
     rArrowLabel = new QLabel(this); rArrowLabel->setStyleSheet("QLabel { background-color: rgba(255, 255, 255, 0); }");
     lArrowLabel->setPixmap(lArrowPixm);
