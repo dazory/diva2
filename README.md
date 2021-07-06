@@ -146,7 +146,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
 | :---------------: | :----------------------------------------------------------: |
 |     개발환경      |                    Linux Ubuntu 18.04 LTS                    |
 |  GUI 개발 플랫폼  |                          QT 5.12.5                           |
-| 라이브러리·API 등 | [QT 5.12.5, CMake 3.10.2, OpenCV 3.2.0, OpenGL 4.4, QTI-4.0.47, PCL 1.11.1, VTK 7.1, mscl, PostgreSQL 10.17, protobuf 3.17.3,PostgreSQL 10.17 , tomcat*, zeromq, libmscl , libusb 1.0, flann 1.8, eigen3, boost, qhull*, freeglut3, protobuf 3.17.3, libpqxx, expect](https://www.notion.so/API-25736c98854646f28a9d14996fa229fb)  |
+| 라이브러리·API 등 | [QT 5.12.5, CMake 3.10.2, OpenCV 3.2.0, OpenGL 4.4, QTI-4.0.47, PCL 1.11.1, VTK 7.1, mscl, PostgreSQL 10.17, protobuf 3.17.3,PostgreSQL 10.17 , tomcat*, zeromq, libmscl , libusb 1.0, flann 1.8, eigen3, boost, qhull*, freeglut3, protobuf 3.17.3, libpqxx, expect]()  |
 
 
 
