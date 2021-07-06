@@ -93,15 +93,15 @@ Ground Station의 주요 기능은 다음과 같습니다.
 
 1. **Real-time Visualization**
 
-[![realtime-visualization](https://img.youtube.com/vi/LOaPA7vAb78/0.jpg)](https://youtu.be/LOaPA7vAb78?t=0s)
+[![realtime-visualization](https://img.youtube.com/vi/LOaPA7vAb78/0.jpg)](https://youtu.be/LOaPA7vAb78?t=0s) ← 클릭시 유튜브로 이동
 
 2. **Playback**
 
-[![playback](https://img.youtube.com/vi/aTknWwIAsPE/0.jpg)](https://youtu.be/aTknWwIAsPE?t=0s)
+[![playback](https://img.youtube.com/vi/aTknWwIAsPE/0.jpg)](https://youtu.be/aTknWwIAsPE?t=0s)  ← 클릭시 유튜브로 이동
 
 3. **Algorithm Test**
 
-[![algorithm-test](https://img.youtube.com/vi/myjYaK9Yv-U/0.jpg)](https://youtu.be/myjYaK9Yv-U?t=0s)
+[![algorithm-test](https://img.youtube.com/vi/myjYaK9Yv-U/0.jpg)](https://youtu.be/myjYaK9Yv-U?t=0s)  ← 클릭시 유튜브로 이동
 
 <br>
 
@@ -110,21 +110,26 @@ Ground Station의 주요 기능은 다음과 같습니다.
 
 ```
 ├─ diva2
-│  │  README.md
-│  ├─ MobilePlatform
+│  ├─ build
+│  ├─ MobilePlatform 
 │  │      ├─ Sensing
 │  │      └─ Visualization
 │  ├─ Server
-│  │      ├─ TimeSynchronization
-│  │      └─ DBStoring
+│  │      ├─ DBStoring
+│  │      └─ TimeSynchronization
 │  ├─ GroundStation
 │  │      ├─ Playback
 │  │      ├─ Visualization
-│  │      └─ AlgorithmTest
-│  ├─ build
-│  └─ service
-│          이미지
-│          이미지
+│  │      ├─ AlgorithmTest
+│  │      └─ AlgorithmTest_GUI
+│  ├─ protobuf
+│  ├─ service
+│  ├─ test
+│  │
+│  ├─ CMakeLists.txt
+│  ├─ README.md
+│  └─ main.cpp
+│          
 ```
 
 <br>
