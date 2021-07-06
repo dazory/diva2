@@ -101,10 +101,7 @@ Ground Station의 주요 기능은 다음과 같습니다.
 
 3. **Algorithm Test**
 
-   <p align="center">
-     <img width="700" align="center" src="./storage/algorithm-test.gif" alt="algorithm-test"/>
-   </p>
-
+[![algorithm-test](https://img.youtube.com/vi/myjYaK9Yv-U/0.jpg)](https://youtu.be/myjYaK9Yv-U?t=0s)
 
 <br>
 
