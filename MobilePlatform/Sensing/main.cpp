@@ -25,7 +25,7 @@ int USE_CAN = 0;
 
 int main(int argc, char *argv[])
 {
-    ///[USB 포트연결] : (IMU, GPS, CAN, CAM)
+    ///[USB 포트연결] : GPS, IMU 순서대로
     //sudo chmod 777 /dev/ttyACM0
 
     time_t system_time;
