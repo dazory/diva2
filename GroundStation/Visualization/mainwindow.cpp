@@ -211,7 +211,7 @@ void MainWindow::Make(){
     ui->label->setPixmap(rpix);
     ui->label_2->setPixmap(lpix);
     
-   QPixmap redRectPixm("../resource/square.png");
+   QPixmap redRectPixm("../../resource/square.png");
    redRectLabel = new QLabel(this);
    redRectLabel->setStyleSheet("QLabel { background-color: rgba(255, 255, 255, 0); }");
    redRectLabel->setPixmap(redRectPixm);
