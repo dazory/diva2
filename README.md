@@ -10,7 +10,7 @@
 
 
 Manual : https://github.com/dazory/diva2/wiki
-
+Google Drive : https://drive.google.com/drive/folders/1TDDUTZKxcEvnGGAj-dnJR9AZF-h2Cgaq?usp=sharing
 
 <br>
 
