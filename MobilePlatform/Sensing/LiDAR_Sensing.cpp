@@ -39,8 +39,8 @@ void LiDAR_Sensing::WritePCD(std::vector<double> xyz_lut, uint8_t *buf)
             uint32_t r = OS1::px_range(px_buf);
             int ind = 3 * (idx + ipx);
             pcl::PointXYZ LiDAR_point;
-            LiDAR_point.x = r  * 0.001f * xyz_lut[ind + 0]; //leaf size 설정 -> downsampling 0.001f(787kB) 5****
-            LiDAR_point.y = r  * 0.001f * xyz_lut[ind + 1]; //0.01f -> 1cm (787kB) tkdlwmsms 27***
+            LiDAR_point.x = r  * 0.001f * xyz_lut[ind + 0]; //leaf size 설정 -> downsampling 0.001f(787kB) 
+            LiDAR_point.y = r  * 0.001f * xyz_lut[ind + 1]; //0.01f -> 1cm (787kB) 
             LiDAR_point.z = r  * 0.001f * xyz_lut[ind + 2];
             if (getCount() > W * H)
             {
