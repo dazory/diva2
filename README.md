@@ -9,9 +9,8 @@
 ---
 
 
-Manual : https://github.com/dazory/diva2/wiki
-
-Google Drive : https://drive.google.com/drive/folders/1TDDUTZKxcEvnGGAj-dnJR9AZF-h2Cgaq?usp=sharing
+* Manual : https://github.com/dazory/diva2/wiki
+* Google Drive : https://drive.google.com/drive/folders/1TDDUTZKxcEvnGGAj-dnJR9AZF-h2Cgaq?usp=sharing
 
 <br>
 
@@ -22,6 +21,9 @@ Google Drive : https://drive.google.com/drive/folders/1TDDUTZKxcEvnGGAj-dnJR9AZF
 | ------------ | ------------------------------------------------------------ |
 | 프로젝트명   | 자율주행차량의 실시간 다중센서데이터 수집·정제·분석 및 관제 통합 플랫폼 개발 |
 | 기간         | 2020.12.23 ~ 2021.06.18                                      |
+
+
+> To prepare for the unexpected driving environment that can occur when self-driving in a real road environment, a system is required to monitor, manage and process the vehicle's driving information from the outside. This paper is a study of remote streaming platforms that collect multi-sensor data from vehicles and communicate in real-time using ZeroMQ, Google Protocol Buffer. It visualizes data obtained from Camera, GPS, IMU, CAN, and LiDAR sensors in real-time using Qt, and provides playback function using time-synchronized data stored in the database. Also, it enables evaluation of algorithms using stored real-world driving data.
 
 
 <br>
