@@ -102,7 +102,7 @@ void CamSensingThread::run(zmq::socket_t *pubSock, mutex &m, string dir) // cons
       tm *ts = localtime(&nowTime);
 
       // save jpg & csv
-      char cPath[15];
+      char cPath[50];
       sprintf(cPath, "/home/diva2/DIVA2_DATA/%s_0/CAM/JPG/CAM_%04d%02d%02d", timestamp.c_str(), ts->tm_year + 1900, ts->tm_mon + 1, ts->tm_mday);
       sprintf(cFn, "%s%02d%02d%02d%03d.jpg", cPath,
               ts->tm_hour, ts->tm_min, ts->tm_sec, msc);
