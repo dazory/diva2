@@ -202,8 +202,6 @@ Ground Station의 주요 기능은 다음과 같습니다.
         [wiki](https://github.com/dazory/diva2/wiki/Ground-Station-Algorithm-Test) 확인 바람
      
      * Visualization
-        
-        실행전 [Streaming/경로 수정](https://github.com/dazory/diva2/wiki/Streaming#%EA%B2%BD%EB%A1%9C-%EC%88%98%EC%A0%95) 참고하여 경로 수정 필요
        ```shell
        cd diva2/build/GroundStation/Visualization
        ./GS_Visualization
