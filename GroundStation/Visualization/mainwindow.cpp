@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     //배경
-    QPixmap bg("/home/dahye/diva2/GroundStation/Visualization/resource/color.jpeg");
+    QPixmap bg("../../resource/color.jpeg");
     QPalette p(palette());
     p.setBrush(QPalette::Background,bg);
     setAutoFillBackground(true);
@@ -38,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
     //로고
     ui->logo->setAlignment(Qt::AlignCenter);
     QPixmap temp_jpeg;
-    temp_jpeg.load("/home/dahye/diva2/GroundStation/Visualization/resource/diva_logo.jpg"); 
+    temp_jpeg.load("../../resource/diva_logo.jpg"); 
     ui->logo->setPixmap(temp_jpeg.scaled(ui->logo->width(), ui->logo->height()));
     ui->logo->show();
 }
@@ -206,8 +206,8 @@ void MainWindow::Make(){
     //iw = new imuWidget();
     mSpeedGauge = new QcGaugeWidget;
     
-    QPixmap lpix("/home/dahye/diva2/GroundStation/Visualization/resource/leftarrowbefore.png");
-    QPixmap rpix("/home/dahye/diva2/GroundStation/Visualization/resource/rightarrowbefore.png");
+    QPixmap lpix("../../resource/leftarrowbefore.png");
+    QPixmap rpix("../../resource/rightarrowbefore.png");
     ui->label->setPixmap(rpix);
     ui->label_2->setPixmap(lpix);
     
