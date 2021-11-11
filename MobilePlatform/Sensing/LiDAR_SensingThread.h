@@ -12,9 +12,3 @@ class LiDAR_SensingThread{
     LiDAR_SensingThread(){};
     static void run(zmq::socket_t *socket, mutex &m, float leaf_size);
 };
-
-// class LiDAR_SensingThread{
-//     public:
-//     LiDAR_SensingThread(){};
-//     static void run(void *context, mutex &m, float leaf_size);
-// };
